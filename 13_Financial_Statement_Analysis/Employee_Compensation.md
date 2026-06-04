@@ -53,6 +53,32 @@ Choices that **reduce reported pension expense and/or the PBO** (flatter earning
   change the PBO or the fair value of plan assets.
 - Note: a **decrease in the discount rate raises the PBO** → funded status **decreases** (more underfunded).
 
+## Worked Example — IFRS Periodic Pension Cost & Funded-Status Roll-Forward
+*(curriculum Example, Module 2 "Workflow"; IFRS net-interest approach)*
+
+Inputs: beginning **benefit obligation = 97**, beginning **plan assets = 1,010** (so beginning **net
+pension asset = 913**), **service cost = 9**, **discount rate = 2%**, **actual return on assets = 5%**,
+**benefits paid = 5**, no contributions, no amendments/assumption changes.
+
+| Item | Calc | Amount |
+|---|---|---|
+| Current service cost (→ P&L, operating) | given | **9** |
+| Net interest **income** (→ P&L) | beginning **funded status** × discount = `913 × 2%` | **+18.3** |
+| Actual return on assets | `1,010 × 5%` | 50.5 |
+| Expected (net-interest) return implied | `1,010 × 2%` | 20.2 |
+| **Remeasurement** (→ OCI, no recycling) | actual − net-interest return on assets = `50.5 − 20.2` | **+30.3** |
+| Ending **net pension asset** (BS) | `913 − 9 + 18.3 + 30.3` | **952.6** |
+
+- **Benefits paid (5) are neutral** to funded status (plan assets and obligation both fall by 5) → no
+  income or balance-sheet net effect; no contributions → **no cash-flow-statement impact**.
+- **IFRS uses one net-interest number at the discount rate**; the gap between the **actual** 5% return and
+  that net-interest rate is the **remeasurement to OCI**, NOT P&L.
+- **US GAAP contrast (same facts):** service cost 9 to operating expense; a **gross interest cost** =
+  `97 × 2% = 1.94` below operating income; a separate **expected return on assets** offset in earnings;
+  the actual-vs-expected difference and actuarial G/L go to **OCI and are amortized** via the **corridor**
+  (amortize only the excess of cumulative unrecognized G/L over **10% of the greater of** obligation or
+  plan assets).
+
 ## Analyst Adjustments (8.e)
 - Reclassify the **total** periodic pension cost: many analysts move all of it (or its operating part)
   appropriately, and reclassify the interest/return components to the **financing/investing** sections

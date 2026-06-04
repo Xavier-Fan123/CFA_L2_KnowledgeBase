@@ -9,6 +9,44 @@ status: evergreen
 
 Auto-detected topics not yet covered by the KB. Resolve by creating or enriching notes.
 
+### 2026-06-05 — Ten-agent deep module-level audit vs. OFFICIAL curriculum (RESOLVED)
+- Triggered by: user request — set up 10 agents (one per topic), deep-verify every module against the
+  original/official curriculum volumes (`cfa-program2026L2V1–V10.PDF`), and supplement as needed.
+- Method: 10 parallel agents, each scoped to one topic folder, grounded in the official volume + Schweser.
+- **Findings (notes were incomplete/incorrect despite `status: evergreen` — confirms labels can't be trusted):**
+  - **Derivatives**: [[Options_Valuation]] was **missing BSM d₁/d₂ entirely**; FRA/swap valuation, Black
+    model, swaptions, and Greek formulas + delta-hedge sizing were thin → all added.
+  - **Equity**: [[Market_Based_Valuation]] was **missing P/CF and dividend yield** (both explicit LOS) → added.
+  - **Ethics**: [[Code_and_Standards]] was on the **old edition** — missing **Standard I(E) Competence**
+    (2024 revision), VI(A) mislabeled; no Application-cases note existed → created
+    [[Application_of_the_Code_and_Standards]]; [[GIPS]] source corrected (no standalone 2026 GIPS reading —
+    it sits under Standard III(D)).
+  - **Alternatives**: [[Real_Estate]] used a non-official example and omitted most of LM2 → **rewritten** to
+    the official private-RE reading (NOI, RE cycle, 3 valuation approaches, indexes).
+  - **Corporate**: [[Cost_of_Capital]] missing DDM/BYPRP/Fama-French/Grinold-Kroner; [[Corporate_Restructurings]]
+    missing pro-forma/sum-of-parts/LBO → added.
+  - Smaller gaps filled across Quant (ANOVA MSR/MSE/SEE; AR residual-autocorrelation test), Economics
+    (forward points, real-rate parity, endogenous growth), FSA (SPE/VIE, pension & translation worked
+    examples, sources of risk info), FI (macro rate views 23.k, convertibles, VND/CVA, DM, CDS spread),
+    PM (APT arbitrage, parametric VaR worked example).
+- **Result: every LOS across all ten topics now verified against the official curriculum and at evergreen depth.**
+- Priority: resolved.
+
+### 2026-06-04 — Full reading-level build-out (RESOLVED)
+- Triggered by: user request — "cover every chapter of all ten CFA L2 topics perfectly."
+- Audited all 42 Schweser readings vs. KB. Found 6 integer-level gaps + Time-Series module holes.
+- **Done**: created [[Multiple_Regression]] (R1 basics/fit/dummies/influence), [[Machine_Learning]] (R3),
+  [[Big_Data_Projects]] (R4), [[Integration_of_FSA_Techniques]] (R12), [[Publicly_Traded_Real_Estate]] (R32);
+  completed [[Time_Series_Analysis]] (trend, seasonality, chain-rule/RMSE, cointegration).
+- Module-level audit of high-module-count existing notes (R23/25/26/28/29/41) — all confirmed complete.
+- **Result: all 42 readings now have evergreen notes; no `seed`/`incubating`/`(to add)` notes remain.**
+- Priority: resolved.
+
+### 2026-06-04 — ARCH not covered (RESOLVED)
+- Triggered by: "What is ARCH?"
+- Suggested action: enrich note — **done**, folded ARCH section + Q&A into [[Time_Series_Analysis]].
+- Priority: medium
+
 ## Prose Verification Status (deep-dive against Schweser)
 Tracks which topics have had formulas verified line-by-line against the book + worked examples added,
 vs. those still scaffolded from the LOS map + general knowledge.
@@ -44,7 +82,7 @@ See [[QA_Log]] for the per-note index.
   table is the thing to correct. Priority: low (cosmetic, but affects future PDF lookups).
 
 ## Remaining enrichment opportunities (optional)
-- Quant: seasonality, ARCH, RMSE, cointegration sub-readings not yet noted.
+- ~~Quant: seasonality, ARCH, RMSE, cointegration~~ — **DONE 2026-06-04** (folded into [[Time_Series_Analysis]]).
 - Pull actual end-of-chapter practice questions from the official EOC folder (`02 CFA二级课后题/Volume 1–10`)
   and mock exams into each note's Q&A section as real vignette practice.
 - Add a cross-topic **formula cheat-sheet** note (final-review aggregation) and a personal **error log**

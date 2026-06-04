@@ -3,3 +3,7 @@ Thumbs.db
 desktop.ini
 *.tmp
 .claude/settings.local.json
+
+# Obsidian per-device UI state (avoids cross-computer sync conflicts)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json

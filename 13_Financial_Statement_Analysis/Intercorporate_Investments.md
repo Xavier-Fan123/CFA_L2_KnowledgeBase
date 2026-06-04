@@ -16,6 +16,7 @@ Classification is driven by **degree of influence/control**, which dictates the 
 | Investment in **associates** | Significant | 20–50% | **Equity method** |
 | **Joint venture** | Shared control | — | **Equity method** (IFRS) |
 | **Business combination** | Control | > 50% | **Acquisition method (consolidation)** |
+| **SPE / VIE** | Control via risk/returns, not votes | — | **Consolidate** (sponsor / primary beneficiary) |
 
 ## Financial Assets (IFRS 9)
 - **Amortized cost**: debt held to collect contractual cash flows.
@@ -51,6 +52,37 @@ Classification is driven by **degree of influence/control**, which dictates the 
   - The `$10m` goodwill difference is mirrored by the `$10m` NCI difference.
 - **Full goodwill → higher total assets and equity → lower ROA and ROE** than partial goodwill.
 
+### Acquisition-Method Mechanics (details the LOS expects)
+- **Consideration** is measured at **fair value**, including the **acquisition-date fair value of any
+  contingent consideration** (earn-outs).
+- **Direct acquisition costs** (legal, valuation, advisory, consulting fees) are **expensed as incurred**
+  — they are **not** capitalized into goodwill.
+- **Identifiable assets/liabilities** (tangible and intangible) recorded at **fair value** at the
+  acquisition date, including assets the acquiree never recognized internally (e.g., internally developed
+  brand names, patents, technology).
+- **Contingent liabilities**: IFRS recognizes them if **fair value is reliably measurable**; US GAAP
+  recognizes only those that are **probable AND reasonably estimable**. Expected (but not obligated)
+  costs — e.g., planned restructuring — are **not** liabilities at acquisition; expensed when incurred.
+- **Indemnification assets** (seller contractually covers a contingency outcome) are recognized at the
+  same time and on the same basis as the indemnified item.
+- **Pooling-of-interests is prohibited** — all business combinations use the acquisition method under
+  both IFRS and US GAAP, which substantially converges the two.
+
+## Special Purpose & Variable Interest Entities (SPE / VIE) — part of LOS 7.a/7.b
+- An **SPE/VIE** is created by a **sponsor** for a narrow purpose (often securitizing assets to move them
+  off the balance sheet). The defining feature: control is **not** based on **voting interest** because
+  equity holders lack sufficient at-risk capital or a controlling financial interest.
+- **IFRS (IFRS 10 / SIC-12)**: consolidate when the **substance** of the relationship indicates
+  **control** — the sponsor (1) can direct the entity's financial/operating policy AND (2) is exposed to
+  **variable returns** from it.
+- **US GAAP (ASC 810)**: two-component model (voting interest + variable interest). The **primary
+  beneficiary** of a VIE **must consolidate** it regardless of voting interest. Primary beneficiary =
+  the party that absorbs the **majority of expected losses**, receives the **majority of expected
+  residual returns**, or both.
+- **Securitization** (e.g., selling receivables to an SPE for cash) can be structured to keep the SPE
+  off the sponsor's balance sheet, **understating reported leverage** — a classic analyst red flag.
+  If consolidation is required, the SPE's assets and (non-recourse) debt come back on-balance-sheet.
+
 ## Effect on Statements & Ratios (7.c)
 - Equity method vs consolidation: **net income is identical**, but consolidation grosses up revenue,
   assets, and liabilities → **lower margins, higher leverage-looking ratios** under consolidation;
@@ -63,6 +95,11 @@ Classification is driven by **degree of influence/control**, which dictates the 
   grossed-up base.
 - **Partial goodwill** (IFRS) < full goodwill → lower total assets and lower NCI.
 - FVOCI **debt** recycles to P&L on sale; FVOCI **equity** election does **not** recycle.
+- **SPE/VIE**: control is by **risk/returns, not votes** — IFRS consolidates on **substance/control**;
+  US GAAP consolidates if you are the **primary beneficiary**. Off-balance-sheet securitization
+  **understates leverage** until consolidation pulls the assets/debt back on.
+- **Acquisition costs are expensed** (not added to goodwill); **contingent consideration** is included
+  in the purchase price at **fair value**.
 
 ## Q&A
 
@@ -86,3 +123,16 @@ margins and higher apparent leverage**, while net income, total equity attributa
 are the **same**. Trap: equity-method dividends **reduce the carrying value of the investment**, they are
 not income.
 Related: [[Multinational_Operations]]
+
+### 2026-06-04 — When must a sponsor consolidate an SPE/VIE, and why does it matter?
+**Q:** A company sets up a special purpose entity to securitize receivables. When is it consolidated, and
+what is the analytical concern?
+**A:** Control of an SPE/VIE is **not** based on voting interest. **IFRS (IFRS 10/SIC-12)** requires
+consolidation when the **substance** shows control — the sponsor directs the entity's policies and is
+exposed to its **variable returns**. **US GAAP (ASC 810)** requires the **primary beneficiary** — the
+party absorbing the majority of expected losses and/or residual returns — to consolidate the VIE
+regardless of votes. The concern: firms historically used SPEs to move debt **off-balance-sheet**
+(securitization), **understating leverage**; consolidation pulls the SPE's assets and (often non-recourse)
+debt back on, raising reported leverage. Trap: **direct acquisition costs are expensed**, and **contingent
+consideration** is part of the purchase price at fair value.
+Related: [[Quality_of_Financial_Reports]]

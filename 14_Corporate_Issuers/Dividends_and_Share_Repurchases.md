@@ -3,7 +3,7 @@ aliases: [Dividends and Share Repurchases, Dividend Policy, Buybacks, Dividend T
 tags: [CFA-L2, corp, concept]
 date: 2026-06-03
 status: evergreen
-source: Schweser Book 2, Module 13, LOS 13.a-13.n
+source: Official Curriculum 2026 L2 V4, Reading "Analysis of Dividends and Share Repurchases" (Schweser Book 2, Module 13); LOS a-n
 ---
 
 # Analysis of Dividends and Share Repurchases

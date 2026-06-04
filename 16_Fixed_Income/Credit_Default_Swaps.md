@@ -28,13 +28,20 @@ source: Schweser Book 4, Module 27, LOS 27.a-27.e
     subordinated bond is not deliverable into a senior CDS) → payout = `$10m × (1 − 0.25) = $7.5m`.
 
 ## Pricing (27.c)
+- **Two legs**: the **protection leg** (contingent payout the seller may owe) vs the **premium leg** (the
+  buyer's coupon stream). At initiation, **upfront payment = PV(protection leg) − PV(premium leg)**; the
+  party with the larger-PV claim pays the other.
+- **Single-period fair spread** (no upfront, ignore TVM, default only at maturity):
+  `CDS spread ≈ (1 − RR) × POD`. E.g. POD 2%, RR 60% → spread ≈ `0.40 × 2% = 80 bps`.
 - **Upfront premium** ≈ `(CDS spread − CDS coupon) × effective duration` (PV of the spread-coupon
-  difference).
+  difference). Equivalently `PV(credit spread) = upfront premium + PV(fixed coupon)`.
 - **CDS price (per 100)** ≈ `100 − upfront%`, where `upfront% ≈ (spread − coupon) × duration`.
-  - If spread > coupon → protection buyer pays upfront; if spread < coupon → seller pays upfront.
-- **Change in value** ≈ `Δspread × effective duration × notional` (gain to the protection buyer when
-  spreads widen).
-- Spread driven by **POD** and **LGD** (hazard rate × loss).
+  - If spread > coupon → protection buyer pays upfront (price < 100); if spread < coupon → seller pays
+    upfront (price > 100). Worked: IG, coupon 1%, spread 50 bps, duration 4 → upfront = (0.50% − 1%)×4 =
+    **−2%** (seller pays), **price = 100 − (−2) = 102**.
+- **Change in value** ≈ `%Δprice ≈ Δspread(bps) × effective duration`; dollar `≈ Δspread × duration ×
+  notional` (gain to the protection **buyer** when spreads **widen**).
+- POD each period is **conditional** (a **hazard rate**); cumulative POD = 1 − Π(probability of survival).
 
 ## Uses (27.d, 27.e)
 - **Hedge / manage exposure**: buy protection to reduce credit risk; sell protection to add it.
@@ -47,7 +54,10 @@ source: Schweser Book 4, Module 27, LOS 27.a-27.e
 
 ## Exam Traps
 - **Payout = notional × (1 − recovery)** = notional × LGD.
-- Upfront ≈ **(spread − coupon) × duration**; buyer pays when spread > coupon.
+- One-period **fair spread ≈ (1 − RR) × POD**; don't confuse the **CDS coupon** (standardized 1% IG / 5%
+  HY) with the **CDS spread** (the risk-justified rate).
+- Upfront ≈ **(spread − coupon) × duration**; buyer pays when spread > coupon (price < 100). A **negative**
+  upfront means the **seller** pays and **price > 100** (e.g. −2% → price 102).
 - Protection **buyer profits when spreads widen** (credit worsens).
 - Index CDS for macro credit views; single-name for issuer-specific; basis trades exploit CDS vs cash bond.
 

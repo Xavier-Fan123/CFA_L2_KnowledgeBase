@@ -12,6 +12,41 @@ Each line: `YYYY-MM-DD [Topic] question → [[Note]]`
 
 **2026-06-03 — Bulk enrichment pass: worked examples + exam Q&A added to all nine non-Quant topic areas (Books 1–5, Schweser-verified). One index line per enriched note below.**
 
+**2026-06-05 — Ten-agent deep module-level audit vs. the OFFICIAL curriculum (cfa-program2026L2V1–V10). One agent per topic verified every LOS and filled gaps. New note: [[Application_of_the_Code_and_Standards]]. Major fixes: BSM d₁/d₂ (were absent), P/CF + dividend yield, Standard I(E) Competence (2024 revision), Real_Estate rewritten to official LM2.**
+
+- 2026-06-04 [Quant] One/two-period AR(1) forecasts + residual-autocorrelation test (1/√T) → [[Time_Series_Analysis]]
+- 2026-06-04 [Economics] Forward points → all-in forward rate (÷10,000, JPY ÷100) → [[Currency_Exchange_Rates]]
+- 2026-06-04 [Economics] Real interest rate parity vs international Fisher effect → [[Currency_Exchange_Rates]]
+- 2026-06-04 [Economics] Endogenous growth model Δye/ye = sc−δ−n; forecasting potential GDP → [[Economic_Growth]]
+- 2026-06-04 [FSA] When must a sponsor consolidate an SPE/VIE? → [[Intercorporate_Investments]]
+- 2026-06-04 [FSA] Is the auditor's opinion a good source of risk information? → [[Quality_of_Financial_Reports]]
+- 2026-06-04 [Corp] Grinold-Kroner forward ERP; private cost of equity (expanded CAPM vs build-up); Fama-French → [[Cost_of_Capital]]
+- 2026-06-04 [Corp] Sum-of-the-parts spin-off, 10%-of-EV materiality, debt-funded WACC shift → [[Corporate_Restructurings]]
+- 2026-06-04 [Corp] ESG integration: equity vs fixed income & info sources → [[ESG_and_Corporate_Governance]]
+- 2026-06-04 [Equity] P/CF cash-flow definitions & justified dividend yield → [[Market_Based_Valuation]]
+- 2026-06-04 [Equity] Continuing residual income & persistence factor ω → [[Residual_Income]]
+- 2026-06-04 [Equity] Excess Earnings Method worked example → [[Private_Company_Valuation]]
+- 2026-06-04 [Fixed Income] Bear flattening vs bull steepening vs bull flattening (rate views) → [[Term_Structure]]
+- 2026-06-04 [Fixed Income] Convertible value measures & bond/hybrid/equity risk-return spectrum → [[Bonds_With_Embedded_Options]]
+- 2026-06-04 [Derivatives] FRA notation/valuation; swap valuation after a rate move; currency vs equity swap shortcuts → [[Forward_Commitments]]
+- 2026-06-04 [Derivatives] BSM d₁/d₂ & carry-adjusted form; Black model/IR options/swaptions; delta-hedge sizing → [[Options_Valuation]]
+- 2026-06-04 [Alternatives] Commodity index construction → [[Commodities]]
+- 2026-06-04 [Alternatives] Conditional factor model crisis dummy → [[Hedge_Fund_Strategies]]
+- 2026-06-04 [PM] Determine/exploit an APT arbitrage opportunity (worked) → [[Multifactor_Models]]
+- 2026-06-04 [PM] Macro factor model expected vs realized return; compute parametric VaR (worked) → [[Multifactor_Models]], [[Measuring_Managing_Market_Risk]]
+- 2026-06-04 [Ethics] 2024 Code & Standards revisions (I(E) Competence, V(B), VI(A)); worked I(E)/V(A)/III(C) case → [[Code_and_Standards]]
+- 2026-06-04 [Ethics] L2 Application reading + 4-step framework; "first five vs last two" cases → [[Application_of_the_Code_and_Standards]]
+- 2026-06-04 [Ethics] Compute an asset-weighted composite return + III(D) trap → [[GIPS]]
+
+**2026-06-04 — Full reading-level build-out: created the 6 missing readings (R1 dedicated, R3 ML, R4 Big Data, R12 FSA integration, R32 public real estate) + completed Time-Series (trend/seasonality/cointegration). All 42 Schweser readings now have evergreen notes.**
+
+- 2026-06-04 [Quant] Multiple regression: R²/adjusted R²/AIC/BIC, nested F-test, dummy variables → [[Multiple_Regression]]
+- 2026-06-04 [Quant] Machine learning: bias vs variance error, algorithm selection → [[Machine_Learning]]
+- 2026-06-04 [Quant] Big data: precision/recall/F1 from confusion matrix, text processing → [[Big_Data_Projects]]
+- 2026-06-04 [Quant] Time-series: seasonality test/correction, cointegration (DF-EG) → [[Time_Series_Analysis]]
+- 2026-06-04 [FSA] FSA integration: DuPont associate adjustment, accruals ratio, implied P/E → [[Integration_of_FSA_Techniques]]
+- 2026-06-04 [Alt] Public real estate: FFO/AFFO, NAVPS from cash NOI, 4 valuation approaches → [[Publicly_Traded_Real_Estate]]
+- 2026-06-04 [Quant] What is ARCH? (test, GLS fix, variance forecast) → [[Time_Series_Analysis]]
 - 2026-06-03 [Ethics] GIPS: composites include-all & firm-wide all-or-nothing/verification → [[GIPS]]
 - 2026-06-03 [Ethics] Stricter-law rule, mosaic theory, priority of transactions → [[Code_and_Standards]]
 - 2026-06-03 [PM] Discount-rate framework; breakeven inflation & cyclical credit spreads → [[Economics_and_Investment_Markets]]

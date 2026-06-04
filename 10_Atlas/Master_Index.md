@@ -13,7 +13,7 @@ Map of Content for the whole knowledge base. One WikiLink line per note. Registe
 
 ## 11 — Quantitative Methods
 - [[Quantitative_Methods_Overview]]
-- [[Model_Misspecification]] · [[Regression_Assumption_Violations]] · [[Breusch_Pagan_Test]] · [[Logistic_Regression]] · [[Time_Series_Analysis]]
+- [[Multiple_Regression]] · [[Model_Misspecification]] · [[Regression_Assumption_Violations]] · [[Breusch_Pagan_Test]] · [[Logistic_Regression]] · [[Time_Series_Analysis]] · [[Machine_Learning]] · [[Big_Data_Projects]]
 
 ## 12 — Economics
 - [[Economics_Overview]]
@@ -21,7 +21,7 @@ Map of Content for the whole knowledge base. One WikiLink line per note. Registe
 
 ## 13 — Financial Statement Analysis
 - [[Financial_Statement_Analysis_Overview]]
-- [[Intercorporate_Investments]] · [[Employee_Compensation]] · [[Multinational_Operations]] · [[Analysis_of_Financial_Institutions]] · [[Quality_of_Financial_Reports]]
+- [[Intercorporate_Investments]] · [[Employee_Compensation]] · [[Multinational_Operations]] · [[Analysis_of_Financial_Institutions]] · [[Quality_of_Financial_Reports]] · [[Integration_of_FSA_Techniques]]
 
 ## 14 — Corporate Issuers
 - [[Corporate_Issuers_Overview]]
@@ -41,7 +41,7 @@ Map of Content for the whole knowledge base. One WikiLink line per note. Registe
 
 ## 18 — Alternative Investments
 - [[Alternative_Investments_Overview]]
-- [[Commodities]] · [[Real_Estate]] · [[Hedge_Fund_Strategies]]
+- [[Commodities]] · [[Real_Estate]] · [[Publicly_Traded_Real_Estate]] · [[Hedge_Fund_Strategies]]
 
 ## 19 — Portfolio Management
 - [[Portfolio_Management_Overview]]
@@ -49,7 +49,7 @@ Map of Content for the whole knowledge base. One WikiLink line per note. Registe
 
 ## 20 — Ethical and Professional Standards
 - [[Ethics_Overview]]
-- [[Code_and_Standards]] · [[GIPS]]
+- [[Code_and_Standards]] · [[Application_of_the_Code_and_Standards]] · [[GIPS]]
 
 ---
 
@@ -57,16 +57,16 @@ Map of Content for the whole knowledge base. One WikiLink line per note. Registe
 
 | Topic | Notes | Status |
 |------|------|------|
-| 11 Quantitative Methods | 6 | Evergreen (regression + time series) |
+| 11 Quantitative Methods | 9 | Evergreen (regression, time series, ML, big data) — full R1–R4 |
 | 12 Economics | 3 | Evergreen |
-| 13 Financial Statement Analysis | 6 | Evergreen |
+| 13 Financial Statement Analysis | 7 | Evergreen — full R7–R12 |
 | 14 Corporate Issuers | 5 | Evergreen |
 | 15 Equity Investments | 7 | Evergreen |
 | 16 Fixed Income | 6 | Evergreen |
 | 17 Derivatives | 3 | Evergreen |
-| 18 Alternative Investments | 4 | Evergreen |
+| 18 Alternative Investments | 5 | Evergreen — full R30–R33 |
 | 19 Portfolio Management | 7 | Evergreen |
-| 20 Ethics | 3 | Evergreen |
+| 20 Ethics | 4 | Evergreen — full R40–R42 + GIPS; 2024 revisions, I(E) Competence |
 
 All ten topic areas now have evergreen concept coverage grounded in the 2026 Schweser LOS map. Each note
 carries module/LOS-level structure, key formulas, and exam traps. **As of the 2026-06-03 enrichment pass,

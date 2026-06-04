@@ -36,22 +36,37 @@ source: Schweser Book 4, Module 30, LOS 30.a-30.j
 
 ## Total Return Components (30.g, 30.h)
 `Total return = spot (price) return + roll return + collateral return`.
-- **Roll return**: gain/loss from rolling expiring futures to the next contract.
-  - **Backwardation → positive roll return** (roll down to cheaper deferred contracts).
-  - **Contango → negative roll return** (roll up to more expensive contracts).
-- **Collateral return**: interest on the cash backing a fully collateralized futures position.
+- **Price (spot) return** = change in the price of the futures contract held.
+- **Roll return**: gain/loss from rolling expiring futures to the next contract. **Accounting** figure
+  only — you cannot build a portfolio of "pure roll return." Official formula:
+`Roll return = [(Near-term price − Farther-term price) / Near-term price] × % of position rolled`
+  - **Backwardation → positive roll return** (near > far; roll into **cheaper** deferred contracts → buy **more** contracts to hold the same dollar exposure).
+  - **Contango → negative roll return** (near < far; roll into **more expensive** contracts → buy **fewer**).
+  - *Worked (official WTI, S&P GSCI 5-day roll = 20%/day):* March $52.64, April $53.00 → (52.64 − 53.00)/52.64 = −0.68% gross × 20% = **−0.13% net roll return** (negative, in contango).
+- **Collateral return**: interest (≈ risk-free rate) on the cash backing a fully collateralized position.
+- **Worked total return (official Example 18):** price 5% + roll 2.5% + collateral (2% × 100%) = **9.5%**.
 
 ## Swaps & Indexes (30.i, 30.j)
-- **Commodity swaps**: exchange exposure (e.g., total-return swap, basis swap, variance swap) to gain or
-  modify commodity exposure without holding physicals.
-- **Index construction** drives returns: **weighting** scheme (production-weighted vs fixed), the
-  **roll** methodology and timing, and **rebalancing** frequency materially affect index performance.
+- **Commodity swaps** modify exposure without holding physicals:
+  - **Total-return swap** — pay/receive the total return of a commodity (or index) vs a fixed/floating rate.
+  - **Excess-return swap** — exchanges the **price (excess) return** only (no collateral leg).
+  - **Basis swap** — exchanges cash flows based on the difference between two related prices/indexes.
+  - **Variance / volatility swap** — payoff tied to realized **variance / volatility** of the commodity.
+- **Index construction** drives returns via three levers: **weighting** scheme, **roll** methodology/timing, and **rebalancing** frequency.
+  - **Five major indexes:** **S&P GSCI** (24 commodities, world-production value weighting → energy-heavy, up to ~80%); **BCOM / Bloomberg Commodity** (23 commodities, liquidity-weighted + committee, capped to diversify); **DBLCI** (fixed weights, distinctive **optimized roll**); **TR/CC CRB** (fixed, committee, **monthly** rebalance); **RICI** (38 commodities, fixed, committee, **monthly** rebalance).
+  - **Weighting:** production/value-weighted (floating) drifts with prices → **smaller rebalancing trades**; **fixed-weight** forces larger buy-low/sell-high rebalancing.
+  - **Rebalancing:** **frequent (monthly)** rebalancing helps in **mean-reverting** markets (sell peaks/buy valleys) but **hurts in trending** markets; annual rebalancing favors persistent trends.
+  - **Roll methodology** matters most where roll cost is large (e.g., **natural gas** ~19% annual roll cost — its higher weight in BCOM is a drag the index must overcome with price/rebalance return).
 
 ## Exam Traps
-- **Backwardation → positive roll return; contango → negative roll return.**
+- **Backwardation → positive roll return; contango → negative roll return.** In backwardation you buy
+  **more** (cheaper) deferred contracts to keep dollar exposure; in contango you buy **fewer**.
 - Commodities have **no cash flows** → no DCF; convenience yield is central.
 - Keynes's **normal backwardation**: speculators earn a risk premium for bearing producers' price risk.
-- Total return = spot + **roll** + collateral.
+- Total return = spot + **roll** + collateral; roll return = (near − far)/near × % rolled (an
+  **accounting** figure — cannot be isolated into a tradable portfolio).
+- Index returns hinge on **weighting + roll + rebalancing**: floating/production weights → small
+  rebalancing trades; **frequent rebalancing helps mean-reverting, hurts trending** markets.
 
 ## Q&A
 
@@ -73,3 +88,16 @@ futures-spot gap reflects **storage costs minus convenience yield** — high con
 supply, valuable to hold physical) pushes the market into **backwardation**; abundant supply / high
 storage cost → **contango**.
 Related: [[Hedge_Fund_Strategies]]
+
+### 2026-06-04 — How does commodity index construction affect returns?
+**Q:** Which design choices make two commodity indexes (e.g., S&P GSCI vs BCOM) perform differently?
+**A:** Three levers: **weighting**, **roll methodology**, and **rebalancing frequency**. **Weighting:**
+the S&P GSCI uses **world-production value** weighting → very energy-heavy (up to ~80%), while **BCOM**
+caps weights for diversification (energy ~30%, but more natural gas). Because natural gas has a huge
+(~19%) annual **roll cost** in contango, an index overweight it must overcome that drag with price and
+rebalance return. **Roll methodology** (which contracts, over how many days) sets the roll return — DBLCI
+uses an optimized roll. **Rebalancing:** monthly rebalancers (TR/CC CRB, RICI) buy-low/sell-high and win
+in **mean-reverting** markets but **lag in trending** markets; annual rebalancers favor persistent trends.
+Floating (production) weights drift with prices, so they need **smaller** rebalancing trades than
+fixed-weight schemes.
+Related: [[Alternative_Investments_Overview]]

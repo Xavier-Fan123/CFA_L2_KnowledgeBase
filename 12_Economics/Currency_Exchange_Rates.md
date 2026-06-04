@@ -40,6 +40,24 @@ Three currencies, three quotes; if the implied cross rate ≠ the quoted cross r
   **premium** when its interest rate is **lower** than the price currency's.
 - Forward (covered interest parity), with day-count `τ = days/360`:
   `F = S × (1 + r_price·τ) / (1 + r_base·τ)`
+
+### Forward Points and the All-in Forward Rate (5.c)
+In practice dealers quote a **spot rate** plus **forward points**, not the full forward outright. Forward
+points are scaled in **pips** (the last decimal of the quote):
+- **All-in forward rate = spot rate + (forward points / scale)**, where scale = **10,000** for most pairs
+  (4-decimal quotes), or **100** for JPY pairs quoted to 2 decimals. (Official curriculum, Reading 5.)
+- Forward points are **positive** when the base trades at a forward **premium** (base rate < price rate) and
+  **negative** at a forward **discount**. Their absolute size **grows with maturity** and with the size of the
+  interest-rate differential.
+- Build a forward quote side-consistently: **all-in bid = spot bid + points bid**, **all-in offer = spot offer
+  + points offer**. The bid–offer factors (liquidity, volatility, term) apply to the points the same way they
+  apply to spot.
+- **Worked example (official, Reading 5):** spot EUR quote 1.1649, 1-month forward points bid = −15.9 →
+  all-in 1-month forward bid `= 1.1649 + (−15.9/10,000) = 1.16331` (negative points → base at a forward
+  discount). For an AUD/GBP example, spot 1.8210 + 3-month points 130 → all-in `1.8210 + 130/10,000 = 1.8340`.
+- **Trap:** divide JPY-pair points by **100** (not 10,000) because the quote has only two decimals; mixing the
+  scales is a classic error.
+
 - **MTM value of a forward** before expiry (long base): discount the change in forward rate:
   `Vt = (Ft − F0) × contract size / (1 + r_price·(days remaining/360))`
   - **Worked example (Schweser):** long CAD 1m at F0 = 1.05358 AUD/CAD (90-day). After 30 days (60 left),
@@ -54,13 +72,15 @@ Three currencies, three quotes; if the implied cross rate ≠ the quoted cross r
 | **Covered IRP** | `F/S = (1+r_price)/(1+r_base)`; forward fully offsets rate differential | **Yes** (no-arb) |
 | **Uncovered IRP** | Expected %ΔS (base) ≈ `r_base − r_price` (high-yield currency expected to depreciate) | No |
 | **Forward rate parity** | Forward rate = unbiased predictor of future spot | No |
-| **PPP** (absolute/relative/ex-ante) | %ΔS ≈ inflation differential | Only long-run (relative) |
-| **International Fisher effect** | Nominal rate differential ≈ expected inflation differential (equal real rates) | No |
+| **PPP** (absolute/relative/ex-ante) | absolute: `S_f/d = P_f/P_d`; relative/ex-ante: %ΔS ≈ inflation differential | Only long-run (relative) |
+| **International Fisher effect** | Nominal rate differential ≈ **expected** inflation differential: `i_f − i_d = π_f^e − π_d^e` | No |
+| **Real interest rate parity** | Real rates equal across markets → real yield spread `(r_f − r_d) = 0` | No (equilibrium) |
 
-Linkages: Covered IRP always holds. If forward rate parity holds → UIRP holds. International Fisher
-links rate diffs to inflation diffs; ex-ante PPP links inflation diffs to %ΔS. **If ex-ante relative
-PPP and international Fisher both hold → UIRP holds.** UIRP assumes investors are **risk-neutral**
-(they demand no premium for FX risk).
+Linkages (official curriculum chain): Covered IRP always holds (arbitrage). If forward rate parity holds →
+UIRP holds. **UIRP + ex-ante relative PPP both holding ⇒ real interest rate parity** (real spread = 0), and
+it then follows that **`i_f − i_d = π_f^e − π_d^e` = the international Fisher effect** (nominal spread driven
+solely by expected-inflation differential). All of these (UIRP, forward parity, ex-ante PPP, Fisher) assume
+**risk-neutral** investors who demand no FX/inflation risk premium; only covered IRP is enforced by arbitrage.
 
 **Worked examples (Schweser):**
 - **Covered interest arbitrage**: USD MRR 8%, EUR MRR 6%, spot 1.30 USD/EUR. No-arb forward =
@@ -121,6 +141,31 @@ depreciate by the rate differential as UIRP predicts). Returns are small and pos
 spikes and the high-yield currency crashes, producing rare large losses → **negative skew / "crash
 risk" (peso problem)**, fat left tail. So returns are **not** normally distributed and Sharpe ratios
 overstate attractiveness.
+Related: [[Economics_Overview]]
+
+### 2026-06-04 — Forward points: how do you build the all-in forward rate?
+**Q:** A dealer quotes spot plus forward points. How do I turn the points into a forward rate, and how do I
+pick the bid vs offer side?
+**A:** **All-in forward = spot + (forward points / scale)**, where scale = **10,000** for normal 4-decimal
+pairs and **100** for JPY 2-decimal pairs. Stay side-consistent: all-in bid = spot bid + points bid, all-in
+offer = spot offer + points offer. Positive points = base at a forward **premium** (base interest rate <
+price-currency rate); negative points = forward **discount**. Example: spot 1.1649, 1-month points bid −15.9
+→ all-in bid `1.1649 + (−15.9/10,000) = 1.16331`. Trap: using /10,000 on a JPY pair (should be /100), and
+flipping the sign of negative points. Points grow with maturity and with the rate differential.
+Related: [[Economics_Overview]]
+
+### 2026-06-04 — Real interest rate parity vs the international Fisher effect
+**Q:** How does "real interest rate parity" fit with the other parity conditions, and is it the same as the
+international Fisher effect?
+**A:** They are linked but distinct. **Real interest rate parity** states that **real** interest rates
+converge across markets, so the real yield spread `(r_f − r_d) = 0`. It is the **joint outcome** of two
+conditions both holding: **uncovered IRP** (`%ΔS_f/d = i_f − i_d`) and **ex-ante relative PPP**
+(`%ΔS_f/d = π_f^e − π_d^e`). Setting the two equal gives `i_f − i_d = π_f^e − π_d^e`, i.e. the nominal yield
+spread is driven solely by the expected-inflation differential — and the curriculum reserves the name
+**international Fisher effect** for exactly that nominal-rate/expected-inflation relationship (some authors
+instead call UIRP the international Fisher effect; the official text does not). Both assume risk-neutral
+investors who demand no FX or inflation risk premium. (Official curriculum, Reading 5, "The Fisher Effect,
+Real Interest Rate Parity, and International Parity Conditions.")
 Related: [[Economics_Overview]]
 
 ### 2026-06-03 — Mundell-Fleming: policy effects on the exchange rate

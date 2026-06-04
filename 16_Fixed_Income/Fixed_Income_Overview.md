@@ -12,8 +12,9 @@ Five modules. The tree-based valuation (arbitrage-free + embedded options) and c
 are the heaviest.
 
 ## Module 23 — Term Structure → [[Term_Structure]]
-Spot/forward/par, bootstrapping, riding the curve, swap spread, TED/Libor-OIS, term-structure theories,
-yield-curve factors & key-rate duration.
+Spot/forward/par, bootstrapping, riding the curve, swap spread, TED & MRR−OIS, term-structure theories,
+yield-curve factors & key-rate duration, and developing rate views from macro factors (bear-flattening /
+bull-steepening, bullet vs barbell).
 
 ## Module 24 — Arbitrage-Free Valuation → [[Arbitrage_Free_Valuation]]
 Value additivity; binomial (lognormal) tree, calibration, backward induction, pathwise, Monte Carlo;

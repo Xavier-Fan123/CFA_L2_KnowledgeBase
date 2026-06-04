@@ -42,26 +42,58 @@ source: Schweser Book 4, Module 25, LOS 25.a-25.q
   expected life as rates approach the exercise region.
 - **Effective convexity**: callable bonds can have **negative** convexity (price compression near the
   call); putable bonds have **positive** convexity.
-- **One-sided durations** (up vs down) and **key-rate durations** better capture asymmetric/non-parallel
-  sensitivity of option bonds.
+- **One-sided durations** (up vs down) better capture the **asymmetric** sensitivity when the option is
+  **near the money**: for a **callable**, one-sided **up**-duration > **down**-duration (price capped on
+  the way down as it nears the call price → less sensitive to rate falls). For a **putable**,
+  **down**-duration > **up**-duration (put floors the price on the way up). **Key-rate durations** isolate
+  sensitivity to specific maturity shifts (shaping risk).
 
 ## Convertible Bonds (25.n-25.q)
-- **Conversion value** = underlying share price × conversion ratio.
-- **Minimum (straight) value** = max(conversion value, straight bond value).
-- **Market conversion price** = convertible price / conversion ratio; **conversion premium** = market
-  conversion price − share price.
-- Components: straight value + value of the call option on the stock (− value of issuer's call, if also
-  callable). Behaves more like the **stock** when deep in-the-money, more like a **bond** when out.
+**Defining features**: bondholder's right to convert debt into a fixed number of shares during the
+conversion period at a preset **conversion price**; **conversion ratio** = par / conversion price.
+Ratio/price are adjusted for stock splits, bonus issues, and above-**threshold** dividends. If also
+**callable**, the issuer can force conversion (**forced conversion**) by calling once the share price is
+well above the conversion price, capping the bondholder's redemption value below the conversion value.
+
+**Value components & measures** (all per the curriculum):
+- **Conversion (parity) value** = underlying share price × conversion ratio.
+- **Minimum (floor) value** = **max(conversion value, straight-bond value)** — else arbitrage (buy the
+  cheap convertible; convert & sell shares, or capture the higher yield).
+- **Market conversion price** = convertible price / conversion ratio (the effective break-even price paid
+  per share by buying the bond and converting).
+- **Market conversion premium per share** = market conversion price − share price.
+- **Market conversion premium ratio** = (market conversion premium per share) / share price. The premium
+  behaves like a **call-option price**: it caps downside at the (fluctuating) straight value — but unlike a
+  true option the floor is **not fixed** (it moves with rates and credit spreads).
+- **Premium over straight value** = (convertible price / straight value) − 1. Higher premium → **less
+  attractive** convertible; it is a **flawed** downside measure because the straight value is not fixed.
+- **Components of convertible value** ≈ straight bond value + **call option on the stock**; for a
+  **callable convertible**, subtract the issuer's call option on the bond (≈ straight + stock call −
+  issuer call). A **putable convertible** adds the put.
+
+**Risk-return spectrum (25.q)** — depends on where the share price sits vs the conversion price:
+
+| Region | Share price vs conversion price | Behaves like | Key drivers |
+|------|------|------|------|
+| **Busted convertible** | Share **well below** | **Bond** (out-of-money call) | rates, credit spread; floor → PV of recovery as S→0 |
+| **Hybrid / mixed** | Share **near** conversion price | Both bond & stock | option time value largest here |
+| **Equity-like** | Share **well above** | **Stock** (in-the-money call; tracks parity) | share price; rates matter little |
+
 - **Worked example (Schweser – BSC):** 7% convertible, price $985, conversion ratio 25, straight value
   $950, stock $35.
   - Conversion value = `25 × $35 = $875`; **minimum value = max($875, $950) = $950**.
-  - Market conversion price = `$985 / 25 = $39.40`; **market conversion premium/share = $39.40 − $35 = $4.40**.
+  - Market conversion price = `$985 / 25 = $39.40`; **market conversion premium/share = $39.40 − $35 = $4.40**;
+    **premium ratio = $4.40 / $35 = 12.6%**; **premium over straight value = $985/$950 − 1 = 3.7%**.
 
 ## Exam Traps
 - Higher vol → **lower** callable, **higher** putable, and **lower OAS**.
 - Apply **min(value, call price)** for calls, **max(value, put price)** for puts at each node.
 - Callable convexity can be **negative**; OAS removes the option to allow apples-to-apples comparison.
 - Convertible minimum value = **max(conversion value, straight value)**.
+- **Busted convertible** = share price **well below** conversion price → trades like a **bond** (driven by
+  rates/credit, not the share). Deep ITM → trades like the **stock**; near the conversion price → hybrid.
+- Callable: one-sided **up**-duration > down-duration; putable: **down** > up. Higher vol still →
+  callable down / putable up / **OAS down**.
 
 ## Q&A
 
@@ -82,3 +114,18 @@ duration `ED = (V− − V+)/(2·V0·Δy)` is **shorter** than the straight bond
 shortens as the call moves in-the-money. Putables stay **positively convex** (the put supports the price
 floor as rates rise).
 Related: [[Term_Structure]]
+
+### 2026-06-04 — Convertible value measures and the risk-return spectrum (25.n-25.q)
+**Q:** A 7% convertible trades at $985 (conversion ratio 25, straight value $950, stock $35). Give
+conversion value, minimum value, market conversion price/premium, premium ratio, and premium over
+straight value. When does the bond act like stock vs like a bond?
+**A:** Conversion (parity) value = `25 × $35 = $875`. **Minimum value = max($875, $950) = $950** (the
+straight value is the floor here). Market conversion price = `$985/25 = $39.40`; market conversion premium
+per share = `$39.40 − $35 = $4.40`; **premium ratio = $4.40/$35 = 12.6%**; **premium over straight value =
+$985/$950 − 1 = 3.7%**. Behavior: when the share is **well above** the conversion price the convertible is
+**equity-like** (tracks parity, rates barely matter); **well below** it is a **busted convertible** acting
+**bond-like** (driven by rates/credit, floor → PV of recovery as S→0); **near** the conversion price it is
+a **hybrid** with the largest option time value. The market conversion premium resembles a call premium
+but the floor (straight value) is **not fixed** — it moves with rates/spreads, so "premium over straight
+value" is a flawed downside gauge.
+Related: [[Credit_Analysis_Models]]

@@ -25,9 +25,29 @@ creates value only when it earns **above its cost of equity**.
   - **Worked example (Schweser):** ROE 14%, r 8%, g 4% → `P/B = (0.14 − 0.04)/(0.08 − 0.04) = 2.5`.
 - Implied growth: solve the single-stage equation given market P/B (21.g).
 
-## Continuing Residual Income (21.h)
-RI is assumed to fade as competition erodes excess returns. A **persistence factor ω** (0 ≤ ω ≤ 1)
-models the decay: ω = 1 → RI persists forever; ω = 0 → RI disappears after the forecast horizon.
+## Multistage RI & Continuing Residual Income (21.f, 21.h)
+- **Multistage RI**: forecast RI explicitly for T periods, then add a **continuing (terminal) residual
+  income** value at the horizon:
+  `V0 = B0 + Σ_{t=1}^{T-1} RI_t/(1+r)^t + [ RI_T / (1 + r − ω) ] / (1+r)^{T-1}`.
+- **Persistence factor ω** (0 ≤ ω ≤ 1) models the decay of terminal RI as competition erodes excess
+  returns:
+  - ω = 1 → RI persists unchanged **forever** (terminal RI is a level perpetuity at the equity charge).
+  - ω = 0 → RI **drops to zero** immediately after the forecast horizon (terminal value = 0).
+  - Higher ω → larger final-stage RI → higher valuation.
+  - **Empirical anchor (curriculum):** Dechow et al. estimated ω ≈ **0.62** (≈ 38%/yr decay) on 1976–1995 data.
+- **Drivers of persistence (Dechow/Bauman):**
+  | Lower ω (RI fades fast) | Higher ω (RI persists) |
+  |---|---|
+  | Extreme accounting ROE | Low dividend payout |
+  | Large special / non-recurring items | High historical RI persistence in the industry |
+  | Large accounting accruals | Strong market-leadership position |
+- A separate multistage variant lets **ROE fade to r** explicitly each period; once ROE = r, RI = 0 and the
+  terminal value is **zero**.
+
+> **Tobin's q** (closely related concept): `q = (market value of debt + equity) / replacement cost of total
+> assets`. Like justified P/B it rises with asset productivity, but it uses **total capital** in the
+> numerator and **replacement cost of total assets** (not equity book value) in the denominator. Theory:
+> q → 1 as economic profits compete away. (Hard to compute — replacement costs are rarely observable.)
 
 ## Comparison to DDM / FCF (21.i)
 - RI recognizes value **earlier** (much of the value is in current book value), so it relies **less on
@@ -46,6 +66,9 @@ models the decay: ω = 1 → RI persists forever; ω = 0 → RI disappears after
 - **Justified P/B = (ROE − g)/(r − g)** — same as the relative-value result.
 - RI puts most value in **current book value**, reducing terminal-value dependence (vs DDM/FCF).
 - **Clean surplus** must hold; OCI items (FX, FVOCI, pension remeasurements) violate it.
+- **Persistence factor** sits in the terminal term as `RI_T/(1 + r − ω)`, NOT `/(r − g)`. ω = 1 → perpetuity
+  of RI; ω = 0 → terminal value zero. Don't confuse ω-decay with the ROE-fades-to-r variant (terminal = 0).
+- **Tobin's q** uses **replacement cost of total assets** and **total capital** — not equity book value.
 
 ## Q&A
 
@@ -65,3 +88,13 @@ translation (CTA), some pension remeasurements, and FVOCI gains/losses. These di
 adjusted for, or the RI model misstates value. (EVA recap: `NOPAT − WACC×capital`; MVA = market − book
 capital.)
 Related: [[Multinational_Operations]]
+
+### 2026-06-04 — Continuing RI and the persistence factor ω
+**Q:** How does the persistence factor enter a multistage RI valuation, and what does ω = 0.62 mean?
+**A:** Forecast RI explicitly through year T−1, then capitalize terminal RI with the persistence factor:
+`V0 = B0 + Σ PV(RI_t) + PV[ RI_T/(1 + r − ω) ]`. **ω = 1** → RI continues unchanged forever; **ω = 0** →
+RI vanishes after the horizon (terminal value 0); higher ω → higher value. The curriculum's empirical
+estimate **ω ≈ 0.62** implies RI decays ~38%/year (mean reversion of ROE toward r). Low payout and high
+industry persistence raise ω; extreme ROE, large special items, and big accruals lower it. Trap: the
+denominator is `(1 + r − ω)`, **not** `(r − g)`.
+Related: [[Free_Cash_Flow_Valuation]]

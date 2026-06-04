@@ -23,6 +23,39 @@ source: Schweser Book 5, Module 38, LOS 38.a-38.l
 | **Historical simulation** | Reprice the current portfolio over actual past returns; read the percentile | No distribution assumption, handles options; but **assumes the past repeats**, limited by sample |
 | **Monte Carlo simulation** | Simulate many returns from assumed distributions | Flexible, handles complex portfolios; **computationally heavy**, model-dependent |
 
+**VaR z-thresholds (normal):** 5% VaR = **1.65σ** below the mean; 1% VaR = **2.33σ** below; 16% VaR = **1σ**
+below (one-standard-deviation move). All three start by **risk decomposition** — mapping holdings to risk
+factors. Parametric & Monte Carlo only need parameter *estimates* (no formal data history required);
+historical simulation *requires* the actual return history.
+
+### Worked example — Parametric (variance-covariance) VaR (38.c)
+Official V9, Module 5. Portfolio = **$150,000,000**, 80% SPY (equity) + 20% SPLB (corp bond).
+**Annual inputs (judgment-adjusted):** E(R_SPY)=10.5%, σ_SPY=20%; E(R_SPLB)=6%, σ_SPLB=8.5%; ρ = −0.06.
+
+1. **Portfolio expected return:** `E(R_P) = 0.8(0.105) + 0.2(0.06) = 0.0960` (9.6%).
+2. **Portfolio volatility:**
+   `σ_P = √[(0.8)²(0.20)² + (0.2)²(0.085)² + 2(0.8)(0.2)(−0.06)(0.20)(0.085)] = 0.15988` (≈16.0%).
+3. **Convert to daily** (250 trading days; divide return by 250, σ by √250):
+   `E(R_P)_daily = 0.096/250 = 0.000384`; `σ_daily = 0.15988/√250 = 0.010112`.
+4. **5% daily VaR** = `[E(R_P)_daily − 1.65·σ_daily]·(−1)·$150m`:
+   - Step 1: `0.010112 × 1.65 = 0.016685`
+   - Step 2: `0.000384 − 0.016685 = −0.016301`
+   - Step 3: flip sign → `0.016301`
+   - Step 4: `0.016301 × $150,000,000 = $2,445,150`.
+
+   **→ Daily 5% VaR ≈ $2,445,150** ("on 5% of days, loss is at least $2.44m").
+- **1% daily VaR:** use 2.33σ → `(0.000384 − 2.33·0.010112)·(−1)·$150m = $3,476,550`.
+- **Annual 5% VaR:** annualize first (E=0.096, σ=0.15988): `(0.096 − 1.65·0.15988)·(−1)·$150m ≈ $25.17m`.
+  **TRAP:** you **cannot** annualize a daily VaR by ×250 or ×√250 — you must re-annualize the mean and σ
+  *then* compute VaR. (Multiplying daily VaR by √250 only works if the expected return is assumed zero.)
+
+### Worked example — Historical simulation VaR (same portfolio)
+Reprice the 80/20 portfolio over each day's *actual* SPY/SPLB returns (e.g., Day 1 = 0.8(0.80%) + 0.2(−0.53%)),
+sort the resulting daily portfolio returns, and read the percentile. Official results (Excel `=percentile`):
+1% VaR = **$2,643,196**; 5% VaR = **$1,622,272**; 16% VaR = **$880,221**. These differ from parametric mainly
+because historical simulation uses the data's own (lower-volatility) distribution and makes **no normality
+assumption** — the actual SPY sample had abnormally low volatility vs the 20% long-run input used above.
+
 ## Advantages & Limitations (38.d)
 - **+**: single, comparable number; widely used; aggregates across positions.
 - **−**: says nothing about the **size of losses beyond VaR**; sensitive to assumptions/look-back;
@@ -51,6 +84,10 @@ source: Schweser Book 5, Module 38, LOS 38.a-38.l
   use **CVaR/expected shortfall** for that.
 - **Parametric VaR is poor for option-heavy portfolios** (non-normal); historical/Monte Carlo handle them.
 - Sensitivity measures give **exposure**, not loss probability; scenario analysis covers tail/multi-factor stress.
+- z-thresholds: **5% → 1.65σ, 1% → 2.33σ, 16% → 1σ**. Higher confidence (1% vs 5%) → larger z → larger VaR.
+- **Never annualize a daily VaR** by ×250 or ×√250. Re-annualize mean (×250) and σ (×√250) *first*, then
+  compute VaR. The √250 shortcut is valid only under a zero-expected-return assumption.
+- Parametric needs only mean + σ (+ correlations); it does **not** require a data history (historical sim does).
 
 ## Q&A
 
@@ -71,4 +108,13 @@ actual past returns and reads the percentile — no distribution assumption and 
 **assumes the past repeats** and is sample-limited. **Monte Carlo** simulates many returns from assumed
 distributions — most flexible for complex/optioned portfolios, but **computationally heavy and
 model-dependent**. So for non-linear (option) payoffs, prefer historical or Monte Carlo over parametric.
+Related: [[Backtesting_and_Simulation]]
+
+### 2026-06-04 — Compute parametric VaR for a two-asset portfolio (worked)
+**Q:** $150m portfolio, 80% equity (E=10.5%, σ=20%) / 20% bond (E=6%, σ=8.5%), ρ=−0.06. Find the daily 5% VaR.
+**A:** (1) `E(R_P)=0.8(0.105)+0.2(0.06)=9.6%`. (2) `σ_P=√[0.8²·0.2²+0.2²·0.085²+2·0.8·0.2·(−0.06)·0.2·0.085]
+=15.99%`. (3) Daily: E=0.096/250=0.0384%, σ=0.1599/√250=1.0112%. (4) 5% VaR = `(0.000384 − 1.65·0.010112)·
+(−1)·$150m = $2,445,150` — on 5% of days the loss is **at least** $2.44m. For 1% VaR swap 1.65→**2.33**
+(→$3.48m). To get the **annual** VaR, re-annualize E and σ first (`0.096 − 1.65·0.15988`)·$150m ≈ **$25.2m** —
+do **not** scale the daily VaR by √250.
 Related: [[Backtesting_and_Simulation]]

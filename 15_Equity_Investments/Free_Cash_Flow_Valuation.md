@@ -41,6 +41,14 @@ source: Schweser Book 3, Module 19, LOS 19.a-19.m
 - **Two/three-stage**: PV of explicit FCF + PV of terminal value (Gordon or exit multiple).
 - Compare to market price → over/under/fairly valued (19.m).
 
+## Non-Operating Assets (19.l)
+FCFF/FCFE value only the **operating** assets. If the firm holds significant **non-operating assets** —
+excess cash, excess marketable securities, land held for investment, financial (non-subsidiary) stock/bond
+holdings — **add their market value** to the DCF-based value:
+`Firm value = value of operating assets (FCFF DCF) + value of non-operating assets`.
+Revalue any such securities carried at book value to **current market value**. General rule: any asset
+excluded from the projected cash flows must be added back separately.
+
 ## Worked Example — Two-Stage FCFF
 FCFF0 = $100m, grows 10% for 3 years, then 4% forever. WACC = 9%, market value of debt = $300m, 50m shares.
 - Stage-1 FCFF: yr1 110, yr2 121, yr3 133.1.
@@ -57,6 +65,8 @@ FCFF0 = $100m, grows 10% for 3 years, then 4% forever. WACC = 9%, market value o
 - Add **after-tax interest** to get FCFF (not pre-tax).
 - **Leverage changes affect FCFE, not FCFF.** Dividends/buybacks affect **neither**.
 - WCInv excludes cash and short-term debt; an **increase** in working capital **reduces** free cash flow.
+- **Add non-operating assets** (excess cash, investment land, financial holdings at market value) to the
+  FCFF/FCFE-derived value — the DCF only captures operating assets.
 
 ## Q&A
 

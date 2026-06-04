@@ -30,9 +30,10 @@ Why banks differ; Basel III (CET1, LCR, NSFR); **CAMELS**; insurer combined rati
 Quality spectrum; earnings persistence and accruals; mean reversion; cash-flow/balance-sheet quality;
 Beneish M-score.
 
-## Module 12 — Integration of FSA Techniques
-Apply an analytical framework; identify reporting choices/biases; make comparability adjustments
-(covered within [[Quality_of_Financial_Reports]]).
+## Module 12 — Integration of FSA Techniques → [[Integration_of_FSA_Techniques]]
+Six-step framework; extended DuPont (remove associate equity income/investment); asset base & goodwill;
+burdensome vs non-burdensome leverage; segment capital allocation (CapEx%/Assets%); accruals ratio
+(balance-sheet & cash-flow) and earnings quality; CGO; market-value decomposition (implied standalone P/E).
 
 ## Cross-cutting Exam Traps
 - Equity method vs consolidation → same net income, different ratios.

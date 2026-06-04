@@ -54,6 +54,34 @@ source: Schweser Book 2, Module 9, LOS 9.a-9.j
 - Current rate method **preserves financial ratios** computed in local currency; temporal distorts them
   (mixes current and historical rates).
 
+## Worked Example — Same Balance Sheet, Two Methods (LOS 9.e)
+*(curriculum Amerco/Spanco; functional vs presentation differ; rate falls from 1.00 H to 0.80 C)*
+
+Subsidiary BS (in US$, the local currency here): Cash 3,000; Inventory 12,000; Notes payable 10,000;
+Common stock 5,000 (issued at the 1.00 historical rate). Rate moves to **0.80** at period-end.
+
+**Current rate method (all assets & liabilities @ current 0.80; equity @ historical):**
+| Item | Rate | Δ in presentation value |
+|---|---|---|
+| Cash | 0.80 C | −600 |
+| Inventory | 0.80 C | −2,400 |
+| Notes payable | 0.80 C | +1,000 (liability shrinks) |
+| **Net = CTA → equity (OCI)** | | **−2,000 loss** |
+
+**Temporal method (only MONETARY items @ current; inventory & equity @ historical):**
+| Item | Rate | Δ in presentation value |
+|---|---|---|
+| Cash | 0.80 C | −600 |
+| Inventory | **1.00 H** | 0 (non-monetary, held at historical) |
+| Notes payable | 0.80 C | +1,000 |
+| **Net = remeasurement → net income** | | **+400 gain** |
+
+**Read-through:** with a **net asset** exposure and a **falling** rate, the current rate method books a
+**−2,000 CTA loss in equity**. Switching to temporal freezes inventory at historical cost, leaving a
+**net monetary liability** position (notes payable 10,000 > cash 3,000) → the same rate fall produces a
+**+400 remeasurement gain in net income**. Same facts, opposite sign, different statement — the core
+LOS 9.e/9.f trap.
+
 ## Other Effects (9.g, 9.h, 9.i)
 - **Hyperinflationary** economies (US GAAP): use temporal (functional = parent's). IFRS: restate local
   statements for inflation, then translate at the **current** rate.

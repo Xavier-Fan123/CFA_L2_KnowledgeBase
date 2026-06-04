@@ -56,6 +56,23 @@ source: Schweser Book 1, Module 6, LOS 6.a-6.l
 - **Professor's note trap:** capital (K) does **not** appear — capital deepening still occurs in steady
   state but does **not** raise the growth rate. In steady state MPK = Y/K is constant and output per
   worker grows at θ/(1−α).
+- On the steady-state path the **marginal product of capital = the real interest rate** of the economy and
+  is constant (= αY/K for Cobb-Douglas), even though k = K/L keeps rising at θ/(1−α). (Official curriculum.)
+
+**Endogenous growth model formulas** (official curriculum, Reading 6, Eq. 12):
+- Production function is a **straight line** (constant returns to broad/knowledge capital, no diminishing
+  returns at the economy level): `ye = c · ke`, where `c` is the constant economy-wide MPK and the
+  output-to-capital ratio is fixed at `c`. (Contrast: neoclassical function curves and flattens.)
+- Growth rate of output per capita: **`Δye/ye = Δke/ke = s·c − δ − n`** (s = saving rate, c = output/capital
+  ratio, δ = depreciation rate, n = labor-force growth). This is **both** the short-run and long-run rate, so
+  a **higher saving rate `s` permanently raises growth** — the key result that distinguishes endogenous from
+  neoclassical theory.
+- **Worked example (official, Example 12):** s rises 20% → 23.5%, c = 0.7040, δ = 10%, n = 1%.
+  New per-capita growth `= 0.235 × 0.7040 − 0.10 − 0.01 = 0.0554 = 5.54%` (vs prior 3.08%). The 2.46% faster
+  growth compounds: after 10 years per-capita income is `exp(0.0246 × 10) = exp(0.246) ≈ 1.279` → **~28%
+  higher, and permanently so** (no diminishing returns), versus only a temporary lift in the Solow model.
+- Implication: with constant/increasing returns to knowledge capital, **incomes need NOT converge** —
+  developed economies can keep growing as fast as or faster than developing ones.
 
 ## Convergence Hypotheses (6.j)
 - **Absolute convergence**: all countries converge to the same per-capita income level. (Not supported.)
@@ -96,6 +113,29 @@ after which extra capital adds ~nothing. Technological progress raises **TFP (A)
 whole function up**, so it keeps adding output without bound → it is the only source of **sustained**
 per-capita growth in the neoclassical model. Developed economies (high K/L) gain little from deepening;
 developing economies (low K/L) can still gain in the short run.
+
+### 2026-06-04 — Endogenous growth model: formula and why saving matters permanently
+**Q:** What is the endogenous-growth-model growth equation, and why does a higher saving rate raise growth
+permanently there but only temporarily in the Solow model?
+**A:** The endogenous model uses a **linear** production function `ye = c·ke` (constant economy-wide MPK = c,
+no diminishing returns to broad/knowledge capital from R&D externalities). Per-capita growth is
+**`Δye/ye = s·c − δ − n`** (saving rate × output-capital ratio − depreciation − labor growth), which is both
+the short- and long-run rate. Because there are **no diminishing returns**, a higher `s` shifts this rate up
+**permanently**. In the **neoclassical/Solow** model, diminishing MPK means a higher `s` only lifts growth
+during the transition to a new steady state, after which growth reverts to `θ/(1−α)` (saving changes the
+**level**, not the long-run **rate**). Official Example 12: s 20%→23.5%, c=0.704, δ=10%, n=1% gives
+`0.235×0.704 − 0.10 − 0.01 = 5.54%`, ~2.46% above the old 3.08%, compounding to ~28% higher income after 10y.
+Related: [[Economics_Overview]]
+
+### 2026-06-04 — Two methods to forecast potential GDP growth
+**Q:** What are the two growth-accounting ways to estimate the growth rate of potential GDP?
+**A:** (1) **Growth-accounting equation** (from the Cobb-Douglas function):
+`%ΔY = %ΔTFP + α·%ΔK + (1−α)·%ΔL`, where α and (1−α) are capital's and labor's income shares. (2)
+**Labor-productivity approach:** `growth in potential GDP = long-term growth of the labor force + long-term
+growth of labor productivity`. Method (2) is often preferred in practice because labor-productivity trends
+are more stable/observable than a separately estimated TFP residual. Trap: TFP is never measured directly —
+it is the **residual** left after subtracting the weighted input growth from output growth.
+Related: [[Economics_Overview]]
 
 ### 2026-06-03 — Three convergence hypotheses
 **Q:** Distinguish absolute, conditional, and club convergence.

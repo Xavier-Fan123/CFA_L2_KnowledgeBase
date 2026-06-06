@@ -8,19 +8,13 @@ source: Schweser Book 1, Module 1.3, LOS 1.h
 
 # Breusch-Pagan (BP) Test
 
-Detects **conditional heteroskedasticity** — whether residual variance is related to the level of the
-independent variables. Core idea: **if the size of the residuals can be explained by the regressors,
-heteroskedasticity is present.**
+Detects **conditional heteroskedasticity** — whether residual variance is related to the level of the independent variables. Core idea: **if the size of the residuals can be explained by the regressors, heteroskedasticity is present.**
 
 ## Construction Steps
 
-1. **Run the original regression, save residuals.**
-   `Yᵢ = b₀ + b₁X₁ᵢ + ... + bₖXₖᵢ + εᵢ` → obtain `ε̂ᵢ`.
-2. **Auxiliary regression: regress the SQUARED residuals on the original regressors.**
-   `ε̂ᵢ² = a₀ + a₁X₁ᵢ + ... + aₖXₖᵢ + uᵢ`
-   If the regressors significantly explain the squared residuals, variance is tied to X → heteroskedasticity.
-3. **Test statistic** (R² from the auxiliary regression):
-   `BP = n × R²`
+1. **Run the original regression, save residuals.** `Yᵢ = b₀ + b₁X₁ᵢ + ... + bₖXₖᵢ + εᵢ` → obtain `ε̂ᵢ`.
+2. **Auxiliary regression: regress the SQUARED residuals on the original regressors.** `ε̂ᵢ² = a₀ + a₁X₁ᵢ + ... + aₖXₖᵢ + uᵢ` If the regressors significantly explain the squared residuals, variance is tied to X → heteroskedasticity.
+3. **Test statistic** (R² from the auxiliary regression): `BP = n × R²`
 4. **Compare to χ² critical value.**
 
 ## Test Specification
@@ -43,20 +37,16 @@ heteroskedasticity is present.**
 
 ## Correction
 
-Use **White-corrected (robust / heteroskedasticity-consistent) standard errors**, then recompute
-t-stats with the original coefficients → see [[Regression_Assumption_Violations]].
+Use **White-corrected (robust / heteroskedasticity-consistent) standard errors**, then recompute t-stats with the original coefficients → see [[Regression_Assumption_Violations]].
 
 ## Exam Traps
 - Dependent variable in the auxiliary regression is the **squared** residual, not the residual.
 - Statistic is `n × R²`, χ² with **k** df, **one-tailed**.
-- Don't confuse with **Breusch-Godfrey (BG)** = serial correlation (F-distribution), or
-  **Durbin-Watson** = single-lag serial correlation.
+- Don't confuse with **Breusch-Godfrey (BG)** = serial correlation (F-distribution), or **Durbin-Watson** = single-lag serial correlation.
 
 ## Q&A
 
 ### 2026-06-03 — How do you construct the BP test?
 **Q:** How is the BP test built?
-**A:** Regress the squared OLS residuals on the original independent variables; statistic `BP = n × R²`,
-χ² with k df, one-tailed; BP > critical → conditional heteroskedasticity. Example: n=60, R²=8% →
-4.8 > 3.841 → reject H₀. Correct with White standard errors.
+**A:** Regress the squared OLS residuals on the original independent variables; statistic `BP = n × R²`, χ² with k df, one-tailed; BP > critical → conditional heteroskedasticity. Example: n=60, R²=8% → 4.8 > 3.841 → reject H₀. Correct with White standard errors.
 Related: [[Regression_Assumption_Violations]]

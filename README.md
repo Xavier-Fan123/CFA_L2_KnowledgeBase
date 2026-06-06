@@ -33,7 +33,10 @@ CFA_L2_KnowledgeBase/
 ├── 00_Inbox/                       # Inbox: knowledge gaps, incoming material
 │   └── knowledge_gaps.md
 ├── 10_Atlas/                       # Index
-│   └── Master_Index.md             # Map of Content with all WikiLinks
+│   ├── Master_Index.md             # Map of Content with all WikiLinks
+│   ├── LOS_Coverage_Matrix.md      # Generated coverage/maintenance matrix
+│   ├── Active_Recall_Index.md      # Generated Q&A prompt index
+│   └── Exam_Traps_Index.md         # Generated trap index
 │
 ├── 11_Quantitative_Methods/        # Quantitative Methods
 ├── 12_Economics/                   # Economics
@@ -48,6 +51,7 @@ CFA_L2_KnowledgeBase/
 │
 ├── 90_QA_Log/                      # Chronological Q&A log across all topics
 │   └── QA_Log.md
+├── scripts/                        # Optional maintenance scripts
 │
 ├── CLAUDE.md                       # Claude Code behavioral rules (auto-loaded)
 └── README.md
@@ -89,6 +93,21 @@ Every wiki note follows a standardized structure:
 1. Open this folder in Claude Code — `CLAUDE.md` loads automatically; just ask questions.
 2. Each time you ask a CFA question, Claude searches this KB first, answers with `[[WikiLink]]` citations, and writes valuable Q&A back into the relevant note.
 3. (Optional) Open this folder in Obsidian for the WikiLink graph and full-text search.
+
+## Maintenance
+
+Optional generated review indexes live in `10_Atlas/`:
+
+- `LOS_Coverage_Matrix.md`: coverage and maintenance view by topic/note.
+- `Active_Recall_Index.md`: every saved Q&A heading as a review prompt.
+- `Exam_Traps_Index.md`: all `## Exam Traps` bullets in one final-review sheet.
+
+Regenerate and check them with:
+
+```powershell
+python scripts\generate_atlas.py
+python scripts\kb_quality_check.py
+```
 
 ## Inspired By
 

@@ -11,6 +11,8 @@ Map of Content for the whole knowledge base. One WikiLink line per note. Registe
 
 **Cross-topic:** [[Formula_Cheat_Sheet]] — final-review formula sheet aggregating every topic area.
 
+**Review control:** [[LOS_Coverage_Matrix]] | [[Practice_Coverage_Matrix]] | [[Active_Recall_Index]] | [[Exam_Traps_Index]]
+
 ## 11 — Quantitative Methods
 - [[Quantitative_Methods_Overview]]
 - [[Multiple_Regression]] · [[Model_Misspecification]] · [[Regression_Assumption_Violations]] · [[Breusch_Pagan_Test]] · [[Logistic_Regression]] · [[Time_Series_Analysis]] · [[Machine_Learning]] · [[Big_Data_Projects]]
@@ -68,11 +70,6 @@ Map of Content for the whole knowledge base. One WikiLink line per note. Registe
 | 19 Portfolio Management | 7 | Evergreen |
 | 20 Ethics | 4 | Evergreen — full R40–R42 + GIPS; 2024 revisions, I(E) Competence |
 
-All ten topic areas now have evergreen concept coverage grounded in the 2026 Schweser LOS map. Each note
-carries module/LOS-level structure, key formulas, and exam traps. **As of the 2026-06-03 enrichment pass,
-every detail note also has at least one worked numeric example and a populated `## Q&A` section** (exam-style
-questions, Schweser-verified) — bringing the nine non-Quant areas up to the depth of the Quant notes.
-Remaining optional work: import official end-of-chapter / mock vignettes, and add a cross-topic formula
-cheat-sheet and a personal error log (see `00_Inbox/knowledge_gaps.md`).
+All ten topic areas now have evergreen concept coverage grounded in the 2026 Schweser LOS map. Each note carries module/LOS-level structure, key formulas, and exam traps. **As of the 2026-06-03 enrichment pass, every detail note also has at least one worked numeric example and a populated `## Q&A` section** (exam-style questions, Schweser-verified). Official EOC/module quiz/mock source files are inventoried in [[Practice_Coverage_Matrix]]; full vignettes are not copied into the note set.
 
-See [[QA_Log]] for the chronological Q&A timeline and `00_Inbox/knowledge_gaps.md` for detected gaps.
+See [[LOS_Coverage_Matrix]] for maintenance coverage, [[Practice_Coverage_Matrix]] for local EOC/mock source coverage, [[Active_Recall_Index]] for review prompts, [[Exam_Traps_Index]] for final-pass traps, [[QA_Log]] for the chronological Q&A timeline, and `00_Inbox/knowledge_gaps.md` for detected gaps.

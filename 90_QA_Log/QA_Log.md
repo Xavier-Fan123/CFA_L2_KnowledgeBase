@@ -7,8 +7,7 @@ status: evergreen
 
 # Q&A Log
 
-Chronological index of every saved Q&A across all topics (newest first).
-Each line: `YYYY-MM-DD [Topic] question → [[Note]]`
+Chronological index of every saved Q&A across all topics (newest first). Each line: `YYYY-MM-DD [Topic] question → [[Note]]`
 
 **2026-06-03 — Bulk enrichment pass: worked examples + exam Q&A added to all nine non-Quant topic areas (Books 1–5, Schweser-verified). One index line per enriched note below.**
 

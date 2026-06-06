@@ -8,9 +8,7 @@ source: Aggregated from all KB topic notes + 2026 Schweser Quicksheet
 
 # CFA Level II — Cross-Topic Formula Cheat Sheet
 
-Final-review aggregation of the highest-yield formulas across all ten topic areas. Each section links to
-the detail note for derivations, worked examples, and exam traps. Formulas verified against the 2026
-Schweser Notes / Quicksheet during the 2026-06-03 enrichment pass.
+Final-review aggregation of the highest-yield formulas across all ten topic areas. Each section links to the detail note for derivations, worked examples, and exam traps. Formulas verified against the 2026 Schweser Notes / Quicksheet during the 2026-06-03 enrichment pass.
 
 > Convention: `r` = required return / discount rate; `t` = tax rate; `g` = growth; `σ` = volatility/std dev.
 
@@ -101,6 +99,4 @@ Schweser Notes / Quicksheet during the 2026-06-03 enrichment pass.
 ---
 
 ## How to use this sheet
-- This is a **recall** tool, not a substitute for the detail notes — every line links to a note with the
-  derivation, a worked example, and the exam traps. Drill the formula here, then click through if it doesn't
-  click. For computational topics, the worked examples in the linked notes show the plug-and-chug.
+- This is a **recall** tool, not a substitute for the detail notes — every line links to a note with the derivation, a worked example, and the exam traps. Drill the formula here, then click through if it doesn't click. For computational topics, the worked examples in the linked notes show the plug-and-chug.

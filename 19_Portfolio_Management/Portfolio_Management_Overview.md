@@ -11,12 +11,10 @@ source: Schweser Book 5 (Modules 34-39)
 Six modules spanning macro-to-markets, active management theory, products, and risk.
 
 ## Module 34 — Economics and Investment Markets → [[Economics_and_Investment_Markets]]
-Discount-rate framework (rates / cash flows / risk premium); Taylor rule; business-cycle effects on
-curve, credit spreads, multiples; breakeven inflation; consumption-hedging ERP.
+Discount-rate framework (rates / cash flows / risk premium); Taylor rule; business-cycle effects on curve, credit spreads, multiples; breakeven inflation; consumption-hedging ERP.
 
 ## Module 35 — Active Portfolio Management → [[Active_Portfolio_Management]]
-Active return; Sharpe vs Information Ratio; fundamental law IR = IC × √BR × TC; optimal active risk;
-breadth and market timing.
+Active return; Sharpe vs Information Ratio; fundamental law IR = IC × √BR × TC; optimal active risk; breadth and market timing.
 
 ## Module 36 — Exchange-Traded Funds → [[Exchange_Traded_Funds]]
 Creation/redemption & APs; tracking error; bid-ask spread; premium/discount; costs; risks; uses.
@@ -28,8 +26,7 @@ APT and arbitrage; macro/fundamental/statistical models; Carhart; active risk = 
 VaR (parametric/historical/Monte Carlo); CVaR & extensions; sensitivity & scenario measures; constraints.
 
 ## Module 39 — Backtesting & Simulation → [[Backtesting_and_Simulation]]
-Rolling-window backtests; survivorship/look-ahead/data-snooping biases; historical vs Monte Carlo
-simulation; sensitivity analysis.
+Rolling-window backtests; survivorship/look-ahead/data-snooping biases; historical vs Monte Carlo simulation; sensitivity analysis.
 
 ## Cross-cutting Exam Traps
 - IR = active return/active risk; IR = IC × √BR × TC.

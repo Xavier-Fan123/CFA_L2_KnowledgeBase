@@ -10,9 +10,7 @@ source: Schweser Book 1, Module 1.4, LOS 1.m
 
 ## Why It Exists
 
-Used when the **dependent variable is qualitative** — usually **binary** (0/1): probability of default,
-dividend increase, merger, monetary tightening. Ordinary (OLS) regression is inappropriate because its
-fitted values can be **< 0 or > 1**, which are illogical for a probability.
+Used when the **dependent variable is qualitative** — usually **binary** (0/1): probability of default, dividend increase, merger, monetary tightening. Ordinary (OLS) regression is inappropriate because its fitted values can be **< 0 or > 1**, which are illogical for a probability.
 
 ## The Two Transforms: probability → odds → log odds
 
@@ -34,11 +32,8 @@ The logit model uses **log odds as the dependent variable**:
 ## Interpreting Coefficients
 
 - **Intercept b₀**: log odds when all X = 0.
-- **Slope bⱼ** (official wording): the change in the **log odds** of the event per 1-unit change in Xⱼ,
-  holding others constant.
-- It is **NOT** a direct change in probability — the model is non-linear, so the probability change from a
-  1-unit move depends on the curvature at that point. Curriculum method: compute probability at the
-  **average** X's, then bump one X by 1 unit and recompute; the difference is that variable's marginal effect.
+- **Slope bⱼ** (official wording): the change in the **log odds** of the event per 1-unit change in Xⱼ, holding others constant.
+- It is **NOT** a direct change in probability — the model is non-linear, so the probability change from a 1-unit move depends on the curvature at that point. Curriculum method: compute probability at the **average** X's, then bump one X by 1 unit and recompute; the difference is that variable's marginal effect.
 
 ## From Coefficients to Probability
 
@@ -59,8 +54,7 @@ Worked example (36 firms, dividend increase): model `ŷ = −3.445 + 0.332·Age 
    - Log-likelihood (LL) is always **negative**; **closer to 0 = better fit**.
    - LR is **χ² with q df**. H₀: the dropped coefficients are all 0. LR > critical → reject H₀.
    - Example: LL_unrestricted = −212.44, LL_restricted = −216.22, q=2 → LR = 2×3.78 = 7.56 > 5.99 → reject.
-3. **Goodness of fit**: no traditional R²; software gives **pseudo-R²**, usable only to compare models with
-   the **same dependent variable**.
+3. **Goodness of fit**: no traditional R²; software gives **pseudo-R²**, usable only to compare models with the **same dependent variable**.
 
 ## OLS vs Logit (one-page)
 
@@ -83,10 +77,5 @@ Worked example (36 firms, dividend increase): model `ŷ = −3.445 + 0.332·Age 
 
 ### 2026-06-02 — What is logistic regression and how is it tested?
 **Q:** Explain logistic regression in detail and how to test it.
-**A:** A logit model is used when the dependent variable is binary; OLS fails because fitted values can
-fall outside [0,1]. It models **log odds** `ln[p/(1−p)] = b₀+ΣbⱼXⱼ`, estimated by **MLE**, residuals
-**logistic (fat-tailed)**. Slope = change in log odds per unit X (probability effect must be computed
-pointwise at average X). Recover probability via `p = 1/(1+e^(−ŷ))`. Testing: individual p-values; nested
-models via the **Likelihood Ratio (LR) test** `LR = 2(LL_unrestricted − LL_restricted)`, χ² with q df
-(example 7.56 > 5.99 → reject); fit via pseudo-R² (same-DV only). Key trap: LR test, not F-test.
+**A:** A logit model is used when the dependent variable is binary; OLS fails because fitted values can fall outside [0,1]. It models **log odds** `ln[p/(1−p)] = b₀+ΣbⱼXⱼ`, estimated by **MLE**, residuals **logistic (fat-tailed)**. Slope = change in log odds per unit X (probability effect must be computed pointwise at average X). Recover probability via `p = 1/(1+e^(−ŷ))`. Testing: individual p-values; nested models via the **Likelihood Ratio (LR) test** `LR = 2(LL_unrestricted − LL_restricted)`, χ² with q df (example 7.56 > 5.99 → reject); fit via pseudo-R² (same-DV only). Key trap: LR test, not F-test.
 Related: [[Regression_Assumption_Violations]]

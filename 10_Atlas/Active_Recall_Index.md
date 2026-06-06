@@ -1,0 +1,175 @@
+---
+aliases: [Active Recall Index, Q&A Index]
+tags: [CFA-L2, atlas, active-recall]
+date: 2026-06-05
+status: evergreen
+source: Generated from note Q&A headings by scripts/generate_atlas.py
+---
+
+# Active Recall Index
+
+Each prompt links back to the note that contains the full answer. Use this as a compact review queue before drilling the underlying note.
+
+Total prompts: **132**.
+
+## 11 Quantitative Methods
+
+- 2026-06-04 — Precision, recall, accuracy, F1 from a confusion matrix -> [[Big_Data_Projects]]
+- 2026-06-04 — How is unstructured text turned into model-ready data? -> [[Big_Data_Projects]]
+- 2026-06-03 — How do you construct the BP test? -> [[Breusch_Pagan_Test]]
+- 2026-06-02 — What is logistic regression and how is it tested? -> [[Logistic_Regression]]
+- 2026-06-04 — Bias error vs. variance error, and how to fix overfitting -> [[Machine_Learning]]
+- 2026-06-04 — Which ML algorithm fits which task? -> [[Machine_Learning]]
+- 2026-06-01 — Why does omitting a key variable cause heteroskedasticity and serial correlation? -> [[Model_Misspecification]]
+- 2026-06-02 — Why does inappropriate variable scaling cause heteroskedasticity and multicollinearity? -> [[Model_Misspecification]]
+- 2026-06-04 — How do R², adjusted R², AIC and BIC differ for model selection? -> [[Multiple_Regression]]
+- 2026-06-04 — How is the nested-model joint F-test constructed? -> [[Multiple_Regression]]
+- 2026-06-04 — How do you interpret a dummy-variable regression? -> [[Multiple_Regression]]
+- 2026-06-03 — How do you construct the Breusch-Pagan test? -> [[Regression_Assumption_Violations]]
+- 2026-06-03 — How does the White method correct heteroskedasticity (the principle)? -> [[Regression_Assumption_Violations]]
+- 2026-06-03 — What is covariance stationary? -> [[Time_Series_Analysis]]
+- 2026-06-03 — Unit root / Dickey-Fuller test / first differencing -> [[Time_Series_Analysis]]
+- 2026-06-04 — How do you test and correct for seasonality? -> [[Time_Series_Analysis]]
+- 2026-06-04 — When can you regress one time series on another (cointegration)? -> [[Time_Series_Analysis]]
+- 2026-06-04 — How do you compute one- and two-period AR(1) forecasts, and test the AR model's fit? -> [[Time_Series_Analysis]]
+- 2026-06-04 — What is ARCH? -> [[Time_Series_Analysis]]
+
+## 12 Economics
+
+- 2026-06-03 — Marking a forward to market: which rate and which side? -> [[Currency_Exchange_Rates]]
+- 2026-06-03 — Why does the carry trade have negative skew? -> [[Currency_Exchange_Rates]]
+- 2026-06-04 — Forward points: how do you build the all-in forward rate? -> [[Currency_Exchange_Rates]]
+- 2026-06-04 — Real interest rate parity vs the international Fisher effect -> [[Currency_Exchange_Rates]]
+- 2026-06-03 — Mundell-Fleming: policy effects on the exchange rate -> [[Currency_Exchange_Rates]]
+- 2026-06-03 — Solow steady-state growth rate: per-capita vs total -> [[Economic_Growth]]
+- 2026-06-03 — Capital deepening vs technological progress -> [[Economic_Growth]]
+- 2026-06-04 — Endogenous growth model: formula and why saving matters permanently -> [[Economic_Growth]]
+- 2026-06-04 — Two methods to forecast potential GDP growth -> [[Economic_Growth]]
+- 2026-06-03 — Three convergence hypotheses -> [[Economic_Growth]]
+
+## 13 Financial Statement Analysis
+
+- 2026-06-03 — Combined ratio: what does it tell you about a P&C insurer? -> [[Analysis_of_Financial_Institutions]]
+- 2026-06-03 — LCR vs NSFR: what does each capture? -> [[Analysis_of_Financial_Institutions]]
+- 2026-06-03 — Total periodic pension cost and IFRS vs US GAAP allocation -> [[Employee_Compensation]]
+- 2026-06-03 — Effect of lowering the discount rate on the DB plan -> [[Employee_Compensation]]
+- 2026-06-04 — How do you adjust ROE/DuPont for an equity-method associate? -> [[Integration_of_FSA_Techniques]]
+- 2026-06-04 — Balance-sheet vs. cash-flow accruals ratio and earnings quality -> [[Integration_of_FSA_Techniques]]
+- 2026-06-04 — How is implied (standalone) P/E from market value decomposition computed? -> [[Integration_of_FSA_Techniques]]
+- 2026-06-03 — Full vs partial goodwill: which ratios change, and how? -> [[Intercorporate_Investments]]
+- 2026-06-03 — Equity method vs consolidation: same income, different ratios? -> [[Intercorporate_Investments]]
+- 2026-06-04 — When must a sponsor consolidate an SPE/VIE, and why does it matter? -> [[Intercorporate_Investments]]
+- 2026-06-03 — Temporal method, net monetary liability, weakening currency → gain? -> [[Multinational_Operations]]
+- 2026-06-03 — Which translation method preserves financial ratios? -> [[Multinational_Operations]]
+- 2026-06-03 — Why do high accruals signal low earnings quality? -> [[Quality_of_Financial_Reports]]
+- 2026-06-03 — Reporting quality vs earnings quality -> [[Quality_of_Financial_Reports]]
+- 2026-06-04 — Is the auditor's opinion a good source of information about risk? -> [[Quality_of_Financial_Reports]]
+
+## 14 Corporate Issuers
+
+- 2026-06-03 — Spin-off vs split-off vs equity carve-out -> [[Corporate_Restructurings]]
+- 2026-06-03 — Computing the takeover premium -> [[Corporate_Restructurings]]
+- 2026-06-04 — Sum-of-the-parts spin-off value -> [[Corporate_Restructurings]]
+- 2026-06-04 — Is the restructuring material? (10% of EV) -> [[Corporate_Restructurings]]
+- 2026-06-04 — How a debt-funded acquisition shifts the WACC weights -> [[Corporate_Restructurings]]
+- 2026-06-03 — Unlever and relever beta (pure-play / Hamada) -> [[Cost_of_Capital]]
+- 2026-06-03 — Country risk premium for an emerging market -> [[Cost_of_Capital]]
+- 2026-06-04 — Grinold-Kroner forward-looking ERP -> [[Cost_of_Capital]]
+- 2026-06-04 — Private-company cost of equity: expanded CAPM vs build-up -> [[Cost_of_Capital]]
+- 2026-06-04 — Fama-French factors -> [[Cost_of_Capital]]
+- 2026-06-03 — Is a buyback accretive or dilutive to EPS? -> [[Dividends_and_Share_Repurchases]]
+- 2026-06-03 — Effective tax rate under double taxation -> [[Dividends_and_Share_Repurchases]]
+- 2026-06-03 — Principal-agent vs principal-principal conflict -> [[ESG_and_Corporate_Governance]]
+- 2026-06-03 — What does "materiality" mean in ESG integration? -> [[ESG_and_Corporate_Governance]]
+- 2026-06-04 — ESG integration: equity vs fixed income, and information sources -> [[ESG_and_Corporate_Governance]]
+
+## 15 Equity Investments
+
+- 2026-06-03 — H-model worked example -> [[Dividend_Discount_Models]]
+- 2026-06-03 — Justified leading vs trailing P/E -> [[Dividend_Discount_Models]]
+- 2026-06-03 — Perceived vs true mispricing -> [[Equity_Valuation_Process]]
+- 2026-06-03 — Choosing a valuation model -> [[Equity_Valuation_Process]]
+- 2026-06-03 — Why does leverage affect FCFE but not FCFF? -> [[Free_Cash_Flow_Valuation]]
+- 2026-06-03 — Getting FCFF from CFO vs from EBIT -> [[Free_Cash_Flow_Valuation]]
+- 2026-06-03 — Why use the harmonic mean to average P/Es? -> [[Market_Based_Valuation]]
+- 2026-06-03 — Why EV/EBITDA over P/E when capital structures differ? -> [[Market_Based_Valuation]]
+- 2026-06-04 — P/CF: which "cash flow" and a worked calc -> [[Market_Based_Valuation]]
+- 2026-06-04 — Justified dividend yield and the dividend rate -> [[Market_Based_Valuation]]
+- 2026-06-03 — Combining DLOC and DLOM (worked) -> [[Private_Company_Valuation]]
+- 2026-06-03 — Which discount rate model for a small private firm? -> [[Private_Company_Valuation]]
+- 2026-06-04 — Excess Earnings Method worked example -> [[Private_Company_Valuation]]
+- 2026-06-03 — Why does RI rely less on terminal value than DDM/FCF? -> [[Residual_Income]]
+- 2026-06-03 — Clean surplus violations -> [[Residual_Income]]
+- 2026-06-04 — Continuing RI and the persistence factor ω -> [[Residual_Income]]
+
+## 16 Fixed Income
+
+- 2026-06-03 — Equilibrium vs arbitrage-free term-structure models -> [[Arbitrage_Free_Valuation]]
+- 2026-06-03 — Monte Carlo vs binomial tree: which and when? -> [[Arbitrage_Free_Valuation]]
+- 2026-06-03 — How does higher rate volatility move callable, putable, and OAS? -> [[Bonds_With_Embedded_Options]]
+- 2026-06-03 — Why can a callable bond have negative convexity? -> [[Bonds_With_Embedded_Options]]
+- 2026-06-04 — Convertible value measures and the risk-return spectrum (25.n-25.q) -> [[Bonds_With_Embedded_Options]]
+- 2026-06-03 — Structural vs reduced-form credit models -> [[Credit_Analysis_Models]]
+- 2026-06-03 — Computing CVA / the credit spread -> [[Credit_Analysis_Models]]
+- 2026-06-03 — CDS upfront premium and mark-to-market -> [[Credit_Default_Swaps]]
+- 2026-06-03 — Cheapest-to-deliver and the CDS payout -> [[Credit_Default_Swaps]]
+- 2026-06-03 — When does "riding the yield curve" beat buy-and-hold? -> [[Term_Structure]]
+- 2026-06-03 — Liquidity preference vs pure expectations -> [[Term_Structure]]
+- 2026-06-04 — Bear flattening vs bull steepening vs bull flattening (23.k) -> [[Term_Structure]]
+
+## 17 Derivatives
+
+- 2026-06-03 — Par swap rate from discount factors (worked) -> [[Forward_Commitments]]
+- 2026-06-03 — How do income and costs move the forward price? -> [[Forward_Commitments]]
+- 2026-06-04 — FRA notation and valuation at time g (worked) -> [[Forward_Commitments]]
+- 2026-06-04 — Valuing an interest-rate swap after rates move -> [[Forward_Commitments]]
+- 2026-06-04 — Currency vs equity swap pricing shortcuts -> [[Forward_Commitments]]
+- 2026-06-03 — One-period binomial call (worked) -> [[Options_Valuation]]
+- 2026-06-03 — Reading BSM: N(d1), N(d2), and the put -> [[Options_Valuation]]
+- 2026-06-04 — BSM d1/d2 and the carry-adjusted form -> [[Options_Valuation]]
+- 2026-06-04 — Black model, IR options, and swaptions -> [[Options_Valuation]]
+- 2026-06-04 — Delta-hedge sizing and gamma management -> [[Options_Valuation]]
+
+## 18 Alternative Investments
+
+- 2026-06-03 — Roll return in contango vs backwardation -> [[Commodities]]
+- 2026-06-03 — Theories of futures returns -> [[Commodities]]
+- 2026-06-04 — How does commodity index construction affect returns? -> [[Commodities]]
+- 2026-06-03 — Skew: merger arbitrage vs global macro -> [[Hedge_Fund_Strategies]]
+- 2026-06-03 — Equity market neutral vs long/short equity -> [[Hedge_Fund_Strategies]]
+- 2026-06-04 — Conditional factor model: why the crisis dummy? -> [[Hedge_Fund_Strategies]]
+- 2026-06-04 — How do FFO and AFFO differ, and which is better? -> [[Publicly_Traded_Real_Estate]]
+- 2026-06-04 — How do you estimate NAVPS from cash NOI? -> [[Publicly_Traded_Real_Estate]]
+- 2026-06-03 — Compute NOI, DSC, LTV and equity dividend rate from a pro forma -> [[Real_Estate]]
+- 2026-06-03 — Value a property by direct capitalization vs DCF, and the terminal-value trap -> [[Real_Estate]]
+- 2026-06-03 — Why do appraisal-based indexes understate real estate risk? -> [[Real_Estate]]
+
+## 19 Portfolio Management
+
+- 2026-06-03 — Fundamental law worked (and breadth done right) -> [[Active_Portfolio_Management]]
+- 2026-06-03 — Information ratio vs Sharpe ratio -> [[Active_Portfolio_Management]]
+- 2026-06-03 — The three classic backtesting biases -> [[Backtesting_and_Simulation]]
+- 2026-06-03 — Historical vs Monte Carlo simulation -> [[Backtesting_and_Simulation]]
+- 2026-06-03 — The discount-rate framework: how can an economic factor move asset prices? -> [[Economics_and_Investment_Markets]]
+- 2026-06-03 — Breakeven inflation and credit spreads over the cycle -> [[Economics_and_Investment_Markets]]
+- 2026-06-03 — How does creation/redemption keep ETF price ≈ NAV (and cut taxes)? -> [[Exchange_Traded_Funds]]
+- 2026-06-03 — Premiums/discounts and ETN counterparty risk -> [[Exchange_Traded_Funds]]
+- 2026-06-03 — What exactly does "5% VaR = $25,000/month" mean? -> [[Measuring_Managing_Market_Risk]]
+- 2026-06-03 — Which VaR method for an options-heavy book? -> [[Measuring_Managing_Market_Risk]]
+- 2026-06-04 — Compute parametric VaR for a two-asset portfolio (worked) -> [[Measuring_Managing_Market_Risk]]
+- 2026-06-03 — APT vs CAPM -> [[Multifactor_Models]]
+- 2026-06-03 — Macroeconomic vs fundamental factor models -> [[Multifactor_Models]]
+- 2026-06-04 — Determine whether an arbitrage opportunity exists (worked) -> [[Multifactor_Models]]
+- 2026-06-04 — Macro factor model: expected vs realized portfolio return -> [[Multifactor_Models]]
+
+## 20 Ethics
+
+- 2026-06-04 — What does the Level II "Application" ethics reading actually test? -> [[Application_of_the_Code_and_Standards]]
+- 2026-06-04 — "First five vs. last two" cases — why the distinction matters -> [[Application_of_the_Code_and_Standards]]
+- 2026-06-03 — Stricter-law rule and the duty to dissociate -> [[Code_and_Standards]]
+- 2026-06-03 — Mosaic theory, MNPI, and priority of transactions -> [[Code_and_Standards]]
+- 2026-06-04 — The 2024 revisions: what changed in the Standards? -> [[Code_and_Standards]]
+- 2026-06-04 — Worked case: recommending an unfamiliar asset (I(E), III(C), V(A)) -> [[Code_and_Standards]]
+- 2026-06-03 — Why must a composite include ALL discretionary portfolios? -> [[GIPS]]
+- 2026-06-03 — Firm-wide, all-or-nothing, and verification -> [[GIPS]]
+- 2026-06-04 — Worked: compute an asset-weighted composite return (and the III(D) trap) -> [[GIPS]]

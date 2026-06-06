@@ -8,12 +8,10 @@ source: Schweser Book 3 (Modules 17-22)
 
 # Equity Investments — Overview
 
-Six modules, heavily computational. The DCF family (DDM, FCF, residual income) plus multiples is the
-core; private company applies it all with discounts.
+Six modules, heavily computational. The DCF family (DDM, FCF, residual income) plus multiples is the core; private company applies it all with discounts.
 
 ## Module 17 — Valuation Process → [[Equity_Valuation_Process]]
-Intrinsic value & perceived mispricing; going-concern vs liquidation; absolute vs relative;
-sum-of-the-parts and conglomerate discount; model selection.
+Intrinsic value & perceived mispricing; going-concern vs liquidation; absolute vs relative; sum-of-the-parts and conglomerate discount; model selection.
 
 ## Module 18 — Dividend Discount Models → [[Dividend_Discount_Models]]
 Gordon, PVGO, justified leading/trailing P/E, sustainable growth (g = b×ROE), two-stage, H-model.

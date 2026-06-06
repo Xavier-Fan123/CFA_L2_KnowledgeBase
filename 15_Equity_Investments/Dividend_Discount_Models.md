@@ -19,15 +19,11 @@ source: Schweser Book 3, Module 18, LOS 18.a-18.p
 - **Perpetual preferred**: `V = D / r`.
 
 ## PVGO and Leading P/E (18.g, 18.h)
-- `V0 = E1/r + PVGO` → no-growth value (`E1/r`, value if 100% payout) plus present value of growth
-  opportunities. Solve for PVGO from price: `PVGO = P0 − E1/r`.
-- **Leading P/E** = `(1/r) + PVGO/E1` — splits the multiple into a no-growth component (1/r) and a
-  growth component (PVGO/E1).
+- `V0 = E1/r + PVGO` → no-growth value (`E1/r`, value if 100% payout) plus present value of growth opportunities. Solve for PVGO from price: `PVGO = P0 − E1/r`.
+- **Leading P/E** = `(1/r) + PVGO/E1` — splits the multiple into a no-growth component (1/r) and a growth component (PVGO/E1).
 - **Justified leading P/E** = `(D1/E1)/(r − g) = payout / (r − g)`.
 - **Justified trailing P/E** = `payout × (1+g) / (r − g)`.
-- **Worked example (curriculum, MSEX):** no-growth EPS E1 = $1.52, r = 6.8%, price = $43.20.
-  No-growth value = 1.52/0.068 = $22.42; `PVGO = 43.20 − 22.42 = $20.78` → ~48% of price is the value of
-  growth. A high PVGO/Price (or high PVGO/E1) signals a market-priced growth firm.
+- **Worked example (curriculum, MSEX; 2026 errata):** no-growth EPS E1 = $1.52, r = 6.8%, price = $43.20. No-growth value = 1.52/0.068 = **$22.35**; `PVGO = 43.20 - 22.35 = $20.85`, so about 48% of price is the value of growth. A high PVGO/Price (or high PVGO/E1) signals a market-priced growth firm.
 
 ## Implied Growth / Required Return (18.f, 18.i)
 - Implied g (from Gordon): `g = r − D1/P0`.
@@ -35,30 +31,21 @@ source: Schweser Book 3, Module 18, LOS 18.a-18.p
 
 ## Sustainable Growth (18.p)
 - `g = b × ROE`, where `b` = retention = `1 − payout`.
-- **DuPont**: `ROE = net margin × asset turnover × financial leverage`, so
-  `g = b × (net margin × asset turnover × leverage)` (PRAT model).
+- **DuPont**: `ROE = net margin × asset turnover × financial leverage`, so `g = b × (net margin × asset turnover × leverage)` (PRAT model).
 
 ## Multistage Models (18.k-18.o)
-- Business stages: **growth → transition → maturity**. Use multistage when constant-growth is unrealistic
-  (e.g., earnings growing far above nominal GDP growth — not sustainable in perpetuity).
+- Business stages: **growth → transition → maturity**. Use multistage when constant-growth is unrealistic (e.g., earnings growing far above nominal GDP growth — not sustainable in perpetuity).
 - **Two-stage DDM**: PV of high-growth dividends + PV of terminal value (Gordon at stable g).
-- **H-model** (growth declines linearly from gS to gL over 2H years):
-  `V0 = [D0(1+gL) + D0 × H × (gS − gL)] / (r − gL)`, where **H = half the high-growth period**.
+- **H-model** (growth declines linearly from gS to gL over 2H years): `V0 = [D0(1+gL) + D0 × H × (gS − gL)] / (r − gL)`, where **H = half the high-growth period**.
   - Required return (H-model): `r = (D0/P0)[(1+gL) + H(gS − gL)] + gL`.
 - **Three-stage DDM** — two common variants:
-  1. **Three-step (growth / transition / maturity)**: a constant high growth, then constant transition
-     growth, then a constant mature growth → discount each stage's dividends, add a Gordon terminal value at
-     the start of the mature phase.
-  2. **Growth + H-model tail**: a constant high-growth stage 1, then an **H-model** decline to the mature
-     rate. Discount stage-1 dividends + PV of the H-model value.
-- **Terminal value**: Gordon (perpetuity) or **exit / price multiple** based (e.g., terminal P/E × terminal
-  EPS) → see [[Market_Based_Valuation]].
-- **Share repurchases**: a DDM still works if the analyst nets the buyback effect into the **per-share**
-  dividend growth rate (total distributions ÷ a shrinking share count).
+  1. **Three-step (growth / transition / maturity)**: a constant high growth, then constant transition growth, then a constant mature growth → discount each stage's dividends, add a Gordon terminal value at the start of the mature phase.
+  2. **Growth + H-model tail**: a constant high-growth stage 1, then an **H-model** decline to the mature rate. Discount stage-1 dividends + PV of the H-model value.
+- **Terminal value**: Gordon (perpetuity) or **exit / price multiple** based (e.g., terminal P/E × terminal EPS) → see [[Market_Based_Valuation]].
+- **Share repurchases**: a DDM still works if the analyst nets the buyback effect into the **per-share** dividend growth rate (total distributions ÷ a shrinking share count).
 
 ## Strengths / Limits (18.e, 18.j)
-- Gordon: simple, good for stable mature firms; **very sensitive to (r − g)**; useless for non-payers
-  or g ≈ r.
+- Gordon: simple, good for stable mature firms; **very sensitive to (r − g)**; useless for non-payers or g ≈ r.
 - Compare model value to market price → **over/under/fairly valued**.
 
 ## Exam Traps
@@ -71,15 +58,10 @@ source: Schweser Book 3, Module 18, LOS 18.a-18.p
 
 ### 2026-06-03 — H-model worked example
 **Q:** D0 = $2, current growth 15% declining linearly to 5% over 6 years, r = 10%. Value with the H-model.
-**A:** H = half the transition period = 6/2 = **3**. `V0 = [D0(1+gL) + D0·H·(gS − gL)]/(r − gL) =
-[2(1.05) + 2·3·(0.15 − 0.05)]/(0.10 − 0.05) = [2.10 + 0.60]/0.05 = 2.70/0.05 = $54`. Trap: **H is half**
-the high-growth/transition period, and the long-run growth gL (not gS) goes in the denominator.
+**A:** H = half the transition period = 6/2 = **3**. `V0 = [D0(1+gL) + D0·H·(gS − gL)]/(r − gL) = [2(1.05) + 2·3·(0.15 − 0.05)]/(0.10 − 0.05) = [2.10 + 0.60]/0.05 = 2.70/0.05 = $54`. Trap: **H is half** the high-growth/transition period, and the long-run growth gL (not gS) goes in the denominator.
 Related: [[Free_Cash_Flow_Valuation]]
 
 ### 2026-06-03 — Justified leading vs trailing P/E
 **Q:** What's the difference between justified leading and trailing P/E, and when does each apply?
-**A:** **Leading (forward) P/E** uses next year's earnings: `payout/(r − g)`. **Trailing P/E** uses last
-year's: `payout(1+g)/(r − g)` — the extra `(1+g)` grosses the payout up to a forward basis. Use leading
-when forecasts are reliable; trailing when current earnings are clean/representative. Both come from the
-Gordon model and are very sensitive to `(r − g)`.
+**A:** **Leading (forward) P/E** uses next year's earnings: `payout/(r − g)`. **Trailing P/E** uses last year's: `payout(1+g)/(r − g)` — the extra `(1+g)` grosses the payout up to a forward basis. Use leading when forecasts are reliable; trailing when current earnings are clean/representative. Both come from the Gordon model and are very sensitive to `(r − g)`.
 Related: [[Market_Based_Valuation]]

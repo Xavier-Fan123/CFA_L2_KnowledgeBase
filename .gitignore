@@ -2,6 +2,8 @@ Thumbs.db
 .DS_Store
 desktop.ini
 *.tmp
+__pycache__/
+*.pyc
 .claude/settings.local.json
 
 # Obsidian per-device UI state (avoids cross-computer sync conflicts)

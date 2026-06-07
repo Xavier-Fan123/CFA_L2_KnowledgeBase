@@ -39,6 +39,16 @@ Grouped by approach; each differs in directionality, leverage, liquidity, and ta
 ## Adding to a Portfolio (33.i)
 - Evaluate the **return/risk and diversification** impact; consider non-normal moments (skew, kurtosis), illiquidity, and how the strategy behaves in stress. A strategy with attractive standalone Sharpe may add little if highly correlated; crisis-alpha strategies add value despite lower standalone returns.
 
+### Commodity Hedge Fund Extension (Beyond Curriculum)
+This section is a professional hedge-fund application, not CFA curriculum text.
+
+- A top commodity hedge fund is rarely just "long commodities." It usually blends **fundamental discretionary**, **relative value**, **global macro**, **systematic trend**, and **volatility/optionality** sleeves, each with different liquidity, capacity, skew, and crisis behavior.
+- The core research workflow is: build a supply/demand balance, infer the inventory path, identify the marginal unit of supply or demand, map that view into curve/grade/location/volatility expressions, then size it against liquidity and drawdown tolerance.
+- Many apparent alpha streams are commodity risk premia in disguise: carry/term structure, trend, liquidity provision, short-volatility, congestion relief, or balance-sheet risk. Conditional factor models are useful because exposures often appear only during inventory squeezes or funding stress.
+- Relative-value books can look market-neutral while carrying concentrated **basis**, **calendar-spread**, **delivery**, and **liquidity** risk. A flat outright beta does not mean the strategy is low risk.
+- Portfolio value comes from converting diverse research edges into uncorrelated P&L streams. The hard part is not finding many trade ideas; it is avoiding the same weather, USD, rates, China-demand, refinery-margin, or liquidity shock appearing in every book at once.
+- Thesis invalidation should be separated from mark-to-market pain. Top funds distinguish "price moved against us but the balance is intact" from "the balance, policy regime, logistics constraint, or positioning thesis is wrong."
+
 ## Exam Traps
 - **Merger arbitrage** payoff is **negatively skewed** = **long riskless bond (spread) + short binary put** (pays out if deal breaks); **global macro / managed futures** are often **positively skewed** (crisis alpha, long volatility/trend).
 - **Equity market neutral** ≈ low beta/low correlation; long/short equity keeps net (usually net-long) market exposure.

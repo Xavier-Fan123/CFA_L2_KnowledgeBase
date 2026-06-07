@@ -42,6 +42,14 @@ In practice dealers quote a **spot rate** plus **forward points**, not the full 
 - **MTM value of a forward** before expiry (long base): discount the change in forward rate: `Vt = (Ft − F0) × contract size / (1 + r_price·(days remaining/360))`
   - **Worked example (Schweser):** long CAD 1m at F0 = 1.05358 AUD/CAD (90-day). After 30 days (60 left), the new 60-day forward bid = 1.06206 AUD/CAD, 60-day AUD rate = 1.16%. To unwind, sell CAD forward (up the bid): `Vt = (1.06206 − 1.05358) × 1,000,000 / (1 + 0.0116 × 60/360) = 8,480 / 1.001933 ≈ AUD 8,463.64` gain. **Discount at the price-currency (AUD) rate.**
 
+### Commodity Trading Extension (Beyond Curriculum)
+This section is a professional trading application, not CFA curriculum text.
+
+- Many globally traded commodities are priced in USD even when costs, taxes, freight, storage, or end-sales are in local currencies. A desk must separate the commodity hedge from the FX hedge; a flat commodity exposure can still have material currency P&L.
+- For a known foreign-currency receivable or payable, the FX forward is a hedge of the cash flow, not a view that the forward is an unbiased forecast. Covered interest parity prices the forward; it does not say the future spot will equal the forward.
+- Quote convention errors are operationally expensive in commodity trading because cargo invoices, letters of credit, freight, demurrage, and hedge settlements may be in different currencies. Always label the quote as `P/B` before deciding whether to use bid or offer.
+- Carry trades are speculative currency positions. They should not be confused with hedging an operating FX exposure attached to a physical commodity purchase or sale.
+
 ## International Parity Conditions (5.e, 5.f)
 
 | Condition | Statement | Holds by arbitrage? |

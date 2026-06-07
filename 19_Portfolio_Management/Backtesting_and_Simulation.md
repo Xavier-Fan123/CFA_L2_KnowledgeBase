@@ -22,6 +22,16 @@ Report risk-adjusted returns (Sharpe, IR), drawdowns, turnover, hit rate; visual
 - **Data snooping / overfitting**: testing many strategies and reporting the best → spurious; multiple-testing inflates apparent significance.
 - **Transaction-cost / liquidity** neglect; **regime dependence** (one historical path).
 
+### Commodity Trading Extension (Beyond Curriculum)
+This section is a professional trading application, not CFA curriculum text.
+
+- Commodity futures backtests are highly sensitive to **continuous-contract construction**. The roll rule must be tradable using information known at the time: contract selection, first-notice constraints, delivery risk, liquidity migration, and whether returns include the exact roll slippage.
+- Roll yield cannot be treated as a free signal. A strategy that buys backwardation and sells contango must include bid-ask spreads, brokerage, exchange fees, financing/collateral return, margin liquidity, and the market impact of rolling in crowded windows.
+- Survivorship bias can appear through missing delisted contracts, discontinued delivery points, changed contract specifications, and excluding markets that became untradeable because of sanctions, capital controls, exchange limits, or liquidity collapse.
+- Look-ahead bias often enters through revised inventory data, late-arriving fundamental statistics, final index weights, known future holidays/maintenance outages, or using the eventual most-liquid contract before it was actually the liquid point on the curve.
+- Historical simulation is only one realized logistics regime. Stress separately for storage saturation, negative prices, export bans, force majeure, vessel delays, exchange limit moves, clearinghouse margin hikes, and sudden basis dislocations.
+- Capacity matters. A backtest may work at small notional but fail once trade size exceeds screen depth, warehouse capacity, freight availability, credit lines, or counterparty appetite.
+
 ## Historical Scenario Analysis (39.e)
 Evaluate the strategy under a **specific past stress** (e.g., 2008, COVID) to see tail behavior — but it is **one realized path** and may not repeat.
 

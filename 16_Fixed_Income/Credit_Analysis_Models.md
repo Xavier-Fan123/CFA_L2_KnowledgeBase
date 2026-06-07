@@ -25,6 +25,16 @@ source: Schweser Book 4, Module 26, LOS 26.a-26.h
 - The same VND − CVA framework values a **risky floater**. Cash flow each period = (benchmark rate at start of period + **quoted margin**) × par, set in arrears. **VND** ≈ par + PV(quoted margin); fair value = VND − CVA.
 - **Discount margin (DM)** = the spread added to the benchmark rates in the tree so the Date-0 value = fair value — the floater's analogue of a fixed bond's credit spread / YTM. If the floater is priced **below par**, DM > quoted margin (and conversely). Found by trial-and-error / Solver.
 
+### Commodity Trading Extension (Beyond Curriculum)
+This section is a professional trading application, not CFA curriculum text.
+
+- In commodity trading, **expected exposure** is not just bond value. It includes open receivables, prepaid cargoes, replacement cost on undelivered physical contracts, positive MTM on OTC derivatives, and potential future exposure from price moves before settlement.
+- Exposure is often **wrong-way**: a buyer's default probability can rise exactly when the commodity price falls and the seller is left with unwanted inventory, or when prices rise and a short supplier cannot afford to replace cargoes. POD, LGD, and exposure are therefore not independent in stress.
+- Recovery depends heavily on legal title, netting enforceability, collateral quality, letters of credit, guarantees, retention-of-title clauses, and whether inventory can be located, seized, and resold. A headline recovery rate is weak without the trade-finance structure.
+- Credit limits should be set by **counterparty group**, tenor, jurisdiction, product, and settlement mechanism. A low nominal receivable can still be high risk if the cargo is hard to liquidate, documentation is weak, or the counterparty controls logistics.
+- CVA-style thinking is useful even when no formal CVA model is booked: expected loss rises with larger MTM exposure, longer settlement windows, weaker collateral, and stressed correlation between commodity prices and counterparty credit.
+- Ratings can lag quickly deteriorating trade-credit conditions. For commodity counterparties, real-time signals such as delayed payments, reduced credit-line availability, missed margin calls, letter-of-credit confirmation difficulty, and widening bond/CDS spreads may be more timely than the agency rating.
+
 ## Credit Scores vs Ratings (26.b)
 - **Credit scores**: for retail/small borrowers (e.g., FICO).
 - **Credit ratings**: for corporate/sovereign issues (agency letter grades); **issuer** vs **issue** ratings; subject to stability ("through-the-cycle") and potential lag, and notching.

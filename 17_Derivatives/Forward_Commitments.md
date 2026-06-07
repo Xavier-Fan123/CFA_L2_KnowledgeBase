@@ -16,6 +16,14 @@ Curriculum notation (official V7): the forward price is the **future value of th
   - Carry **benefits lower** F0 (the physical holder receives them, the forward holder forgoes them).
 - Mnemonic: **"benefits down, costs up."** When CB > CC (e.g. high-dividend index) the forward can trade **below** spot (backwardation-like); when CC > CB, **above** spot (contango-like).
 
+### Commodity Trading Extension (Beyond Curriculum)
+This section is a professional trading application, not CFA curriculum text.
+
+- For physical commodities, `CC` includes financing, storage, insurance, handling, evaporation/shrinkage, quality degradation, and transport optionality. `CB` is the **convenience yield** from controlling scarce deliverable inventory.
+- A textbook cash-and-carry arbitrage only works when the trader can buy the physical commodity, finance it, store it, insure it, hedge it, and deliver or resell it without binding credit, logistics, or position-limit constraints. Apparent arbitrage can persist when tankage, warehouse receipts, freight, or balance sheet capacity are scarce.
+- A **basis swap** is often the cleaner hedge for a physical exposure than an outright futures hedge. It exchanges one floating commodity reference price for another, such as a location, grade, timing, or index differential, leaving the desk with the exposure it actually wants.
+- OTC commodity forwards and swaps create collateral and liquidity risk. A hedge can be economically correct but still strain cash if adverse mark-to-market movements trigger margin calls before the physical sale or purchase settles.
+
 ## Valuing a Forward During Its Life (28.a)
 - Long forward value at time t: `Vt = PV[Ft − F0] = (Ft − F0) / (1 + r)^(T − t)`.
 - Equivalent **direct form** (curriculum Eq. 3): `Vt = St − PV[F0]` (no-cashflow case); with carry, `Vt = (St − CB_t-to-T + CC_t-to-T) − PV[F0]` where the carry terms are PV'd to time t.

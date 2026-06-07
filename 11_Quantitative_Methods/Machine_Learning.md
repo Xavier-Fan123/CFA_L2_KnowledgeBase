@@ -74,6 +74,16 @@ As complexity rises, **bias error falls but variance error rises** → choose co
 - **Deep learning networks (DLN)**: NNs with **many hidden layers (≥2, often >20)**; image/pattern/speech recognition, fraud detection, NLP. (A DLN reproduced Black-Scholes option values at R² = 99.8%.)
 - **Reinforcement learning (RL)**: an **agent** maximizes a reward under constraints, learning from millions of trials (e.g. AlphaGo); no labeled data, no instant feedback.
 
+### Commodity Hedge Fund Extension (Beyond Curriculum)
+This section is a professional hedge-fund application, not CFA curriculum text.
+
+- ML is most useful when it improves a specific workflow: nowcasting inventories, classifying text shocks, detecting anomalous flows, extracting satellite/image features, forecasting volatility regimes, clustering curve states, or improving execution. It is not a substitute for commodity-market microstructure and physical economics.
+- Target design is critical. Predicting next-day flat price is often noisier than predicting inventory surprise, spread direction, volatility regime, congestion, or probability of a delivery squeeze.
+- The main model risk is leakage: revised fundamentals, future roll liquidity, post-event labels, vendor backfills, and unavailable timestamps can make validation results look institutional-grade while being untradeable.
+- Cross-validation should respect time order and regimes. Random k-fold splits are often inappropriate for commodity time series because adjacent observations share inventories, weather systems, and positioning.
+- Black-box accuracy is not enough for capital allocation. A model should expose which features drive P&L, when the signal decays, how it behaves under stress, and whether execution costs consume the edge.
+- Reinforcement learning or highly adaptive systems require tight guardrails: position limits, liquidity constraints, drawdown stops, and human review. The objective function must penalize tail losses and market impact, not just maximize simulated reward.
+
 ## Exam Traps
 - **Hyperparameters are set by the researcher**; they are not learned from the data (λ in LASSO, k in KNN/k-means, NN node counts).
 - **Bias error = in-sample/underfit (too simple); variance error = out-of-sample/overfit (too complex).** Linear → high bias; nonlinear → high variance.

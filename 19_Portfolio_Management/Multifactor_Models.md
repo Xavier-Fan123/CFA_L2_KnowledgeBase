@@ -60,6 +60,16 @@ Two factors = **surprises** in inflation (F_INFL) and GDP growth (F_GDP). Two st
 - **Active risk (tracking error)** decomposes into **active factor risk + active specific risk**: `active risk² = active factor risk² + active specific (selection) risk²`.
 - **Information ratio** = active return / active risk (→ [[Active_Portfolio_Management]]).
 
+### Commodity Hedge Fund Extension (Beyond Curriculum)
+This section is a professional hedge-fund application, not CFA curriculum text.
+
+- Commodity hedge-fund factor models should include more than broad commodity beta. Common factors include **carry/term structure**, momentum/trend, inventory tightness, seasonality, USD, real rates, inflation surprises, growth/industrial demand, volatility, liquidity, freight, and credit/funding stress.
+- Factor definitions must match the traded instrument. A crude outright future, a refinery crack spread, a WTI-Brent spread, and a call option can have very different exposures even if all are "oil" trades.
+- Active return attribution should separate **factor premia** from true idiosyncratic alpha. A long-backwardation book may be earning carry; a trend book may be earning momentum; a short-option book may be selling volatility, not generating pure forecasting skill.
+- Statistical factors from PCA can be useful for risk compression, but they need economic labeling before capital is allocated. An unlabeled component may actually be USD, China demand, refinery margin, freight, or liquidity.
+- Conditional betas matter. A book can have low normal-times commodity beta and large crisis beta when exchanges raise margin, liquidity vanishes, correlations rise, or delivery constraints dominate.
+- Apparent arbitrage portfolios are rarely zero-risk in commodities. Residual basis, funding, storage, delivery optionality, settlement timing, and position limits often explain why a spread remains open.
+
 ## Exam Traps
 - APT needs **no market portfolio** and no normality — only a factor structure, diversification, no arbitrage (contrast with CAPM, a single-factor special case).
 - **Macroeconomic** models use factor **surprises**; **fundamental** models use **standardized attributes** as the sensitivities (the reverse of macro).

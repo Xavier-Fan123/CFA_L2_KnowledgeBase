@@ -51,6 +51,15 @@ For underlyings that are **costless to carry** (futures/forwards), use the futur
 - **Put** = `e^(−rT)·[X·N(−d2) − F0(T)·N(−d1)]`  …(Eq. 16)
 - `d1 = [ln(F0(T)/X) + (σ²/2)·T] / (σ·√T)`, `d2 = d1 − σ·√T` (no carry/rate term in d1 — it is embedded in F0). **Futures put–call parity**: `c = e^(−rT)·[F0(T) − X] + p`.
 
+### Commodity Trading Extension (Beyond Curriculum)
+This section is a professional trading application, not CFA curriculum text.
+
+- Exchange-traded commodity options are commonly options on futures, so the Black model intuition is usually the right starting point: the futures price already embeds financing, storage, and convenience-yield economics.
+- Commodity option hedging is usually done with the futures contract for the same delivery month or the closest liquid proxy. That leaves **basis risk** when the option references a different grade, location, pricing window, or physical index.
+- Delta hedges are fragile around inventory shocks, weather events, refinery outages, sanctions, export bans, and delivery-period squeezes. These are jump risks; they violate the continuous-trading intuition behind BSM/Black and make gamma and liquidity management central.
+- Implied volatility can differ sharply by contract month because each delivery month has its own inventory and seasonality. A flat volatility assumption is especially weak for energy and agriculture curves.
+- Storage, swing, and take-or-pay contracts often contain embedded optionality. Black-style models may help with intuition, but operational constraints and path dependence often require simulation or specialized physical-asset valuation.
+
 ## Interest-Rate Options & Swaptions (29.i, 29.j)
 Black-model variants. **Interest-rate option** (standard market model) — underlying is a **forward rate** FRA(0,t_{j−1},tm), discounted to settlement `t_{j−1}+tm` (settled in arrears), scaled by accrual period AP:
 - **Call** = `AP·e^(−r(t_{j−1}+tm))·[FRA·N(d1) − RX·N(d2)]`  …(Eq. 18)

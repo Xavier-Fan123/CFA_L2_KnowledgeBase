@@ -34,6 +34,16 @@ source: Schweser Book 5, Module 35, LOS 35.a-35.f
 - Provides a framework linking skill, breadth, and implementation to performance.
 - Limitations: **BR assumes independent decisions** (correlated bets overstate breadth); **IC is hard to estimate** and unstable; ex-ante inputs are noisy.
 
+### Commodity Hedge Fund Extension (Beyond Curriculum)
+This section is a professional hedge-fund application, not CFA curriculum text.
+
+- The fundamental law is a useful lens for a commodity hedge fund, but **breadth** is the number of independent theses, not the number of contracts traded. Ten gas curve trades driven by the same weather shock are one risk cluster, not ten independent bets.
+- **IC** comes from repeatable forecast quality: better balances, cleaner data, earlier signal extraction, stronger physical-market interpretation, and disciplined post-trade review. A one-off correct call does not establish skill.
+- **TC** is often the binding constraint. Position limits, exchange liquidity, margin, financing, mandate limits, drawdown control, counterparty lines, and crowded roll windows can keep the actual portfolio far from the theoretical optimal book.
+- Sizing should be linked to thesis half-life and liquidity. A high-conviction storage thesis with poor exit liquidity deserves a different risk budget from a liquid CTA signal that can be reduced intraday.
+- Portfolio construction should aggregate exposures by economic driver: weather, freight, USD, rates, refinery margins, Chinese demand, sanctions, inventory scarcity, volatility, and funding liquidity. Desk-level diversification can disappear after this regrouping.
+- A strong process measures both ex ante and ex post IR by strategy sleeve, then asks whether losses came from bad forecasts, bad sizing, hidden correlation, execution slippage, or an unmodeled constraint.
+
 ## Exam Traps
 - **IR = active return / active risk** (tracking error); **Sharpe uses total risk**.
 - IR is invariant to aggressiveness (unconstrained); `SR_P² = SR_B² + IR²`.

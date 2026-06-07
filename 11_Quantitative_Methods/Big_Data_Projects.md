@@ -59,6 +59,16 @@ Steps are **iterative**. For **text/unstructured** data the first four become: t
 - **Feature engineering (FE)**: create/transform features (log, decompose, combine); **one-hot encoding (OHE)** converts a categorical feature into binary dummies.
 - For unstructured text: **word cloud** (bigger font = higher frequency); summary stats = **term frequency** and **co-occurrence**.
 
+### Commodity Hedge Fund Extension (Beyond Curriculum)
+This section is a professional hedge-fund application, not CFA curriculum text.
+
+- For a top commodity fund, the data project is an alpha-production system, not a dashboard. Useful sources can include exchange data, broker flows, customs data, vessel AIS, satellite storage estimates, pipeline nominations, refinery runs, weather models, crop conditions, power load, credit data, and text/news.
+- **Veracity** is the dominant issue. Every observation needs timestamp, source, revision history, unit, location, product specification, delivery period, and point-in-time availability. A signal received after the market close cannot be used as if it was known before the trade.
+- Data wrangling must solve commodity-specific mapping: barrels vs. tonnes, grades, sulfur/API quality, delivery hubs, contract rolls, holiday calendars, time zones, daylight saving changes, and benchmark changes. Unit errors can look like alpha in backtests.
+- Alternative data is valuable only after conversion into a tradable feature: inventory surprise, congestion, implied run rate, export pace, weather deviation, vessel delay, or balance revision. Raw novelty is not edge.
+- Feature engineering should encode lags and publication timing. Many fundamental series are revised, delayed, sampled irregularly, or released during illiquid trading hours; ignoring this creates look-ahead bias.
+- Production-grade data work includes lineage, anomaly flags, vendor-change monitoring, stale-data detection, and a fallback rule for missing feeds. A fragile data feed can become a hidden position risk.
+
 ## Model Training (LOS 4.f)
 
 **Method selection** depends on:

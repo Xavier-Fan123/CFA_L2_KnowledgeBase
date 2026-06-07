@@ -145,6 +145,16 @@ When regressing one time series on another (e.g. market model: stock returns y�
 
 **Cointegration** = two series are economically linked / share a common trend that is not expected to change, so the **error from regressing one on the other is covariance stationary** → t-tests are reliable. **Test**: regress one on the other, then run a **Dickey-Fuller test on the residuals using Engle-Granger critical values (DF-EG test)**. Reject the unit-root null → residuals stationary → series **cointegrated** → regression usable (Scenario 5).
 
+### Commodity Trading Extension (Beyond Curriculum)
+This section is a professional trading application, not CFA curriculum text.
+
+- Commodity **price levels** often behave like non-stationary series, while spreads, returns, or inventory-adjusted basis may be closer to stationary. Regressing one price level on another without testing unit roots can produce a high R-squared and meaningless inference.
+- Cointegration is useful when there is a durable economic link, such as spot vs. nearby futures, related grades, substitute fuels, or regional prices connected by freight and quality differentials. The tradeable idea is usually the stationary residual, not the two outright price levels.
+- Seasonality is structural for many commodities. Heating demand, refinery maintenance, harvest cycles, monsoons, storage injection/withdrawal, and shipping seasons can create predictable lags; ignoring them can make an AR model look falsely misspecified.
+- ARCH/volatility clustering is common around inventory reports, weather shocks, policy announcements, delivery squeezes, and geopolitical events. A mean forecast and a volatility forecast should be treated as separate outputs.
+- Structural breaks matter more than elegant in-sample fit. Pipeline reversals, new export capacity, benchmark reform, contract-specification changes, sanctions, and storage constraints can invalidate a previously stable basis or cointegration relationship.
+- Model outputs must be tied back to execution. A statistically stationary spread is not automatically tradable if the convergence horizon is longer than credit tenor, margin capacity, storage availability, or mandate limits.
+
 ## Logic Map — Full Model-Selection Flow (LOS 2.o)
 
 ```

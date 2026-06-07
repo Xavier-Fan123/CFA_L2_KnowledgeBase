@@ -34,6 +34,15 @@ source: Schweser Book 4, Module 27, LOS 27.a-27.e
 - **Curve trades**: long/short CDS of different maturities to bet on the **shape** of the credit curve (e.g., curve steepener/flattener).
 - **Basis trades**: exploit the **CDS-bond basis** = CDS spread − bond (cash) spread. Negative basis → buy the bond and buy protection for a near-riskless pickup; convergence trades across markets.
 
+### Commodity Trading Extension (Beyond Curriculum)
+This section is a professional trading application, not CFA curriculum text.
+
+- CDS is a **credit** instrument, not a commodity-price hedge. Buying protection on a producer, refiner, utility, shipper, or commodity merchant may hedge issuer default risk, but it will not hedge the grade/location/calendar basis risk in a physical commodity book.
+- A commodity trader may use CDS or bond spreads as a market signal for counterparties with public debt. Widening spreads can tighten credit limits, raise LC confirmation costs, reduce available tenor, or require more collateral even before an agency rating changes.
+- Hedge effectiveness is usually imperfect. Trade receivables and physical replacement exposure may be short-dated, secured, or structurally senior, while the CDS references a specific legal entity, seniority, restructuring convention, and deliverable obligation set.
+- CDS-bond basis trades are not riskless in a commodity context. Funding cost, repo availability, deliverability, restructuring terms, settlement mechanics, and jump-to-default timing can dominate the apparent spread pickup.
+- Watch **wrong-way credit risk**: a commodity price shock can simultaneously hurt the counterparty's solvency and increase the replacement value of the trade exposure. A CDS hedge on the reference entity may help with default loss but not with operational disruption or cargo non-performance.
+
 ## Exam Traps
 - **Payout = notional × (1 − recovery)** = notional × LGD.
 - One-period **fair spread ≈ (1 − RR) × POD**; don't confuse the **CDS coupon** (standardized 1% IG / 5% HY) with the **CDS spread** (the risk-justified rate).

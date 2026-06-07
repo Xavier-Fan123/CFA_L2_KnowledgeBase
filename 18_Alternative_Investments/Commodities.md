@@ -48,6 +48,15 @@ source: Schweser Book 4, Module 30, LOS 30.a-30.j
   - **Rebalancing:** **frequent (monthly)** rebalancing helps in **mean-reverting** markets (sell peaks/buy valleys) but **hurts in trending** markets; annual rebalancing favors persistent trends.
   - **Roll methodology** matters most where roll cost is large (e.g., **natural gas** ~19% annual roll cost — its higher weight in BCOM is a drag the index must overcome with price/rebalance return).
 
+## Commodity Trading Extension (Beyond Curriculum)
+This section is a professional trading application, not CFA curriculum text.
+
+- A commodity desk usually separates **outright price risk**, **calendar-spread risk**, and **basis risk**. A long physical cargo hedged with exchange futures may be flat in outright price but still exposed to grade, location, timing, freight, and pricing-index differences.
+- **Contango** is not automatically a bearish forecast. It often reflects financing, storage, insurance, quality-loss, and logistics costs. A merchant with available tankage or warehouse capacity can monetize a cash-and-carry only if the spread exceeds the full carry cost and the physical leg is executable.
+- **Backwardation** often signals scarce prompt supply and high convenience yield. The economic value may sit in inventory optionality: being able to deliver or consume prompt barrels/tons when paper markets cannot create physical availability.
+- Persistent contango hurts a long-only futures investor through negative roll return, but it can still be attractive for a physical trader with cheap storage and funding. The same curve shape can be bad for an index investor and useful for a merchant balance sheet.
+- Do not read the futures curve as a pure forecast. It mixes no-arbitrage carry, inventory scarcity, hedging pressure, funding constraints, and risk premia.
+
 ## Exam Traps
 - **Backwardation → positive roll return; contango → negative roll return.** In backwardation you buy **more** (cheaper) deferred contracts to keep dollar exposure; in contango you buy **fewer**.
 - Commodities have **no cash flows** → no DCF; convenience yield is central.

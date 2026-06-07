@@ -56,6 +56,14 @@ Reprice the 80/20 portfolio over each day's *actual* SPY/SPLB returns (e.g., Day
 - **Sensitivity**: equity **beta**; fixed-income **duration & convexity**; option **Greeks (delta, gamma, vega)**. Measure exposure to a single risk factor, but **not probability** of loss.
 - **Scenario risk**: **historical** scenarios (replay a past crisis) and **hypothetical/stress** tests (extreme but plausible). Capture non-normal, multi-factor stress that VaR may miss.
 
+### Commodity Trading Extension (Beyond Curriculum)
+This section is a professional trading application, not CFA curriculum text.
+
+- A commodity trading book should be mapped to more than one price factor: outright futures, calendar spreads, location/grade basis, FX, freight, volatility, interest rates, and counterparty exposure. A single flat-price VaR can miss the risk that actually drives P&L.
+- Parametric VaR is weak for commodity books with options, spread positions, illiquid tenors, or physical optionality. Return distributions can be skewed, fat-tailed, and jumpy because inventories, weather, outages, policy actions, and delivery constraints are discontinuous.
+- Stress tests should include curve dislocations, basis blowouts, exchange limit moves, sudden margin calls, loss of credit lines, and liquidity evaporation in deferred contracts. These scenarios often matter more than the percentile loss from a calm historical window.
+- Risk limits should distinguish **economic hedge effectiveness** from **cash liquidity**. A hedge can reduce final price exposure while creating interim collateral needs that exceed available working capital.
+
 ## Constraints & Users (38.j, 38.k, 38.l)
 - **Constraints**: **risk budgeting** (allocate a total risk limit across units), **position limits**, **scenario limits**, **stop-loss limits**.
 - Different users emphasize different measures: **banks** (regulatory VaR, liquidity, leverage), **asset managers** (active risk / relative VaR), **pensions** (surplus-at-risk, liability-relative), **insurers** (economic capital, scenario/stress).

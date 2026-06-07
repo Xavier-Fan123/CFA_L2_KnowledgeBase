@@ -47,6 +47,16 @@ The financial statements themselves signal risk (high leverage/low coverage = fi
 - **BUT the audit opinion is rarely a timely source of risk information** — it covers **historical** statements and lags events (Kodak's clean-with-going-concern opinion was dated *after* it had already filed for bankruptcy; Groupon's control weakness never appeared in an opinion because of newly-public exemptions, then was remedied before the first required opinion).
 - **Auditor-related red flags**: a **discretionary change of auditor** (especially **multiple** changes → "auditor shopping," as at a Madoff feeder fund with 3 auditors in 3 years); an auditor whose **size/ capability is inadequate** for the company's complexity (Madoff's $50bn operation audited by a 3-person firm); or any **independence** concern (auditor too close to management, or the client is a large share of the auditor's revenue).
 
+### Commodity Trading Extension (Beyond Curriculum)
+This section is a professional trading application, not CFA curriculum text.
+
+- For commodity merchants, high reported revenue can be economically thin because many flows are pass-through. Test whether the firm reports as **principal vs. agent**, whether buy/sell legs are grossed up, and whether volume growth actually creates margin, cash conversion, and risk-adjusted return.
+- Inventory accounting is central. Compare inventory measurement with the risk policy: lower of cost and net realizable value (NRV), fair-value inventory, exchange hedges, and basis exposure can move earnings in different periods even when the economic hedge is sensible.
+- Derivative gains deserve a cash-quality check. Positive fair-value marks on swaps, forwards, and options may reverse, require collateral, or depend on Level 2/Level 3 curves; they are not the same as cash collected from customers.
+- Repeated "one-off" adjustments around storage losses, demurrage, sanctions, credit losses, restructuring, contract disputes, or inventory write-downs are not automatically non-recurring for a trading business. They may be part of the operating risk profile.
+- Off-balance-sheet commitments matter: take-or-pay contracts, long-term purchase/sale commitments, guarantees, letters of credit, tolling agreements, and lease/storage obligations can create liquidity risk before they appear as debt.
+- Strong reporting quality requires reconciliation among MD&A risk language, derivative footnotes, inventory policy, segment margins, collateral/margin disclosures, and operating cash flow. A clean audit opinion is not enough for a commodity trader.
+
 ## Integration / Adjustments (Module 12)
 - Apply a **framework**: define purpose → collect data → make **adjustments** for comparability (accounting standards, methods, assumptions) → analyze.
 - Common adjustments: capitalize vs expense, off-balance-sheet leases/debt, pension reclassifications, inventory (LIFO→FIFO), goodwill/impairments, normalizing earnings.

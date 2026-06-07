@@ -41,6 +41,15 @@ A weak driver (e.g. falling EBIT margin) can be **masked** by higher turnover or
   - **Less burdensome**: pension/employee-benefit obligations, deferred taxes, restructuring provisions (may never require cash).
 - **Working capital**: current/quick ratios, **defensive interval**, and the **cash conversion cycle** (DSO + DOH − days payables). CCC falling 31.0 → 15.5 days = better WC management (faster collections, faster inventory turns, slower payments).
 
+### Commodity Trading Extension (Beyond Curriculum)
+This section is a professional trading application, not CFA curriculum text.
+
+- Commodity traders often report very high revenue and thin margins, so asset turnover, working-capital intensity, and financing capacity can matter more than headline sales growth.
+- Inventory is both an operating asset and a trading position. Rising inventories may signal strategic storage economics, delayed sales, weak demand, or a speculative carry trade; the analyst has to reconcile inventory growth with the futures curve, hedges, and financing cost.
+- Margin calls on futures and swaps can create large short-term cash needs even when the physical hedge is economically sound. CFO can therefore be volatile because collateral timing and physical settlement timing do not always match.
+- Trade finance, letters of credit, borrowing-base facilities, repurchase agreements, and supplier/customer advances can be as important as reported debt. Read liquidity notes and covenant disclosures before judging leverage from the balance sheet alone.
+- Fair-value gains on derivatives can improve earnings before cash is realized, while basis losses or inventory write-downs may appear later. Cash conversion and hedge documentation are central to earnings-quality analysis.
+
 ## Capital Allocation — Segment Analysis (LOS 12.b)
 
 A **segment** = >10% of revenue **or** assets, distinct in risk/return. Use segment disclosures to judge where capital goes.

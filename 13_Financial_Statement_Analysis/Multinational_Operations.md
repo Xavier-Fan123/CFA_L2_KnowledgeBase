@@ -81,6 +81,15 @@ Subsidiary BS (in US$, the local currency here): Cash 3,000; Inventory 12,000; N
 - **Effective tax rate** is affected by the mix of country tax rates and currency movements.
 - Sales-growth **sustainability**: distinguish organic (price/volume) growth from currency-driven and acquisition-driven growth.
 
+### Commodity Trading Extension (Beyond Curriculum)
+This section is a professional trading application, not CFA curriculum text.
+
+- A commodity group may operate in many local currencies while its real economic currency is **USD**, because purchase contracts, sale contracts, hedges, debt, and inventory marks are often USD-linked. The functional-currency decision should follow the cash-flow economics, not the legal location of the subsidiary.
+- Under the temporal method, non-monetary inventory can sit at historical exchange rates while monetary debt, receivables, and payables move at current rates. For a commodity subsidiary with large stock and trade finance, this can create net-income volatility that is accounting-driven rather than a new physical trading result.
+- Current-rate translation can preserve local ratios but move CTA through equity. That matters when management says operating performance is stable while reported equity, leverage, or book value changes because the local currency moved.
+- Separate **transaction exposure** from **translation exposure**. A USD-priced cargo sold by a local-currency subsidiary may have limited commodity-price exposure after hedging but still create local tax, payroll, freight, and working-capital FX exposure.
+- Intercompany funding and transfer pricing can change the apparent net monetary asset/liability position. For commodity groups, look for whether USD loans, local receivables, and inventory financing create natural hedges or concentrate FX gains/losses in one entity.
+
 ## Exam Traps
 - Translation gain/loss location: **current rate → equity (CTA)**; **temporal → income statement**.
 - "Translation" = current rate method; "remeasurement" = temporal method.

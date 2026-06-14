@@ -1,1 +1,7 @@
-{}
+{
+  "readableLineLength": true,
+  "showLineNumber": false,
+  "spellcheck": false,
+  "foldHeading": true,
+  "foldIndent": true
+}

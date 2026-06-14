@@ -1,0 +1,325 @@
+/*
+  CFA Level II review surface for Obsidian.
+  Scope: display only. This snippet does not depend on a community theme.
+*/
+
+body {
+  --file-line-width: 920px;
+  --line-height-normal: 1.58;
+  --line-height-tight: 1.34;
+  --cfa-page-width: 920px;
+  --cfa-radius: 6px;
+  --cfa-border-soft: color-mix(in srgb, var(--text-muted) 24%, transparent);
+  --cfa-border-strong: color-mix(in srgb, var(--text-normal) 24%, transparent);
+  --cfa-accent: #1f6f8b;
+  --cfa-accent-2: #2f7d59;
+  --cfa-warn: #a65f00;
+  --cfa-danger: #b34343;
+  --cfa-purple: #7353a3;
+  --cfa-table-stripe: color-mix(in srgb, var(--text-normal) 4%, transparent);
+  --cfa-table-head: color-mix(in srgb, var(--text-normal) 8%, transparent);
+  --cfa-link-bg: color-mix(in srgb, var(--cfa-accent) 10%, transparent);
+  --cfa-trap-bg: color-mix(in srgb, var(--cfa-danger) 10%, var(--background-primary));
+  --cfa-qa-bg: color-mix(in srgb, var(--cfa-accent) 10%, var(--background-primary));
+  --cfa-formula-bg: color-mix(in srgb, var(--cfa-purple) 9%, var(--background-primary));
+}
+
+.theme-dark {
+  --cfa-border-soft: color-mix(in srgb, var(--text-muted) 32%, transparent);
+  --cfa-border-strong: color-mix(in srgb, var(--text-normal) 30%, transparent);
+  --cfa-table-stripe: color-mix(in srgb, var(--text-normal) 7%, transparent);
+  --cfa-table-head: color-mix(in srgb, var(--text-normal) 12%, transparent);
+  --cfa-link-bg: color-mix(in srgb, var(--cfa-accent) 18%, transparent);
+  --cfa-trap-bg: color-mix(in srgb, var(--cfa-danger) 17%, var(--background-primary));
+  --cfa-qa-bg: color-mix(in srgb, var(--cfa-accent) 16%, var(--background-primary));
+  --cfa-formula-bg: color-mix(in srgb, var(--cfa-purple) 15%, var(--background-primary));
+}
+
+/* Reading canvas */
+.markdown-preview-view,
+.markdown-source-view.mod-cm6 .cm-scroller {
+  font-size: 16px;
+  line-height: var(--line-height-normal);
+}
+
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer,
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer {
+  max-width: var(--cfa-page-width);
+}
+
+.markdown-preview-view .markdown-preview-sizer {
+  padding-bottom: 8rem;
+}
+
+.markdown-rendered > :first-child {
+  margin-top: 0;
+}
+
+.markdown-rendered p,
+.markdown-rendered li {
+  letter-spacing: 0;
+}
+
+/* Headings */
+.markdown-rendered h1 {
+  border-bottom: 1px solid var(--cfa-border-soft);
+  font-size: 1.85em;
+  letter-spacing: 0;
+  margin-bottom: 1rem;
+  padding-bottom: 0.55rem;
+}
+
+.markdown-rendered h2 {
+  border-left: 4px solid var(--cfa-accent);
+  font-size: 1.28em;
+  letter-spacing: 0;
+  margin-top: 2.1rem;
+  padding: 0.15rem 0 0.18rem 0.65rem;
+}
+
+.markdown-rendered h3 {
+  color: var(--text-normal);
+  font-size: 1.05em;
+  letter-spacing: 0;
+  margin-top: 1.35rem;
+}
+
+.markdown-rendered hr {
+  border-color: var(--cfa-border-soft);
+  margin: 1.6rem 0;
+}
+
+/* Links and metadata */
+.markdown-rendered .internal-link {
+  background: var(--cfa-link-bg);
+  border-radius: 4px;
+  color: var(--cfa-accent);
+  font-weight: 600;
+  padding: 0 0.18em;
+  text-decoration: none;
+}
+
+.markdown-rendered .internal-link:hover {
+  color: var(--text-on-accent);
+  background: var(--cfa-accent);
+}
+
+.metadata-container {
+  border: 1px solid var(--cfa-border-soft);
+  border-radius: var(--cfa-radius);
+  margin-block-end: 1.1rem;
+  padding: 0.55rem 0.65rem;
+}
+
+.metadata-container .metadata-property-key,
+.metadata-container .metadata-property-value {
+  font-size: 0.86em;
+}
+
+.tag,
+.cm-hashtag {
+  border: 1px solid color-mix(in srgb, var(--cfa-accent-2) 30%, transparent);
+  border-radius: 999px;
+  padding: 0.05em 0.42em;
+}
+
+/* Tables: dense but legible for comparison matrices */
+.markdown-rendered table {
+  border: 1px solid var(--cfa-border-soft);
+  border-collapse: separate;
+  border-radius: var(--cfa-radius);
+  border-spacing: 0;
+  font-size: 0.92em;
+  line-height: var(--line-height-tight);
+  overflow: hidden;
+  width: 100%;
+}
+
+.markdown-rendered th {
+  background: var(--cfa-table-head);
+  border-bottom: 1px solid var(--cfa-border-strong);
+  font-weight: 700;
+  vertical-align: bottom;
+}
+
+.markdown-rendered td,
+.markdown-rendered th {
+  border-color: var(--cfa-border-soft);
+  padding: 0.42rem 0.55rem;
+}
+
+.markdown-rendered tr:nth-child(even) td {
+  background: var(--cfa-table-stripe);
+}
+
+.markdown-rendered td:first-child,
+.markdown-rendered th:first-child {
+  font-weight: 600;
+}
+
+/* Formula blocks */
+.markdown-rendered mjx-container[display="true"],
+.markdown-rendered .math-block {
+  background: var(--cfa-formula-bg);
+  border: 1px solid color-mix(in srgb, var(--cfa-purple) 28%, transparent);
+  border-radius: var(--cfa-radius);
+  margin: 0.9rem 0;
+  overflow-x: auto;
+  padding: 0.75rem 0.9rem;
+}
+
+.markdown-rendered .math,
+.markdown-rendered mjx-container:not([display="true"]) {
+  color: color-mix(in srgb, var(--cfa-purple) 72%, var(--text-normal));
+}
+
+.markdown-rendered code {
+  border: 1px solid var(--cfa-border-soft);
+  border-radius: 4px;
+  padding: 0.05em 0.28em;
+}
+
+/* Exam Traps: high-contrast review module */
+.markdown-rendered h2[data-heading="Exam Traps"] {
+  background: var(--cfa-trap-bg);
+  border: 1px solid color-mix(in srgb, var(--cfa-danger) 34%, transparent);
+  border-left: 5px solid var(--cfa-danger);
+  border-radius: var(--cfa-radius);
+  color: color-mix(in srgb, var(--cfa-danger) 82%, var(--text-normal));
+  margin-bottom: 0.45rem;
+  padding: 0.55rem 0.75rem;
+}
+
+.markdown-rendered h2[data-heading="Exam Traps"]::before {
+  content: "!";
+  display: inline-grid;
+  height: 1.25rem;
+  margin-right: 0.45rem;
+  place-items: center;
+  width: 1.25rem;
+  border-radius: 999px;
+  background: var(--cfa-danger);
+  color: var(--text-on-accent);
+  font-size: 0.78em;
+  font-weight: 800;
+}
+
+.markdown-rendered h2[data-heading="Exam Traps"] + ul,
+.markdown-rendered h2[data-heading="Exam Traps"] + ol {
+  background: color-mix(in srgb, var(--cfa-danger) 7%, var(--background-primary));
+  border: 1px solid color-mix(in srgb, var(--cfa-danger) 26%, transparent);
+  border-left: 5px solid var(--cfa-danger);
+  border-radius: var(--cfa-radius);
+  margin-top: 0;
+  padding: 0.8rem 1.15rem 0.85rem 1.65rem;
+}
+
+.markdown-rendered h2[data-heading="Exam Traps"] + ul li::marker,
+.markdown-rendered h2[data-heading="Exam Traps"] + ol li::marker {
+  color: var(--cfa-danger);
+}
+
+/* Q&A: dated recall cards */
+.markdown-rendered h2[data-heading="Q&A"] {
+  background: var(--cfa-qa-bg);
+  border: 1px solid color-mix(in srgb, var(--cfa-accent) 32%, transparent);
+  border-left: 5px solid var(--cfa-accent);
+  border-radius: var(--cfa-radius);
+  color: color-mix(in srgb, var(--cfa-accent) 80%, var(--text-normal));
+  margin-bottom: 0.55rem;
+  padding: 0.55rem 0.75rem;
+}
+
+.markdown-rendered h2[data-heading="Q&A"]::before {
+  content: "?";
+  display: inline-grid;
+  height: 1.25rem;
+  margin-right: 0.45rem;
+  place-items: center;
+  width: 1.25rem;
+  border-radius: 999px;
+  background: var(--cfa-accent);
+  color: var(--text-on-accent);
+  font-size: 0.78em;
+  font-weight: 800;
+}
+
+.markdown-rendered h2[data-heading="Q&A"] ~ h3[data-heading*="2026-"] {
+  background: color-mix(in srgb, var(--cfa-accent) 7%, var(--background-primary));
+  border: 1px solid color-mix(in srgb, var(--cfa-accent) 24%, transparent);
+  border-bottom: 0;
+  border-radius: var(--cfa-radius) var(--cfa-radius) 0 0;
+  color: color-mix(in srgb, var(--cfa-accent) 82%, var(--text-normal));
+  font-size: 0.98em;
+  margin-bottom: 0;
+  padding: 0.55rem 0.75rem;
+}
+
+.markdown-rendered h2[data-heading="Q&A"] ~ h3[data-heading*="2026-"] + p,
+.markdown-rendered h2[data-heading="Q&A"] ~ h3[data-heading*="2026-"] + p + p,
+.markdown-rendered h2[data-heading="Q&A"] ~ h3[data-heading*="2026-"] + p + p + p,
+.markdown-rendered h2[data-heading="Q&A"] ~ h3[data-heading*="2026-"] + p + p + p + p {
+  background: color-mix(in srgb, var(--cfa-accent) 4%, var(--background-primary));
+  border-bottom: 1px solid color-mix(in srgb, var(--cfa-accent) 14%, transparent);
+  border-left: 1px solid color-mix(in srgb, var(--cfa-accent) 24%, transparent);
+  border-right: 1px solid color-mix(in srgb, var(--cfa-accent) 24%, transparent);
+  margin: 0;
+  padding: 0.35rem 0.75rem;
+}
+
+.markdown-rendered h2[data-heading="Q&A"] ~ p strong:first-child {
+  color: var(--cfa-accent);
+}
+
+/* Atlas pages: make scan pages feel more like control surfaces */
+.markdown-rendered:has(h1[data-heading*="Master Index"]) h2,
+.markdown-rendered:has(h1[data-heading*="Coverage Matrix"]) h2,
+.markdown-rendered:has(h1[data-heading*="Formula Cheat Sheet"]) h2,
+.markdown-rendered:has(h1[data-heading*="Active Recall"]) h2,
+.markdown-rendered:has(h1[data-heading*="Exam Traps Index"]) h2 {
+  border-left-color: var(--cfa-accent-2);
+}
+
+.markdown-rendered:has(h1[data-heading*="Master Index"]) h2 + ul,
+.markdown-rendered:has(h1[data-heading*="Formula Cheat Sheet"]) h2 + ul,
+.markdown-rendered:has(h1[data-heading*="Active Recall"]) h2 + ul {
+  border: 1px solid var(--cfa-border-soft);
+  border-radius: var(--cfa-radius);
+  padding: 0.65rem 0.85rem 0.65rem 1.5rem;
+}
+
+/* File explorer topic cues */
+.nav-folder-title[data-path^="10_Atlas"] {
+  color: var(--cfa-accent-2);
+  font-weight: 700;
+}
+
+.nav-folder-title[data-path^="11_"],
+.nav-folder-title[data-path^="12_"],
+.nav-folder-title[data-path^="13_"],
+.nav-folder-title[data-path^="14_"],
+.nav-folder-title[data-path^="15_"],
+.nav-folder-title[data-path^="16_"],
+.nav-folder-title[data-path^="17_"],
+.nav-folder-title[data-path^="18_"],
+.nav-folder-title[data-path^="19_"],
+.nav-folder-title[data-path^="20_"] {
+  border-left: 3px solid color-mix(in srgb, var(--cfa-accent) 45%, transparent);
+  padding-left: 0.45rem;
+}
+
+.nav-folder-title[data-path^="90_QA_Log"],
+.nav-folder-title[data-path^="00_Inbox"] {
+  color: var(--cfa-warn);
+  font-weight: 650;
+}
+
+/* Side panes */
+.workspace-split.mod-left-split .workspace-tabs,
+.workspace-split.mod-right-split .workspace-tabs {
+  font-size: 0.92em;
+}
+
+.view-header-title {
+  font-weight: 650;
+}

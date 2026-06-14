@@ -7,6 +7,9 @@ status: evergreen
 
 # Q&A Log
 
+- 2026-06-07 [Econ] Deep completion: FX workflow, forecast model selection, policy/crisis diagnostics -> [[Currency_Exchange_Rates]]
+- 2026-06-07 [Econ] Deep completion: TFP residual, growth-model identification, trade-barrier effects -> [[Economic_Growth]]
+
 Chronological index of every saved Q&A across all topics (newest first). Each line: `YYYY-MM-DD [Topic] question → [[Note]]`
 
 **2026-06-03 — Bulk enrichment pass: worked examples + exam Q&A added to all nine non-Quant topic areas (Books 1–5, Schweser-verified). One index line per enriched note below.**

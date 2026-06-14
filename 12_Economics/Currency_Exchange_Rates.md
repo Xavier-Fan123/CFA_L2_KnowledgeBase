@@ -17,6 +17,17 @@ Quote convention: **P/B = price currency / base currency** (price of 1 unit of b
 ## The Conversion Mnemonic (Schweser)
 **"Up-the-bid-and-multiply, down-the-ask-and-divide."** Given a P/B quote: converting the base→price currency means going **up** the quote → use the **bid** and **multiply**; converting price→base means going **down** the quote → use the **ask (offer)** and **divide**. (Rule: *buy the base at ask, sell the base at bid*.)
 
+## Exam Workflow - Quotes, Arbitrage, and Forwards (5.a-5.d)
+Use the same five-step order for almost every computational FX vignette:
+
+1. **Normalize the quote.** Write it as `P/B = price currency per 1 base currency`; label the base and price currencies before touching the numbers.
+2. **Choose the side of the dealer quote.** Selling the base uses the **bid** and multiplying; buying the base uses the **ask** and dividing.
+3. **For triangular arbitrage, walk the cash.** Convert through the three dealer quotes in one direction, then the other if needed; never use the implied cross rate for the actual trade legs.
+4. **For covered IRP, use the price-currency rate in the numerator.** `F = S * (1 + r_price * t) / (1 + r_base * t)`. If `r_base < r_price`, the base trades at a forward premium.
+5. **For forward MTM, offset the old contract.** A long-base forward is offset by selling the base forward, so use the new forward **bid**; then discount the forward-rate difference at the **price-currency** rate for the remaining term.
+
+Common exam pattern: the vignette gives extra spot or interest-rate data to tempt a shortcut. Forward valuation during the contract's life uses the **new same-maturity forward**, not spot, and the quote side must match the offsetting trade.
+
 ## Triangular Arbitrage (5.b)
 Three currencies, three quotes; if the implied cross rate ≠ the quoted cross rate, arbitrage exists.
 - **Cross rate**: compute from two pairs so the common currency cancels. Compare to the dealer's quote; use the **dealer quotes** (not the computed cross) when walking the triangle.
@@ -72,6 +83,18 @@ Linkages (official curriculum chain): Covered IRP always holds (arbitrage). If f
 - Short/medium term: UIRP and PPP **seldom hold**; forward rate is a **biased** predictor.
 - Long run: **relative PPP** tends to hold → real exchange rate is mean-reverting. Assess fair value via ex-ante PPP, UIRP, or forward rates.
 
+### Forecasting Decision Rules (5.g, 5.h)
+
+| Method | Input | Forecast logic | Best use | Main weakness |
+|---|---|---|---|---|
+| **Current spot** | `S0` | future spot is unchanged | neutral benchmark | ignores rates and inflation |
+| **Forward rate** | `F0,T` | market forward as expected future spot | hedging / market-implied quote | biased predictor when risk premia exist |
+| **UIRP** | nominal rate differential | high-yield currency expected to depreciate | rate-based forecast | fails often in the short run |
+| **Relative PPP** | inflation differential | high-inflation currency expected to depreciate | long-run fair value | weak short-run predictor |
+| **Real exchange rate** | nominal FX and price levels | mean reversion toward long-run real FX | valuation / misalignment | slow adjustment and regime breaks |
+
+Use the facts to choose the model: **rates** point to UIRP/forward, **inflation** points to PPP, and **long-run over/undervaluation** points to real-exchange-rate mean reversion. If a question asks for a no-arbitrage forward, use **covered IRP**, not a forecasting parity.
+
 ## Carry Trade (5.i)
 - **Borrow the low-yield (funding) currency, invest in the high-yield currency.** Profitable precisely when UIRP **fails** (high-yielder does not depreciate as predicted).
 - Return ≈ interest differential ± currency move. Risk profile: small steady gains punctuated by rare large losses → **negative skew / "crash risk"** (peso problem). Returns are **not** normally distributed.
@@ -82,11 +105,40 @@ Linkages (official curriculum chain): Covered IRP always holds (arbitrage). If f
 - **Portfolio balance / monetary models**: long-run money-supply growth → depreciation.
 - **Intervention & capital controls**: more effective for EM with smaller FX markets; aim to manage volatility/level. **Currency crisis warning signs**: deteriorating terms of trade, large foreign liabilities / declining FX reserves, rapid prior money growth, fixed/overvalued real exchange rate, banking-sector fragility, contagion.
 
+### Policy Impact Grid (5.k, 5.l)
+
+| Policy shock | High capital mobility | Low capital mobility / trade channel |
+|---|---|---|
+| **Expansionary monetary** | lower rates -> capital outflow -> depreciation | depreciation still likely through money supply and lower rates |
+| **Restrictive monetary** | higher rates -> capital inflow -> appreciation | appreciation, unless recessionary effects dominate |
+| **Expansionary fiscal** | higher rates -> capital inflow -> appreciation | higher income/imports -> current-account pressure -> depreciation |
+| **Restrictive fiscal** | lower rates -> capital outflow -> depreciation | lower imports -> current-account support -> appreciation |
+| **Monetary + fiscal expansion** | ambiguous, because the policies push rates in opposite directions | usually ambiguous; read the stated channel |
+
+If the vignette explicitly says **high capital mobility**, use the interest-rate channel first. If it emphasizes low capital mobility, import growth, or trade balance pressure, use the trade channel.
+
+### Crisis Diagnostic Checklist (5.m)
+A currency-crisis vignette usually combines several of these:
+
+- **Overvalued real exchange rate** or a fixed peg that has become hard to defend.
+- **Falling FX reserves** against large short-term foreign-currency liabilities.
+- **Rapid domestic credit / money growth**, often tied to banking-sector weakness.
+- **Worsening current account** or deteriorating terms of trade.
+- **Large fiscal deficits** financed by money creation or external borrowing.
+- **Contagion** from a similar country or currency regime.
+- **Policy inconsistency**, such as defending a peg while running loose money or fiscal policy.
+
+The strongest answer is usually not "one bad ratio." It is the combination of an overvalued currency, fragile external funding, and limited reserves.
+
 ## Exam Traps
 - Mind the quote convention — a forward **premium on the base** means `F > S` in P/B terms.
 - Carry trade ≠ free money: it works while UIRP fails, but carries crash risk (negative skew).
 - Covered IRP is the only parity condition enforced by arbitrage; the rest are equilibrium tendencies.
 - Expansionary monetary policy → currency **depreciates** (rate channel, high capital mobility).
+
+- In a forward MTM problem, discount at the **price-currency** rate and use the new forward quote that offsets the old position.
+- Do not use a no-arbitrage covered-IRP forward as proof that the forward is an unbiased forecast; no-arbitrage and forecasting are separate ideas.
+- Currency crises are usually multi-signal cases: overvaluation plus weak reserves plus short-term FX debt is stronger evidence than any single symptom.
 
 ## Q&A
 
@@ -94,6 +146,21 @@ Linkages (official curriculum chain): Covered IRP always holds (arbitrage). If f
 **Q:** When you value an FX forward before expiry, which interest rate do you discount at, and do you use the bid or the offer of the new forward?
 **A:** Two rules. (1) **Discount at the price-currency rate** for the remaining days (the value is expressed in the price currency). (2) To value an existing long-base forward you must **offset it** by entering a new forward to **sell the base** for the remaining maturity → use the side of the new quote that applies to selling the base (**up the bid**). `Vt = (F_new − F0) × size / (1 + r_price·(days left/360))`. A positive number is a gain to the long-base position. Trap: do not discount at the base-currency rate, and do not use the spot rate to mark a forward.
 Related: [[Economics_Overview]]
+
+### 2026-06-07 - FX vignette workflow: quote side, arbitrage, and forward MTM
+**Q:** What is the safest order for solving FX quote, triangular-arbitrage, and forward-value questions?
+**A:** First label the quote as `P/B`; second choose the quote side (sell base = bid and multiply, buy base = ask and divide); third walk the actual dealer quotes around the triangle if arbitrage is possible; fourth use covered IRP for a no-arbitrage forward; fifth, for MTM, offset the old contract with the new remaining-maturity forward and discount the rate difference at the **price-currency** rate. Most errors come from using the implied cross rate for a trade leg, using spot instead of the new forward, or discounting at the base-currency rate.
+Related: [[Economics_Overview]]
+
+### 2026-06-07 - Choosing the correct FX forecast model
+**Q:** How do you decide whether to use spot, forward, UIRP, PPP, or real-exchange-rate mean reversion to forecast a future spot rate?
+**A:** Use the model implied by the input data and wording. **Forward** is a market-implied hedge/quote and is not guaranteed unbiased; **UIRP** uses nominal rate differentials; **relative PPP** uses expected inflation differentials; **real-exchange-rate mean reversion** is the long-run fair-value tool; current spot is a neutral benchmark. If the question asks for no-arbitrage, that is **covered IRP**, not a forecasting claim.
+Related: [[Economics_Overview]]
+
+### 2026-06-07 - Currency crisis warning signs
+**Q:** What combination of facts is most persuasive for a currency-crisis risk question?
+**A:** Look for a cluster: overvalued/fixed exchange rate, falling reserves, large short-term foreign-currency debt, rapid domestic credit or money growth, a current-account deficit or terms-of-trade shock, fragile banks, and contagion. A single symptom is weak evidence; overvaluation plus reserve weakness plus external funding pressure is the classic crisis setup.
+Related: [[Economic_Growth]]
 
 ### 2026-06-03 — Why does the carry trade have negative skew?
 **Q:** The carry trade looks like steady profit — where's the catch?

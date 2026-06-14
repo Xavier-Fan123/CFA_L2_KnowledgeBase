@@ -79,11 +79,17 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - Carry trade ≠ free money: it works while UIRP fails, but carries crash risk (negative skew).
 - Covered IRP is the only parity condition enforced by arbitrage; the rest are equilibrium tendencies.
 - Expansionary monetary policy → currency **depreciates** (rate channel, high capital mobility).
+- In a forward MTM problem, discount at the **price-currency** rate and use the new forward quote that offsets the old position.
+- Do not use a no-arbitrage covered-IRP forward as proof that the forward is an unbiased forecast; no-arbitrage and forecasting are separate ideas.
+- Currency crises are usually multi-signal cases: overvaluation plus weak reserves plus short-term FX debt is stronger evidence than any single symptom.
 
 ### Economic Growth -> [[Economic_Growth]]
 - **Capital deepening cannot sustain growth** (diminishing returns); only **TFP / technological progress** sustains per-capita growth in the neoclassical model.
 - Neoclassical: higher savings raises the **level** of output and **temporarily** its growth, but **not the long-run growth rate**. Endogenous theory: savings **can** raise the long-run rate.
 - Convergence is **conditional/club**, not absolute, empirically.
+- If the question gives output growth and input growth, TFP is the **residual** after subtracting weighted capital and labor contributions.
+- In equity-market growth questions, sustainable GDP growth is only a long-run anchor; short-run returns also depend on `E/GDP` and `P/E` changes.
+- Removing trade barriers can raise aggregate growth while hurting import-competing workers/firms; do not call every participant a winner.
 
 
 ## 13 Financial Statement Analysis

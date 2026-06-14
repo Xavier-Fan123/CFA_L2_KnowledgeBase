@@ -30,3 +30,9 @@ Two readings. Currency is the heavier, more computational one; growth is concept
 - Covered IRP is the only arbitrage-enforced parity; others are tendencies.
 - Carry trade profits when UIRP fails, but has negative skew (crash risk).
 - Capital deepening cannot sustain per-capita growth; only TFP can (neoclassical).
+
+## Deep Review Order
+1. Drill the FX computation workflow in [[Currency_Exchange_Rates]]: quote orientation, bid/ask side, triangular arbitrage, covered IRP, and forward MTM.
+2. Drill the FX forecast and policy grids: spot vs forward vs UIRP vs PPP, Mundell-Fleming capital-mobility channel, and currency-crisis diagnostics.
+3. Drill [[Economic_Growth]] calculations: growth accounting, TFP residual, labor-productivity shortcut, Solow steady-state `g*`, and endogenous `s*c - delta - n`.
+4. Drill growth theory identification: classical vs Solow vs endogenous, convergence type, and trade-barrier aggregate gains vs sector losses.

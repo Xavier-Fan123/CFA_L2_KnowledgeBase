@@ -9,6 +9,16 @@ status: evergreen
 
 Auto-detected topics not yet covered by the KB. Resolve by creating or enriching notes.
 
+### 2026-07-18 — Independent regulators vs SROs (out of 2026 L2 scope)
+- Triggered by: user question on structural and funding differences between independent regulators and SROs — not found in the KB, the five 2026 Schweser L2 books, or the official L2 glossary; this is the Level I "Economics of Regulation" LOS. Answered from general/L1 knowledge: independent regulator = government-recognized authority + self-funded via levies on regulated entities (funding independence → political independence); SRO = private member body funded by dues/commercial revenue (conflict-of-interest risk); overlap case = FINRA (SRO with delegated authority); SRO delegation more common in common-law than civil-law countries.
+- Suggested action: none for L2 notes; if the user's practice sources keep testing it, add a short "Legacy/L1 Regulation Vocabulary" stub.
+- Priority: low (Level I material, not a 2026 L2 LOS)
+
+### 2026-07-11 — Legacy M&A vocabulary (merger types, takeover defenses) absent from KB
+- Triggered by: user questions on horizontal vs. vertical mergers and on crown jewel / Pac-Man / white knight defenses — the current 2026 restructuring reading does not define these, so answers came from legacy-curriculum/general knowledge.
+- Suggested action: if the user's practice questions keep touching legacy M&A terms, add a short "Legacy M&A Vocabulary" section to [[Corporate_Restructurings]] (merger types, pre-/post-offer defenses: poison pill, staggered board, greenmail, leveraged recap, litigation, etc.); otherwise leave as Q&A entries only.
+- Priority: low (out of 2026 LOS scope; useful vignette vocabulary)
+
 ### 2026-06-05 - 2026 errata / LOS metadata / practice-source sync (RESOLVED for concept metadata)
 - Triggered by: user audit against current CFA Institute Level II page and 2026 errata.
 - Fixed: [[Intercorporate_Investments]] VIE primary beneficiary definition, removed pooling-of-interests curriculum residue, tightened contingent-liability/goodwill impairment language; [[Cost_of_Capital]] private-company premium wording; [[Dividend_Discount_Models]] MSEX PVGO no-growth value; [[Real_Estate]] official LOS 31.a-31.e metadata.

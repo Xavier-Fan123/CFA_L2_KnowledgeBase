@@ -21,6 +21,18 @@ source: Official Curriculum L2 Vol 8, Learning Module 3 (Investments in Real Est
 
 **REIT structure rules (typical):** distribute **90–100%** of taxable income; **≥75%** of assets in real estate; **≥75%** of income from rent or mortgage interest; **U.S. "5/50 rule"** — ≥100 owners and **no 5 or fewer owners holding >50%** of shares.
 
+### Equity REIT Property Subtypes — economic drivers (official LM3 exhibit)
+
+| Subtype | Owns | Key drivers / risks | Cyclicality |
+|---|---|---|---|
+| **Office** | office towers | job growth, lease length long, new supply | cyclical (lagging) |
+| **Industrial** | warehouses, logistics | trade, e-commerce, supply chains | moderately cyclical |
+| **Retail** | malls, shopping centers | consumer spending, e-commerce threat | cyclical |
+| **Multi-family/residential** | apartments | job growth, home affordability; short leases reset quickly | stable-to-cyclical |
+| **Storage** | self-storage units | mobility, downsizing; month-to-month leases | fairly resilient |
+| **Health care** | senior housing, skilled nursing, hospitals, medical office | **demographics (aging), government reimbursement (Medicare/Medicaid), operator financial health/lease coverage, litigation, new-supply risk**; REIT = landlord on long **net leases**, cannot operate facilities (US) | **defensive/acyclical** |
+| **Hotel** | hotels, resorts | business/leisure travel; **no leases** (nightly pricing) | **most cyclical** |
+
 ## Advantages vs. Disadvantages of REITs (LOS 32.a)
 
 **Advantages:** superior **liquidity** (trades daily), transparency, tax exemption, **predictable earnings** (contractual rents), access to premium properties, active professional management, greater diversification across property type/geography.
@@ -83,6 +95,11 @@ A premium/discount of price to NAVPS reflects views on management, leverage, and
 - **NAVPS uses market values** and is superior to BVPS; it is not "exactly" intrinsic value.
 
 ## Q&A
+
+### 2026-07-12 — What is a health care REIT?
+**Q:** What is a health care REIT?
+**A:** An equity REIT owning **senior housing, skilled nursing facilities, hospitals, and medical office buildings**, leased to healthcare **operators** on long-term **net leases** — the REIT is the landlord, not the operator (US REITs can't run care businesses). Economics: demand is **demographic-driven (aging), largely acyclical/defensive**; the central risks are **government reimbursement policy** (Medicare/Medicaid squeezes operators' rent-paying ability), **operator credit/lease coverage**, litigation/regulation, and **new-supply/overbuilding** (weak land constraints). Exam pairing: health care REIT ↔ demographics + government funding + operator health; contrast hotels (**most cyclical**, no leases) and apartments (short leases, reset with economy).
+Related: [[Real_Estate]]
 
 ### 2026-06-04 — How do FFO and AFFO differ, and which is better?
 **Q:** Define FFO and AFFO and explain which is the better measure of REIT economic income.

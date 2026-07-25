@@ -88,6 +88,7 @@ Exam shortcut: if the question says **saving permanently raises growth**, it is 
 ## Government & Trade (6.k, 6.l)
 - Rationale for **subsidizing R&D/knowledge**: positive externalities → private investment is below the social optimum.
 - **Removing trade barriers**: raises investment and growth, reallocates toward comparative advantage; convergence is faster for open economies.
+- **Free trade by model** (LOS 6.l pairing is neoclassical vs endogenous): **Neoclassical** — capital flows to capital-scarce countries (higher MPK) → faster capital deepening → **temporary** growth boost, **permanently higher level**, faster convergence. **Endogenous** — bigger markets, competition, scale economies, and international knowledge spillovers → **permanently higher growth rate**.
 
 ### Policy and Trade Effects Checklist (6.k, 6.l)
 
@@ -110,6 +111,11 @@ For trade-barrier questions, separate **aggregate growth** from **sector effects
 - Removing trade barriers can raise aggregate growth while hurting import-competing workers/firms; do not call every participant a winner.
 
 ## Q&A
+
+### 2026-07-11 — Free trade under the growth models
+**Q:** What do the growth models predict about opening an economy to free trade?
+**A:** The tested pairing (LOS 6.l) is neoclassical vs endogenous. **Neoclassical**: capital flows to capital-scarce economies with higher MPK → faster capital deepening → **temporary** growth-rate boost, **permanently higher output level**, and **faster (conditional) convergence** — the long-run rate returns to g* = θ/(1−α). **Endogenous**: larger markets, competition, economies of scale, and knowledge/technology spillovers raise innovation → **permanently higher growth rate**; also lets developing countries import technology. Shortcut: "temporary boost / level / convergence" → neoclassical; "permanent rate increase via spillovers" → endogenous. Always separate aggregate gains from **import-competing sector losses**. (Classical/Malthus is not tested on trade; any gain would be diluted by population growth — beyond-curriculum note.)
+Related: [[Economics_Overview]]
 
 ### 2026-06-03 — Solow steady-state growth rate: per-capita vs total
 **Q:** In the neoclassical (Solow) model, what is the sustainable growth rate, and does saving/capital change it?

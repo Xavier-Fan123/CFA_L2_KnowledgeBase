@@ -35,7 +35,7 @@ source: Schweser Book 4, Module 25, LOS 25.a-25.q
 - **One-sided durations** (up vs down) better capture the **asymmetric** sensitivity when the option is **near the money**: for a **callable**, one-sided **up**-duration > **down**-duration (price capped on the way down as it nears the call price → less sensitive to rate falls). For a **putable**, **down**-duration > **up**-duration (put floors the price on the way up). **Key-rate durations** isolate sensitivity to specific maturity shifts (shaping risk).
 
 ## Convertible Bonds (25.n-25.q)
-**Defining features**: bondholder's right to convert debt into a fixed number of shares during the conversion period at a preset **conversion price**; **conversion ratio** = par / conversion price. Ratio/price are adjusted for stock splits, bonus issues, and above-**threshold** dividends. If also **callable**, the issuer can force conversion (**forced conversion**) by calling once the share price is well above the conversion price, capping the bondholder's redemption value below the conversion value.
+**Defining features**: bondholder's right to convert debt into a fixed number of shares during the conversion period at a preset **conversion price**; **conversion ratio** = par / conversion price. Ratio/price are adjusted for stock splits, bonus issues, and above-**threshold** dividends: if the actual dividend **exceeds the threshold dividend**, the **conversion ratio adjusts upward** (conversion price **down**) to offset the ex-dividend share-price drop — bondholder protection always means *more* shares, never fewer; dividends ≤ threshold trigger no adjustment. Change-of-control events carry a **contingent put** (or a lowered conversion price); other puts may be **hard** (cash) or **soft** (issuer picks cash/stock/debentures/mix). If also **callable**, the issuer can force conversion (**forced conversion**) by calling once the share price is well above the conversion price, capping the bondholder's redemption value below the conversion value.
 
 **Value components & measures** (all per the curriculum):
 - **Conversion (parity) value** = underlying share price × conversion ratio.
@@ -76,6 +76,11 @@ Related: [[Arbitrage_Free_Valuation]]
 ### 2026-06-03 — Why can a callable bond have negative convexity?
 **Q:** Explain the duration/convexity behavior of a callable bond as rates fall.
 **A:** As rates fall, a normal bond's price rises at an increasing rate (positive convexity). But the issuer's **call caps the upside** near the call price — the price compresses as it approaches the strike, so the price-yield curve bends the "wrong" way → **negative convexity** in that region. Effective duration `ED = (V− − V+)/(2·V0·Δy)` is **shorter** than the straight bond's because the expected life shortens as the call moves in-the-money. Putables stay **positively convex** (the put supports the price floor as rates rise).
+Related: [[Term_Structure]]
+
+### 2026-07-18 — Threshold dividend vs actual dividend vs conversion price
+**Q:** What is the relationship between the threshold dividend, the actual dividend paid, and the conversion price?
+**A:** If the actual dividend **exceeds** the specified threshold dividend, the **conversion ratio is adjusted upward** (equivalently, conversion price adjusted **downward**). This protects convertible holders from the ex-dividend share-price drop caused by an unusually large payout, which would otherwise gut the conversion option's value. Dividends at or below the threshold trigger no adjustment. Trap: bondholder protection always means ratio **up** / price **down** — never the reverse. (Schweser Book 4, Module 25.8, LOS 25.n)
 Related: [[Term_Structure]]
 
 ### 2026-06-04 — Convertible value measures and the risk-return spectrum (25.n-25.q)

@@ -85,6 +85,16 @@ Build **pro forma** statements, then read off EPS, net debt/EBITDA, FCF, and a p
 
 ## Q&A
 
+### 2026-07-11 — Horizontal vs. vertical merger
+**Q:** How do you distinguish a horizontal merger from a vertical merger?
+**A:** **Horizontal** = combining with a firm at the **same stage of the same industry** (a competitor) — motives: economies of scale, market/pricing power, cost synergies; attracts the **most antitrust scrutiny** (raises concentration). **Vertical** = combining with a firm at a **different stage of your own value chain** (a supplier or customer) — motives: secure inputs, capture chain margins, cut transaction costs. Vertical splits into **backward integration** (buy upstream, e.g., automaker → battery maker) and **forward integration** (buy downstream, e.g., manufacturer → retailer). Test: could one firm be the other's supplier/customer? Yes → vertical; same product to same customers → horizontal; unrelated → **conglomerate**. (Legacy M&A curriculum / general knowledge — the 2026 restructuring reading does not formally define these.)
+Related: [[Corporate_Issuers_Overview]]
+
+### 2026-07-11 — Takeover defenses: crown jewel, Pac-Man, white knight
+**Q:** In M&A, what do crown jewel, Pac-Man, and white knight mean?
+**A:** Three **post-offer takeover defenses** (legacy M&A curriculum / general knowledge). **Crown jewel**: target sells its most valuable asset — usually what the bidder wants — to a third party, making itself unattractive (may be ruled illegal if done after a hostile bid). **Pac-Man**: target counter-bids to **acquire the hostile acquirer**; rare (needs size/financing). **White knight**: target invites a **friendly third party to outbid** the hostile bidder — the ensuing bidding war often triggers the **winner's curse** (knight overpays, benefiting target shareholders). Don't confuse white knight (buys the whole company) with **white squire** (buys only a minority blocking stake, no control).
+Related: [[Corporate_Issuers_Overview]]
+
 ### 2026-06-03 — Spin-off vs split-off vs equity carve-out
 **Q:** Distinguish the three main divestiture forms and which raise cash for the parent.
 **A:** **Spin-off** — existing shareholders receive **pro-rata shares** of the new standalone entity; **no cash** to the parent. **Split-off** — shareholders **exchange** some parent shares for subsidiary shares (reduces parent share count); no cash raised. **Equity carve-out** — parent **sells a stake via IPO** to outside investors → **raises cash**. All three can unlock value by reducing a conglomerate discount and improving focus. Trap: only the carve-out (and an outright asset sale) brings cash into the parent.

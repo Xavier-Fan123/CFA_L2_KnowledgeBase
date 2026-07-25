@@ -20,9 +20,11 @@ source: Schweser Book 1, Reading 4 (Modules 4.1–4.3), LOS 4.a–4.g
 
 Steps are **iterative**. For **text/unstructured** data the first four become: text **problem formulation → curation (collection) → text preparation & wrangling → text exploration**.
 
+**Data (text) curation** = the text analog of data collection: gathering the relevant raw text (news, filings, transcripts, social media) via **web spidering/scraping/crawling** programs or APIs, and **checking quality/relevance** of what was gathered. For **supervised** text models it also includes **labeling/annotation** of the target (e.g., human experts tagging sentences positive/negative sentiment). Cleaning HTML/punctuation is NOT curation — that is step 3 (preparation & wrangling).
+
 ## Data Preparation & Wrangling (LOS 4.b)
 
-**Data cleansing** fixes raw-data errors: **missing, invalid (out-of-range), inaccurate, non-uniform (format/unit), duplicate** values. (Note: "common values" are NOT a cleansing target — exam trap.)
+**Data cleansing** fixes six raw-data error types: **incompleteness** (missing values → delete or impute), **invalidity** (outside a meaningful range), **inaccuracy** (in-range but not the true value), **inconsistency** (conflicts with other data points, e.g., age contradicts birth year), **non-uniformity** (same info in different formats/units), **duplication**. (Note: "common values" are NOT a cleansing target — exam trap.)
 
 **Data wrangling = transformation + scaling:**
 - **Transformation types**: **Extraction, Aggregation, Filtration** (drop irrelevant observations/rows), **Selection** (drop unneeded features/columns), **Conversion** (data types).
@@ -116,9 +118,35 @@ Dividend-cut model, 78 test obs: TP = 18 (correctly flagged cuts), TN = 46, FN =
 - **AUC = 0.5 means random**; higher (toward 1) is better.
 - **Parameters are learned; hyperparameters are set by the researcher** and adjusted in tuning.
 - **Stemming** is rules-based and crude; **lemmatization** is more advanced/resource-heavy.
-- "Common values" are not a data-cleansing item; structured cleansing targets missing/invalid/inaccurate/ non-uniform/duplicate.
+- "Common values" are not a data-cleansing item; structured cleansing targets incomplete/invalid/inaccurate/inconsistent/non-uniform/duplicate.
+- **Invalid vs. inaccurate**: invalid = outside the possible range; inaccurate = in-range but wrong. **Inconsistent vs. non-uniform**: inconsistent = values contradict each other; non-uniform = same value, different format/unit.
 
 ## Q&A
+
+### 2026-07-10 — Chi-square vs. mutual information vs. vocabulary pruning
+**Q:** What is the difference between chi-square, mutual information, and vocabulary pruning in text feature selection?
+**A:** All three shrink the BOW/DTM to informative tokens. **Frequency-based vocabulary pruning** uses **document frequency** (DF = docs containing token / total docs) and is **label-blind**: it removes *both tails* — very high-DF tokens (stop-word-like, no discriminating power) and very low-DF tokens (rare noise). **Chi-square** and **MI** are **label-aware** rankings of token↔class association: keep high-χ² tokens (occurrence depends on class); keep **MI ≈ 1** tokens (concentrated in one class), drop **MI ≈ 0** (spread across all classes). Traps: DF pruning cuts both frequent AND rare words; MI ≈ 0 means "appears in all classes," not "rare."
+Related: [[Machine_Learning]]
+
+### 2026-07-10 — Bag-of-words vs. document term matrix
+**Q:** What is the difference between a bag-of-words and a document term matrix?
+**A:** **BOW** = the collection of distinct tokens from the cleaned/normalized text — just the corpus *vocabulary*, ignoring word order and per-document detail. **DTM** = a matrix with **rows = documents, columns = the BOW tokens, cells = counts** of each token in each document — it is the step that converts unstructured text into **structured, ML-ready** data. Relationship: BOW supplies the DTM's column headers; DTM adds the per-document counts. Traps: both ignore sequence (use **N-grams** if order matters, and N-grams **keep stop words**); "converts text to structured data" → answer is DTM, not BOW.
+Related: [[Machine_Learning]]
+
+### 2026-07-10 — Why normalization uses (Xi−Xmin)/(Xmax−Xmin) rather than (Xi−mean)/sd
+**Q:** Why is normalization defined as (Xi − Xmin)/(Xmax − Xmin) instead of (Xi − mean)/sd?
+**A:** Because (Xi − mean)/sd is a **different method — standardization (z-score)** — and it cannot produce a bounded [0,1] output. Min-max works because Xi = Xmin maps to 0, Xi = Xmax maps to 1, and everything between maps linearly into (0,1); a z-score is unbounded (mean 0, SD 1, but values can be ±anything). Choose **normalization** when data are non-normal and a bounded common scale is needed (but it is **outlier-sensitive**: one extreme min/max compresses the rest); choose **standardization** when data are ~normal (more outlier-robust). Scaling matters most for **NN and SVM**.
+Related: [[Machine_Learning]]
+
+### 2026-07-10 — Incompleteness vs. inconsistency errors in data cleansing
+**Q:** What is the difference between an incompleteness error and an inconsistency error?
+**A:** **Incompleteness** = the value is **missing/absent** (blank, NA) — fix by deleting the observation or imputing (mean/median). **Inconsistency** = the value is present but **conflicts with other data points** (e.g., title = "CEO" while employment status = "unemployed"; age contradicts birth year) — fix by verifying against an alternative source. Discriminator: incomplete = *not there*; inconsistent = *there, but two fields disagree*. Companion pairs: **invalid** (outside possible range) vs. **inaccurate** (in-range but wrong); **inconsistent** (contradicts) vs. **non-uniform** (same info, different format/unit).
+Related: [[Machine_Learning]]
+
+### 2026-07-10 — What does "data (text) curation" mean in text-based ML?
+**Q:** In the five steps of building text-based ML models, what does step 2, data (text) curation, mean?
+**A:** It is the text counterpart of "data collection": gathering the relevant raw text from sources (web pages, news, filings, social media) — typically via **web spidering/scraping/crawling** programs or web-service APIs — and verifying the gathered text's **quality and relevance** to the task. For **supervised** learning, curation also covers **labeling/annotation** of the target variable by human experts (e.g., tagging sentences positive/negative for a sentiment classifier). **Trap:** removing HTML tags, punctuation, numbers, and stop words belongs to step 3 (text preparation & wrangling), not curation.
+Related: [[Machine_Learning]]
 
 ### 2026-06-04 — Precision, recall, accuracy, F1 from a confusion matrix
 **Q:** How are precision, recall, accuracy, and the F1 score computed, and when does each matter?

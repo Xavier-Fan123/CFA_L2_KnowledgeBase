@@ -102,7 +102,17 @@ Use the facts to choose the model: **rates** point to UIRP/forward, **inflation*
 ## Balance of Payments, Policy, Crises (5.j-5.m)
 - **BOP flows**: persistent current-account deficits tend to pressure a currency lower (flow + portfolio mechanisms); capital-account flows can dominate short-term moves.
 - **Monetary/fiscal policy (Mundell-Fleming)**: with high capital mobility, **expansionary monetary → lower rates → currency depreciation**; **expansionary fiscal → higher rates → appreciation** (rate channel). Effects can reverse under low capital mobility (trade channel).
-- **Portfolio balance / monetary models**: long-run money-supply growth → depreciation.
+- **Monetary models**: long-run money-supply growth → higher prices → depreciation (Dornbusch overshooting adds short-run sticky-price overshoot that mean-reverts).
+- **Portfolio balance model**: the **long-run** counterpart to Mundell-Fleming for **fiscal** policy. Expansionary fiscal policy → growing stock of govt debt in investor portfolios → investors eventually demand a higher risk premium and become saturated. The short-run fiscal **appreciation** (Mundell-Fleming rate channel) is unsustainable and **reverses to long-run depreciation** unless the government reverses fiscal policy or the central bank **monetizes** the debt.
+
+### Exchange-Rate-Determination Models (beyond parity)
+| Model | Focus | Horizon | Key result |
+|---|---|---|---|
+| **Mundell-Fleming** | Monetary + fiscal policy via interest-rate / trade channels | Short run | Exp. monetary → depreciation; exp. fiscal → appreciation (high capital mobility) |
+| **Monetary models** (incl. Dornbusch overshooting) | Money supply & inflation; PPP-based, output fixed | Mainly long run | Money growth → higher prices → depreciation; sticky prices → short-run overshooting |
+| **Portfolio balance** | Sustained fiscal deficits & debt accumulation | Long run | Short-run fiscal appreciation unwinds → long-run depreciation as debt saturates / is monetized |
+
+**Trap:** Mundell-Fleming (short run) and portfolio balance (long run) give **opposite** signs for the same expansionary fiscal policy — short-run appreciation, long-run depreciation.
 - **Intervention & capital controls**: more effective for EM with smaller FX markets; aim to manage volatility/level. **Currency crisis warning signs**: deteriorating terms of trade, large foreign liabilities / declining FX reserves, rapid prior money growth, fixed/overvalued real exchange rate, banking-sector fragility, contagion.
 
 ### Policy Impact Grid (5.k, 5.l)
@@ -175,6 +185,11 @@ Related: [[Economics_Overview]]
 ### 2026-06-04 — Real interest rate parity vs the international Fisher effect
 **Q:** How does "real interest rate parity" fit with the other parity conditions, and is it the same as the international Fisher effect?
 **A:** They are linked but distinct. **Real interest rate parity** states that **real** interest rates converge across markets, so the real yield spread `(r_f − r_d) = 0`. It is the **joint outcome** of two conditions both holding: **uncovered IRP** (`%ΔS_f/d = i_f − i_d`) and **ex-ante relative PPP** (`%ΔS_f/d = π_f^e − π_d^e`). Setting the two equal gives `i_f − i_d = π_f^e − π_d^e`, i.e. the nominal yield spread is driven solely by the expected-inflation differential — and the curriculum reserves the name **international Fisher effect** for exactly that nominal-rate/expected-inflation relationship (some authors instead call UIRP the international Fisher effect; the official text does not). Both assume risk-neutral investors who demand no FX or inflation risk premium. (Official curriculum, Reading 5, "The Fisher Effect, Real Interest Rate Parity, and International Parity Conditions.")
+Related: [[Economics_Overview]]
+
+### 2026-06-15 — What is the portfolio balance model?
+**Q:** What is the portfolio balance model?
+**A:** It is the **long-run counterpart to Mundell-Fleming** for **fiscal** policy. Expansionary fiscal policy is financed by issuing domestic-currency debt; investors keep accumulating that debt until they become **saturated** and demand a higher risk premium. So the **short-run appreciation** from Mundell-Fleming's interest-rate channel is unsustainable and **reverses into long-run depreciation** — unless the government reverses its fiscal stance or the central bank **monetizes** the debt. Key trap: Mundell-Fleming (short run) and the portfolio balance model (long run) can give **opposite** FX signs for the *same* expansionary fiscal policy. It is one of three exchange-rate-determination models beyond parity, alongside Mundell-Fleming (interest-rate/trade channels, short run) and the monetary models (money supply/inflation, with Dornbusch overshooting).
 Related: [[Economics_Overview]]
 
 ### 2026-06-03 — Mundell-Fleming: policy effects on the exchange rate

@@ -8,6 +8,8 @@ source: Schweser Book 1, Reading 2 (Modules 2.1–2.5), LOS 2.a–2.o
 
 # Time Series Analysis
 
+> DF / DF-EG / ARCH / residual-autocorrelation tests compared against every other L2 test: [[Statistical_Tests_Master_Table]].
+
 ## Trend Models (LOS 2.a–2.b)
 
 | Model | Equation | Use when… |

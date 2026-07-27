@@ -15,6 +15,8 @@ Final-review aggregation of the highest-yield formulas across all ten topic area
 ---
 
 ## 11 — Quantitative Methods → [[Regression_Assumption_Violations]] · [[Time_Series_Analysis]] · [[Logistic_Regression]]
+> Every test's distribution / df / tails / decision rule: **[[Statistical_Tests_Master_Table]]**.
+- **Coefficient CI**: $\hat{b}_j \pm t_c \cdot SE(\hat{b}_j)$, df $= n-k-1$, **always two-tailed**. Critical z values — 90/95/99%: two-tailed **1.645 / 1.96 / 2.58**, one-tailed **1.28 / 1.645 / 2.33**. (One-tailed at α = two-tailed at 2α, so 1.645 appears in both.)
 - **Adjusted R²**: $\bar{R}^2 = 1 - \dfrac{n-1}{n-k-1}\,(1 - R^2)$.
 - **AIC** $= n\ln(\text{SSE}/n) + 2(k+1)$ (forecasting); **BIC** $= n\ln(\text{SSE}/n) + \ln(n)\,(k+1)$ (goodness of fit). Lower = better; BIC penalizes added vars more.
 - **F-test (overall)**: $F = \dfrac{\text{MSR}}{\text{MSE}} = \dfrac{\text{SSR}/k}{\text{SSE}/(n-k-1)}$.

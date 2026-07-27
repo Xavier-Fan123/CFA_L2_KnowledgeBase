@@ -9,6 +9,11 @@ status: evergreen
 
 Auto-detected topics not yet covered by the KB. Resolve by creating or enriching notes.
 
+### 2026-07-26 — No critical-value / test-statistic reference anywhere in the KB (RESOLVED)
+- Triggered by: user asked which multiplier to use for 90/95/99% confidence intervals, one- vs two-tailed. Grep found no z/t critical values in any note or in the Formula Cheat Sheet — every note assumed the reader already had them.
+- Suggested action: **done** — added a "Coefficient t-test and Confidence Intervals" section with the full critical-value table to [[Multiple_Regression]] and a one-line summary to [[Formula_Cheat_Sheet]]. Follow-up **also done (2026-07-26)**: built [[Statistical_Tests_Master_Table]] in `10_Atlas/` — all 12 L2 hypothesis tests (statistic / distribution / df / tails / decision rule), the non-test diagnostics (VIF, leverage, AIC/BIC/RMSE), a df decoder, a "which test do I use" flow, and the violation→Type I/II direction table. Registered in [[Master_Index]] and back-linked from all six quant detail notes.
+- Priority: resolved
+
 ### 2026-07-18 — Independent regulators vs SROs (out of 2026 L2 scope)
 - Triggered by: user question on structural and funding differences between independent regulators and SROs — not found in the KB, the five 2026 Schweser L2 books, or the official L2 glossary; this is the Level I "Economics of Regulation" LOS. Answered from general/L1 knowledge: independent regulator = government-recognized authority + self-funded via levies on regulated entities (funding independence → political independence); SRO = private member body funded by dues/commercial revenue (conflict-of-interest risk); overlap case = FINRA (SRO with delegated authority); SRO delegation more common in common-law than civil-law countries.
 - Suggested action: none for L2 notes; if the user's practice sources keep testing it, add a short "Legacy/L1 Regulation Vocabulary" stub.

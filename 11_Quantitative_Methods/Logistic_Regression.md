@@ -69,7 +69,7 @@ Worked example (36 firms, dividend increase): model `ŷ = −3.445 + 0.332·Age 
 | Fit | R² | pseudo-R² (same-DV comparison only) |
 
 ## Exam Traps
-- Nested test is the **LR test (χ²)**, not an F-test.
+- Nested test is the **LR test (χ²)**, not an F-test. All L2 tests side by side: [[Statistical_Tests_Master_Table]].
 - Slope = change in **log odds**, not probability.
 - pseudo-R² compares only models with the **same** dependent variable.
 

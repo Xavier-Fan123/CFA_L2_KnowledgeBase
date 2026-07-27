@@ -8,7 +8,7 @@ source: Schweser Book 1, Reading 1 (Modules 1.1, 1.2, 1.4), LOS 1.a–1.f, 1.k, 
 
 # Multiple Regression (Basics, Model Fit, Dummies, Influence)
 
-> Hub note for Reading 1. Assumption **violations** (heteroskedasticity / serial correlation / multicollinearity) live in [[Regression_Assumption_Violations]]; **misspecification** in [[Model_Misspecification]]; **logistic** (qualitative dependent variable) in [[Logistic_Regression]].
+> Hub note for Reading 1. Assumption **violations** (heteroskedasticity / serial correlation / multicollinearity) live in [[Regression_Assumption_Violations]]; **misspecification** in [[Model_Misspecification]]; **logistic** (qualitative dependent variable) in [[Logistic_Regression]]. Every test's distribution / df / tails / decision rule in one table: [[Statistical_Tests_Master_Table]].
 
 ## Overview (LOS 1.a–1.b)
 
@@ -19,6 +19,36 @@ The general model: `Yᵢ = b₀ + b₁X₁ᵢ + b₂X₂ᵢ + … + bₖXₖᵢ 
 - **Slope bⱼ** = expected change in Y for a 1-unit change in Xⱼ, **holding all other X constant** → called a **partial slope coefficient**. Adding a correlated variable typically *changes* the other slopes (e.g. X₁ slope shifts 4.5 → 2.5 once X₂ enters).
 
 **Significance via p-value:** the p-value is the smallest significance level at which H₀ (bⱼ = 0) can be rejected. **p-value < α → reject** (coefficient significant); p-value > α → fail to reject.
+
+## Coefficient t-test and Confidence Intervals
+
+**t-statistic:** `t = (b̂ⱼ − bⱼ,H₀) / SE(b̂ⱼ)`, compared to t with **n − k − 1 df**. The standard significance test `H₀: bⱼ = 0` is **two-tailed**.
+
+**Confidence interval:** `b̂ⱼ ± t_c × SE(b̂ⱼ)` — **always two-tailed**, `t_c` at α/2 with n − k − 1 df.
+
+### Critical-value table (z; large-sample limit of t)
+
+| Confidence | α | **Two-tailed** (CI, `≠` tests) | **One-tailed** (`>` / `<` tests) |
+|---|---|---|---|
+| **90%** | 0.10 | **± 1.645** | **1.28** |
+| **95%** | 0.05 | **± 1.96** | **1.645** |
+| **99%** | 0.01 | **± 2.58** | **2.33** |
+
+Only five numbers exist: **1.28 · 1.645 · 1.96 · 2.33 · 2.58**.
+
+**Memory hook — 1.645 appears twice.** One-tailed 95% = two-tailed 90%, because both place exactly **0.05 in the right tail**. So the **one-tailed column is the two-tailed column shifted down one row**; anchor on 1.645 and rebuild the rest along the diagonal. General rule: **one-tailed at α = two-tailed at 2α.**
+
+**Which tail count applies:**
+
+| Situation | Tails |
+|---|---|
+| Any **confidence interval** | Two — always |
+| H₀: bⱼ = 0 (coefficient significance) | Two |
+| H₁: bⱼ > 0 or bⱼ < 0 | One |
+| **F-test** (overall / nested) | **One**, right side — despite the "=" in H₀ |
+| **Breusch-Pagan** (χ²) | **One** |
+
+*Caveat:* these are **z** values. Regression uses **t with n − k − 1 df**, which is always larger and converges to z as n grows (t ≈ z for df > 120). For small df the exam supplies the t-table. 99% two-tailed = 2.576, commonly written **2.58**.
 
 ## Five Assumptions (LOS 1.c)
 
@@ -111,6 +141,11 @@ Monthly returns on 5 X's, n = 60, SST = 460, SSE = 170.
 - Slope coefficients are **partial** — they hold other X's constant and change as regressors are added.
 
 ## Q&A
+
+### 2026-07-26 — Which critical values for 90/95/99%, one-tailed vs two-tailed?
+**Q:** When building a confidence interval, what do you multiply by for 90%, 95% and 99% — one-tailed vs two-tailed?
+**A:** **Confidence intervals are always two-tailed** → **1.645 / 1.96 / 2.58**. One-tailed values (for `>` or `<` hypothesis tests only) are **1.28 / 1.645 / 2.33**. Two-tailed splits α across both tails (α/2 each); one-tailed puts all of α in one tail, so it is always the smaller cutoff. **Key hook: 1.645 appears in both columns** — one-tailed 95% = two-tailed 90%, since both leave 0.05 in the right tail; the one-tailed column is the two-tailed column shifted down one row (**one-tailed at α = two-tailed at 2α**). Only five numbers to know: 1.28, 1.645, 1.96, 2.33, 2.58. Caveat: these are **z**; regression uses **t with n−k−1 df**, always larger, converging to z for df > 120.
+Related: [[Regression_Assumption_Violations]]
 
 ### 2026-06-04 — How do R², adjusted R², AIC and BIC differ for model selection?
 **Q:** When comparing multiple regression models, how do R², adjusted R², AIC, and BIC differ?

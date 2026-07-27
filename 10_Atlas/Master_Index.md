@@ -10,6 +10,7 @@ status: evergreen
 Map of Content for the whole knowledge base. One WikiLink line per note. Register new notes here.
 
 **Cross-topic:** [[Formula_Cheat_Sheet]] — final-review formula sheet aggregating every topic area.
+**Cross-topic:** [[Statistical_Tests_Master_Table]] — every L2 hypothesis test: statistic, distribution, df, tails, decision rule.
 
 **Review control:** [[LOS_Coverage_Matrix]] | [[Practice_Coverage_Matrix]] | [[Active_Recall_Index]] | [[Exam_Traps_Index]]
 

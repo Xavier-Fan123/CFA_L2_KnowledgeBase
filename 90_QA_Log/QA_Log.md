@@ -7,6 +7,10 @@ status: evergreen
 
 # Q&A Log
 
+- 2026-07-26 [Quant] Built Statistical Tests Master Table: all 12 L2 tests + rule "every F/chi-sq is one-tailed right, every t is two-tailed except Dickey-Fuller" -> [[Statistical_Tests_Master_Table]]
+- 2026-07-26 [Quant] Critical values: CI always two-tailed 1.645/1.96/2.58; one-tailed 1.28/1.645/2.33; one-tailed at a = two-tailed at 2a -> [[Multiple_Regression]]
+- 2026-07-26 [Quant] DW ~ 2(1-r): near 0 = positive SC (residuals persist, tiny gaps), near 4 = negative SC (alternating, huge gaps); "positive = pals" -> [[Regression_Assumption_Violations]]
+- 2026-07-26 [Quant] Multicollinearity consequences: inflated SEs -> Type II error; coefficients unbiased but unstable; R2/F/forecasts unaffected; no robust-SE fix -> [[Regression_Assumption_Violations]]
 - 2026-07-25 [Equity] Justified P/B=(ROE-g)/(r-g), P/S=margin*payout*(1+g)/(r-g); P/CF has NO justified formula (comparables only) -> [[Market_Based_Valuation]]
 - 2026-07-25 [Equity] Justified leading vs trailing P/E: trailing = leading x (1+g); leading=payout/(r-g), trailing=payout(1+g)/(r-g) -> [[Market_Based_Valuation]]
 - 2026-07-25 [Equity] FCFF vs FCFE valuation paths reconcile to same equity value when assumptions consistent (FCFF-firm-minus-debt vs FCFE-direct) -> [[Free_Cash_Flow_Valuation]]

@@ -42,7 +42,8 @@ Use **White-corrected (robust / heteroskedasticity-consistent) standard errors**
 ## Exam Traps
 - Dependent variable in the auxiliary regression is the **squared** residual, not the residual.
 - Statistic is `n × R²`, χ² with **k** df, **one-tailed**.
-- Don't confuse with **Breusch-Godfrey (BG)** = serial correlation (F-distribution), or **Durbin-Watson** = single-lag serial correlation.
+- Don't confuse with **Breusch-Godfrey (BG)** = serial correlation (F-distribution), or **Durbin-Watson** = single-lag serial correlation. Side-by-side comparison: [[Statistical_Tests_Master_Table]].
+- BP's auxiliary regression uses the **squared** residuals; BG's uses the **residuals themselves plus their lags**.
 
 ## Q&A
 

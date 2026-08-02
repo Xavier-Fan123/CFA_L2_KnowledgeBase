@@ -19,6 +19,24 @@ Actions track the life cycle: **start-up/growth** → invest (expand); **maturit
 - **Divestment** (decrease size/scope) — two main forms in the curriculum:
   - **Sale (divestiture)**: sell a unit/segment/assets for **cash**; control transfers to the acquirer.
   - **Spin-off**: separate a unit into a **new independent company** via a **stock dividend** to existing holders (pro-rata new shares); **no cash** to the parent; faces little regulatory scrutiny (reduces, not increases, market power). (Curriculum also recognizes split-off and equity carve-out as related forms.)
+
+### Divestiture Forms Compared
+
+| Dimension | **Equity carve-out** | **Spin-off** | **Split-off** |
+|---|---|---|---|
+| Mechanism | Sell a stake via **IPO** to new outside investors | Distribute sub shares **pro rata** as a stock dividend | Shareholders **swap** parent shares for sub shares |
+| **Cash to parent** | ✅ **YES** | ❌ No | ❌ No |
+| Who receives sub shares | New outside investors | **All** existing holders, pro rata | Only those who **elect** to swap |
+| Voluntary? | — | **No** — automatic | **Yes** — shareholder chooses |
+| Parent share count | Unchanged | Unchanged | ⬇️ **Decreases** (tendered shares retired) |
+| Parent retains a stake? | Yes — usually keeps control | No | No |
+| Consolidation | **Still consolidated**; minority interest appears | Deconsolidated | Deconsolidated |
+| Resulting shareholder base | Unchanged + new sub investors | Same people own **both** firms | Base **splits into two groups** |
+
+- **Spin-off vs. split-off in one line:** spin-off = *everyone gets both*; split-off = *you pick one*.
+- **Sharpest framing:** a **split-off is economically a share repurchase funded with subsidiary stock instead of cash** — which is why the parent's share count falls.
+- **Carve-outs keep control**: only a minority stake is sold, so the parent still consolidates and books a **non-controlling interest**. Often a **first step**, later completed by a full spin-off or sale.
+- Mnemonic: **C**arve-out → **C**ash · **Spin** → **s**tock dividend sprayed to all · **S**plit → **s**wap, base **s**plits, share count **s**hrinks.
 - **Restructuring** (same size/scope, better cost/financing): **cost** restructuring (e.g., franchising, sale-leaseback), **balance-sheet** restructuring (recapitalization, leveraged recap), **reorganization** (Chapter 11 — renegotiate debt) and **liquidation** (Chapter 7).
 - Motivations (Exhibit 3): **Investment** → realize synergies, growth, capabilities/resources, acquire an undervalued target; **Divestment** → focus, valuation (unlock a **conglomerate discount**), liquidity, regulatory; **Restructuring** → improve returns on capital, financial distress/bankruptcy.
 - **LBO** (special case = invest + divest + restructure): PE buyer uses heavy debt to take a target private, restructures, then exits via sale/IPO. Returns driven by **purchase price, leverage, FCF generated (debt paydown), and exit price**.
@@ -75,6 +93,34 @@ Build **pro forma** statements, then read off EPS, net debt/EBITDA, FCF, and a p
 - **Divestitures — sale vs spin-off (16.f)**: both can unlock a **conglomerate discount** (sum-of-parts > whole) by improving focus/management attention. A **sale** brings cash (often at a lower valuation if forced by liquidity/regulators); a **spin-off** gives holders equity in the separated firm and is slower but faces little antitrust scrutiny. Choice often hinges on **valuation** (many interested buyers → sale fetches more).
 - **Cost & balance-sheet restructurings (16.g)**: cost (franchising, sale-leaseback) lifts margins/returns; balance-sheet (recap, leveraged recap) rebalances leverage; reorganization renegotiates debt. Watch one-off charges and earnings-quality effects.
 
+## Legacy M&A Vocabulary (NOT 2026 L2 curriculum)
+
+> ⚠️ **Scope:** the terms below are **absent from the 2026 L2 curriculum** — "poison" returns **zero hits across all five 2026 Schweser books**. This is legacy-curriculum / general M&A vocabulary, retained only because practice sources keep testing it. Do not spend L2 review time here; recognize the words and move on.
+
+**Takeover defense taxonomy:**
+
+| **Pre-offer (preventive)** — installed in advance | **Post-offer (reactive)** — deployed after a bid |
+|---|---|
+| Poison **pill**, poison **put**, staggered/classified board, restricted voting rights, supermajority provisions, fair price amendments, golden parachutes | "Just say no," litigation, greenmail, share repurchase, leveraged recapitalization, crown jewel, Pac-Man, white knight, white squire |
+
+**Poison pill vs. poison put:**
+
+| Dimension | **Poison pill** | **Poison put** |
+|---|---|---|
+| Right held by | **Shareholders** (excluding the acquirer) | **Bondholders** |
+| Instrument | Shareholder rights plan (**equity**) | Bond covenant (**debt**) |
+| Trigger | Acquirer crosses ~10–20% ownership | **Change of control** |
+| Mechanism | Buy new shares at a deep discount (~50%) | Put bonds back at **par / 101** |
+| Damage to acquirer | **Dilution** — raider's stake destroyed | **Cash drain** — must refinance all debt at once |
+| Board can cancel? | ✅ **Yes** — redeemable at will | ❌ **No** — contractual covenant |
+
+- **Mnemonic: pill poisons the share count; put poisons the cash balance.**
+- **Pill variants:** *flip-in* (buy target shares at a discount — most common); *flip-over* (buy the acquirer's shares post-merger); *dead-hand* (only incumbent directors may redeem — often struck down).
+- **A pill's real purpose is leverage, not blockade.** The board can redeem it, so it forces the bidder to negotiate **with the board** instead of going straight to shareholders — raising the final premium.
+- **The poison put is genuinely credit-protective**, not just an anti-raider device: without it, an LBO acquirer loads the target with debt and structurally subordinates existing bondholders (event risk).
+
+> 🔗 **The poison put IS examinable — under a different name.** Schweser Book 4, Module 25.8, LOS 25.n covers it as a **"contingent put option in the event of change-of-control events,"** exercisable for a limited window, with a lowered conversion price as the alternative protection, and the **hard put** (cash) vs. **soft put** (issuer chooses cash/stock/debentures) distinction. See [[Bonds_With_Embedded_Options]].
+
 ## Exam Traps
 - **Materiality** rule of thumb: transaction is "large" if value > **10% of acquirer's pre-deal EV** (size + fit). Announcement-day price reaction is a **poor** predictor of long-run value.
 - **Comparable-company** multiples have **no** control premium → **add** one (best for spin-offs); **comparable-transaction** multiples **embed** the premium.
@@ -84,6 +130,11 @@ Build **pro forma** statements, then read off EPS, net debt/EBITDA, FCF, and a p
 - **Spin-off** = pro-rata new shares via stock dividend, **no cash** to parent; **carve-out** = sell a stake via IPO for **cash**; **split-off** = holders swap parent shares for subsidiary shares.
 
 ## Q&A
+
+### 2026-08-02 — Poison pill vs. poison put
+**Q:** What are a poison put and a poison pill, and when is each used?
+**A:** **Poison pill** = a **shareholder rights plan**: once a hostile acquirer crosses ~10–20% ownership, all *other* shareholders may buy new shares at a ~50% discount → **massive dilution** of the raider. **Poison put** = a **bond covenant** letting **bondholders** put their bonds back at **par/101 on a change of control** → the acquirer must **refinance the entire debt stack at once**. Mnemonic: **pill poisons the share count, put poisons the cash balance.** Both are **pre-offer (preventive)** defenses installed in advance, not deployed reactively. Critical asymmetry: a **pill is board-redeemable at will** (so its real function is forcing the bidder to negotiate with the board, raising the premium), while a **put is a contract the board cannot undo**. The put is also genuinely credit-protective against LBO event risk, not merely an anti-raider device. ⚠️ **Scope:** "poison" has **zero hits in all five 2026 Schweser L2 books** — pill is legacy vocabulary; the **put's mechanism IS examinable** as the change-of-control **contingent put** in Book 4, Module 25.8, LOS 25.n.
+Related: [[Bonds_With_Embedded_Options]]
 
 ### 2026-07-11 — Horizontal vs. vertical merger
 **Q:** How do you distinguish a horizontal merger from a vertical merger?

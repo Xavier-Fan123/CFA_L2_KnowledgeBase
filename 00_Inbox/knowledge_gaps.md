@@ -9,6 +9,12 @@ status: evergreen
 
 Auto-detected topics not yet covered by the KB. Resolve by creating or enriching notes.
 
+### 2026-08-02 — Capital budgeting (TNOCF / NWC recovery / tax shields) absent from KB and from the 2026 L2 curriculum (RESOLVED)
+- Triggered by: user's four-part self-diagnosis after a practice set — TNOCF & NWC recovery, incremental capex vs. depreciation tax shield, annuity↔geometric-series mapping, and nominal-vs-real direction on shields and interest.
+- Finding: **"TNOCF" returns zero hits across all five 2026 Schweser L2 books**; there is no capital budgeting reading in 2026 L2. This is **Level I** (Corporate Issuers — Capital Investments). The user's practice source is testing L1 foundation material.
+- Suggested action: **done** — created [[Capital_Budgeting_Foundations]] with an explicit scope warning, plus L2 bridges for each concept (NWC↔WCInv in [[Free_Cash_Flow_Valuation]]; tax shield↔after-tax cost of debt in [[Cost_of_Capital]]; geometric series↔Gordon Growth in [[Dividend_Discount_Models]]; nominal-vs-real↔temporal method in [[Multinational_Operations]]).
+- Priority: resolved (kept as foundation, flagged as non-LOS so it doesn't consume L2 review time)
+
 ### 2026-07-26 — No critical-value / test-statistic reference anywhere in the KB (RESOLVED)
 - Triggered by: user asked which multiplier to use for 90/95/99% confidence intervals, one- vs two-tailed. Grep found no z/t critical values in any note or in the Formula Cheat Sheet — every note assumed the reader already had them.
 - Suggested action: **done** — added a "Coefficient t-test and Confidence Intervals" section with the full critical-value table to [[Multiple_Regression]] and a one-line summary to [[Formula_Cheat_Sheet]]. Follow-up **also done (2026-07-26)**: built [[Statistical_Tests_Master_Table]] in `10_Atlas/` — all 12 L2 hypothesis tests (statistic / distribution / df / tails / decision rule), the non-test diagnostics (VIF, leverage, AIC/BIC/RMSE), a df decoder, a "which test do I use" flow, and the violation→Type I/II direction table. Registered in [[Master_Index]] and back-linked from all six quant detail notes.
@@ -22,7 +28,8 @@ Auto-detected topics not yet covered by the KB. Resolve by creating or enriching
 ### 2026-07-11 — Legacy M&A vocabulary (merger types, takeover defenses) absent from KB
 - Triggered by: user questions on horizontal vs. vertical mergers and on crown jewel / Pac-Man / white knight defenses — the current 2026 restructuring reading does not define these, so answers came from legacy-curriculum/general knowledge.
 - Suggested action: if the user's practice questions keep touching legacy M&A terms, add a short "Legacy M&A Vocabulary" section to [[Corporate_Restructurings]] (merger types, pre-/post-offer defenses: poison pill, staggered board, greenmail, leveraged recap, litigation, etc.); otherwise leave as Q&A entries only.
-- Priority: low (out of 2026 LOS scope; useful vignette vocabulary)
+- **2026-08-02 — triggered a second time** (poison pill / poison put) → **section built.** [[Corporate_Restructurings]] now has a "Legacy M&A Vocabulary" block with the pre-/post-offer defense taxonomy and a pill-vs-put table, explicitly flagged as non-LOS. Notable finding: "poison" has **zero hits in all five 2026 Schweser books**, but the **poison put's mechanism IS examinable** as the change-of-control contingent put in Book 4 Module 25.8 (LOS 25.n) — [[Bonds_With_Embedded_Options]] updated to carry the market name.
+- Priority: resolved (was low — out of 2026 LOS scope; useful vignette vocabulary)
 
 ### 2026-06-05 - 2026 errata / LOS metadata / practice-source sync (RESOLVED for concept metadata)
 - Triggered by: user audit against current CFA Institute Level II page and 2026 errata.

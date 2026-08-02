@@ -29,6 +29,7 @@ Map of Content for the whole knowledge base. One WikiLink line per note. Registe
 ## 14 — Corporate Issuers
 - [[Corporate_Issuers_Overview]]
 - [[Dividends_and_Share_Repurchases]] · [[ESG_and_Corporate_Governance]] · [[Cost_of_Capital]] · [[Corporate_Restructurings]]
+- [[Capital_Budgeting_Foundations]] — L1 bridge (TNOCF / NWC recovery / tax shields / nominal vs real); **not a 2026 L2 LOS**
 
 ## 15 — Equity Investments
 - [[Equity_Investments_Overview]]
@@ -63,7 +64,7 @@ Map of Content for the whole knowledge base. One WikiLink line per note. Registe
 | 11 Quantitative Methods | 9 | Evergreen (regression, time series, ML, big data) — full R1–R4 |
 | 12 Economics | 3 | Evergreen |
 | 13 Financial Statement Analysis | 7 | Evergreen — full R7–R12 |
-| 14 Corporate Issuers | 5 | Evergreen |
+| 14 Corporate Issuers | 6 | Evergreen (+1 L1-bridge foundation note) |
 | 15 Equity Investments | 7 | Evergreen |
 | 16 Fixed Income | 6 | Evergreen |
 | 17 Derivatives | 3 | Evergreen |

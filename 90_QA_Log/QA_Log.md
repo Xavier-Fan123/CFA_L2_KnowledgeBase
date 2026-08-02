@@ -7,6 +7,9 @@ status: evergreen
 
 # Q&A Log
 
+- 2026-08-02 [Corp] Interlocking directorates: NOT prohibited; what fails is the independence test (remuneration/ownership/employment) or comply-or-explain disclosure -> [[ESG_and_Corporate_Governance]]
+- 2026-08-02 [Corp/FI] Poison pill (equity dilution, board-redeemable) vs poison put (bond covenant, change-of-control put at 101, irrevocable); pill not in 2026 LOS, put IS via LOS 25.n -> [[Corporate_Restructurings]]
+- 2026-08-02 [Corp] TNOCF/NWC recovery (untaxed, hurts short projects most), capex tax shield, annuity=geometric series -> Gordon Growth, inflation direction on shield vs interest -> [[Capital_Budgeting_Foundations]]
 - 2026-07-26 [Quant] Built Statistical Tests Master Table: all 12 L2 tests + rule "every F/chi-sq is one-tailed right, every t is two-tailed except Dickey-Fuller" -> [[Statistical_Tests_Master_Table]]
 - 2026-07-26 [Quant] Critical values: CI always two-tailed 1.645/1.96/2.58; one-tailed 1.28/1.645/2.33; one-tailed at a = two-tailed at 2a -> [[Multiple_Regression]]
 - 2026-07-26 [Quant] DW ~ 2(1-r): near 0 = positive SC (residuals persist, tiny gaps), near 4 = negative SC (alternating, huge gaps); "positive = pals" -> [[Regression_Assumption_Violations]]

@@ -95,7 +95,12 @@ Return = **periodic income** (bond-like leases) + **capital appreciation** (equi
 ### Valuation approaches
 **(A) Income approach** — the DCF analogue; primary for income property.
 - **Direct capitalization** (single-year NOI as a perpetuity): `Property value = NOI / Cap rate`  (where `Cap rate = r − g`) *Worked (Wallonia Example 8):* NOI EUR406,750, r = 12.5%, g = 2% → value = 406,750 / (0.125 − 0.02) = **EUR3,873,810** (falls ~6% to EUR3,643,810 if NOI = EUR382,600). Use **stabilized/normalized NOI** in the numerator if current NOI is distorted.
-- **Cap rate interpretation:** Cap rate = NOI / value (akin to a bond's current yield or the inverse of EV/EBITDA). **Going-in cap rate** = based on first-year income at purchase; **terminal cap rate** = based on income after the assumed future sale. g < 0 ⇒ property nearing end of useful life.
+- **Cap rate interpretation:** Cap rate = NOI / value (akin to a bond's current yield or the inverse of EV/EBITDA). Curriculum also calls it the property's **current yield**, i.e. the **income return** component of an index return (the remainder being capital return). Its **reciprocal is a valuation multiple** — an 8% cap rate = paying **12.5× NOI**. **Going-in cap rate** = based on first-year income at purchase; **terminal cap rate** = based on income after the assumed future sale. g < 0 ⇒ property nearing end of useful life.
+- **Two ways to obtain a cap rate — both testable:**
+  1. **Market-derived from comparables:** `cap rate = NOI_comp / sale price_comp`, then apply to the subject. *Curriculum quiz:* comp sold for $2,500,000 with NOI $200,000 → cap rate **8%**; subject NOI $130,000 → value = 130,000/0.08 = **$1,625,000**.
+  2. **From fundamentals:** `cap rate = r − g` (Gordon Growth rearranged, with NOI replacing dividends).
+- **⚠️ Cap rate ≠ discount rate** (curriculum states this explicitly): the discount rate `r` is the **required return** = risk-free + risk premium; the cap rate is an **income yield** = `r − g`, applied to a **single year's** NOI. With `g > 0` the **cap rate is strictly lower than the discount rate**; they coincide only when `g = 0`. Useful inversion: **`g = r − cap rate`** backs out the growth the market is pricing.
+- **Stabilized NOI — TWO steps, not one.** If first-year NOI is temporarily distorted (e.g. vacancy during renovation): ① recompute NOI **as if the disruption were over** and capitalize that **stabilized/normalized NOI**; ② **subtract the value lost from the temporary NOI decline**. Capitalizing stabilized NOI alone **overstates** value.
 - **DCF method** (multi-year projections + terminal value): `Value = Σ[NOIₜ / (1+r)^t] + Terminal value / (1+r)^n`,  where `Terminal value = NOIₙ(1+g) / (r − g)`
 
 **(B) Cost approach** — replacement cost of land + improvements − depreciation; sets a value **floor** (an investor "should not pay more than the cost to build a comparable"). *Worked (Wallonia Example 10):* cost estimate EUR4,350,000; depreciable base = 4,350,000 − 750,000 (land) = EUR3,600,000; SL over 30 yrs = EUR120,000/yr; 4 years old → less EUR480,000 → **EUR3,870,000**. During **oversupply**, replacement cost typically **exceeds** market price.
@@ -119,6 +124,10 @@ Return = **periodic income** (bond-like leases) + **capital appreciation** (equi
 
 ## Exam Traps
 - **Direct cap: value = year-1 NOI / cap rate**, and **cap rate = r − g**. Higher r ↓ value; higher g ↓ cap rate ↑ value. **Terminal value uses NOI_n(1+g)/(r−g)** (next-period NOI), not current NOI.
+- **Cap rate ≠ discount rate.** `r` = required return (risk-free + risk premium); cap rate = `r − g` and is **lower than r** whenever g > 0. Equal only if g = 0. Invert to read market growth: `g = r − cap rate`.
+- **Cap rate and value always move in opposite directions** — "cap rate compression" = falling cap rates = rising prices.
+- **Stabilized NOI has a second step**: capitalize the normalized NOI, **then subtract** the value lost to the temporary decline. Skipping step ② overstates value.
+- A cap rate can be **backed out of a comparable sale** (`NOI_comp / price_comp`) and applied to the subject — a common quiz format.
 - **NOI is before financing and taxes**; **expense recoveries are capped** at the contractual amount — cost overruns above the cap hit NOI fully.
 - Over the cycle's **Expansion**, the favorable triad is **NOI↑, DSC↑, LTV↓**. New **supply lags**, so oversupply often appears right as demand softens.
 - **DSC uses NOI / total debt service** (interest **+ principal**); **equity dividend rate** = (NOI − debt service) / equity, ignores taxes and capital gains.
@@ -131,6 +140,11 @@ Return = **periodic income** (bond-like leases) + **capital appreciation** (equi
 **Q:** Given effective gross income, operating expenses, a maintenance allowance and an amortizing loan, how do I get NOI, DSC, LTV and the equity dividend rate?
 **A:** **NOI = Effective gross income − Operating expenses − Property maintenance allowance** (before financing & taxes). Then **LTV = mortgage outstanding / property value**; **DSC = NOI / debt service** (debt service includes **interest + principal**); **equity dividend rate = (NOI − debt service) / equity**. Using the official Wallonia case: NOI EUR406,750, debt service EUR220,745 → DSC = **1.84**; equity EUR750,000 → equity dividend rate = (406,750 − 220,745)/750,000 = **24.8%**. Watch the **expense-recovery cap**: a 20% rise in repairs above the cap cuts NOI to EUR382,600, dropping DSC to 1.73 and the equity dividend rate to 21.6%.
 Related: [[Publicly_Traded_Real_Estate]]
+
+### 2026-08-02 — What is a cap rate?
+**Q:** What is the cap rate in real estate valuation?
+**A:** `Cap rate = NOI / value`, i.e. the property's **income yield** on first-year NOI (before financing and taxes) — so `Value = NOI / cap rate`. Its **reciprocal is a valuation multiple** (8% cap rate = 12.5× NOI), making it the real estate analogue of an **earnings yield**. Obtain it two ways: **(1) from comparables**, `NOI_comp / price_comp` — comp at $2.5m with NOI $200k → 8%, so a subject with NOI $130k is worth $1,625,000; **(2) from fundamentals**, `cap rate = r − g` (Gordon Growth with NOI for dividends). **Key trap: cap rate ≠ discount rate** — `r` is the required return (risk-free + risk premium), the cap rate is `r − g` and is **lower than r** whenever g > 0. Invert for market-implied growth: `g = r − cap rate`; `cap rate > r` ⇒ `g < 0` ⇒ property near end of useful life. Cap rate and value move **inversely**. **Going-in** cap rate → first-year NOI (direct capitalization); **terminal** cap rate → the DCF terminal value `NOIₙ(1+g)/(r−g)` (**next**-period NOI). If first-year NOI is distorted, capitalize **stabilized NOI** and then **subtract** the value lost to the temporary decline.
+Related: [[Publicly_Traded_Real_Estate]], [[Dividend_Discount_Models]]
 
 ### 2026-06-03 — Value a property by direct capitalization vs DCF, and the terminal-value trap
 **Q:** When do I use direct cap vs DCF, and what's the terminal-value formula?

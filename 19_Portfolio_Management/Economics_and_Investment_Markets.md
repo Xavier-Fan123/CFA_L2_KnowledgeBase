@@ -1,7 +1,7 @@
 ---
 aliases: [Economics and Investment Markets, Discount Rate Framework, Taylor Rule, Business Cycle and Markets, Credit Spreads, Equity Risk Premium]
 tags: [CFA-L2, pm, concept, macro]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Schweser Book 5, Module 34, LOS 34.a-34.k
 ---
@@ -11,6 +11,17 @@ source: Schweser Book 5, Module 34, LOS 34.a-34.k
 ## The Discount-Rate Framework (34.a, 34.b)
 - Asset value = `PV of expected future cash flows`. To affect value, an economic factor must change one of: (1) **default-free interest rates** across maturities, (2) **timing/magnitude of expected cash flows**, or (3) the **risk premium**.
 - **Expectations** drive prices; only the **unexpected** (surprise) part of news moves markets.
+
+### The Inter-Temporal Rate of Substitution — the engine behind the whole reading (34.a, 34.b)
+The reading builds every result from one idea: an investor decides between **consuming now** and **consuming later**.
+
+- **Inter-temporal rate of substitution** = the **marginal utility of future consumption ÷ the marginal utility of current consumption**. It is how much future consumption an investor values relative to consumption today.
+- **Diminishing marginal utility** makes it move: when future income is expected to be **high**, an extra unit of future consumption is worth **less** → the inter-temporal rate of substitution **falls** → investors **save less** → the **real interest rate rises** to clear the market.
+- Hence **real rates are positively correlated with expected real GDP growth** (why fast-growing economies show high real rates), and also positively related to the **expected volatility** of that growth (a higher risk premium).
+- **Risk premium = the covariance between an asset's future payoff and the investor's inter-temporal rate of substitution.**
+  - **Risky assets (equities)**: the covariance is **negative** — payoffs are high exactly when incomes are high and the marginal utility of future consumption is low. A negative covariance lowers today's price (P₀), which **raises** expected return → a **positive risk premium**.
+  - **Single-period risk-free bond**: terminal value is certain, so the covariance is **zero** → **no risk premium**.
+- **Risk aversion**: the utility lost on a loss exceeds the utility gained on an equal-sized gain. **Absolute risk aversion declines with wealth** (richer investors accept more risk), but in **equilibrium** the marginal utility of holding more risky assets declines, so wealthy and poorer investors end up with the **same willingness to hold risky assets** at the margin.
 
 ## Real Rates & Growth (34.c)
 - Average level of **real short-term rates** is tied to the economy's **long-term real growth rate** and the **volatility** of that growth. Higher trend growth → higher real rates; higher growth volatility → investors demand more → can lower the equilibrium rate (precautionary saving).
@@ -35,7 +46,9 @@ source: Schweser Book 5, Module 34, LOS 34.a-34.k
 - A factor affects markets only via **rates, cash flows, or the risk premium**; only **surprises** move prices.
 - **Credit spreads widen in recessions, tighten in expansions**; yield curve flattens/inverts late cycle.
 - **Breakeven inflation = nominal − real yield**.
-- Equity risk premium exists because stocks are a **poor consumption hedge** (pay off badly in bad times).
+- Equity risk premium exists because stocks are a **poor consumption hedge** (pay off badly in bad times) — formally, the **negative covariance between the payoff and the inter-temporal rate of substitution** is the risk premium.
+- **Higher expected GDP growth → lower inter-temporal rate of substitution → less saving → HIGHER real rates.** The chain runs through diminishing marginal utility; getting the direction backwards is the classic error.
+- A **single-period risk-free bond has zero covariance → zero risk premium**; the premium appears only once the terminal value is uncertain.
 
 ## Q&A
 

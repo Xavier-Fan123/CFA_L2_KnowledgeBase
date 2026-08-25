@@ -10,10 +10,15 @@ source: Generated from note Q&A headings by scripts/generate_atlas.py
 
 Each prompt links back to the note that contains the full answer. Use this as a compact review queue before drilling the underlying note.
 
-Total prompts: **132**.
+Total prompts: **162**.
 
 ## 11 Quantitative Methods
 
+- 2026-07-10 — Chi-square vs. mutual information vs. vocabulary pruning -> [[Big_Data_Projects]]
+- 2026-07-10 — Bag-of-words vs. document term matrix -> [[Big_Data_Projects]]
+- 2026-07-10 — Why normalization uses (Xi−Xmin)/(Xmax−Xmin) rather than (Xi−mean)/sd -> [[Big_Data_Projects]]
+- 2026-07-10 — Incompleteness vs. inconsistency errors in data cleansing -> [[Big_Data_Projects]]
+- 2026-07-10 — What does "data (text) curation" mean in text-based ML? -> [[Big_Data_Projects]]
 - 2026-06-04 — Precision, recall, accuracy, F1 from a confusion matrix -> [[Big_Data_Projects]]
 - 2026-06-04 — How is unstructured text turned into model-ready data? -> [[Big_Data_Projects]]
 - 2026-06-03 — How do you construct the BP test? -> [[Breusch_Pagan_Test]]
@@ -22,9 +27,12 @@ Total prompts: **132**.
 - 2026-06-04 — Which ML algorithm fits which task? -> [[Machine_Learning]]
 - 2026-06-01 — Why does omitting a key variable cause heteroskedasticity and serial correlation? -> [[Model_Misspecification]]
 - 2026-06-02 — Why does inappropriate variable scaling cause heteroskedasticity and multicollinearity? -> [[Model_Misspecification]]
+- 2026-07-26 — Which critical values for 90/95/99%, one-tailed vs two-tailed? -> [[Multiple_Regression]]
 - 2026-06-04 — How do R², adjusted R², AIC and BIC differ for model selection? -> [[Multiple_Regression]]
 - 2026-06-04 — How is the nested-model joint F-test constructed? -> [[Multiple_Regression]]
 - 2026-06-04 — How do you interpret a dummy-variable regression? -> [[Multiple_Regression]]
+- 2026-07-26 — Why is DW near 0 positive serial correlation and near 4 negative? How to remember? -> [[Regression_Assumption_Violations]]
+- 2026-07-26 — What are the consequences of multicollinearity? -> [[Regression_Assumption_Violations]]
 - 2026-06-03 — How do you construct the Breusch-Pagan test? -> [[Regression_Assumption_Violations]]
 - 2026-06-03 — How does the White method correct heteroskedasticity (the principle)? -> [[Regression_Assumption_Violations]]
 - 2026-06-03 — What is covariance stationary? -> [[Time_Series_Analysis]]
@@ -40,7 +48,9 @@ Total prompts: **132**.
 - 2026-06-03 — Why does the carry trade have negative skew? -> [[Currency_Exchange_Rates]]
 - 2026-06-04 — Forward points: how do you build the all-in forward rate? -> [[Currency_Exchange_Rates]]
 - 2026-06-04 — Real interest rate parity vs the international Fisher effect -> [[Currency_Exchange_Rates]]
+- 2026-06-15 — What is the portfolio balance model? -> [[Currency_Exchange_Rates]]
 - 2026-06-03 — Mundell-Fleming: policy effects on the exchange rate -> [[Currency_Exchange_Rates]]
+- 2026-07-11 — Free trade under the growth models -> [[Economic_Growth]]
 - 2026-06-03 — Solow steady-state growth rate: per-capita vs total -> [[Economic_Growth]]
 - 2026-06-03 — Capital deepening vs technological progress -> [[Economic_Growth]]
 - 2026-06-04 — Endogenous growth model: formula and why saving matters permanently -> [[Economic_Growth]]
@@ -55,6 +65,7 @@ Total prompts: **132**.
 - 2026-06-03 — Effect of lowering the discount rate on the DB plan -> [[Employee_Compensation]]
 - 2026-06-04 — How do you adjust ROE/DuPont for an equity-method associate? -> [[Integration_of_FSA_Techniques]]
 - 2026-06-04 — Balance-sheet vs. cash-flow accruals ratio and earnings quality -> [[Integration_of_FSA_Techniques]]
+- 2026-07-19 — Why use ROCE to compare profitability across different tax structures? -> [[Integration_of_FSA_Techniques]]
 - 2026-06-04 — How is implied (standalone) P/E from market value decomposition computed? -> [[Integration_of_FSA_Techniques]]
 - 2026-06-03 — Full vs partial goodwill: which ratios change, and how? -> [[Intercorporate_Investments]]
 - 2026-06-03 — Equity method vs consolidation: same income, different ratios? -> [[Intercorporate_Investments]]
@@ -67,6 +78,10 @@ Total prompts: **132**.
 
 ## 14 Corporate Issuers
 
+- 2026-08-02 — TNOCF, NWC recovery, tax shields, annuities, and inflation direction -> [[Capital_Budgeting_Foundations]]
+- 2026-08-02 — Poison pill vs. poison put -> [[Corporate_Restructurings]]
+- 2026-07-11 — Horizontal vs. vertical merger -> [[Corporate_Restructurings]]
+- 2026-07-11 — Takeover defenses: crown jewel, Pac-Man, white knight -> [[Corporate_Restructurings]]
 - 2026-06-03 — Spin-off vs split-off vs equity carve-out -> [[Corporate_Restructurings]]
 - 2026-06-03 — Computing the takeover premium -> [[Corporate_Restructurings]]
 - 2026-06-04 — Sum-of-the-parts spin-off value -> [[Corporate_Restructurings]]
@@ -79,6 +94,7 @@ Total prompts: **132**.
 - 2026-06-04 — Fama-French factors -> [[Cost_of_Capital]]
 - 2026-06-03 — Is a buyback accretive or dilutive to EPS? -> [[Dividends_and_Share_Repurchases]]
 - 2026-06-03 — Effective tax rate under double taxation -> [[Dividends_and_Share_Repurchases]]
+- 2026-08-02 — When do interlocking directorates violate the rules? -> [[ESG_and_Corporate_Governance]]
 - 2026-06-03 — Principal-agent vs principal-principal conflict -> [[ESG_and_Corporate_Governance]]
 - 2026-06-03 — What does "materiality" mean in ESG integration? -> [[ESG_and_Corporate_Governance]]
 - 2026-06-04 — ESG integration: equity vs fixed income, and information sources -> [[ESG_and_Corporate_Governance]]
@@ -91,9 +107,20 @@ Total prompts: **132**.
 - 2026-06-03 — Choosing a valuation model -> [[Equity_Valuation_Process]]
 - 2026-06-03 — Why does leverage affect FCFE but not FCFF? -> [[Free_Cash_Flow_Valuation]]
 - 2026-06-03 — Getting FCFF from CFO vs from EBIT -> [[Free_Cash_Flow_Valuation]]
+- 2026-07-25 — Control perspective: why FCFE over DDM (not "FCFE over FCFF") -> [[Free_Cash_Flow_Valuation]]
+- 2026-07-25 — Reversal of a restructuring charge in FCFE -> [[Free_Cash_Flow_Valuation]]
+- 2026-07-11 — Why use E/P instead of P/E when diluted EPS is negative -> [[Market_Based_Valuation]]
+- 2026-07-12 — Standardized unexpected earnings (SUE) -> [[Market_Based_Valuation]]
+- 2026-07-12 — Relative strength indicators: what they are and what they're for -> [[Market_Based_Valuation]]
+- 2026-07-12 — Fed model vs. Yardeni model (legacy curriculum) -> [[Market_Based_Valuation]]
+- 2026-07-12 — What "sales" means in the price-to-sales ratio -> [[Market_Based_Valuation]]
+- 2026-07-11 — What the forward PEG ratio measures and its three limitations -> [[Market_Based_Valuation]]
+- 2026-07-11 — Underlying EPS vs. diluted EPS -> [[Market_Based_Valuation]]
+- 2026-07-11 — When to use P/E rather than E/P -> [[Market_Based_Valuation]]
 - 2026-06-03 — Why use the harmonic mean to average P/Es? -> [[Market_Based_Valuation]]
 - 2026-06-03 — Why EV/EBITDA over P/E when capital structures differ? -> [[Market_Based_Valuation]]
 - 2026-06-04 — P/CF: which "cash flow" and a worked calc -> [[Market_Based_Valuation]]
+- 2026-07-25 — Justified leading vs trailing P/E (the (1+g) bridge) -> [[Market_Based_Valuation]]
 - 2026-06-04 — Justified dividend yield and the dividend rate -> [[Market_Based_Valuation]]
 - 2026-06-03 — Combining DLOC and DLOM (worked) -> [[Private_Company_Valuation]]
 - 2026-06-03 — Which discount rate model for a small private firm? -> [[Private_Company_Valuation]]
@@ -108,6 +135,7 @@ Total prompts: **132**.
 - 2026-06-03 — Monte Carlo vs binomial tree: which and when? -> [[Arbitrage_Free_Valuation]]
 - 2026-06-03 — How does higher rate volatility move callable, putable, and OAS? -> [[Bonds_With_Embedded_Options]]
 - 2026-06-03 — Why can a callable bond have negative convexity? -> [[Bonds_With_Embedded_Options]]
+- 2026-07-18 — Threshold dividend vs actual dividend vs conversion price -> [[Bonds_With_Embedded_Options]]
 - 2026-06-04 — Convertible value measures and the risk-return spectrum (25.n-25.q) -> [[Bonds_With_Embedded_Options]]
 - 2026-06-03 — Structural vs reduced-form credit models -> [[Credit_Analysis_Models]]
 - 2026-06-03 — Computing CVA / the credit spread -> [[Credit_Analysis_Models]]
@@ -138,9 +166,11 @@ Total prompts: **132**.
 - 2026-06-03 — Skew: merger arbitrage vs global macro -> [[Hedge_Fund_Strategies]]
 - 2026-06-03 — Equity market neutral vs long/short equity -> [[Hedge_Fund_Strategies]]
 - 2026-06-04 — Conditional factor model: why the crisis dummy? -> [[Hedge_Fund_Strategies]]
+- 2026-07-12 — What is a health care REIT? -> [[Publicly_Traded_Real_Estate]]
 - 2026-06-04 — How do FFO and AFFO differ, and which is better? -> [[Publicly_Traded_Real_Estate]]
 - 2026-06-04 — How do you estimate NAVPS from cash NOI? -> [[Publicly_Traded_Real_Estate]]
 - 2026-06-03 — Compute NOI, DSC, LTV and equity dividend rate from a pro forma -> [[Real_Estate]]
+- 2026-08-02 — What is a cap rate? -> [[Real_Estate]]
 - 2026-06-03 — Value a property by direct capitalization vs DCF, and the terminal-value trap -> [[Real_Estate]]
 - 2026-06-03 — Why do appraisal-based indexes understate real estate risk? -> [[Real_Estate]]
 

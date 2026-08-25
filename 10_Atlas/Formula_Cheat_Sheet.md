@@ -42,6 +42,7 @@ Final-review aggregation of the highest-yield formulas across all ten topic area
 - **Translation**: current-rate gain/loss → **CTA in equity** (exposure = net assets); temporal → **remeasurement G/L in NI** (exposure = net monetary assets).
 - **Combined ratio** (P&C) = loss ratio + expense ratio; **< 100% = underwriting profit**.
 - **LCR** = HQLA / 30-day net outflows; **NSFR** = available / required stable funding (≥100%).
+- **Basel III capital minima** (% of risk-weighted assets): **CET1 4.5%**, **Tier 1 6%**, **total capital 8%**. P&C cycle: **low** combined ratio = **hard** market; **high** = **soft** market.
 
 ## 14 — Corporate Issuers → [[Cost_of_Capital]] · [[Dividends_and_Share_Repurchases]] · [[Corporate_Restructurings]]
 - **Unlever (Hamada)**: $\beta_{\text{asset}} = \dfrac{\beta_{\text{equity}}}{1 + (1-t)(D/E)}$; **relever**: $\beta_{\text{equity}} = \beta_{\text{asset}}\,[1 + (1-t)(D/E)]$.
@@ -59,6 +60,7 @@ Final-review aggregation of the highest-yield formulas across all ten topic area
 - **Residual income**: $\text{RI} = (\text{ROE} - r)\,B_{t-1}$; $V_0 = B_0 + \sum\text{PV(RI)}$. **EVA** $= \text{NOPAT} - \text{WACC}\times\text{capital}$.
 - **Justified P/E (leading)**: $\dfrac{\text{payout}}{r - g}$; **trailing**: $\dfrac{\text{payout}(1+g)}{r - g}$. **Justified P/B**: $\dfrac{\text{ROE} - g}{r - g}$.
 - **EV** = market cap + debt + preferred + minority − cash. Average P/Es with the **harmonic mean**.
+- **Method of average ROE** (preferred for normalizing cyclical EPS): normalized EPS $=$ average ROE $	imes$ current BVPS.
 - **Total private-co discount**: $1 - (1 - \text{DLOC})(1 - \text{DLOM})$; **DLOC** $= 1 - \dfrac{1}{1 + \text{control premium}}$.
 
 ## 16 — Fixed Income → [[Term_Structure]] · [[Arbitrage_Free_Valuation]] · [[Bonds_With_Embedded_Options]] · [[Credit_Analysis_Models]] · [[Credit_Default_Swaps]]
@@ -87,8 +89,10 @@ Final-review aggregation of the highest-yield formulas across all ten topic area
 ## 19 — Portfolio Management → [[Active_Portfolio_Management]] · [[Multifactor_Models]] · [[Measuring_Managing_Market_Risk]]
 - **APT**: $E(R_p) = R_f + \sum \beta_j \lambda_j$.
 - **Information ratio** = active return / active risk (tracking error). **Sharpe** uses total risk.
+- **Market timer's IC** $= 2(\%	ext{ correct}) - 1$ (50% correct $\Rightarrow$ IC $=0$).
 - **Fundamental law**: $\text{IR} = \text{IC}\sqrt{\text{BR}}\;\text{TC}$; $E(R_A) = \text{IC}\sqrt{\text{BR}}\;\text{TC}\,\sigma_A$; optimal $\sigma_A^* = \dfrac{\text{IR}}{\text{SR}_B}\,\sigma_B$; $\text{SR}_P^2 = \text{SR}_B^2 + \text{IR}^2$.
 - **Active risk²** = active factor risk² + active specific risk².
+- **ETF premium/discount** $= \dfrac{	ext{ETF price} - 	ext{NAV}}{	ext{NAV}}$; **tracking error** = annualized SD of the **daily tracking differences**.
 - **VaR** = minimum loss at a confidence level over a period (use **CVaR/expected shortfall** for tail size).
 - **Taylor rule**: `policy rate = neutral + inflation + 0.5(inflation gap) + 0.5(output gap)`.
 - **Breakeven inflation** = nominal yield − real (TIPS) yield.

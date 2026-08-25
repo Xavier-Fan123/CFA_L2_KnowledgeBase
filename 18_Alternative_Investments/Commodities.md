@@ -1,7 +1,7 @@
 ---
 aliases: [Commodities, Commodity Futures, Contango, Backwardation, Roll Return, Theories of Futures Returns, Commodity Swaps]
 tags: [CFA-L2, alt, concept, commodities]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Schweser Book 4, Module 30, LOS 30.a-30.j
 ---
@@ -22,9 +22,15 @@ source: Schweser Book 4, Module 30, LOS 30.a-30.j
 
 ## Theories of Futures Returns (30.f)
 
-- **Insurance / hedging pressure (Keynes – normal backwardation)**: producers hedge by selling futures; speculators require a risk premium → futures below expected spot → backwardation.
-- **Theory of storage**: futures-spot relationship set by storage costs vs **convenience yield**; high convenience yield → backwardation.
-- **Hedging pressure hypothesis**: net hedging position (producers short vs consumers long) determines whether the curve is in contango or backwardation.
+The curriculum names **three** distinct theories — keep them separate, because a vignette will name one:
+
+| Theory | Claim | Implication for curve shape |
+|---|---|---|
+| **Insurance theory** (Keynes, normal backwardation) | Futures returns **compensate the buyer for providing price-risk insurance to the producer**, who is the natural **short** hedger | **Backwardation is the normal condition**; the long speculator earns the risk premium |
+| **Hedging pressure hypothesis** | Extends insurance theory by admitting **long hedgers** (consumers) as well as short hedgers | **Short hedgers dominate → backwardation**; **long hedgers dominate → contango** |
+| **Theory of storage** | Spot and futures are linked through **storage costs** and **convenience yield** | High storage cost / ample supply → **contango**; high convenience yield / tight supply → **backwardation** |
+
+- Trap: insurance theory says backwardation is *normal*; only the **hedging pressure hypothesis** can produce **contango** from hedger behaviour (when consumers dominate the hedging). The theory of storage is the only one that is a **cost** argument rather than a **risk-premium** argument.
 
 ## Total Return Components (30.g, 30.h)
 `Total return = spot (price) return + roll return + collateral return`.

@@ -1,7 +1,7 @@
 ---
 aliases: [Arbitrage-Free Valuation, Binomial Interest Rate Tree, Backward Induction, Pathwise Valuation, Monte Carlo, Term Structure Models]
 tags: [CFA-L2, fi, concept, valuation]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Schweser Book 4, Module 24, LOS 24.a-24.i
 ---
@@ -10,6 +10,9 @@ source: Schweser Book 4, Module 24, LOS 24.a-24.i
 
 ## Arbitrage-Free Principle (24.a, 24.b)
 - **Value = sum of the PV of each cash flow discounted at its own spot rate** ("value additivity" / law of one price). A bond's price must equal its replicating portfolio of zeros, else arbitrage.
+- An arbitrage-free price rules out **two** violations, and the exam names both:
+  - **Value additivity** — the value of the whole must equal the sum of the values of its parts (strip a bond into zeros: the parts must reprice to the whole).
+  - **Dominance** — no asset that can never pay less than another (and sometimes pays more) may cost less. Equivalently, a risk-free asset must not offer a return above the risk-free rate. Spotting either one is a **free-lunch (arbitrage)** trade.
 - Option-free, fixed-rate bonds can be valued directly off the spot curve.
 
 ## Binomial Interest Rate Tree (24.c, 24.d)
@@ -31,13 +34,17 @@ source: Schweser Book 4, Module 24, LOS 24.a-24.i
 - **Equilibrium models** (CIR, Vasicek): describe rate dynamics from economic assumptions; may not fit the current curve exactly.
   - **CIR**: mean-reverting, volatility scales with √r (rates stay non-negative).
   - **Vasicek**: mean-reverting, **constant** volatility (allows negative rates).
-- **Arbitrage-free models** (Ho-Lee): calibrated to **fit the current market** term structure exactly; Ho-Lee has constant volatility and is built via risk-neutral drift.
+- **Arbitrage-free models** (Ho-Lee, KWF): start from **observed market prices** on the assumption that traded securities are correctly priced, and calibrate to **fit the current term structure exactly**.
+  - **Ho-Lee**: `dr_t = θ_t·dt + σ·dz_t`. The **time-dependent drift θ_t** is solved from market prices so the model reproduces today's curve. Short rates are **normally** distributed with **constant volatility** → **rates can go negative**.
+  - **Kalotay-Williams-Fabozzi (KWF)**: `d ln(r_t) = θ_t·dt + σ·dz_t` — the **lognormal** version of Ho-Lee. Same calibration logic, but modeling **ln(r)** keeps rates **non-negative** and makes volatility proportional to the rate level.
 
 ## Exam Traps
 - Binomial tree = **lognormal** (non-negative rates, higher vol at higher rates); spacing factor `e^(2σ)`.
 - Backward induction uses **risk-neutral 0.5/0.5** probabilities, discounting node-by-node.
 - **Monte Carlo** is for **path-dependent** instruments (MBS); a binomial tree is **not** path-dependent.
 - CIR volatility depends on √r; Vasicek volatility is constant (can go negative).
+- **Four models, two families**: *equilibrium* = **CIR** (√r volatility, non-negative rates) and **Vasicek** (constant volatility, rates can go negative); *arbitrage-free* = **Ho-Lee** (normal, rates can go negative) and **KWF** (lognormal in ln r, so rates stay positive). "Time-dependent drift θ_t fitted to market prices" = arbitrage-free family.
+- Arbitrage requires violating **value additivity OR dominance** — know both names.
 
 ## Q&A
 

@@ -1,7 +1,7 @@
 ---
 aliases: [Economic Growth, Growth Accounting, Production Function, Solow Model, Convergence, Capital Deepening]
 tags: [CFA-L2, econ, concept, growth]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Schweser Book 1, Module 6, LOS 6.a-6.l
 ---
@@ -47,7 +47,10 @@ When the vignette asks what economic growth means for assets, work in this order
 
 ## Natural Resources & Demographics (6.f, 6.g, 6.h)
 - Resource **ownership** is not required for growth (can import); the "resource curse" can even hinder growth (Dutch disease, weak institutions).
-- Growth sources: **physical capital, human capital, technological development**. Demographics, immigration, and labor-force participation drive the labor-input component.
+- Growth sources: **physical capital, human capital, technological development**.
+- **Quantity of labor (6.g)** — four drivers, all of which raise labor input and therefore potential GDP growth: **population growth** (a younger working-age population helps), **labor force participation rate**, **net immigration**, and **average hours worked** (which has trended **down** in developed economies, offsetting some of the other three).
+- **Quality of labor (6.h)**: **human capital** — education, training, and health. Growth correlates positively with investment in **both physical and human capital**, and **R&D spending** is critical — especially for **developed** countries that already have a large capital stock and slow population growth, since they cannot lean on capital deepening or labor quantity.
+- **Natural resources (6.f)**: essential to growth, but **ownership is not necessary** — a country can import them (Japan, Korea). Abundant resources can even **inhibit** growth ("resource curse") when other industries fail to develop or currency appreciation crowds out manufacturing.
 
 ## Growth Theories (6.i)
 

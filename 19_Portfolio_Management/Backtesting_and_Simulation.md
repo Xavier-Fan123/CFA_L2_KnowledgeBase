@@ -1,7 +1,7 @@
 ---
 aliases: [Backtesting, Simulation, Monte Carlo, Historical Simulation, Survivorship Bias, Look-Ahead Bias, Data Snooping]
 tags: [CFA-L2, pm, concept, backtesting]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Schweser Book 5, Module 39, LOS 39.a-39.h
 ---
@@ -43,15 +43,24 @@ Evaluate the strategy under a **specific past stress** (e.g., 2008, COVID) to se
 | Pros | Real co-movements, fat tails, no distribution assumption | Flexible, can model any distribution/correlation, unlimited paths |
 | Cons | Limited to what happened (one history) | Model/assumption risk; only as good as inputs |
 
-- Monte Carlo decisions: choose distributions, parameters, correlations, number of trials; can use **bootstrapping** (resample with replacement) or a **multivariate** specification.
+- Monte Carlo decisions: choose distributions, parameters, correlations, number of trials; can use **bootstrapping** (resample with replacement — especially useful when the number of simulations needed is **large relative to the historical sample**) or a **multivariate** specification. When assets/factors are **correlated**, specify a **multivariate** distribution rather than modeling each series standalone.
+- Both approaches are **non-deterministic and random**, and both are used precisely because returns exhibit **skewness, excess kurtosis (fat tails), and tail dependence** — the tendency of assets to become **more correlated in the tails** (they crash together), which a normal/linear correlation model understates.
+- Historical simulation shares rolling-window backtesting's core assumption: that **future randomness can be predicted from past return distributions**.
 
 ## Sensitivity Analysis (39.h)
-Vary key inputs/assumptions (e.g., use a fat-tailed distribution instead of normal) to see how robust the conclusions are — addresses model risk.
+Vary key inputs/assumptions to see how robust the conclusions are — it addresses **model risk** and, crucially, is **not restricted to the multivariate normal** that a plain Monte Carlo usually assumes (and which ignores fat tails and negative skew).
+
+**Curriculum procedure**: fit the factor-return data to a distribution that **accounts for skewness and excess kurtosis** — the curriculum uses a **multivariate skewed Student t-distribution** — then **re-run the Monte Carlo** with it and compare against the normal-based run.
+
+**Cost**: a multivariate skewed t needs **more parameters** (degrees of freedom and skewness on top of means, variances, correlations), so it raises **estimation error**. That trade-off — better tail realism vs more parameter risk — is the examinable point.
 
 ## Exam Traps
 - **Survivorship + look-ahead + data snooping** are the three classic backtest biases.
 - **Historical simulation** uses actual past data (one path); **Monte Carlo** draws from assumed distributions (flexible but model-dependent).
 - Rolling-window backtests approximate real point-in-time rebalancing.
+- **Tail dependence** (assets crashing together) is a main reason to move beyond normal assumptions; **bootstrapping** = resampling **with replacement**, useful when simulations needed far exceed the sample size.
+- **Sensitivity analysis** re-runs the Monte Carlo under a **multivariate skewed Student t** to capture skew and fat tails — at the cost of **more parameters and more estimation error**.
+- **Cross-validation** (fit on training data, assess on separate test data — including data from **other geographic markets**) is the antidote to **data snooping**.
 
 ## Q&A
 

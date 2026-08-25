@@ -1,7 +1,7 @@
 ---
 aliases: [Active Portfolio Management, Information Ratio, Fundamental Law, Information Coefficient, Breadth, Transfer Coefficient, Active Risk]
 tags: [CFA-L2, pm, concept, active-management]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Schweser Book 5, Module 35, LOS 35.a-35.f
 ---
@@ -29,6 +29,10 @@ source: Schweser Book 5, Module 35, LOS 35.a-35.f
 ## Applications & Strategy Comparison (35.d, 35.e)
 - IR aids **manager selection** and choosing the **level of active risk**.
 - **Market timing**: few, large, correlated bets → **low breadth**; **security selection**: many small independent bets → **high breadth**. The fundamental law shows breadth's leverage on IR (via √BR).
+- **IC of a market timer (35.e)**: when the forecast is a binary call (up or down), skill collapses to the hit rate:
+  `IC = 2 × (proportion of calls correct) − 1`.
+  So 50% correct → IC = 0 (no skill); 55% correct → IC = 0.10; 60% correct → IC = 0.20. A timer making **12 independent monthly calls a year** at 55% accuracy has IR ≈ `0.10 × √12 = 0.35` — which is why timing needs either high accuracy or many independent calls.
+- **Sector rotation (35.e)**: the fundamental law also evaluates a sector-rotation strategy — treat **each sector bet as one decision**, so BR = number of sector-period bets, and active return = **active sector weights × sector returns**. Because sector returns are strongly correlated, effective breadth is far below the raw count.
 
 ## Strengths & Limitations (35.f)
 - Provides a framework linking skill, breadth, and implementation to performance.
@@ -49,6 +53,8 @@ This section is a professional hedge-fund application, not CFA curriculum text.
 - IR is invariant to aggressiveness (unconstrained); `SR_P² = SR_B² + IR²`.
 - Fundamental law: `IR = IC × √BR × TC`; breadth must be **independent** decisions.
 - Market timing = low breadth; broad security selection = high breadth.
+- **Market timer's IC = 2(% correct) − 1.** 50% right means **zero** skill, not 0.5.
+- **Sector rotation** is evaluated by the same fundamental law, with each sector bet counted as one (highly correlated) decision.
 
 ## Q&A
 

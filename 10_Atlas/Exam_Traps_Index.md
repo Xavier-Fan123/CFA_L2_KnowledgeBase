@@ -19,15 +19,17 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - **AUC = 0.5 means random**; higher (toward 1) is better.
 - **Parameters are learned; hyperparameters are set by the researcher** and adjusted in tuning.
 - **Stemming** is rules-based and crude; **lemmatization** is more advanced/resource-heavy.
-- "Common values" are not a data-cleansing item; structured cleansing targets missing/invalid/inaccurate/ non-uniform/duplicate.
+- "Common values" are not a data-cleansing item; structured cleansing targets incomplete/invalid/inaccurate/inconsistent/non-uniform/duplicate.
+- **Invalid vs. inaccurate**: invalid = outside the possible range; inaccurate = in-range but wrong. **Inconsistent vs. non-uniform**: inconsistent = values contradict each other; non-uniform = same value, different format/unit.
 
 ### Breusch-Pagan (BP) Test -> [[Breusch_Pagan_Test]]
 - Dependent variable in the auxiliary regression is the **squared** residual, not the residual.
 - Statistic is `n × R²`, χ² with **k** df, **one-tailed**.
-- Don't confuse with **Breusch-Godfrey (BG)** = serial correlation (F-distribution), or **Durbin-Watson** = single-lag serial correlation.
+- Don't confuse with **Breusch-Godfrey (BG)** = serial correlation (F-distribution), or **Durbin-Watson** = single-lag serial correlation. Side-by-side comparison: [[Statistical_Tests_Master_Table]].
+- BP's auxiliary regression uses the **squared** residuals; BG's uses the **residuals themselves plus their lags**.
 
 ### Logistic Regression (Logit) -> [[Logistic_Regression]]
-- Nested test is the **LR test (χ²)**, not an F-test.
+- Nested test is the **LR test (χ²)**, not an F-test. All L2 tests side by side: [[Statistical_Tests_Master_Table]].
 - Slope = change in **log odds**, not probability.
 - pseudo-R² compares only models with the **same** dependent variable.
 
@@ -54,8 +56,13 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 ### Regression Assumption Violations -> [[Regression_Assumption_Violations]]
 - Conditional (not unconditional) heteroskedasticity is the dangerous one.
 - BP test is **one-tailed**; White corrects it. DW vs BG: DW = one lag, BG = multiple lags; both detect serial correlation.
+- **DW → 0 = positive SC, DW → 4 = negative SC** (`DW ≈ 2(1−r)`). Mnemonic: "positive = pals, no gap → 0."
+- **DW is invalid when a lagged dependent variable is a regressor** (i.e. in any AR model) — use the t-test on residual autocorrelations, `t = ρ̂ / (1/√T)`. See [[Time_Series_Analysis]].
+- Direction confusion: *positive* SC (DW near 0) → SEs **under**estimated → t-stats too big → **Type I** error. Opposite of multicollinearity, which causes Type II.
 - Multicollinearity's tell: **high R² + significant F but insignificant t-stats**.
 - All three corrections (White, Newey-West) change only the **standard errors**, never the coefficients.
+- Multicollinearity does **not** bias coefficients — only inflates their SEs. **Omitted-variable bias (misspecification) is the one that biases coefficients.** Don't mix them up.
+- Low pairwise correlations do **not** rule out multicollinearity: three or more variables can be jointly collinear with modest pairwise correlations. Correlation alone is diagnostic only in a two-variable regression — use VIF.
 
 ### Time Series Analysis -> [[Time_Series_Analysis]]
 - **Durbin-Watson is invalid for AR models** (lagged dependent variable as regressor). Detect serial correlation of AR residuals with the **t-test on residual autocorrelations**, SE = **`1/√T`**, `t = ρ̂·√T`. Any significant residual autocorrelation ⇒ add lags / re-specify.
@@ -97,6 +104,9 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 ### Analysis of Financial Institutions -> [[Analysis_of_Financial_Institutions]]
 - **CAMELS** order: Capital, Asset quality, Management, Earnings, Liquidity, Sensitivity.
 - **Combined ratio < 100%** = underwriting profit; > 100% = underwriting loss (insurer relies on investment income).
+- **Basel III minima: CET1 4.5%, Tier 1 6%, Total capital 8%** of risk-weighted assets; LCR and NSFR both ≥ **100%**.
+- **Hard vs soft P&C market**: a **low** combined ratio marks a **hard** (profitable, high-rate) market; a **high** combined ratio marks a **soft** market. L&H carries **more interest-rate risk** than P&C because of its longer contracts and larger float.
+- A growing share of **Level 3** (unobservable-input) assets is a bank earnings-quality red flag.
 - LCR addresses **short-term (30-day)** liquidity; NSFR addresses **structural/long-term** funding.
 
 ### Employee Compensation: Post-Employment and Share-Based -> [[Employee_Compensation]]
@@ -135,6 +145,16 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 
 ## 14 Corporate Issuers
 
+### Capital Budgeting Foundations (L1 bridge) -> [[Capital_Budgeting_Foundations]]
+- **NWC recovery is NOT taxed** (return of principal); **salvage IS taxed**, but only on the gain over book value `t(Sal − B)`.
+- Omitting NWC recovery understates terminal CF — and the distortion is **largest for short projects** (less discounting).
+- A capex change hits **twice**: t=0 outlay **and** the annual depreciation tax shield. Net after-tax cost ≈ `ΔFCInv × [1 − (t/N)·PVA]`.
+- **Accelerated depreciation raises NPV** vs. straight-line despite an identical total nominal shield — front-loading raises its PV.
+- Depreciation enters cash flow **only** through `tD` — it is non-cash.
+- **Inflation hurts the depreciation shield but helps the fixed-rate borrower.** Same erosion, opposite impact.
+- **Never discount real cash flows at a nominal rate** (or vice versa) — the classic error undervalues the project.
+- `PMT/(r−g)` is the same geometric series as `PVA`, with ratio `(1+g)/(1+r)` — this is Gordon Growth.
+
 ### Corporate Restructurings -> [[Corporate_Restructurings]]
 - **Materiality** rule of thumb: transaction is "large" if value > **10% of acquirer's pre-deal EV** (size + fit). Announcement-day price reaction is a **poor** predictor of long-run value.
 - **Comparable-company** multiples have **no** control premium → **add** one (best for spin-offs); **comparable-transaction** multiples **embed** the premium.
@@ -144,6 +164,7 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - **Spin-off** = pro-rata new shares via stock dividend, **no cash** to parent; **carve-out** = sell a stake via IPO for **cash**; **split-off** = holders swap parent shares for subsidiary shares.
 
 ### Cost of Capital: Advanced Topics -> [[Cost_of_Capital]]
+- **Finance lease cost of debt = the rate implicit in the lease (RIIL)** — the IRR equating asset fair value (+ lessor's direct costs) to PV of lease payments + residual value. Use the **IBR** only when the RIIL is not determinable.
 - **2026 errata - private-company premiums**: add SP/IP/SCRP/CRP only when the risk is not already captured by beta, ERP, or country assumptions. Peer beta can make a separate IP double-count industry risk.
 - **Unlever then relever** beta when the comparable's leverage differs from the subject's (Hamada).
 - **Expanded CAPM** = R_f + β·ERP + **SP + SCRP** (uses peer beta); **Build-up** = R_f + ERP + **SP + IP + SCRP** (NO beta — implicit β=1). Don't double-count beta in build-up. Illiquidity → marketability **discount on value**, not a premium in r_e.
@@ -158,6 +179,10 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - Buyback EPS test: compare **E/P (earnings yield)** to the **after-tax cost** of the funds — above → accretive, below → dilutive.
 - BVPS rises only if shares are repurchased **below** book value per share.
 - Dividend **cuts** carry the strongest negative signal; cash dividends raise D/E and cut liquidity.
+- **13.e list of six** — investment opportunities, earnings volatility, financial flexibility, taxes, **flotation costs**, contractual/legal restrictions. Flotation costs push payout **down**, not up.
+- **Dutch auction**: bids filled **lowest-first**, but everyone accepted is paid the **single highest accepted price** — not their own bid.
+- **Agency runs two ways**: higher payout fixes the shareholder-manager conflict but **worsens** the shareholder-bondholder conflict; the latter is controlled by **indenture covenants**.
+- Global trend: **fewer** dividend payers, **more** repurchases (US since the 1980s; UK/Europe since the 1990s).
 
 ### ESG and Corporate Governance -> [[ESG_and_Corporate_Governance]]
 - Dispersed ownership → **principal-agent**; concentrated ownership → **principal-principal** (minority expropriation) conflict.
@@ -165,6 +190,10 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - ESG analysis should center on **financially material** factors, not all ESG issues.
 - ESG **integration ≠ screening**: integration folds ESG into the valuation/forecast; screening just includes/excludes names. Equity use → opportunities + downside; FI use → **credit spread**.
 - **Horizontal** ownership = mutual cross-holdings; **vertical/pyramid** = controlling stakes through tiers of holding companies. **CEO duality** (CEO = chair) raises governance risk.
+- **Interlocking directorates are NOT prohibited** — there is no rule to "violate." What fails is the **independence test** (significant remuneration / ownership / employment relationship) or the **comply-or-explain disclosure** obligation.
+- Counterintuitive point the exam likes: family control / interlocking directorates can **reduce** the principal-agent conflict while creating a **principal-principal** one. Don't assume every governance concentration is purely negative.
+- **Board independence standard: a MAJORITY should be independent** — and the **audit, compensation, and nomination** committees specifically must be "sufficiently independent."
+- **Long tenure (>10 years) cuts both ways**: deep firm knowledge vs. resistance to change and becoming "too friendly with management, affecting independence."
 
 
 ## 15 Equity Investments
@@ -173,12 +202,16 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - Justified **leading** P/E = `payout/(r−g)`; **trailing** = `payout(1+g)/(r−g)` — don't mix.
 - H-model **H = HALF** the high-growth (transition) period length.
 - Gordon value explodes as `g → r`; small input changes move value a lot.
-- `g = b × ROE` uses the **retention** ratio, not payout.
+- `g = b × ROE` uses the **retention** ratio, not payout — and the SGR assumes a **constant D/E ratio and no new equity issuance**, on **beginning-of-period** balance-sheet values.
+- Terminal value in any DDM comes from **either the Gordon model or a market multiple** (e.g., terminal P/E × terminal EPS) — 18.m expects both.
+- Know the **18.l list**: multistage models are flexible, invertible (solve for r or g), explicit, and spreadsheet-friendly; but assumption-driven, sensitivity-prone, and error-prone.
 
 ### Equity Valuation: Applications and Processes -> [[Equity_Valuation_Process]]
 - Analyst edge = **perceived** mispricing, which includes estimation error in intrinsic value.
 - **Sum-of-the-parts** can reveal a **conglomerate discount**.
 - Choose the model that fits the firm: non-payer with negative FCF but clean accounting → residual income.
+- **Fair market value** = hypothetical willing buyer/seller; **investment value** = value to a **specific** buyer **including synergies** (the strategic-buyer measure). Don't use the two interchangeably.
+- Porter's five: new entrants, substitutes, **buyer** power, **supplier** power, rivalry — buyers and suppliers are two separate forces.
 
 ### Free Cash Flow Valuation (FCFF / FCFE) -> [[Free_Cash_Flow_Valuation]]
 - **FCFF discounted at WACC; FCFE discounted at cost of equity.**
@@ -189,6 +222,9 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 
 ### Market-Based (Relative) Valuation -> [[Market_Based_Valuation]]
 - **EV subtracts cash** and adds debt/preferred/minority — a common error.
+- **EV/EBITDA's two drawbacks**: EBITDA **overstates CFO when working capital grows**, and **FCFF ties to theory better** than EBITDA. Advantages ≠ the whole answer.
+- Normalizing cyclical EPS: the **method of average ROE is preferred** over the method of historical average EPS.
+- **P/B is the multiple for firms holding liquid assets** (banks/insurers) and for firms **expected to be wound up**; its weakness is **intangibles**, size effects, accounting conventions, and inflation.
 - **EV/EBITDA** is preferred when capital structures differ (P/E is distorted by leverage).
 - Use the **harmonic mean** to average P/Es across firms, not the arithmetic mean; the arithmetic mean is biased **upward** by outliers.
 - Justified P/B = `(ROE − g)/(r − g)`; P/B > 1 when ROE > r.
@@ -199,6 +235,10 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - **Total discount is multiplicative**: `1 − (1 − DLOC)(1 − DLOM)`, not the simple sum.
 - A **minority** interest gets **DLOC**; a **controlling** interest typically does not.
 - **Build-up / expanded CAPM** add size and company-specific premiums for private/small firms.
+- **Use the TARGET's WACC, not the acquirer's**, when discounting the target's cash flows; and check that a size premium taken from small-cap public data isn't double-counting **distress**.
+- Use **FCFF** rather than FCFE whenever the **capital structure is expected to change**.
+- **DLOM** has three curriculum estimation routes: **restricted vs public shares**, **pre-IPO vs post-IPO**, and **put prices**.
+- Market approach has **three** methods — GPCM, GTM, and **PTM** (the subject company's own prior stock sales). GTM multiples already embed a control premium; **GPCM multiples do not**.
 - CCM uses a **single** capitalization rate (r − g) on normalized cash flow.
 - **EEM** charges tangible assets (WC, fixed) their required returns first; the leftover (**excess earnings**) is the intangibles' RI, capitalized at `RI(1+g)/(r_RI − g)`. Firm value adds back **FMV of tangible assets**. Don't forget the tangible-asset value — EEM alone prices only the intangibles.
 
@@ -218,6 +258,8 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - Backward induction uses **risk-neutral 0.5/0.5** probabilities, discounting node-by-node.
 - **Monte Carlo** is for **path-dependent** instruments (MBS); a binomial tree is **not** path-dependent.
 - CIR volatility depends on √r; Vasicek volatility is constant (can go negative).
+- **Four models, two families**: *equilibrium* = **CIR** (√r volatility, non-negative rates) and **Vasicek** (constant volatility, rates can go negative); *arbitrage-free* = **Ho-Lee** (normal, rates can go negative) and **KWF** (lognormal in ln r, so rates stay positive). "Time-dependent drift θ_t fitted to market prices" = arbitrage-free family.
+- Arbitrage requires violating **value additivity OR dominance** — know both names.
 
 ### Valuation and Analysis of Bonds with Embedded Options -> [[Bonds_With_Embedded_Options]]
 - Higher vol → **lower** callable, **higher** putable, and **lower OAS**.
@@ -237,6 +279,8 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - Distressed issuers can show an **inverted** credit-spread term structure.
 
 ### Credit Default Swaps (CDS) -> [[Credit_Default_Swaps]]
+- **Curve-steepening trade** = buy **long**-maturity protection, sell **short**-maturity (the near-term view is the better one); a **flattening** trade is the reverse. A **naked** CDS means no underlying exposure at all.
+- **Synthetic CDO cheaper than cash CDO → buy synthetic, sell cash.** The synthetic gets its exposure by **selling protection**, not by owning bonds.
 - **Payout = notional × (1 − recovery)** = notional × LGD.
 - One-period **fair spread ≈ (1 − RR) × POD**; don't confuse the **CDS coupon** (standardized 1% IG / 5% HY) with the **CDS spread** (the risk-justified rate).
 - Upfront ≈ **(spread − coupon) × duration**; buyer pays when spread > coupon (price < 100). A **negative** upfront means the **seller** pays and **price > 100** (e.g. −2% → price 102).
@@ -290,7 +334,10 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - **Merger arbitrage** payoff is **negatively skewed** = **long riskless bond (spread) + short binary put** (pays out if deal breaks); **global macro / managed futures** are often **positively skewed** (crisis alpha, long volatility/trend).
 - **Equity market neutral** ≈ low beta/low correlation; long/short equity keeps net (usually net-long) market exposure.
 - The **conditional** factor model uses a **crisis dummy** to expose **state-dependent** tail betas hidden in reported "alpha"; residual return = alpha + omitted factors + random error.
-- **Fund of funds** adds **diversification but a second layer of fees**; **multi-strategy** reallocates capital internally (one fee layer) but concentrates operational/manager risk.
+- **Fund of funds** adds **diversification but a second layer of fees plus NETTING RISK** (incentive fees paid to winning sub-managers while losers drag the net return); **multi-strategy** nets internally (one fee layer, no netting risk) and reallocates faster, but concentrates operational risk.
+- **Specialist = volatility trading + life settlements** in the 2026 reading. Volatility traders trade the **term structure of volatility** (OTC option spreads, VIX futures, volatility/variance swaps); life-settlement managers want **low surrender value, low premiums, short life expectancy**.
+- **Dedicated short = 60%–120% short**; **short-biased = 30%–60% net short**. Convertible arb runs roughly **300% long / 200% short**.
+- 20% hedge funds added to 60/40: **σ down, Sharpe up, Sortino up, max drawdown down**.
 
 ### Investments in Real Estate Through Publicly Traded Securities -> [[Publicly_Traded_Real_Estate]]
 - **AFFO subtracts** non-cash rent and maintenance capex/leasing costs from FFO (it does NOT add them). FFO **adds back depreciation** and **excludes property-sale gains**.
@@ -301,6 +348,10 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 
 ### Overview of Types of Real Estate Investment (Private / Direct) -> [[Real_Estate]]
 - **Direct cap: value = year-1 NOI / cap rate**, and **cap rate = r − g**. Higher r ↓ value; higher g ↓ cap rate ↑ value. **Terminal value uses NOI_n(1+g)/(r−g)** (next-period NOI), not current NOI.
+- **Cap rate ≠ discount rate.** `r` = required return (risk-free + risk premium); cap rate = `r − g` and is **lower than r** whenever g > 0. Equal only if g = 0. Invert to read market growth: `g = r − cap rate`.
+- **Cap rate and value always move in opposite directions** — "cap rate compression" = falling cap rates = rising prices.
+- **Stabilized NOI has a second step**: capitalize the normalized NOI, **then subtract** the value lost to the temporary decline. Skipping step ② overstates value.
+- A cap rate can be **backed out of a comparable sale** (`NOI_comp / price_comp`) and applied to the subject — a common quiz format.
 - **NOI is before financing and taxes**; **expense recoveries are capped** at the contractual amount — cost overruns above the cap hit NOI fully.
 - Over the cycle's **Expansion**, the favorable triad is **NOI↑, DSC↑, LTV↓**. New **supply lags**, so oversupply often appears right as demand softens.
 - **DSC uses NOI / total debt service** (interest **+ principal**); **equity dividend rate** = (NOI − debt service) / equity, ignores taxes and capital gains.
@@ -315,33 +366,45 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - IR is invariant to aggressiveness (unconstrained); `SR_P² = SR_B² + IR²`.
 - Fundamental law: `IR = IC × √BR × TC`; breadth must be **independent** decisions.
 - Market timing = low breadth; broad security selection = high breadth.
+- **Market timer's IC = 2(% correct) − 1.** 50% right means **zero** skill, not 0.5.
+- **Sector rotation** is evaluated by the same fundamental law, with each sector bet counted as one (highly correlated) decision.
 
 ### Backtesting and Simulation -> [[Backtesting_and_Simulation]]
 - **Survivorship + look-ahead + data snooping** are the three classic backtest biases.
 - **Historical simulation** uses actual past data (one path); **Monte Carlo** draws from assumed distributions (flexible but model-dependent).
 - Rolling-window backtests approximate real point-in-time rebalancing.
+- **Tail dependence** (assets crashing together) is a main reason to move beyond normal assumptions; **bootstrapping** = resampling **with replacement**, useful when simulations needed far exceed the sample size.
+- **Sensitivity analysis** re-runs the Monte Carlo under a **multivariate skewed Student t** to capture skew and fat tails — at the cost of **more parameters and more estimation error**.
+- **Cross-validation** (fit on training data, assess on separate test data — including data from **other geographic markets**) is the antidote to **data snooping**.
 
 ### Economics and Investment Markets -> [[Economics_and_Investment_Markets]]
 - A factor affects markets only via **rates, cash flows, or the risk premium**; only **surprises** move prices.
 - **Credit spreads widen in recessions, tighten in expansions**; yield curve flattens/inverts late cycle.
 - **Breakeven inflation = nominal − real yield**.
-- Equity risk premium exists because stocks are a **poor consumption hedge** (pay off badly in bad times).
+- Equity risk premium exists because stocks are a **poor consumption hedge** (pay off badly in bad times) — formally, the **negative covariance between the payoff and the inter-temporal rate of substitution** is the risk premium.
+- **Higher expected GDP growth → lower inter-temporal rate of substitution → less saving → HIGHER real rates.** The chain runs through diminishing marginal utility; getting the direction backwards is the classic error.
+- A **single-period risk-free bond has zero covariance → zero risk premium**; the premium appears only once the terminal value is uncertain.
 
 ### Exchange-Traded Funds (ETFs) -> [[Exchange_Traded_Funds]]
 - The **AP in-kind creation/redemption arbitrage** keeps price ≈ NAV and drives tax efficiency.
 - **ETNs carry issuer counterparty (credit) risk** (unsecured debt), unlike physically-backed ETFs.
 - Premiums/discounts often reflect **stale NAV** (closed underlying markets), not mispricing.
-- Total cost of ownership ≠ just the expense ratio — include spreads, premium/discount, tracking error.
+- Total cost of ownership ≠ just the expense ratio — include spreads, premium/discount, tracking error. **Short-term traders optimize spreads; long-term holders optimize the management fee.**
+- **Tracking DIFFERENCE is a level; tracking ERROR is the annualized SD of daily tracking differences.** A steady fee drag gives a big difference with a small error.
+- The three named ETF risks are **counterparty, fund closure, and expectation-related** risk — the third one covers daily-reset leveraged/inverse products.
+- Portfolio uses come in **three** curriculum buckets: **efficient portfolio management**, **asset class exposure management**, **active investing**.
 
 ### Measuring and Managing Market Risk -> [[Measuring_Managing_Market_Risk]]
 - VaR is a **minimum** loss at a confidence level, not the maximum; it ignores **how bad** the tail is — use **CVaR/expected shortfall** for that.
 - **Parametric VaR is poor for option-heavy portfolios** (non-normal); historical/Monte Carlo handle them.
 - Sensitivity measures give **exposure**, not loss probability; scenario analysis covers tail/multi-factor stress.
+- **Reverse stress test = start from failure and work back to the scenarios that cause it** — the opposite direction from an ordinary stress test.
 - z-thresholds: **5% → 1.65σ, 1% → 2.33σ, 16% → 1σ**. Higher confidence (1% vs 5%) → larger z → larger VaR.
 - **Never annualize a daily VaR** by ×250 or ×√250. Re-annualize mean (×250) and σ (×√250) *first*, then compute VaR. The √250 shortcut is valid only under a zero-expected-return assumption.
 - Parametric needs only mean + σ (+ correlations); it does **not** require a data history (historical sim does).
 
 ### Multifactor Models -> [[Multifactor_Models]]
+- **Factor portfolio** = sensitivity **1 to one factor, 0 to all others** (a pure factor bet). **Tracking portfolio** = a chosen set of sensitivities that **replicates a benchmark**. Do not swap them.
 - APT needs **no market portfolio** and no normality — only a factor structure, diversification, no arbitrage (contrast with CAPM, a single-factor special case).
 - **Macroeconomic** models use factor **surprises**; **fundamental** models use **standardized attributes** as the sensitivities (the reverse of macro).
 - Arbitrage portfolio = **zero investment, zero risk, positive expected return**.

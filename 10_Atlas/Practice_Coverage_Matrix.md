@@ -3,7 +3,7 @@ aliases: [Practice Coverage Matrix, EOC Coverage Matrix, Mock Coverage Matrix]
 tags: [CFA-L2, atlas, practice]
 date: 2026-06-05
 status: evergreen
-source: Local practice-source inventory under C:\Users\chenx\Desktop\CFA
+source: Local practice-source inventory under the KB's parent directory (verified 2026-08-25)
 ---
 
 # Practice Coverage Matrix
@@ -12,14 +12,19 @@ This matrix tracks local practice sources. It does **not** mean the full officia
 
 ## Source Roots
 
-| Source | Local path | Status |
-|---|---|---|
-| 2026 official curriculum PDFs | `C:\Users\chenx\Desktop\CFA\CFA二级 2026\cfa-program2026L2V1.PDF` through `cfa-program2026L2V10.PDF` | Present |
-| 2026 official EOC volumes | `C:\Users\chenx\Desktop\CFA\CFA二级 2026\02 CFA二级课后题` | Present: 10 volume PDFs |
-| 2026 module quiz Q&A PDFs | `C:\Users\chenx\Desktop\CFA\CFA二级 2026\课后题答案` | Present: question and answer PDFs by module |
-| 2025 practice/mock PDFs | `C:\Users\chenx\Desktop\CFA\CFA二级 2026\2025cfa二级practice题库pdf版\题库` | Present: use after 2026 official sources |
+**Paths are machine-specific — discover them at runtime with Glob rather than hardcoding them.** Verified inventory of the KB's parent directory on **2026-08-25**:
 
-## 2026 EOC Volume Coverage
+| Source | Where | Status |
+|---|---|---|
+| 2026 official curriculum PDFs | KB parent directory: `cfa-program2026L2V1.PDF` … `cfa-program2026L2V10.PDF` | **Present** (10 volumes, one per topic area) |
+| 2026 Schweser Notes Books 1–5 | KB parent directory, `notes/` subfolder: `CFA 2026 Level II SchweserNotes Book 1..5.pdf` | **Present** |
+| 2026 official EOC volumes | — | **NOT present on this machine** (previously inventoried on a different profile) |
+| 2026 module quiz Q&A PDFs | — | **NOT present on this machine** |
+| 2025 practice/mock PDFs | — | **NOT present on this machine** |
+
+The three "NOT present" rows below are retained as a **wish list / prior inventory** from an earlier machine. Re-verify before relying on them; if the files are restored, record the discovered path here rather than a user-specific absolute path.
+
+## 2026 EOC Volume Coverage (prior inventory — files not on this machine)
 
 | Volume | Topic | PDF |
 |---:|---|---|
@@ -34,7 +39,7 @@ This matrix tracks local practice sources. It does **not** mean the full officia
 | 9 | Portfolio Management | `Volume 9 Portfolio Management.pdf` |
 | 10 | Ethical and Professional Standards | `Volume 10 Ethics and Professional Standards.pdf` |
 
-## Module Quiz PDF Coverage
+## Module Quiz PDF Coverage (prior inventory — files not on this machine)
 
 | Topic | Question PDFs | Answer PDFs | Status |
 |---|---:|---:|---|
@@ -49,7 +54,7 @@ This matrix tracks local practice sources. It does **not** mean the full officia
 | Portfolio Management | 20 | 20 | Source present, not fully distilled |
 | Ethical and Professional Standards | 11 | 11 | Source present, not fully distilled |
 
-## Mock / Pack Coverage
+## Mock / Pack Coverage (prior inventory — files not on this machine)
 
 | Source | Count | Status |
 |---|---:|---|
@@ -61,3 +66,4 @@ This matrix tracks local practice sources. It does **not** mean the full officia
 - Do not paste full official vignettes or long answer explanations into notes.
 - For each completed practice session, add only derived artifacts: missed LOS, formula trigger, trap, original paraphrased Q&A, and link/path back to the source PDF.
 - Prioritize 2026 official EOC volumes and module quizzes before 2025 mock/pack PDFs.
+- **Until the practice PDFs are restored on this machine, the only local practice material is the module quizzes and end-of-reading questions inside the Schweser books themselves** (each reading ends with "ANSWER KEY FOR MODULE QUIZZES") and the official curriculum volumes' own practice problems.

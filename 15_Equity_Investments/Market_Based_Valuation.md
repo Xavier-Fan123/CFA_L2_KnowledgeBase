@@ -1,15 +1,16 @@
 ---
 aliases: [Market-Based Valuation, Price Multiples, EV/EBITDA, Justified Multiples, PEG, Method of Comparables]
 tags: [CFA-L2, equity, concept, valuation]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Schweser Book 3, Module 20, LOS 20.a-20.r
 ---
 
 # Market-Based (Relative) Valuation
 
-## Two Approaches (20.a, 20.b)
-- **Method of comparables**: compare a stock's multiple to a benchmark (peers, industry, own history). "Law of one price" — similar assets should trade at similar multiples.
+## Two Approaches (20.a, 20.b, 20.l, 20.m)
+- **Method of comparables**: compare a stock's multiple to a benchmark (peers, industry, own history). "Law of one price" — similar assets should trade at similar multiples. Multiple **below** the benchmark → undervalued; **above** → overvalued (20.l).
+- **But fundamentals decide (20.m)**: never read the comparison mechanically. A **high P/E can still be attractive** if growth is rapid, and a **high dividend yield can be unattractive** if earnings do not support the dividend and no growth is expected. Always ask whether the multiple gap is explained by differences in **growth, risk, and payout** — only the unexplained residual is mispricing.
 - **Method based on forecasted fundamentals**: derive a **justified multiple** from a DCF/Gordon model.
 
 ## Justified Multiples (from fundamentals) (20.i)
@@ -29,8 +30,20 @@ All justified multiples share the form `[fundamental] / (r − g)` → **rise wi
 - **P/E**: payout's effect on P/E is **ambiguous** — raising payout lifts the numerator but cuts retention b, lowering `g = b·ROE` (dividend displacement).
 - **P/CF has no Gordon-derived justified formula** in the curriculum — it is a **method-of-comparables** multiple only (four CF definitions: CF, CFO, FCFE, EBITDA). *[My derivation, beyond curriculum: from the FCFE Gordon model `P₀ = FCFE₁/(r−g)`, leading `P/FCFE = 1/(r−g)`, trailing `P/FCFE = (1+g)/(r−g)` — same structure as P/E with payout = 1, which is why theory prefers P/FCFE; not curriculum text.]*
 
+## Rationales and Drawbacks by Multiple (20.c)
+The exam asks "why would an analyst prefer X here?" — these are list LOS.
+
+| Multiple | Rationales | Drawbacks |
+|---|---|---|
+| **P/E** | EPS (earnings power) is the primary driver of investment value; **most widely used** in practice; P/E differences are significantly related to **long-run average returns** | Earnings can be **negative**; the **transitory/volatile** part of earnings makes interpretation hard; **management discretion** distorts reported earnings |
+| **P/B** | Book value is usually **positive even when EPS is negative**; **more stable** than EPS; a good net-asset proxy for firms holding mostly **liquid assets** (banks, insurers, finance/investment firms); useful for firms **expected to go out of business**; explains long-run return differences | Ignores **non-physical (intangible) assets**; misleads across firms of very **different size**; **accounting conventions** obscure true shareholder investment; **inflation and technological change** drive book away from market value |
+| **P/S** | Meaningful even for **distressed** firms; sales are **harder to manipulate** than EPS or book value; **less volatile** than P/E; suits **mature, cyclical, and start-up** firms with no earnings record; related to long-run returns | Higher sales ≠ higher **operating profit**; ignores **cost-structure** differences; **revenue-recognition** practices can still distort sales |
+| **P/CF** | Cash flow is **harder to manipulate** than earnings; **more stable** than P/E; sidesteps earnings-quality differences; related to long-run returns | The "EPS + noncash charges" definition **ignores items that actually affect CFO**; **FCFE** is theoretically better but **more volatile** |
+| **Dividend yield** | Dividends are a **component of total return**, and a **less risky** component than capital appreciation | Only **one** component of return; **dividend displacement** — higher dividends today mean slower growth, hurting the other component |
+
 ## Earnings Issues (20.e, 20.f)
-- **Normalize EPS** for cyclical firms: method of historical average EPS or average ROE × current BV.
+- **Normalize EPS** for cyclical firms by (1) the **method of historical average EPS** or (2) the **method of average ROE** (average ROE × current book value per share). The curriculum **prefers the method of average ROE**, because it reflects the firm's current asset base rather than an EPS history from a different-sized company.
+- **Underlying earnings** (a.k.a. core/persistent/continuing) = earnings with **non-recurring components removed**; **normalized earnings** = earnings adjusted for the **business cycle**. Different fixes for different problems.
 - **Negative earnings** → P/E meaningless; use **earnings yield E/P** (high E/P = cheap) or normalized EPS.
 - **Underlying/trailing earnings** strip out non-recurring items.
 
@@ -58,10 +71,20 @@ Both are explicit curriculum multiples alongside P/E, P/B, P/S.
 - **Justified (leading) dividend yield (Gordon)**: `D0/P0 = (r − g)/(1 + g)`.
 - Rationales: dividend yield is a **component of total return** and a **less risky** component than capital gains. Drawbacks: it is only **one** component of return (ignoring it elsewhere is suboptimal), and the **dividend displacement of earnings** means higher current dividends can trade off future growth.
 
-## Enterprise Value Multiples (20.n-20.p)
+## Enterprise Value Multiples (20.n, 20.o, 20.p)
 - **EV** = market cap + total debt + preferred + minority interest − cash & equivalents (cash & short-term investments, a.k.a. *nonearning assets*, are subtracted because EV = net price an acquirer pays for the whole firm — the acquirer gains access to that cash).
-- **EV/EBITDA**: numerator (total firm value) matches a pre-financing flow (EBITDA) → good for comparing firms with **different capital structures** and for capital-intensive firms.
+- **EV/EBITDA advantages**: (1) numerator (total firm value) matches a pre-financing flow, so it is **useful across firms with different leverage**; (2) EBITDA suits **capital-intensive businesses with heavy depreciation**; (3) EBITDA is usually **positive even when EPS is not**.
+- **EV/EBITDA disadvantages**: (1) when **working capital is growing, EBITDA overstates CFO** (it ignores WCInv entirely); (2) **FCFF is more strongly linked to valuation theory** than EBITDA.
 - EV/Sales useful when earnings are negative or capital structures differ.
+
+## International Comparables (20.p)
+Cross-border relative valuation is harder because comparable firms differ in:
+- **Accounting methods** (recognition, depreciation, inventory, lease and pension treatment) — multiples are not on a like-for-like basis.
+- **Cultures** and business/reporting conventions.
+- **Risk** (country, currency, political, and liquidity differences).
+- **Growth opportunities** (different macro and industry stages).
+
+Practical fix: restate to a common accounting basis where possible, and prefer multiples that are **less sensitive to accounting choice** (e.g., **EV/Sales**, **EV/EBITDA**) over P/E and P/B.
 
 ## Momentum & Averaging (20.q, 20.r)
 - **Momentum indicators**: earnings surprise (standardized unexpected earnings = unexpected earnings ÷ std-dev of past surprises), relative strength.
@@ -73,6 +96,9 @@ Both are explicit curriculum multiples alongside P/E, P/B, P/S.
 
 ## Exam Traps
 - **EV subtracts cash** and adds debt/preferred/minority — a common error.
+- **EV/EBITDA's two drawbacks**: EBITDA **overstates CFO when working capital grows**, and **FCFF ties to theory better** than EBITDA. Advantages ≠ the whole answer.
+- Normalizing cyclical EPS: the **method of average ROE is preferred** over the method of historical average EPS.
+- **P/B is the multiple for firms holding liquid assets** (banks/insurers) and for firms **expected to be wound up**; its weakness is **intangibles**, size effects, accounting conventions, and inflation.
 - **EV/EBITDA** is preferred when capital structures differ (P/E is distorted by leverage).
 - Use the **harmonic mean** to average P/Es across firms, not the arithmetic mean; the arithmetic mean is biased **upward** by outliers.
 - Justified P/B = `(ROE − g)/(r − g)`; P/B > 1 when ROE > r.

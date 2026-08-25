@@ -1,7 +1,7 @@
 ---
 aliases: [Intercorporate Investments, Equity Method, Acquisition Method, Consolidation, Goodwill, Financial Assets]
 tags: [CFA-L2, fsa, concept]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Schweser Book 2, Module 7, LOS 7.a-7.c
 ---
@@ -28,6 +28,7 @@ Classification is driven by **degree of influence/control**, which dictates the 
 - Investment account on the balance sheet = cost + cumulative share of earnings − dividends.
 - **Excess purchase price** over share of book value allocated to identifiable assets (depreciated → reduces equity income) and **goodwill**. Under the equity method, goodwill is embedded in the single investment carrying amount, not presented as a separate asset.
 - Watch for: upstream/downstream **unrealized profits** eliminated pro-rata; impairment if value declines.
+- **Proportionate consolidation (rare)**: for some **joint ventures**, IFRS has historically permitted this alternative to the equity method. The investor adds its **pro-rata share of each line** of the venture's assets, liabilities, revenues, and expenses (like an acquisition, but only the investor's percentage). Because only the investor's share is brought in, **no noncontrolling-interest account is created**. Net income and equity are the **same** as under the equity method; **assets, liabilities, revenues, and expenses are all higher** (so margins and ROA look lower, leverage higher). The curriculum presents it as a treatment that **may be allowed in rare cases**, so treat it as a comparison case the exam can describe rather than the default JV treatment.
 
 ## Business Combinations — Acquisition Method
 - **Consolidate**: 100% of subsidiary assets, liabilities, revenues, expenses; eliminate intercompany.

@@ -1,7 +1,7 @@
 ---
 aliases: [Currency Exchange Rates, FX Forecasting, Parity Conditions, Carry Trade, Covered Interest Rate Parity, Triangular Arbitrage]
 tags: [CFA-L2, econ, concept, fx]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Schweser Book 1, Module 5, LOS 5.a-5.m
 ---
@@ -100,12 +100,26 @@ Use the facts to choose the model: **rates** point to UIRP/forward, **inflation*
 - Return ≈ interest differential ± currency move. Risk profile: small steady gains punctuated by rare large losses → **negative skew / "crash risk"** (peso problem). Returns are **not** normally distributed.
 
 ## Balance of Payments, Policy, Crises (5.j-5.m)
-- **BOP flows**: persistent current-account deficits tend to pressure a currency lower (flow + portfolio mechanisms); capital-account flows can dominate short-term moves.
+- **BOP flows**: persistent current-account deficits tend to pressure a currency lower; capital-account flows can dominate short-term moves.
+
+### How the Current Account Moves a Currency - the three mechanisms (5.j)
+The curriculum names **three** channels through which a persistent current-account deficit weakens a currency. Vignettes test them by name.
+
+| Mechanism | How it works | Speed |
+|---|---|---|
+| **Flow supply/demand** | A deficit **increases the supply of the deficit country's currency** in the market (exporters to it convert their revenue into their own currency) -> downward pressure. Whether the depreciation actually restores balance depends on three curriculum factors: (1) **the size of the initial deficit** (bigger deficit needs bigger depreciation); (2) **how much of the exchange-rate move passes through into import/export prices** (some cost increases are absorbed, not passed on); (3) the **price elasticity of demand** for the traded goods (inelastic imports means volumes do not adjust). | Slow (trade adjusts with a lag) |
+| **Portfolio composition** | Surplus countries run capital-account deficits by **investing in** the deficit countries. Their portfolios become **dominated by a few investee currencies**; when they **rebalance**, the sale has a significant negative impact on those investee currencies. | Medium |
+| **Debt sustainability** | A current-account deficit financed by a capital-account surplus means **borrowing from abroad**. Once **debt/GDP** gets too high, investors question sustainability -> **rapid depreciation** of the borrower's currency. | Fast when it triggers |
+
+- **Capital-account influence**: capital **inflows** raise demand for the currency -> **appreciation**; outflows do the reverse. The main driver of the flow is **differences in real rates of return** (higher relative real returns attract foreign capital). Capital flows are **larger and change faster** than goods flows, so in the **short run** the capital account is the dominant determinant of exchange rates.
+- **Excessive inflows are a problem, especially for emerging markets** — four named consequences: (1) **excessive real appreciation** of the domestic currency; (2) **financial-asset and/or real-estate bubbles**; (3) **rising external debt** of businesses or government; (4) **credit-fuelled excess domestic consumption**. Governments respond with **capital controls or direct FX intervention** (5.l).
+- **Trap:** the current account works **slowly and in the same direction** as the deficit (weaker currency); a strong capital inflow can hold a deficit country's currency **up for years** before one of the three mechanisms bites.
 - **Monetary/fiscal policy (Mundell-Fleming)**: with high capital mobility, **expansionary monetary → lower rates → currency depreciation**; **expansionary fiscal → higher rates → appreciation** (rate channel). Effects can reverse under low capital mobility (trade channel).
 - **Monetary models**: long-run money-supply growth → higher prices → depreciation (Dornbusch overshooting adds short-run sticky-price overshoot that mean-reverts).
 - **Portfolio balance model**: the **long-run** counterpart to Mundell-Fleming for **fiscal** policy. Expansionary fiscal policy → growing stock of govt debt in investor portfolios → investors eventually demand a higher risk premium and become saturated. The short-run fiscal **appreciation** (Mundell-Fleming rate channel) is unsustainable and **reverses to long-run depreciation** unless the government reverses fiscal policy or the central bank **monetizes** the debt.
 
 ### Exchange-Rate-Determination Models (beyond parity)
+
 | Model | Focus | Horizon | Key result |
 |---|---|---|---|
 | **Mundell-Fleming** | Monetary + fiscal policy via interest-rate / trade channels | Short run | Exp. monetary → depreciation; exp. fiscal → appreciation (high capital mobility) |

@@ -1,7 +1,7 @@
 ---
 aliases: [Cost of Capital, Required Return on Equity, Equity Risk Premium, Country Risk Premium, Beta Estimation, Hamada, Grinold-Kroner, Fama-French, Build-Up Approach, Expanded CAPM, BYPRP]
 tags: [CFA-L2, corp, concept, valuation]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Official Curriculum 2026 L2 V4, Reading "Cost of Capital: Advanced Topics" (Schweser Book 2, Module 15); LOS a-f
 ---
@@ -20,7 +20,7 @@ Method depends on: type of debt (traded / non-traded / bank / lease), liquidity,
 - **Non-traded debt, rating exists → matrix pricing**: YTM of other issuers with the same rating/maturity.
 - **Non-traded, no rating → synthetic rating**: deduce a rating from **interest-coverage (IC)** and **leverage (D/E)** ratios (e.g., AAA: IC > 10, D/E < 35%; BBB: 3 < IC < 5, 42–44%), then take the matrix YTM or add that rating's credit spread to R_f.
 - **Bank debt**: use the rate on recent/comparable bank borrowings (the IBR).
-- **Leases**: the implicit lease rate is a cost of debt; a low implicit rate can beat the firm's unsecured IBR (but a lease still adds leverage).
+- **Leases — the rate implicit in the lease (RIIL)**: for a **finance lease**, the RIIL **is** the cost of that debt. It is the **IRR that equates the fair value of the leased asset (plus the lessor's initial direct costs) to the present value of the lease payments plus the guaranteed residual value**. If the RIIL is not determinable, fall back on the lessee's **incremental borrowing rate (IBR)** — the rate on recent/comparable secured borrowing. A low RIIL can beat the firm's unsecured IBR (the lessor holds the asset as collateral), but the lease still adds leverage.
 - **International (15.c)**: cost of debt should match the **currency of the cash flows**. For a less-mature market, add a **country risk premium** derived from a **country risk rating (CRR)**: CRP = (local median yield for the rating) − (benchmark-country yield). E.g., rating-2 country at 4.5% vs benchmark 4.0% → CRP 0.5%.
 
 ## Equity Risk Premium (15.c)
@@ -65,6 +65,7 @@ Risk factor models can't be applied directly (no prices); private firms are ofte
 - Evaluate a firm's WACC and structure **relative to peers**: leverage, debt maturity, cost of debt, coverage; identify whether the structure is optimal/sustainable.
 
 ## Exam Traps
+- **Finance lease cost of debt = the rate implicit in the lease (RIIL)** — the IRR equating asset fair value (+ lessor's direct costs) to PV of lease payments + residual value. Use the **IBR** only when the RIIL is not determinable.
 - **2026 errata - private-company premiums**: add SP/IP/SCRP/CRP only when the risk is not already captured by beta, ERP, or country assumptions. Peer beta can make a separate IP double-count industry risk.
 - **Unlever then relever** beta when the comparable's leverage differs from the subject's (Hamada).
 - **Expanded CAPM** = R_f + β·ERP + **SP + SCRP** (uses peer beta); **Build-up** = R_f + ERP + **SP + IP + SCRP** (NO beta — implicit β=1). Don't double-count beta in build-up. Illiquidity → marketability **discount on value**, not a premium in r_e.

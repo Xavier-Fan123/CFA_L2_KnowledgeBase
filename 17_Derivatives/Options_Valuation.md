@@ -1,7 +1,7 @@
 ---
 aliases: [Options Valuation, Binomial Option Model, Black-Scholes-Merton, BSM, Black Model, Option Greeks, Delta Hedging, Implied Volatility]
 tags: [CFA-L2, deriv, concept, options]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Official Curriculum V7 (Derivatives) Learning Module 2; Schweser Book 4, Module 29, LOS 29.a-29.n
 ---
@@ -13,6 +13,7 @@ source: Official Curriculum V7 (Derivatives) Learning Module 2; Schweser Book 4,
 - **Option value = PV of expected payoff under risk-neutral probabilities**: `c = [π_U × c_up + π_D × c_down] / (1 + r)`.
 - **Worked example (Schweser):** rf = 7%, S0 = $30, u = 1.333, d = 0.75 → `π_U = (1.07 − 0.75)/(1.333 − 0.75) = 0.32/0.583 = 0.549`. Then value = PV of the 0.549/0.451 probability-weighted payoffs, discounted at 7%.
 - **Two-period**: roll backward through the tree. For **American** options, check **early exercise** at each node (value = max(exercise, hold)).
+- **American vs European values (29.d)**: an **American call on a non-dividend-paying stock is worth exactly the same as the European call** — early exercise is never optimal, because exercising throws away the remaining time value and the interest on the strike still unpaid. An **American put can be worth MORE** than the European put: exercising early converts the position to cash, and the holder **earns interest on the intrinsic value** (most valuable when the put is deep in the money and rates are high). *[Beyond curriculum, standard result: with **dividends**, early exercise of an American **call** can become optimal just before the ex-dividend date.]*
 
 ## No-Arbitrage / Hedge Ratio (29.c)
 - Replicate the option with a position in the underlying and risk-free borrowing/lending.
@@ -84,7 +85,7 @@ The Greeks are **static (comparative-statics) risk measures** — sensitivity of
 
 - **Delta hedge** — make the **portfolio delta-neutral**. Optimal hedge units of the hedging instrument: `NH = −(Portfolio delta) / (Delta_H)`. If NH < 0 → short the hedge; NH > 0 → long it. Stock has delta = +1 per share. *Example:* short calls on 1,000 shares with call delta 0.50 → portfolio delta −500 → buy `−(−500)/1 = 500` shares. Must **rebalance dynamically** as delta drifts (continuous trading is the BSM ideal).
 - **Delta approximation** of an option's price change: `Δc ≈ Delta_c·(ΔS)`; biased **low** for both up and down moves (the true curve lies above the tangent). **Delta-plus-gamma approximation** is more accurate: `Δc ≈ Delta_c·ΔS + ½·Gamma_c·(ΔS)²`.
-- **Gamma risk**: large/discontinuous jumps break a delta hedge because **delta itself moves**; gamma is the residual risk after delta-neutralizing. Manage gamma **first** (only options change gamma; stock cannot), **then** neutralize delta with stock (stock has zero gamma). Gamma highest **ATM near expiry**.
+- **Gamma risk (29.m)**: large/discontinuous jumps break a delta hedge because **delta itself moves**; gamma is the residual risk after delta-neutralizing. Manage gamma **first** (only options change gamma; stock cannot), **then** neutralize delta with stock (stock has zero gamma). Gamma highest **ATM near expiry**.
 - **Implied volatility**: the σ that makes BSM price = market price — a **forward-looking, market-consensus view of future volatility** (vs *historical* volatility, which is backward-looking). Not directly observable. **Volatility smile/skew** = implied vol plotted vs strike (2-D); **volatility surface** = implied vol vs strike **and** expiration (3-D). If BSM held exactly the surface would be **flat**; in practice it is not, evidencing departures from the lognormal/constant-vol assumptions.
 
 ## Exam Traps

@@ -1,7 +1,7 @@
 ---
 aliases: [Capital Budgeting, TNOCF, Terminal Year Non-Operating Cash Flow, NWC Recovery, Depreciation Tax Shield, Incremental Cash Flow, Nominal vs Real Cash Flows, Annuity Geometric Series]
 tags: [CFA-L2, corp, foundation, L1-bridge]
-date: 2026-08-02
+date: 2026-08-25
 status: evergreen
 source: CFA Level I Corporate Issuers (Capital Investments) — NOT a 2026 L2 LOS; verified absent from all five 2026 Schweser L2 books. Retained as foundation for L2 Equity / FSA / Cost of Capital.
 ---
@@ -27,7 +27,7 @@ Terminal-year total = annual operating CF **+** TNOCF.
 
 ## 1. Why NWC Is Recovered 100% and Untaxed
 
-| | Fixed capital | Working capital |
+| Aspect | Fixed capital | Working capital |
 |---|---|---|
 | Economic nature | **Consumed** by use | **Advanced**, then revolves |
 | Accounting | Depreciates toward salvage | Never depreciates |

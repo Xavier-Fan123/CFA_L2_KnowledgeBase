@@ -1,7 +1,7 @@
 ---
 aliases: [Measuring and Managing Market Risk, Value at Risk, VaR, Expected Shortfall, Sensitivity Risk, Scenario Risk, Risk Budgeting]
 tags: [CFA-L2, pm, concept, risk]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Schweser Book 5, Module 38, LOS 38.a-38.l
 ---
@@ -55,6 +55,9 @@ Reprice the 80/20 portfolio over each day's *actual* SPY/SPLB returns (e.g., Day
 ## Sensitivity & Scenario Measures (38.f-38.i)
 - **Sensitivity**: equity **beta**; fixed-income **duration & convexity**; option **Greeks (delta, gamma, vega)**. Measure exposure to a single risk factor, but **not probability** of loss.
 - **Scenario risk**: **historical** scenarios (replay a past crisis) and **hypothetical/stress** tests (extreme but plausible). Capture non-normal, multi-factor stress that VaR may miss.
+- **Stress test** = sensitivity or scenario analysis run with **extreme** input changes, usually to test the effect on **equity or solvency**.
+- **Reverse stress test (38.h)** runs the logic **backwards**: instead of asking what scenario X would cost, it starts from **business failure** and identifies the **scenarios that would produce it**. Use it to surface vulnerabilities nobody thought to put on the scenario list.
+- Limits of both: scenario and sensitivity measures give **no probability** (and sensitivity measures give no size of the factor move); a **historical scenario need not repeat**, and a **hypothetical scenario can be misspecified**.
 
 ### Commodity Trading Extension (Beyond Curriculum)
 This section is a professional trading application, not CFA curriculum text.
@@ -72,6 +75,7 @@ This section is a professional trading application, not CFA curriculum text.
 - VaR is a **minimum** loss at a confidence level, not the maximum; it ignores **how bad** the tail is — use **CVaR/expected shortfall** for that.
 - **Parametric VaR is poor for option-heavy portfolios** (non-normal); historical/Monte Carlo handle them.
 - Sensitivity measures give **exposure**, not loss probability; scenario analysis covers tail/multi-factor stress.
+- **Reverse stress test = start from failure and work back to the scenarios that cause it** — the opposite direction from an ordinary stress test.
 - z-thresholds: **5% → 1.65σ, 1% → 2.33σ, 16% → 1σ**. Higher confidence (1% vs 5%) → larger z → larger VaR.
 - **Never annualize a daily VaR** by ×250 or ×√250. Re-annualize mean (×250) and σ (×√250) *first*, then compute VaR. The √250 shortcut is valid only under a zero-expected-return assumption.
 - Parametric needs only mean + σ (+ correlations); it does **not** require a data history (historical sim does).

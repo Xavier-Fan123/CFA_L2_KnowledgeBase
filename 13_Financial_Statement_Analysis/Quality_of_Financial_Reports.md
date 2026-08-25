@@ -1,7 +1,7 @@
 ---
 aliases: [Quality of Financial Reports, Earnings Quality, Accruals, Mean Reversion, Cash Flow Quality, Beneish]
 tags: [CFA-L2, fsa, concept]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Schweser Book 2, Modules 11-12, LOS 11.a-11.m, 12.a-12.e
 ---
@@ -31,7 +31,21 @@ Earnings management thrives when **opportunity** (weak controls/board), **motiva
 - **High balance-sheet quality**: adequate completeness, unbiased measurement, clear presentation; watch for understated liabilities and overstated/impaired assets.
 
 ## Detection Tools (11.c, 11.d)
-- **Beneish M-score**: probability of manipulation (higher → more likely manipulator); inputs include DSR, gross-margin index, asset-quality index, sales-growth index, total-accruals-to-assets.
+- **Beneish M-score**: a **probit** model estimating the probability of earnings manipulation from **eight** variables. A **higher** M-score → higher probability of manipulation; the curriculum's cutoff is **M > −1.78** (e.g., M = −1.53 exceeds −1.78 → higher-than-acceptable probability, ≈6.3%).
+
+| Variable | Definition | Manipulation signal |
+|---|---|---|
+| **DSRI** days sales receivable index | days' sales in receivables, year t ÷ year t−1 | **> 1** → revenue may be inflated / recognition accelerated |
+| **GMI** gross margin index | gross margin **year t−1 ÷ year t** | **> 1** → margin **deteriorated**; pressure to manipulate |
+| **AQI** asset quality index | (non-current assets other than PP&E ÷ total assets), t ÷ t−1 | **> 1** → possible **excessive capitalization** of expenses |
+| **SGI** sales growth index | sales, t ÷ t−1 | **> 1** → growth firms face pressure to keep meeting expectations |
+| **DEPI** depreciation index | depreciation rate **t−1 ÷ t** (rate = dep. expense ÷ (dep. + PP&E)) | **> 1** → depreciating **more slowly** (longer lives / higher salvage) |
+| **SGAI** SG&A index | SG&A as % of sales, t ÷ t−1 | rising SG&A may predispose to manipulation (fitted coefficient is **negative**) |
+| **Accruals** | (income before extraordinary items − CFO) ÷ total assets | higher accruals → lower earnings quality |
+| **LEVI** leverage index | total debt ÷ total assets, t ÷ t−1 | rising leverage (fitted coefficient is **negative**) |
+
+  - Don't memorize the coefficients — interpret the **direction** of each index. Note the two counterintuitive ones: **SGAI and LEVI carry negative fitted coefficients**, opposite to what Beneish expected.
+  - **Limitations**: it relies on accounting data that may not reflect economic reality, and once managers know the model they **game its inputs** — the model's predictive power has **declined over time**.
 - Bankruptcy/Altman Z-score for distress; trend & cross-sectional ratio analysis.
 
 ## Sources of Information about Risk (11.m)

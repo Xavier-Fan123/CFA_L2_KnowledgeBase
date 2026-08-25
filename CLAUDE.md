@@ -12,8 +12,8 @@ This KB has **no Python / API key dependency**. Search, citation, and write-back
 with native Claude Code tools (Grep / Glob / Read / Edit).
 
 **Language: write the entire KB and all Q&A in English only. No Chinese characters anywhere.**
-If you ever need to reference the source PDF folder, its on-disk name contains non-ASCII characters —
-do not transcribe it into notes; discover it at runtime with Glob (see Rule 2).
+Never transcribe a user-specific or non-ASCII source path into a note; discover paths at runtime with
+Glob (see Rule 2) and describe them relative to the KB.
 
 ---
 
@@ -33,18 +33,23 @@ When the user asks any CFA-related question:
 
 ## RULE 2: Authoritative Fallback — Official / Schweser PDFs
 
-When the KB lacks the topic, extract from the curriculum PDFs in the sibling source folder under the
-parent CFA directory (`../`), preferring Schweser Notes. That folder's name is non-ASCII, so
-**do not hardcode it** — discover the real PDF path at runtime, then run pdftotext on it:
+When the KB lacks the topic, extract from the source PDFs in the KB's **parent** directory (`../`),
+preferring Schweser Notes. **Do not hardcode paths** — discover them at runtime, then run pdftotext:
 
 ```bash
 # pdftotext is at /mingw64/bin/pdftotext on this machine
-# 1) discover the real path (handles the non-ASCII source folder name):
-#    Glob(pattern="../**/SchweserNotes Book *.pdf")
-# 2) extract and search the discovered file:
-pdftotext "<discovered path>/CFA 2026 Level II SchweserNotes Book 1.pdf" /tmp/book1.txt
-grep -n -i "<keywords>" /tmp/book1.txt   # find line numbers, then sed -n 'a,bp' for context
+# 1) discover the real paths:
+#    Glob(pattern="../**/SchweserNotes Book *.pdf")   -> Schweser Books 1-5
+#    Glob(pattern="../cfa-program2026L2V*.PDF")       -> official volumes V1-V10
+# 2) extract with -layout (preserves tables) and search the discovered file:
+pdftotext -layout "<discovered path>" "<scratch>/book1.txt"
+grep -n -i "<keywords>" "<scratch>/book1.txt"   # then sed -n 'a,bp' for context
 ```
+
+Layout note (verified 2026-08-25): the Schweser books sit in a `notes/` subfolder of the KB's parent;
+the ten official volumes sit directly in the parent. Every Schweser reading ends with a **`KEY CONCEPTS`**
+block that summarizes the reading **LOS by LOS** — that block is the fastest authoritative checklist for
+verifying whether a note covers a reading completely, and `ANSWER KEY FOR MODULE QUIZZES` follows it.
 
 Topic ↔ Schweser Book mapping (5 books) — verified against the 2026 Schweser Notes PDFs:
 - Book 1: Quant (modules 1-4) + Economics (modules 5-6)

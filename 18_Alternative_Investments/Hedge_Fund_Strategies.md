@@ -1,7 +1,7 @@
 ---
 aliases: [Hedge Fund Strategies, Long-Short Equity, Merger Arbitrage, Global Macro, Relative Value, Fund of Funds]
 tags: [CFA-L2, alt, concept, hedge-funds]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Schweser Book 4, Module 33, LOS 33.a-33.i
 ---
@@ -17,7 +17,7 @@ Grouped by approach; each differs in directionality, leverage, liquidity, and ta
 | **Event-driven** | **Merger (risk) arbitrage**, distressed, special situations, activist | Idiosyncratic, deal/event risk; merger arb = short, fat left tail |
 | **Relative value** | **Convertible arbitrage**, fixed-income arb, volatility arb | Exploits pricing differentials; levered, sensitive to liquidity/credit stress |
 | **Opportunistic** | **Global macro**, managed futures (CTAs) | Top-down, trend-following; positive in crises (crisis alpha), trades many markets |
-| **Specialist** | Volatility, reinsurance/ILS | Niche risk premia, low correlation |
+| **Specialist** | **Volatility trading**, **life settlements** | Niche risk premia, low correlation; requires specialized knowledge |
 | **Multi-manager** | **Fund of funds**, multi-strategy | Diversification; FoF adds a second fee layer; multi-strat reallocates capital internally |
 
 ## Investment Characteristics & Role (33.b-33.g)
@@ -27,7 +27,12 @@ Grouped by approach; each differs in directionality, leverage, liquidity, and ta
 - **Fixed-income arbitrage**: exploit mispricings between related rate instruments; highly **levered**, vulnerable to liquidity/funding stress (carry-trade-like blow-up risk).
 - **Global macro / managed futures (CTAs)**: directional/trend-following, can provide **downside protection / crisis alpha**; return profile often **positively skewed** (long volatility/trend).
 - **Distressed**: long undervalued distressed debt; illiquid, long horizon, equity-like risk.
-- **Specialist** (volatility, reinsurance/ILS): niche premia, low correlation; reinsurance pays a steady premium but takes large catastrophe tail losses (insurance-like, negatively skewed).
+- **Specialist (33.f)** — the 2026 curriculum names **two** specialist strategies, both aiming at returns uncorrelated with traditional assets:
+  - **Volatility traders**: profit from changes in the **term structure of volatility**. Expressions include OTC options (**bull spreads, bear spreads, straddles, calendar spreads**) and, alternatively, **VIX futures, volatility swaps, and variance swaps**. (A variance swap pays on realized **variance**, so it is convex in volatility; a volatility swap pays linearly on realized volatility.)
+  - **Life settlements**: buy pools of **life insurance policies** from the insured and become the beneficiary. The manager screens for policies with **low surrender value**, **low ongoing premium payments**, and a **high probability that the insured dies soon**. Risk = longevity (the insured lives longer than modeled) plus the ongoing premium drag.
+- **Dedicated short-selling vs short-biased** (33.b): dedicated short funds run **60%–120% short at all times**; short-biased funds run **30%–60% net short**, moderating the short beta with some long and cash exposure. Both use minimal leverage and focus on stock picking, with **negative** correlation to traditional assets.
+- **Convertible arbitrage sizing** (33.d): managers typically run about **300% long convertibles and 200% short equity**; the strategy works best with **high convertible issuance, adequate liquidity, and moderate volatility**.
+- **Equity market neutral**: mostly **quantitative**, usually **high leverage** (needed because per-trade mispricings are small), and can perform well in weak markets because beta risk is minimal.
 
 **Worked example — merger-arb payoff (official LM4 Example 4):** Acquirer A at $45 offers 1 A for 2 T; T pre-announce $15, post-announce jumps to $19, A falls to $42. Manager buys 20,000 T (cost $380,000) and shorts 10,000 A (proceeds $420,000) → net **deal spread = +$40,000** if it closes. If the deal **breaks**, prices revert: cover A at $45 (−$450,000) and T falls to $15 ($300,000) → total loss **−$110,000** [= (420,000 − 450,000) + (−380,000 + 300,000)]. Hence "long $40k riskless bond + short a binary put paying $110k on failure" → the classic **negative-skew / fat-left-tail** signature.
 
@@ -36,8 +41,14 @@ Grouped by approach; each differs in directionality, leverage, liquidity, and ta
 - **Conditional linear factor model** (official form) adds a **crisis dummy** so betas can differ in stress vs normal times: `R(i,t) = αᵢ + Σₖ βᵢₖ·F(k,t) + Σₖ Dₜ·β*ᵢₖ·F(k,t) + εᵢₜ` where `Dₜ = 1` during financial-crisis periods (e.g., Jun 2007–Feb 2009), else 0; `β*ᵢₖ` is the **incremental** crisis exposure. The six base risk factors (Hasanhodzic & Lo): **equity (S&P 500), interest-rate (bond), currency (USD), commodity (GSCI), credit (Baa−Aaa spread), and volatility (ΔVIX)**.
 - Return not explained by factors splits into **(1) alpha** (manager skill), **(2) omitted factors**, and **(3) random error**. Build the model via **stepwise regression** to avoid multicollinearity.
 
+## Multi-Manager Structures (33.g)
+- **Fund of funds (FoF)**: a hedge fund investing in other hedge funds. Broadest strategy mix, but **lack of transparency**, **slower tactical execution**, a **second layer of fees** — and **netting risk**.
+  - **Netting risk**: the FoF investor pays **incentive fees to each winning underlying manager** even when other underlying managers lose, so fees are owed on gross winners while the FoF's **net** return may be flat or negative. A single **multi-strategy** fund nets the winners against the losers **inside one fee calculation**, so the investor avoids netting risk.
+- **Multi-strategy fund**: one manager running several strategies in-house. Better fee structure (no double layer, no netting risk) and **faster tactical reallocation** between strategies, but **operational risk is less diversified** (one prime broker, one risk system, one back office).
+
 ## Adding to a Portfolio (33.i)
 - Evaluate the **return/risk and diversification** impact; consider non-normal moments (skew, kurtosis), illiquidity, and how the strategy behaves in stress. A strategy with attractive standalone Sharpe may add little if highly correlated; crisis-alpha strategies add value despite lower standalone returns.
+- **The curriculum's benchmark result**: adding a **20% hedge fund allocation** to a traditional **60/40 stock-bond** portfolio generally **decreases total standard deviation**, **increases the Sharpe ratio and the Sortino ratio**, and **decreases maximum drawdown**. (Sortino penalizes only **downside** deviation, so it is the fairer ratio for the negatively skewed strategies; **maximum drawdown** = the largest peak-to-trough loss.)
 
 ### Commodity Hedge Fund Extension (Beyond Curriculum)
 This section is a professional hedge-fund application, not CFA curriculum text.
@@ -53,7 +64,10 @@ This section is a professional hedge-fund application, not CFA curriculum text.
 - **Merger arbitrage** payoff is **negatively skewed** = **long riskless bond (spread) + short binary put** (pays out if deal breaks); **global macro / managed futures** are often **positively skewed** (crisis alpha, long volatility/trend).
 - **Equity market neutral** ≈ low beta/low correlation; long/short equity keeps net (usually net-long) market exposure.
 - The **conditional** factor model uses a **crisis dummy** to expose **state-dependent** tail betas hidden in reported "alpha"; residual return = alpha + omitted factors + random error.
-- **Fund of funds** adds **diversification but a second layer of fees**; **multi-strategy** reallocates capital internally (one fee layer) but concentrates operational/manager risk.
+- **Fund of funds** adds **diversification but a second layer of fees plus NETTING RISK** (incentive fees paid to winning sub-managers while losers drag the net return); **multi-strategy** nets internally (one fee layer, no netting risk) and reallocates faster, but concentrates operational risk.
+- **Specialist = volatility trading + life settlements** in the 2026 reading. Volatility traders trade the **term structure of volatility** (OTC option spreads, VIX futures, volatility/variance swaps); life-settlement managers want **low surrender value, low premiums, short life expectancy**.
+- **Dedicated short = 60%–120% short**; **short-biased = 30%–60% net short**. Convertible arb runs roughly **300% long / 200% short**.
+- 20% hedge funds added to 60/40: **σ down, Sharpe up, Sortino up, max drawdown down**.
 
 ## Q&A
 

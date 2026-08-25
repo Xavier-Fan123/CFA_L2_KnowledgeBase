@@ -1,9 +1,9 @@
 ---
 aliases: [Code of Ethics, Standards of Professional Conduct, Seven Standards, Professionalism, Conflicts of Interest, Competence]
 tags: [CFA-L2, ethics, concept]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
-source: Official 2026 L2 V10 (Learning Modules 1-2); Schweser Book 5, Readings 40-41 (LOS 40.a, 41.a-41.b)
+source: Official 2026 L2 V10 (Learning Modules 1-2); Schweser Book 5, Readings 40-41 (LOS 40.a-40.b, 41.a-41.b)
 ---
 
 # Code of Ethics and Standards of Professional Conduct
@@ -19,7 +19,7 @@ Members and Candidates must:
 5. **Promote the integrity and viability of the global capital markets** for the ultimate benefit of society.
 6. **Maintain and improve their professional competence** and strive to improve that of other professionals.
 
-## The Seven Standards (memorize structure)
+## The Seven Standards (40.b) — memorize the structure
 
 - **I — Professionalism**: A Knowledge of the Law · B Independence & Objectivity · C Misrepresentation · D Misconduct · **E Competence**.
 - **II — Integrity of Capital Markets**: A Material Nonpublic Information (insider trading) · B Market Manipulation.
@@ -40,6 +40,8 @@ Members and Candidates must:
 ### I — Professionalism
 - **I(A) Knowledge of the Law**: follow the **stricter** of law vs Code/Standards; **dissociate** from violations; no general duty to report to authorities unless **law requires** it (reporting to CFA Institute is encouraged, not mandatory). "Distribution-area" laws can apply across borders.
 - **I(B) Independence/Objectivity**: modest gifts from **clients** (with disclosure) may be OK; gifts/benefits from **third parties** to influence research are problematic; pay for **own** travel/lodging on issuer site visits; do not let buy-side/sell-side, IB, or fund-sponsor pressure bias research; manage credit-rating and manager-selection conflicts.
+  - **Issuer-paid research** (named case): permitted, but inherently conflicted — **disclose the nature of the compensation prominently**, take a **flat fee agreed in advance**, and never accept a fee **contingent on the conclusion, the rating, or the issuer's share price**. Best practice is a written contract limiting the issuer's ability to review or approve the report.
+  - **Investment-banking relationships**: research analysts must not be pressured by, or compensated on, IB revenue; use **firewalls** between IB and research.
 - **I(C) Misrepresentation**: no knowingly false/misleading statements; **no plagiarism** (attribute sources); no guaranteeing returns on risky assets; misrepresentation can be by **omission**. Outsourced/third-party research can be used but the member is responsible for its accuracy.
 - **I(D) Misconduct**: bars dishonesty, fraud, deceit, or any act reflecting adversely on **professional** reputation, integrity, or competence (covers personal conduct affecting professional standing, e.g. fraud).
 - **I(E) Competence** *(2024 — new)*: must **have and maintain** the abilities, skills, and knowledge required for the duties assumed. Acting on an unfamiliar product before becoming proficient violates I(E); remedy is CE/training/certification or recusal. Negative outcomes alone ≠ incompetence.
@@ -49,7 +51,7 @@ Members and Candidates must:
 - **II(B) Market Manipulation**: no **information-based** (spreading false rumors) or **transaction-based** (rigging trades, marking the close, securing a controlling position to manipulate price) manipulation.
 
 ### III — Duties to Clients
-- **III(A) Loyalty, Prudence, and Care**: clients' interests **first**; identify the actual client (for a pension, the **beneficiaries**, not the plan sponsor); **vote proxies** in clients' best interest; obtain **best execution**; soft dollars must benefit the client.
+- **III(A) Loyalty, Prudence, and Care**: clients' interests **first**; identify the actual client (for a pension, the **beneficiaries**, not the plan sponsor); **vote proxies** in clients' best interest (cost-benefit: routine proxies need not always be voted, but a policy is required); obtain **best price and execution**; **client brokerage (soft dollars)** belongs to the client and must be used for **research/services that benefit the client**, not to pay the manager's own overhead or to reward referrals.
 - **III(B) Fair Dealing**: disseminate recommendations/changes to all clients **fairly** (not "equally"); limit the people who know a change before dissemination; pre-disseminate allocation procedures for IPOs/hot issues.
 - **III(C) Suitability**: in an **advisory** relationship, make a reasonable inquiry into the client's experience/objectives/constraints, **update the IPS regularly**, judge suitability in the **total-portfolio** context; for a stated **mandate**, only act consistently with it; document/caution on unsolicited off-IPS trades.
 - **III(D) Performance Presentation**: presentations must be **fair, accurate, and complete**; no cherry-picking accounts/periods; adhering to **GIPS** is one way to comply. (Link → [[GIPS]].)
@@ -57,6 +59,7 @@ Members and Candidates must:
 
 ### IV — Duties to Employers
 - **IV(A) Loyalty**: act for the employer's benefit; **no soliciting clients before departure**; may **prepare** to compete; **skill/experience** and **public-source** info may go, **not** employer records/client lists; whistleblowing is allowed when it protects clients/markets and is not for personal gain.
+  - **Independent practice** (named case): before undertaking **independent practice that could result in compensation in competition with the employer**, the member must **notify the employer in writing** — describing the type of service, the expected duration, and the compensation — and **obtain consent** from both the employer and the outside party. Merely *preparing* to leave (renting space, registering a company) is fine; *taking business* is not.
 - **IV(B) Additional Compensation Arrangements**: must get **written consent from all parties** before accepting outside comp/benefits (e.g., a client's performance bonus) that competes with the employer's interest.
 - **IV(C) Responsibilities of Supervisors**: take **reasonable steps** to detect/prevent violations by those under supervision; an inadequate **compliance system** is itself a violation; decline supervisory duty in writing if you cannot discharge it. Detecting a violation → **investigate, increase supervision, limit activity** of the wrongdoer (not merely rely on assurances).
 
@@ -68,6 +71,7 @@ Members and Candidates must:
 ### VI — Conflicts of Interest
 - **VI(A) Avoid or Disclose Conflicts** *(2024 — renamed)*: **avoid** conflicts where reasonable, otherwise make **prominent, plain-language** disclosure (e.g., beneficial ownership, IB relationships, broker/manager arrangements, referral arrangements) to clients/prospects and employer.
 - **VI(B) Priority of Transactions**: **client > employer > self** ("clients come first"); personal/beneficial accounts trade last; family fee-paying accounts are treated like any client.
+  - **Front running** (named case): trading a personal (or firm) account **ahead of a known client order or a pending recommendation** to profit from the price impact — the archetypal VI(B) violation, and a II(B)/III(A) problem too. Controls: **pre-clearance**, **blackout / restricted periods** around research publication, duplicate confirms, and limited participation in **IPOs / hot issues**.
 - **VI(C) Referral Fees**: **disclose** any compensation paid/received for referrals to employer **and** clients/prospects **before** they engage, so they can judge the cost and any partiality.
 
 ### VII — Responsibilities as a CFA Institute Member or CFA Candidate

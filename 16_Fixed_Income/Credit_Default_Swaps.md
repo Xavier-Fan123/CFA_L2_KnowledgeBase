@@ -1,7 +1,7 @@
 ---
 aliases: [Credit Default Swaps, CDS, Single-Name CDS, Index CDS, CDS Basis, Credit Curve Trades]
 tags: [CFA-L2, fi, concept, credit, derivatives]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Schweser Book 4, Module 27, LOS 27.a-27.e
 ---
@@ -32,7 +32,10 @@ source: Schweser Book 4, Module 27, LOS 27.a-27.e
 - **Hedge / manage exposure**: buy protection to reduce credit risk; sell protection to add it.
 - **Express views**: buy protection if you expect credit deterioration (spread widening); sell if you expect improvement.
 - **Curve trades**: long/short CDS of different maturities to bet on the **shape** of the credit curve (e.g., curve steepener/flattener).
-- **Basis trades**: exploit the **CDS-bond basis** = CDS spread − bond (cash) spread. Negative basis → buy the bond and buy protection for a near-riskless pickup; convergence trades across markets.
+- **Basis trades**: exploit the **CDS-bond basis** = CDS spread − bond (cash) spread. Negative basis → buy the bond and buy protection for a near-riskless pickup; convergence trades across markets. The trade rests on the view that the mispricing is **temporary** and will disappear once recognized.
+- **Naked CDS (27.d)**: buying protection with **no exposure** to the underlying — a pure directional short on the credit.
+- **Long/short trade**: buy protection on one reference entity and **sell** protection on another (a relative-value credit view). A **curve trade** is the special case where both legs are the **same entity at different maturities**: bearish on the near term → **curve-flattening** trade; near-term outlook better than the long term → **curve-steepening** trade (buy long-maturity protection, sell short-maturity).
+- **Synthetic vs cash CDO arbitrage (27.e)**: a **synthetic CDO** takes on the credit exposure by **selling protection via CDS** instead of buying the actual bonds held by a **cash CDO**. If the synthetic can be assembled for **less than** the equivalent cash CDO, the arbitrage is to **buy the synthetic CDO and sell the cash CDO**, capturing the difference.
 
 ### Commodity Trading Extension (Beyond Curriculum)
 This section is a professional trading application, not CFA curriculum text.
@@ -44,6 +47,8 @@ This section is a professional trading application, not CFA curriculum text.
 - Watch **wrong-way credit risk**: a commodity price shock can simultaneously hurt the counterparty's solvency and increase the replacement value of the trade exposure. A CDS hedge on the reference entity may help with default loss but not with operational disruption or cargo non-performance.
 
 ## Exam Traps
+- **Curve-steepening trade** = buy **long**-maturity protection, sell **short**-maturity (the near-term view is the better one); a **flattening** trade is the reverse. A **naked** CDS means no underlying exposure at all.
+- **Synthetic CDO cheaper than cash CDO → buy synthetic, sell cash.** The synthetic gets its exposure by **selling protection**, not by owning bonds.
 - **Payout = notional × (1 − recovery)** = notional × LGD.
 - One-period **fair spread ≈ (1 − RR) × POD**; don't confuse the **CDS coupon** (standardized 1% IG / 5% HY) with the **CDS spread** (the risk-justified rate).
 - Upfront ≈ **(spread − coupon) × duration**; buyer pays when spread > coupon (price < 100). A **negative** upfront means the **seller** pays and **price > 100** (e.g. −2% → price 102).

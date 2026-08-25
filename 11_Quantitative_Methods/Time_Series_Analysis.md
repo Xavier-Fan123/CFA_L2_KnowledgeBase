@@ -1,7 +1,7 @@
 ---
 aliases: [Time Series Analysis, Covariance Stationary, Unit Root, Dickey-Fuller Test, Random Walk, First Differencing, AR Model, Mean Reversion, Trend Model, Log-Linear Trend, Seasonality, Seasonal Lag, Chain Rule of Forecasting, RMSE, Cointegration, Engle-Granger, ARCH]
 tags: [CFA-L2, quant, concept, time-series]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Schweser Book 1, Reading 2 (Modules 2.1–2.5), LOS 2.a–2.o
 ---
@@ -98,7 +98,7 @@ If a series is a random walk (has a unit root), transform to covariance stationa
 
 **Worked example (capacity utilization):** AR(1) on the level suggests a unit root → not stationary → take first differences (period-over-period change) → re-estimate AR(1) on the differenced series; the lag coefficient is now significant → usable.
 
-## ARCH — Autoregressive Conditional Heteroskedasticity
+## ARCH (2.m) — Autoregressive Conditional Heteroskedasticity
 
 A series has **ARCH** when the **variance of the error in one period depends on the variance of the error in prior periods** — the error variance is *conditional* (time-varying) and *autoregressive* (driven by its own past). The error term is then **conditionally heteroskedastic**.
 

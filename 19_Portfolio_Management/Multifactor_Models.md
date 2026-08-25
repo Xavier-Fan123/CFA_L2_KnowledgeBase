@@ -1,7 +1,7 @@
 ---
 aliases: [Multifactor Models, Arbitrage Pricing Theory, APT, Carhart Model, Factor Models, Active Risk Decomposition]
 tags: [CFA-L2, pm, concept, factor-models]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Schweser Book 5, Module 37, LOS 37.a-37.g
 ---
@@ -59,6 +59,15 @@ Two factors = **surprises** in inflation (F_INFL) and GDP growth (F_GDP). Two st
 - **Active return** = Σ (active factor tilts × factor returns) + security selection.
 - **Active risk (tracking error)** decomposes into **active factor risk + active specific risk**: `active risk² = active factor risk² + active specific (selection) risk²`.
 - **Information ratio** = active return / active risk (→ [[Active_Portfolio_Management]]).
+- **Two construction portfolios the exam contrasts (37.e)**:
+
+| Aspect | **Factor portfolio** | **Tracking portfolio** |
+|---|---|---|
+| Factor sensitivities | **1.0 to one target factor, 0.0 to every other factor** | A **deliberately chosen set** of sensitivities |
+| Purpose | A **pure bet on (or pure hedge of) a single factor** | **Replicate** the factor exposures of a benchmark or liability |
+| Typical user | Active manager speculating on or hedging one risk | **Passive** manager tracking an index (e.g., S&P 500), or an LDI mandate |
+
+  - Mnemonic: a **factor** portfolio isolates **one** factor; a **tracking** portfolio matches **many** factors to something else. Active managers go long/short **factor** portfolios; passive managers hold a **tracking** portfolio.
 
 ### Commodity Hedge Fund Extension (Beyond Curriculum)
 This section is a professional hedge-fund application, not CFA curriculum text.
@@ -71,6 +80,7 @@ This section is a professional hedge-fund application, not CFA curriculum text.
 - Apparent arbitrage portfolios are rarely zero-risk in commodities. Residual basis, funding, storage, delivery optionality, settlement timing, and position limits often explain why a spread remains open.
 
 ## Exam Traps
+- **Factor portfolio** = sensitivity **1 to one factor, 0 to all others** (a pure factor bet). **Tracking portfolio** = a chosen set of sensitivities that **replicates a benchmark**. Do not swap them.
 - APT needs **no market portfolio** and no normality — only a factor structure, diversification, no arbitrage (contrast with CAPM, a single-factor special case).
 - **Macroeconomic** models use factor **surprises**; **fundamental** models use **standardized attributes** as the sensitivities (the reverse of macro).
 - Arbitrage portfolio = **zero investment, zero risk, positive expected return**.

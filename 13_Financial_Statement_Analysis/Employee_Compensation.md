@@ -1,7 +1,7 @@
 ---
 aliases: [Employee Compensation, Pensions, Defined Benefit, Share-Based Compensation, Stock Options, Postemployment Benefits]
 tags: [CFA-L2, fsa, concept]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Schweser Book 2, Module 8, LOS 8.a-8.e
 ---
@@ -11,7 +11,15 @@ source: Schweser Book 2, Module 8, LOS 8.a-8.e
 ## Share-Based Compensation (8.b, 8.c)
 - Aligns employee/owner interests; **non-cash** but a real expense. Examples: stock options, RSUs, stock appreciation rights, phantom stock.
 - **Stock options**: measured at **fair value at grant date** (option-pricing model), expensed over the **vesting (service) period**. Fair value rises with: higher volatility, longer life, higher risk-free rate, lower dividend yield.
-- Forecasting: model compensation expense (grants × fair value / vesting) and dilution from new shares.
+- **Accounting entry**: the expense is credited to a **share-based compensation reserve** inside equity. On exercise (options) or vesting (shares) the balance is transferred out of the reserve into **common stock / additional paid-in capital** — so total equity is unaffected by the transfer itself.
+- **Tax windfalls and shortfalls (8.b)** — the tax deduction is based on **intrinsic value at exercise** (options) or the **share price at settlement** (stock grants), which rarely equals the grant-date expense already booked.
+  - Settlement price **above** grant-date price → **tax windfall** (deduction > cumulative expense).
+  - Settlement price **below** grant-date price → **tax shortfall**.
+  - **IFRS**: windfalls/shortfalls are recognized **directly in stockholders' equity**.
+  - **US GAAP**: a windfall **reduces** income-tax expense and a shortfall **increases** it — i.e., it runs through the **income statement**, making the effective tax rate lumpy and share-price dependent.
+- **Dilution**: share-based plans add potentially dilutive securities and reduce **diluted EPS**. Options and warrants are handled with the **treasury stock method** — assume exercise at the strike, then assume the proceeds are used to repurchase shares at the **average market price**; the net share increase is added to the diluted denominator (so dilution occurs only when the option is in the money).
+- **Assumption sensitivity**: option-pricing inputs are management estimates. A **low volatility assumption lowers the option's fair value and therefore compensation expense** — a standard earnings-quality red flag (as do a low expected life, a low risk-free rate, or a high assumed dividend yield).
+- Forecasting: model share-based compensation as a **percentage of revenue** (or grants × fair value / vesting) and adjust for announced plan changes; sources are historical data, management guidance, or reversion to the industry mean.
 
 ## Pensions: DC vs DB (8.a, 8.d)
 - **Defined contribution (DC)**: firm pays a fixed contribution; employee bears investment risk; pension expense = the contribution. No balance-sheet asset/liability beyond accrued contribution.

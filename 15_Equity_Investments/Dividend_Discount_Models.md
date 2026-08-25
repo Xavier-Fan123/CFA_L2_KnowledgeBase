@@ -1,7 +1,7 @@
 ---
 aliases: [Dividend Discount Models, DDM, Gordon Growth Model, H-Model, PVGO, Justified PE, Sustainable Growth]
 tags: [CFA-L2, equity, concept, valuation]
-date: 2026-06-03
+date: 2026-08-25
 status: evergreen
 source: Schweser Book 3, Module 18, LOS 18.a-18.p
 ---
@@ -13,10 +13,17 @@ source: Schweser Book 3, Module 18, LOS 18.a-18.p
 - **FCFE**: firm pays no/erratic dividends but generates FCF; control perspective. → [[Free_Cash_Flow_Valuation]]
 - **Residual income**: no dividends/FCF, but quality accounting. → [[Residual_Income]]
 
-## General DDM & Gordon Growth (18.b, 18.c)
-- `V0 = Σ Dt / (1+r)^t`.
-- **Gordon growth (constant g forever)**: `V0 = D1 / (r − g) = D0(1+g)/(r − g)`. Requires `g < r`.
-- **Perpetual preferred**: `V = D / r`.
+## General DDM & Gordon Growth (18.b, 18.c, 18.d)
+- Whatever the holding period, **price = PV of forecast dividends + PV of the estimated terminal value**, all at the required return.
+  - **One-period DDM**: `V0 = (D1 + P1)/(1 + r)`.
+  - **Two-period DDM**: `V0 = D1/(1+r) + (D2 + P2)/(1+r)^2`.
+  - **Multi-period / general**: `V0 = Σ_{t=1..n} D_t/(1+r)^t + P_n/(1+r)^n`, and with `n → ∞` the terminal term vanishes: `V0 = Σ D_t/(1+r)^t`.
+- **Gordon growth (constant g forever)**: `V0 = D1 / (r − g) = D0(1+g)/(r − g)`.
+- **The three GGM assumptions (18.c)** — state them, don't just use the formula:
+  1. **Dividends grow at a constant rate** forever.
+  2. **Dividend policy is tied to earnings** (payout is stable, so dividends track earning power).
+  3. **`r > g`** — the required return exceeds the long-run growth rate (otherwise the value is negative or infinite).
+- **Perpetual preferred (18.d)**: a fixed-rate perpetual preferred is a level perpetuity → `V = D / r` (g = 0 in the Gordon model).
 
 ## PVGO and Leading P/E (18.g, 18.h)
 - `V0 = E1/r + PVGO` → no-growth value (`E1/r`, value if 100% payout) plus present value of growth opportunities. Solve for PVGO from price: `PVGO = P0 − E1/r`.
@@ -30,10 +37,12 @@ source: Schweser Book 3, Module 18, LOS 18.a-18.p
 - Required return: `r = D1/P0 + g` (Gordon), or from the **H-model** (below).
 
 ## Sustainable Growth (18.p)
+- **Definition**: the SGR is the rate at which earnings (and dividends) can grow **indefinitely** *assuming the firm holds its **debt-to-equity ratio constant** and **issues no new equity***. Those two assumptions are what make it "sustainable" — and are the usual exam hook.
 - `g = b × ROE`, where `b` = retention = `1 − payout`.
-- **DuPont**: `ROE = net margin × asset turnover × financial leverage`, so `g = b × (net margin × asset turnover × leverage)` (PRAT model).
+- **PRAT / DuPont expansion**: `ROE = net margin × asset turnover × financial leverage`, so `g = (P)rofit margin × (R)etention rate × (A)sset turnover × financial leverage (T)`.
+- **Use beginning-of-period balance-sheet values** for ROE (and therefore for the SGR) unless the question tells you otherwise — using ending equity is a common wrong turn.
 
-## Multistage Models (18.k-18.o)
+## Multistage Models and Terminal Value (18.k, 18.m, 18.n)
 - Business stages: **growth → transition → maturity**. Use multistage when constant-growth is unrealistic (e.g., earnings growing far above nominal GDP growth — not sustainable in perpetuity).
 - **Two-stage DDM**: PV of high-growth dividends + PV of terminal value (Gordon at stable g).
 - **H-model** (growth declines linearly from gS to gL over 2H years): `V0 = [D0(1+gL) + D0 × H × (gS − gL)] / (r − gL)`, where **H = half the high-growth period**.
@@ -44,15 +53,48 @@ source: Schweser Book 3, Module 18, LOS 18.a-18.p
 - **Terminal value**: Gordon (perpetuity) or **exit / price multiple** based (e.g., terminal P/E × terminal EPS) → see [[Market_Based_Valuation]].
 - **Share repurchases**: a DDM still works if the analyst nets the buyback effect into the **per-share** dividend growth rate (total distributions ÷ a shrinking share count).
 
-## Strengths / Limits (18.e, 18.j)
-- Gordon: simple, good for stable mature firms; **very sensitive to (r − g)**; useless for non-payers or g ≈ r.
-- Compare model value to market price → **over/under/fairly valued**.
+## Multistage Strengths & Limitations (18.l)
+**Strengths**
+- **Flexible** — any growth pattern can be modeled.
+- Can be run **in reverse**: solve for the required return or the growth rate **implied by the market price**.
+- Forces the analyst to make every growth/return assumption **explicit and reviewable**, and to test their impact.
+- **Easy to build and compute** in a spreadsheet.
+
+**Limitations**
+- Output is only as good as the **assumptions and projections** fed in.
+- The model must be **fully understood** for its assumptions' effects to be traced.
+- Values are **very sensitive** to the growth and required-return inputs.
+- **Formula and data-entry errors** are easy to make and hard to spot.
+
+## Spreadsheet Modeling (18.o)
+In practice analysts use a **spreadsheet** rather than a stylized closed-form model, because a spreadsheet handles **any number of stages** with a separate growth rate for each, and is more flexible and computationally accurate. The steps:
+1. **Establish the base level** of dividends (or cash flows).
+2. **Forecast the change** in dividends for each year of the foreseeable future.
+3. Estimate the **normalized long-run growth rate** at the end of the supernormal period, so a **terminal value** can be computed.
+4. **Discount and sum** all projected dividends plus the terminal value back to today.
+
+## Strengths / Limits of the Gordon Model (18.e, 18.j)
+**GGM strengths**
+- Very applicable to **stable, mature dividend-paying** firms.
+- Applies easily to **broad equity indexes**.
+- **Simple to communicate and explain.**
+- Useful for backing out **price-implied growth rates**, **required returns**, and the **value of growth opportunities (PVGO)**.
+- Can be **embedded in more complex valuations** (e.g., as the terminal-value step of a multistage model).
+
+**GGM limitations**
+- Values are **extremely sensitive** to `r` and `g`, both hard to estimate precisely.
+- **Cannot be applied to non-dividend-paying** stocks.
+- Breaks down for firms with **unpredictable or non-constant** growth patterns.
+
+- Compare model value to market price → **over/under/fairly valued** (model value below market → overvalued).
 
 ## Exam Traps
 - Justified **leading** P/E = `payout/(r−g)`; **trailing** = `payout(1+g)/(r−g)` — don't mix.
 - H-model **H = HALF** the high-growth (transition) period length.
 - Gordon value explodes as `g → r`; small input changes move value a lot.
-- `g = b × ROE` uses the **retention** ratio, not payout.
+- `g = b × ROE` uses the **retention** ratio, not payout — and the SGR assumes a **constant D/E ratio and no new equity issuance**, on **beginning-of-period** balance-sheet values.
+- Terminal value in any DDM comes from **either the Gordon model or a market multiple** (e.g., terminal P/E × terminal EPS) — 18.m expects both.
+- Know the **18.l list**: multistage models are flexible, invertible (solve for r or g), explicit, and spreadsheet-friendly; but assumption-driven, sensitivity-prone, and error-prone.
 
 ## Q&A
 

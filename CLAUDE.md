@@ -33,23 +33,42 @@ When the user asks any CFA-related question:
 
 ## RULE 2: Authoritative Fallback — Official / Schweser PDFs
 
-When the KB lacks the topic, extract from the source PDFs in the KB's **parent** directory (`../`),
-preferring Schweser Notes. **Do not hardcode paths** — discover them at runtime, then run pdftotext:
+When the KB lacks the topic, extract from the source PDFs that live **outside** the KB, under the KB's
+parent directory, preferring Schweser Notes. **Never hardcode a path and never transcribe the source
+folder names** — they contain non-ASCII characters. Discover files at runtime by passing the KB's parent
+as Glob's `path` and matching on the **ASCII file names**, which are stable:
+
+```text
+# Glob(path="<KB parent directory>", pattern=...)  -- verified 2026-08-27, hit counts in brackets
+  **/cfa-program2026L2V*.PDF                 -> official curriculum volumes V1-V10   [10]
+  **/cfa-program2026L2glossary.PDF           -> official L2 glossary                  [1]
+  **/CFA 2026 Level II SchweserNotes Book *.pdf -> Schweser Books 1-5                 [5]
+  **/*Quicksheet*.pdf                        -> Schweser formula Quicksheet           [1]
+  **/Volume *.pdf                            -> official EOC practice problems V1-V10 [10]
+  **/Module * Quiz - Questions.pdf           -> Schweser module quizzes               [143]
+  **/Module * Quiz - Answers.pdf             -> matching answer keys                  [143]
+  **/mock*/*                                 -> 2025 mock sets (mock1-3, mockA-B)     [20]
+  **/pack/*                                  -> 2025 topic practice packs             [23]
+```
+
+The parent holds a single 2026 source folder; the volumes, the Schweser books, the EOC problems and the
+module quizzes each sit in their own subfolder of it, so **always search with `**/`, never with a fixed
+depth**. A prior audit hardcoded `../notes/` and `../*.PDF`, found nothing, and wrongly recorded the
+practice sources as absent — use the patterns above instead.
+
+Then extract with `-layout` (preserves tables) and search the discovered file:
 
 ```bash
 # pdftotext is at /mingw64/bin/pdftotext on this machine
-# 1) discover the real paths:
-#    Glob(pattern="../**/SchweserNotes Book *.pdf")   -> Schweser Books 1-5
-#    Glob(pattern="../cfa-program2026L2V*.PDF")       -> official volumes V1-V10
-# 2) extract with -layout (preserves tables) and search the discovered file:
 pdftotext -layout "<discovered path>" "<scratch>/book1.txt"
 grep -n -i "<keywords>" "<scratch>/book1.txt"   # then sed -n 'a,bp' for context
 ```
 
-Layout note (verified 2026-08-25): the Schweser books sit in a `notes/` subfolder of the KB's parent;
-the ten official volumes sit directly in the parent. Every Schweser reading ends with a **`KEY CONCEPTS`**
-block that summarizes the reading **LOS by LOS** — that block is the fastest authoritative checklist for
-verifying whether a note covers a reading completely, and `ANSWER KEY FOR MODULE QUIZZES` follows it.
+Every Schweser reading ends with a **`KEY CONCEPTS`** block that summarizes the reading **LOS by LOS** —
+that block is the fastest authoritative checklist for verifying whether a note covers a reading
+completely, and `ANSWER KEY FOR MODULE QUIZZES` follows it. The official volumes open each learning
+module with a `LEARNING OUTCOMES` box (`The candidate should be able to:`), which is the equivalent
+checklist on the official side.
 
 Topic ↔ Schweser Book mapping (5 books) — verified against the 2026 Schweser Notes PDFs:
 - Book 1: Quant (modules 1-4) + Economics (modules 5-6)

@@ -9,6 +9,34 @@ status: evergreen
 
 Auto-detected topics not yet covered by the KB. Resolve by creating or enriching notes.
 
+### 2026-08-27 - All local practice sources were wrongly recorded as missing (RESOLVED)
+- Triggered by: user question - "is there anything still worth adding to the KB?" A coverage audit found concept coverage complete (42/42 readings, 370/370 LOS, spot-checked against the notes), so the search moved to what was *not* covered: practice material.
+- **Finding:** [[Practice_Coverage_Matrix]] recorded the official EOC volumes, the module-quiz PDFs and the 2025 mock sets as **"NOT present on this machine."** All of them are present. Re-verified by Glob and `find` on 2026-08-27:
+  - **10 official EOC volumes** (`**/Volume *.pdf`) with vignette `PRACTICE PROBLEMS` + full `SOLUTIONS`
+  - **143 module-quiz question PDFs + 143 answer PDFs** (`**/Module * Quiz - Questions.pdf`) - matching the per-topic counts the old "prior inventory" table already listed (15/5/26/8/17/21/10/10/20/11)
+  - **20 mock files** (mock1-3, mockA-B) and **23 topic-pack files**
+  - **Schweser Quicksheet** (`**/*Quicksheet*.pdf`) - a formula condensation the KB has never referenced
+- **Root cause:** `CLAUDE.md` Rule 2 asserted the Schweser books sit in `../notes/` and the official volumes sit directly in `../`. Neither is true here - `../notes/` does not exist and the parent contains no PDFs at all; everything is one level deeper, inside a single 2026 source folder whose name is non-ASCII. The 2026-08-25 audit searched those two hardcoded paths, found nothing, and wrote the "not present" conclusion into the matrix.
+- **Fixed:** Rule 2 rewritten around **ASCII file-name Glob patterns** with the KB's parent passed as `path` and `**/` for depth, each with its verified hit count, plus an explicit warning against hardcoding depth. [[Practice_Coverage_Matrix]] rewritten with the true inventory, a correction log, per-topic distillation tables, and the agreed priority order.
+- **Consequence still open:** the KB's ~168 Q&A entries are all self-authored; **zero** derive from official EOC or module-quiz questions, because the source was believed missing. Level II is a vignette exam, so this is now the largest remaining gap - a gap in *kind*, not in LOS coverage.
+- Suggested action: distill practice questions into the notes, highest exam weight first (FSA -> Equity -> Fixed Income), per the priority table in [[Practice_Coverage_Matrix]]. Derived artifacts only - never full vignettes.
+- Priority: **infrastructure resolved; distillation high**
+
+### 2026-08-27 - Q&A headings written with a hyphen vanish from the review indexes (RESOLVED)
+- Triggered by: the Atlas reported Economics at 12 Q&A while the notes actually held 18.
+- Finding: `scripts/generate_atlas.py:119` only counts a `## Q&A` heading if it contains an **em-dash**. Six entries in [[Currency_Exchange_Rates]] and [[Economic_Growth]] used a plain hyphen, so they were invisible to [[LOS_Coverage_Matrix]] **and** to [[Active_Recall_Index]] - the review prompts existed but never appeared in the index used to revise from.
+- Fixed: the six headings normalized to the template separator; Atlas regenerated (Economics now reads 18). KB-wide total is now **168 topic-note Q&A entries, all indexed**; a 169th sits in [[Statistical_Tests_Master_Table]], which lives in `10_Atlas/` and is outside the generator's topic scan by design.
+- **Standing rule for future write-backs:** the Q&A heading separator must be an em-dash, exactly as the CLAUDE.md template shows - `### YYYY-MM-DD - <summary>` written with a hyphen silently drops the entry from both indexes.
+- Priority: resolved
+
+### 2026-08-27 - Arbitrage_Free_Valuation carries no worked calculation
+- Triggered by: the same coverage audit - a lines-per-LOS and worked-example sweep across all 57 topic notes.
+- Finding: [[Arbitrage_Free_Valuation]] is 59 lines covering LOS 24.a-24.i with **zero numbers** - no calibrated binomial tree, no backward-induction node values, no pathwise example. The prose is complete and correct (value additivity **and** dominance, lognormal `e^(2σ)` node spacing, CIR/Vasicek/Ho-Lee/KWF), but the exam tests this reading almost entirely as calculation. Every comparable computational note ([[Time_Series_Analysis]], [[Options_Valuation]], [[Multifactor_Models]], [[Real_Estate]]) carries worked examples.
+- Checked and cleared: the other zero-example notes are genuinely qualitative or already complete - [[Exchange_Traded_Funds]], [[Quality_of_Financial_Reports]] (Beneish, all 8 indices + the -1.78 cutoff), [[Economics_and_Investment_Markets]] (Taylor rule, breakeven inflation), [[Big_Data_Projects]] (confusion matrix worked through). Not gaps.
+- Suggested action: add a calibrated two-period tree, a backward-induction walk-through for a coupon bond, and a pathwise valuation that reconciles to the same price, from Schweser Book 4 Module 24.
+- Priority: medium-high
+
+
 ### 2026-08-25 - Reading-level "KEY CONCEPTS" audit: 47 detail-level LOS points were missing or thin (RESOLVED)
 - Triggered by: user request - "can this KB be made more detailed; are any exam points missing?"
 - **Method (new, reusable):** every Schweser reading ends with a `KEY CONCEPTS` block that restates the reading **LOS by LOS**. Extracted all 40 such blocks (readings 1-40) plus the full **370-LOS** list from Books 1-5, then compared each block line-by-line against its KB note. This finds *detail inside a covered LOS*, which the earlier note-level and module-level audits could not.

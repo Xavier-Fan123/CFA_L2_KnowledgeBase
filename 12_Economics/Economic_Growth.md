@@ -125,17 +125,17 @@ Related: [[Economics_Overview]]
 **A:** Per-capita sustainable growth `g* = θ/(1−α)` (TFP growth ÷ labor's share); total-output growth `G* = g* + ΔL`. Capital (K) does **not** enter the formula — a higher savings rate raises the **level** of the per-worker output path and **temporarily** its growth, but once steady state is reached, capital deepening cannot raise the long-run growth rate (diminishing MPK). Only **TFP growth (θ)** raises g*. (Endogenous-growth theory is the exception: there saving/investment *can* lift the permanent rate.)
 Related: [[Economics_Overview]]
 
-### 2026-06-07 - Solving for TFP as the growth-accounting residual
+### 2026-06-07 — Solving for TFP as the growth-accounting residual
 **Q:** Output grows 3.8%, capital grows 4.0%, labor grows 1.0%, and labor's income share is 65%. What is TFP growth?
 **A:** Use capital's share as the complement: `alpha = 35%`. Growth accounting gives `%dY = %dA + alpha * %dK + (1 - alpha) * %dL`, so `%dA = 3.8% - 0.35(4.0%) - 0.65(1.0%) = 1.75%`. Trap: do not weight labor by 35%; the vignette gave labor's share, so capital's share is the complement.
 Related: [[Economics_Overview]]
 
-### 2026-06-07 - Identifying the growth model from vignette clues
+### 2026-06-07 — Identifying the growth model from vignette clues
 **Q:** How do you distinguish classical, neoclassical, and endogenous growth theory in a question stem?
 **A:** Classical/Malthusian stems emphasize population pressure and subsistence, so no sustained per-capita growth. Neoclassical/Solow stems emphasize diminishing marginal product of capital, a steady state, and saving raising the **level** but not the long-run growth rate. Endogenous stems emphasize R&D, knowledge spillovers, human capital, constant returns to broad capital, and saving/investment raising the **permanent growth rate**.
 Related: [[Economics_Overview]]
 
-### 2026-06-07 - Trade-barrier removal: aggregate gains vs sector losses
+### 2026-06-07 — Trade-barrier removal: aggregate gains vs sector losses
 **Q:** What does removing trade barriers do to growth, investment, employment, wages, and profits?
 **A:** Aggregate growth tends to improve through specialization, competition, productivity, and investment. But the gains are not uniform: export-competitive and expanding sectors gain investment, profits, jobs, and wages, while import-competing sectors can lose employment and pricing power during reallocation. On the exam, separate the economy-wide growth effect from the distributional sector effect.
 Related: [[Currency_Exchange_Rates]]

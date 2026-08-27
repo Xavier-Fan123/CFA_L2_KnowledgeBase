@@ -1,69 +1,98 @@
 ---
 aliases: [Practice Coverage Matrix, EOC Coverage Matrix, Mock Coverage Matrix]
 tags: [CFA-L2, atlas, practice]
-date: 2026-06-05
+date: 2026-08-27
 status: evergreen
-source: Local practice-source inventory under the KB's parent directory (verified 2026-08-25)
+source: Local practice-source inventory, re-verified 2026-08-27 by Glob against the KB's parent directory
 ---
 
 # Practice Coverage Matrix
 
-This matrix tracks local practice sources. It does **not** mean the full official vignettes have been copied into the note set. The working rule is: keep original question PDFs as source files, then distill only personal errors, formulas, traps, and original flashcards into topic notes.
+Tracks the practice sources available locally and how much of each has been distilled into the notes. It does **not** mean full official vignettes have been copied in. Working rule: keep the original question PDFs as source files, and distill only personal errors, formula triggers, traps, and original paraphrased Q&A into topic notes.
 
-## Source Roots
+## Correction Log
 
-**Paths are machine-specific — discover them at runtime with Glob rather than hardcoding them.** Verified inventory of the KB's parent directory on **2026-08-25**:
+**2026-08-27 — every source previously marked "NOT present on this machine" is in fact present.** The 2026-08-25 audit searched two hardcoded paths (`../notes/` and `../*.PDF`), neither of which exists here, and concluded the EOC volumes, module quizzes and mock sets were gone. They were simply one directory level deeper. All counts below were re-verified by Glob and `find`. See [[knowledge_gaps]] for the full entry.
 
-| Source | Where | Status |
+## How to Find the Sources
+
+Source folder names contain non-ASCII characters and must never be transcribed into a note. Discover files at runtime by passing the KB's **parent directory** as Glob's `path` and matching on the ASCII file names. Bracketed numbers are the hit counts verified on 2026-08-27:
+
+```text
+**/cfa-program2026L2V*.PDF                     -> official curriculum volumes V1-V10   [10]
+**/cfa-program2026L2glossary.PDF               -> official L2 glossary                  [1]
+**/CFA 2026 Level II SchweserNotes Book *.pdf  -> Schweser Books 1-5                    [5]
+**/*Quicksheet*.pdf                            -> Schweser formula Quicksheet           [1]
+**/Volume *.pdf                                -> official EOC practice problems        [10]
+**/Module * Quiz - Questions.pdf               -> Schweser module quizzes               [143]
+**/Module * Quiz - Answers.pdf                 -> matching answer keys                  [143]
+**/mock*/*                                     -> 2025 mock sets (mock1-3, mockA-B)     [20]
+**/pack/*                                      -> 2025 topic practice packs             [23]
+```
+
+Always use `**/` — the sources sit in separate subfolders at different depths.
+
+## Source Inventory (verified 2026-08-27)
+
+| Source | Contents | Status |
 |---|---|---|
-| 2026 official curriculum PDFs | KB parent directory: `cfa-program2026L2V1.PDF` … `cfa-program2026L2V10.PDF` | **Present** (10 volumes, one per topic area) |
-| 2026 Schweser Notes Books 1–5 | KB parent directory, `notes/` subfolder: `CFA 2026 Level II SchweserNotes Book 1..5.pdf` | **Present** |
-| 2026 official EOC volumes | — | **NOT present on this machine** (previously inventoried on a different profile) |
-| 2026 module quiz Q&A PDFs | — | **NOT present on this machine** |
-| 2025 practice/mock PDFs | — | **NOT present on this machine** |
+| Official curriculum | 10 volumes V1-V10 + glossary | **Present** |
+| Schweser Notes | Books 1-5 + Quicksheet | **Present** |
+| Official EOC practice problems | 10 volumes, vignette problems **with full solutions** | **Present — not yet distilled** |
+| Schweser module quizzes | 143 question PDFs + 143 answer PDFs | **Present — not yet distilled** |
+| 2025 mock sets | mock1, mock2, mock3, mockA, mockB (20 files) | **Present — not yet distilled** |
+| 2025 topic practice packs | 23 files (questions + answers) | **Present — not yet distilled** |
 
-The three "NOT present" rows below are retained as a **wish list / prior inventory** from an earlier machine. Re-verify before relying on them; if the files are restored, record the discovered path here rather than a user-specific absolute path.
+## Official EOC Volume Coverage
 
-## 2026 EOC Volume Coverage (prior inventory — files not on this machine)
+Each volume carries the official `PRACTICE PROBLEMS` section for its topic, followed by `SOLUTIONS`.
+Discover with `**/Volume *.pdf`.
 
-| Volume | Topic | PDF |
+| Volume | Topic | Distilled |
 |---:|---|---|
-| 1 | Quantitative Methods | `Volume 1 Quantitative Methods.pdf` |
-| 2 | Economics | `Volume 2 Economics.pdf` |
-| 3 | Financial Statement Analysis | `Volume 3 Financial Statement Analysis.pdf` |
-| 4 | Corporate Issuers | `Volume 4 Corporate Issuers.pdf` |
-| 5 | Equity Investments | `Volume 5 Equity Investments.pdf` |
-| 6 | Fixed Income | `Volume 6 Fixed Income.pdf` |
-| 7 | Derivatives | `Volume 7 Derivatives.pdf` |
-| 8 | Alternative Investments | `Volume 8 Alternative Investments.pdf` |
-| 9 | Portfolio Management | `Volume 9 Portfolio Management.pdf` |
-| 10 | Ethical and Professional Standards | `Volume 10 Ethics and Professional Standards.pdf` |
+| 1 | Quantitative Methods | Not started |
+| 2 | Economics | Not started |
+| 3 | Financial Statement Analysis | Not started |
+| 4 | Corporate Issuers | Not started |
+| 5 | Equity Investments | Not started |
+| 6 | Fixed Income | Not started |
+| 7 | Derivatives | Not started |
+| 8 | Alternative Investments | Not started |
+| 9 | Portfolio Management | Not started |
+| 10 | Ethical and Professional Standards | Not started |
 
-## Module Quiz PDF Coverage (prior inventory — files not on this machine)
+## Module Quiz Coverage
 
-| Topic | Question PDFs | Answer PDFs | Status |
-|---|---:|---:|---|
-| Quantitative Methods | 15 | 15 | Source present, not fully distilled |
-| Economics | 5 | 5 | Source present, not fully distilled |
-| Financial Statement Analysis | 26 | 26 | Source present, not fully distilled |
-| Corporate Issuers | 8 | 8 | Source present, not fully distilled |
-| Equity Investments | 17 | 17 | Source present, not fully distilled |
-| Fixed Income | 21 | 21 | Source present, not fully distilled |
-| Derivatives | 10 | 10 | Source present, not fully distilled |
-| Alternative Investments | 10 | 10 | Source present, not fully distilled |
-| Portfolio Management | 20 | 20 | Source present, not fully distilled |
-| Ethical and Professional Standards | 11 | 11 | Source present, not fully distilled |
+143 question/answer pairs, one folder per topic. Quiz file names carry the **module number** (e.g. `Module 25.8 Quiz - Questions.pdf`), so each quiz maps directly onto a KB note via the module number in that note's `source:` field.
 
-## Mock / Pack Coverage (prior inventory — files not on this machine)
-
-| Source | Count | Status |
+| Topic | Q/A pairs | Distilled |
 |---|---:|---|
-| 2025 mock sets `mock1`, `mock2`, `mock3`, `mockA`, `mockB` | 20 PDFs | Source present; lower priority than 2026 official EOC/module quizzes |
-| 2025 topic practice packs | 10 question PDFs + 10 answer PDFs | Source present; lower priority than 2026 official EOC/module quizzes |
+| Quantitative Methods | 15 | Not started |
+| Economics | 5 | Not started |
+| Financial Statement Analysis | 26 | Not started |
+| Corporate Issuers | 8 | Not started |
+| Equity Valuation | 17 | Not started |
+| Fixed Income | 21 | Not started |
+| Derivatives | 10 | Not started |
+| Alternative Investments | 10 | Not started |
+| Portfolio Management | 20 | Not started |
+| Ethical and Professional Standards | 11 | Not started |
+| **Total** | **143** | **0** |
+
+## Distillation Priority
+
+Agreed order (2026-08-27): **highest exam weight first**.
+
+1. **Financial Statement Analysis** (10-15%) — also the largest quiz set at 26 pairs
+2. **Equity Investments** (10-15%) — 17 pairs
+3. **Fixed Income** (10-15%) — 21 pairs
+4. Portfolio Management and Ethics (also 10-15%), then the 5-10% topics: Quant, Economics, Corporate Issuers, Derivatives, Alternative Investments
+
+Within a topic, prioritize the modules whose notes are thinnest by lines-per-LOS — currently [[Arbitrage_Free_Valuation]], [[Bonds_With_Embedded_Options]], [[Quality_of_Financial_Reports]], and [[Dividend_Discount_Models]].
 
 ## Import Policy
 
-- Do not paste full official vignettes or long answer explanations into notes.
-- For each completed practice session, add only derived artifacts: missed LOS, formula trigger, trap, original paraphrased Q&A, and link/path back to the source PDF.
-- Prioritize 2026 official EOC volumes and module quizzes before 2025 mock/pack PDFs.
-- **Until the practice PDFs are restored on this machine, the only local practice material is the module quizzes and end-of-reading questions inside the Schweser books themselves** (each reading ends with "ANSWER KEY FOR MODULE QUIZZES") and the official curriculum volumes' own practice problems.
+- Never paste full official vignettes or long answer explanations into notes — copyright and review value both argue against it.
+- Per practice session, add only derived artifacts: the missed LOS, the formula trigger, the trap, an original paraphrased Q&A, and the module number that locates the source PDF.
+- Prioritize the official EOC volumes and the Schweser module quizzes over the 2025 mock/pack PDFs.
+- Record each completed batch by flipping the "Distilled" cell in the tables above.

@@ -10,7 +10,7 @@ source: Generated from note Q&A headings by scripts/generate_atlas.py
 
 Each prompt links back to the note that contains the full answer. Use this as a compact review queue before drilling the underlying note.
 
-Total prompts: **162**.
+Total prompts: **168**.
 
 ## 11 Quantitative Methods
 
@@ -45,6 +45,9 @@ Total prompts: **162**.
 ## 12 Economics
 
 - 2026-06-03 — Marking a forward to market: which rate and which side? -> [[Currency_Exchange_Rates]]
+- 2026-06-07 — FX vignette workflow: quote side, arbitrage, and forward MTM -> [[Currency_Exchange_Rates]]
+- 2026-06-07 — Choosing the correct FX forecast model -> [[Currency_Exchange_Rates]]
+- 2026-06-07 — Currency crisis warning signs -> [[Currency_Exchange_Rates]]
 - 2026-06-03 — Why does the carry trade have negative skew? -> [[Currency_Exchange_Rates]]
 - 2026-06-04 — Forward points: how do you build the all-in forward rate? -> [[Currency_Exchange_Rates]]
 - 2026-06-04 — Real interest rate parity vs the international Fisher effect -> [[Currency_Exchange_Rates]]
@@ -52,6 +55,9 @@ Total prompts: **162**.
 - 2026-06-03 — Mundell-Fleming: policy effects on the exchange rate -> [[Currency_Exchange_Rates]]
 - 2026-07-11 — Free trade under the growth models -> [[Economic_Growth]]
 - 2026-06-03 — Solow steady-state growth rate: per-capita vs total -> [[Economic_Growth]]
+- 2026-06-07 — Solving for TFP as the growth-accounting residual -> [[Economic_Growth]]
+- 2026-06-07 — Identifying the growth model from vignette clues -> [[Economic_Growth]]
+- 2026-06-07 — Trade-barrier removal: aggregate gains vs sector losses -> [[Economic_Growth]]
 - 2026-06-03 — Capital deepening vs technological progress -> [[Economic_Growth]]
 - 2026-06-04 — Endogenous growth model: formula and why saving matters permanently -> [[Economic_Growth]]
 - 2026-06-04 — Two methods to forecast potential GDP growth -> [[Economic_Growth]]

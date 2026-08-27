@@ -171,17 +171,17 @@ The strongest answer is usually not "one bad ratio." It is the combination of an
 **A:** Two rules. (1) **Discount at the price-currency rate** for the remaining days (the value is expressed in the price currency). (2) To value an existing long-base forward you must **offset it** by entering a new forward to **sell the base** for the remaining maturity → use the side of the new quote that applies to selling the base (**up the bid**). `Vt = (F_new − F0) × size / (1 + r_price·(days left/360))`. A positive number is a gain to the long-base position. Trap: do not discount at the base-currency rate, and do not use the spot rate to mark a forward.
 Related: [[Economics_Overview]]
 
-### 2026-06-07 - FX vignette workflow: quote side, arbitrage, and forward MTM
+### 2026-06-07 — FX vignette workflow: quote side, arbitrage, and forward MTM
 **Q:** What is the safest order for solving FX quote, triangular-arbitrage, and forward-value questions?
 **A:** First label the quote as `P/B`; second choose the quote side (sell base = bid and multiply, buy base = ask and divide); third walk the actual dealer quotes around the triangle if arbitrage is possible; fourth use covered IRP for a no-arbitrage forward; fifth, for MTM, offset the old contract with the new remaining-maturity forward and discount the rate difference at the **price-currency** rate. Most errors come from using the implied cross rate for a trade leg, using spot instead of the new forward, or discounting at the base-currency rate.
 Related: [[Economics_Overview]]
 
-### 2026-06-07 - Choosing the correct FX forecast model
+### 2026-06-07 — Choosing the correct FX forecast model
 **Q:** How do you decide whether to use spot, forward, UIRP, PPP, or real-exchange-rate mean reversion to forecast a future spot rate?
 **A:** Use the model implied by the input data and wording. **Forward** is a market-implied hedge/quote and is not guaranteed unbiased; **UIRP** uses nominal rate differentials; **relative PPP** uses expected inflation differentials; **real-exchange-rate mean reversion** is the long-run fair-value tool; current spot is a neutral benchmark. If the question asks for no-arbitrage, that is **covered IRP**, not a forecasting claim.
 Related: [[Economics_Overview]]
 
-### 2026-06-07 - Currency crisis warning signs
+### 2026-06-07 — Currency crisis warning signs
 **Q:** What combination of facts is most persuasive for a currency-crisis risk question?
 **A:** Look for a cluster: overvalued/fixed exchange rate, falling reserves, large short-term foreign-currency debt, rapid domestic credit or money growth, a current-account deficit or terms-of-trade shock, fragile banks, and contagion. A single symptom is weak evidence; overvaluation plus reserve weakness plus external funding pressure is the classic crisis setup.
 Related: [[Economic_Growth]]

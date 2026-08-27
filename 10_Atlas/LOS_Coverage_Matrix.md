@@ -15,7 +15,7 @@ Generated from each note's `source` field, headings, `## Exam Traps`, and `## Q&
 | Topic | Notes | Evergreen | Q&A | Trap bullets | Direct LOS notes | Review flags |
 |---|---:|---:|---:|---:|---:|---:|
 | 11 Quantitative Methods | 9 | 9 | 27 | 49 | 8 | 0 |
-| 12 Economics | 3 | 3 | 12 | 13 | 2 | 0 |
+| 12 Economics | 3 | 3 | 18 | 13 | 2 | 0 |
 | 13 Financial Statement Analysis | 7 | 7 | 16 | 29 | 6 | 0 |
 | 14 Corporate Issuers | 6 | 6 | 20 | 40 | 5 | 0 |
 | 15 Equity Investments | 7 | 7 | 27 | 40 | 6 | 0 |
@@ -61,10 +61,10 @@ Generated from each note's `source` field, headings, `## Exam Traps`, and `## Q&
 
 - [[Currency_Exchange_Rates]] — **Direct LOS**
   - Source / LOS: Schweser Book 1, Module 5, LOS 5.a-5.m
-  - Evidence: 11 sections; 6 Q&A; 7 traps; 5 worked/example markers; LOS tokens: 5.a, 5.b, 5.c, 5.d, 5.e, 5.f, 5.g, 5.h, 5.i, 5.j, 5.k, 5.l, ...
+  - Evidence: 11 sections; 9 Q&A; 7 traps; 5 worked/example markers; LOS tokens: 5.a, 5.b, 5.c, 5.d, 5.e, 5.f, 5.g, 5.h, 5.i, 5.j, 5.k, 5.l, ...
 - [[Economic_Growth]] — **Direct LOS**
   - Source / LOS: Schweser Book 1, Module 6, LOS 6.a-6.l
-  - Evidence: 10 sections; 6 Q&A; 6 traps; 5 worked/example markers; LOS tokens: 6.a, 6.b, 6.c, 6.d, 6.e, 6.f, 6.g, 6.h, 6.i, 6.j, 6.k, 6.l
+  - Evidence: 10 sections; 9 Q&A; 6 traps; 5 worked/example markers; LOS tokens: 6.a, 6.b, 6.c, 6.d, 6.e, 6.f, 6.g, 6.h, 6.i, 6.j, 6.k, 6.l
 - [[Economics_Overview]] — **Overview map**
   - Source / LOS: Schweser Book 1 (Economics, Modules 5-6)
   - Evidence: 4 sections; 0 Q&A; 0 traps; 0 worked/example markers

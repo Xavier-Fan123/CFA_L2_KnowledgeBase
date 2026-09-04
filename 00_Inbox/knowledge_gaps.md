@@ -9,6 +9,13 @@ status: evergreen
 
 Auto-detected topics not yet covered by the KB. Resolve by creating or enriching notes.
 
+### 2026-09-04 — 2026 exam-scope audit and errata reconciliation (RESOLVED)
+- Official 45-module mapping found no missing current 2026 learning module in the knowledge base.
+- September errata review removed pseudo-R-squared; Fed/Yardeni and legacy M&A vocabulary were removed from core notes.
+- [[Capital_Budgeting_Foundations]] and deep [[GIPS]] mechanics were reclassified as reference-only.
+- Current Standard III(D) and change-of-control contingent-put mechanics were retained.
+- Priority: resolved
+
 ### 2026-08-27 - All local practice sources were wrongly recorded as missing (RESOLVED)
 - Triggered by: user question - "is there anything still worth adding to the KB?" A coverage audit found concept coverage complete (42/42 readings, 370/370 LOS, spot-checked against the notes), so the search moved to what was *not* covered: practice material.
 - **Finding:** [[Practice_Coverage_Matrix]] recorded the official EOC volumes, the module-quiz PDFs and the 2025 mock sets as **"NOT present on this machine."** All of them are present. Re-verified by Glob and `find` on 2026-08-27:
@@ -78,6 +85,7 @@ Auto-detected topics not yet covered by the KB. Resolve by creating or enriching
 - Triggered by: user questions on horizontal vs. vertical mergers and on crown jewel / Pac-Man / white knight defenses — the current 2026 restructuring reading does not define these, so answers came from legacy-curriculum/general knowledge.
 - Suggested action: if the user's practice questions keep touching legacy M&A terms, add a short "Legacy M&A Vocabulary" section to [[Corporate_Restructurings]] (merger types, pre-/post-offer defenses: poison pill, staggered board, greenmail, leveraged recap, litigation, etc.); otherwise leave as Q&A entries only.
 - **2026-08-02 — triggered a second time** (poison pill / poison put) → **section built.** [[Corporate_Restructurings]] now has a "Legacy M&A Vocabulary" block with the pre-/post-offer defense taxonomy and a pill-vs-put table, explicitly flagged as non-LOS. Notable finding: "poison" has **zero hits in all five 2026 Schweser books**, but the **poison put's mechanism IS examinable** as the change-of-control contingent put in Book 4 Module 25.8 (LOS 25.n) — [[Bonds_With_Embedded_Options]] updated to carry the market name.
+- **2026-09-04 — resolved in the core note:** the optional Legacy M&A Vocabulary section and its related Q&A entries were removed from [[Corporate_Restructurings]]; this discovery history is retained for audit evidence.
 - Priority: resolved (was low — out of 2026 LOS scope; useful vignette vocabulary)
 
 ### 2026-06-05 - 2026 errata / LOS metadata / practice-source sync (RESOLVED for concept metadata)

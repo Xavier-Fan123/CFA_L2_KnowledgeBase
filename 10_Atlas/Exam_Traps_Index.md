@@ -31,7 +31,6 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 ### Logistic Regression (Logit) -> [[Logistic_Regression]]
 - Nested test is the **LR test (χ²)**, not an F-test. All L2 tests side by side: [[Statistical_Tests_Master_Table]].
 - Slope = change in **log odds**, not probability.
-- pseudo-R² compares only models with the **same** dependent variable.
 
 ### Machine Learning -> [[Machine_Learning]]
 - **Hyperparameters are set by the researcher**; they are not learned from the data (λ in LASSO, k in KNN/k-means, NN node counts).
@@ -144,16 +143,6 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 
 
 ## 14 Corporate Issuers
-
-### Capital Budgeting Foundations (L1 bridge) -> [[Capital_Budgeting_Foundations]]
-- **NWC recovery is NOT taxed** (return of principal); **salvage IS taxed**, but only on the gain over book value `t(Sal − B)`.
-- Omitting NWC recovery understates terminal CF — and the distortion is **largest for short projects** (less discounting).
-- A capex change hits **twice**: t=0 outlay **and** the annual depreciation tax shield. Net after-tax cost ≈ `ΔFCInv × [1 − (t/N)·PVA]`.
-- **Accelerated depreciation raises NPV** vs. straight-line despite an identical total nominal shield — front-loading raises its PV.
-- Depreciation enters cash flow **only** through `tD` — it is non-cash.
-- **Inflation hurts the depreciation shield but helps the fixed-rate borrower.** Same erosion, opposite impact.
-- **Never discount real cash flows at a nominal rate** (or vice versa) — the classic error undervalues the project.
-- `PMT/(r−g)` is the same geometric series as `PVA`, with ratio `(1+g)/(1+r)` — this is Gordon Growth.
 
 ### Corporate Restructurings -> [[Corporate_Restructurings]]
 - **Materiality** rule of thumb: transaction is "large" if value > **10% of acquirer's pre-deal EV** (size + fit). Announcement-day price reaction is a **poor** predictor of long-run value.
@@ -430,9 +419,3 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - **V(B)** now also requires disclosing the **nature of services AND the costs** to the client.
 - A single fact pattern usually implicates **several** Standards — name **all** that apply, not just one.
 - "CFA" is an **adjective** (CFA charterholder); using it as a noun violates **VII(B)**.
-
-### Global Investment Performance Standards (GIPS) -> [[GIPS]]
-- GIPS compliance is **firm-wide and all-or-nothing** — no partial/composite-only claims.
-- A composite must include **all** discretionary, fee-paying portfolios of that strategy (anti-cherry-picking).
-- **Third-party verification is recommended, not required**, and applies firm-wide (not to a single composite).
-- Minimum initial presentation: **5 years** of compliant performance.

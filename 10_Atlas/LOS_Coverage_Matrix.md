@@ -14,16 +14,16 @@ Generated from each note's `source` field, headings, `## Exam Traps`, and `## Q&
 
 | Topic | Notes | Evergreen | Q&A | Trap bullets | Direct LOS notes | Review flags |
 |---|---:|---:|---:|---:|---:|---:|
-| 11 Quantitative Methods | 9 | 9 | 27 | 49 | 8 | 0 |
+| 11 Quantitative Methods | 9 | 9 | 27 | 48 | 8 | 0 |
 | 12 Economics | 3 | 3 | 18 | 13 | 2 | 0 |
 | 13 Financial Statement Analysis | 7 | 7 | 16 | 29 | 6 | 0 |
-| 14 Corporate Issuers | 6 | 6 | 20 | 40 | 5 | 0 |
-| 15 Equity Investments | 7 | 7 | 27 | 40 | 6 | 0 |
+| 14 Corporate Issuers | 5 | 5 | 16 | 32 | 4 | 0 |
+| 15 Equity Investments | 7 | 7 | 26 | 40 | 6 | 0 |
 | 16 Fixed Income | 6 | 6 | 13 | 33 | 5 | 0 |
 | 17 Derivatives | 3 | 3 | 10 | 17 | 2 | 0 |
 | 18 Alternative Investments | 5 | 5 | 13 | 27 | 4 | 0 |
 | 19 Portfolio Management | 7 | 7 | 15 | 37 | 6 | 0 |
-| 20 Ethics | 4 | 4 | 9 | 18 | 2 | 0 |
+| 20 Ethics | 3 | 3 | 6 | 14 | 2 | 0 |
 
 ## Reading-Level Notes
 
@@ -37,7 +37,7 @@ Generated from each note's `source` field, headings, `## Exam Traps`, and `## Q&
   - Evidence: 6 sections; 1 Q&A; 4 traps; 2 worked/example markers; LOS tokens: 1.h
 - [[Logistic_Regression]] — **Direct LOS**
   - Source / LOS: Schweser Book 1, Module 1.4, LOS 1.m
-  - Evidence: 9 sections; 1 Q&A; 3 traps; 3 worked/example markers; LOS tokens: 1.m
+  - Evidence: 9 sections; 1 Q&A; 2 traps; 3 worked/example markers; LOS tokens: 1.m
 - [[Machine_Learning]] — **Direct LOS**
   - Source / LOS: Schweser Book 1, Reading 3 (Modules 3.1–3.3), LOS 3.a–3.d
   - Evidence: 7 sections; 2 Q&A; 6 traps; 0 worked/example markers; LOS tokens: 3.a, 3.b, 3.c, 3.d
@@ -95,15 +95,12 @@ Generated from each note's `source` field, headings, `## Exam Traps`, and `## Q&
 
 ### 14 Corporate Issuers
 
-- [[Capital_Budgeting_Foundations]] — **Direct LOS**
-  - Source / LOS: CFA Level I Corporate Issuers (Capital Investments) — NOT a 2026 L2 LOS; verified absent from all five 2026 Schweser L2 books. Retained as foundation for L2 Equity / FSA / Cost of Capital.
-  - Evidence: 7 sections; 1 Q&A; 8 traps; 1 worked/example markers; LOS tokens: 9.e
 - [[Corporate_Issuers_Overview]] — **Overview map**
   - Source / LOS: Schweser Book 2 (Modules 13-16)
   - Evidence: 5 sections; 0 Q&A; 0 traps; 0 worked/example markers
 - [[Corporate_Restructurings]] — **Direct LOS**
   - Source / LOS: Official Curriculum 2026 L2 V4, Reading "Corporate Restructuring" (Schweser Book 2, Module 16); LOS a-g
-  - Evidence: 7 sections; 8 Q&A; 6 traps; 3 worked/example markers; LOS tokens: 16.a, 16.b, 16.c, 16.d, 16.e, 16.f, 16.g, 25.n
+  - Evidence: 6 sections; 5 Q&A; 6 traps; 3 worked/example markers; LOS tokens: 16.a, 16.b, 16.c, 16.d, 16.e, 16.f, 16.g
 - [[Cost_of_Capital]] — **Direct LOS**
   - Source / LOS: Official Curriculum 2026 L2 V4, Reading "Cost of Capital: Advanced Topics" (Schweser Book 2, Module 15); LOS a-f
   - Evidence: 9 sections; 5 Q&A; 10 traps; 1 worked/example markers; LOS tokens: 15.a, 15.b, 15.c, 15.e, 15.f
@@ -130,7 +127,7 @@ Generated from each note's `source` field, headings, `## Exam Traps`, and `## Q&
   - Evidence: 13 sections; 4 Q&A; 5 traps; 3 worked/example markers; LOS tokens: 19.a, 19.b, 19.c, 19.d, 19.e, 19.f, 19.g, 19.h, 19.i, 19.j, 19.k, 19.l, ...
 - [[Market_Based_Valuation]] — **Direct LOS**
   - Source / LOS: Schweser Book 3, Module 20, LOS 20.a-20.r
-  - Evidence: 11 sections; 13 Q&A; 9 traps; 4 worked/example markers; LOS tokens: 20.a, 20.b, 20.c, 20.d, 20.e, 20.f, 20.g, 20.h, 20.i, 20.j, 20.k, 20.l, ...
+  - Evidence: 11 sections; 12 Q&A; 9 traps; 4 worked/example markers; LOS tokens: 20.a, 20.b, 20.c, 20.d, 20.e, 20.f, 20.g, 20.h, 20.i, 20.j, 20.k, 20.l, ...
 - [[Private_Company_Valuation]] — **Direct LOS**
   - Source / LOS: Schweser Book 3, Module 22, LOS 22.a-22.i
   - Evidence: 9 sections; 3 Q&A; 9 traps; 3 worked/example markers; LOS tokens: 22.a, 22.b, 22.c, 22.d, 22.e, 22.f, 22.g, 22.h, 22.i
@@ -224,10 +221,12 @@ Generated from each note's `source` field, headings, `## Exam Traps`, and `## Q&
 - [[Ethics_Overview]] — **Overview map**
   - Source / LOS: Official 2026 L2 V10 (Learning Modules 1-3); Schweser Book 5, Readings 40-42
   - Evidence: 4 sections; 0 Q&A; 0 traps; 0 worked/example markers; LOS tokens: 41.b
-- [[GIPS]] — **Reference-only**
-  - Source / LOS: Referenced in Official 2026 L2 V10, Standard III(D) Performance Presentation; GIPS Standards for Firms. (No standalone GIPS reading in the 2026 L2 curriculum — see scope note.)
-  - Evidence: 8 sections; 3 Q&A; 4 traps; 5 worked/example markers
 
+
+## Reference-Only Notes
+
+- [[Capital_Budgeting_Foundations]] — CFA Level I Corporate Issuers (Capital Investments) — NOT a 2026 L2 LOS; verified absent from all five 2026 Schweser L2 books. Retained as foundation for L2 Equity / FSA / Cost of Capital.
+- [[GIPS]] — Referenced in Official 2026 L2 V10, Standard III(D) Performance Presentation; GIPS Standards for Firms. (No standalone GIPS reading in the 2026 L2 curriculum — see scope note.)
 
 ## Maintenance Flags
 

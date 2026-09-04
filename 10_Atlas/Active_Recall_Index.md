@@ -10,7 +10,7 @@ source: Generated from note Q&A headings by scripts/generate_atlas.py
 
 Each prompt links back to the note that contains the full answer. Use this as a compact review queue before drilling the underlying note.
 
-Total prompts: **168**.
+Total prompts: **160**.
 
 ## 11 Quantitative Methods
 
@@ -84,10 +84,6 @@ Total prompts: **168**.
 
 ## 14 Corporate Issuers
 
-- 2026-08-02 — TNOCF, NWC recovery, tax shields, annuities, and inflation direction -> [[Capital_Budgeting_Foundations]]
-- 2026-08-02 — Poison pill vs. poison put -> [[Corporate_Restructurings]]
-- 2026-07-11 — Horizontal vs. vertical merger -> [[Corporate_Restructurings]]
-- 2026-07-11 — Takeover defenses: crown jewel, Pac-Man, white knight -> [[Corporate_Restructurings]]
 - 2026-06-03 — Spin-off vs split-off vs equity carve-out -> [[Corporate_Restructurings]]
 - 2026-06-03 — Computing the takeover premium -> [[Corporate_Restructurings]]
 - 2026-06-04 — Sum-of-the-parts spin-off value -> [[Corporate_Restructurings]]
@@ -118,7 +114,6 @@ Total prompts: **168**.
 - 2026-07-11 — Why use E/P instead of P/E when diluted EPS is negative -> [[Market_Based_Valuation]]
 - 2026-07-12 — Standardized unexpected earnings (SUE) -> [[Market_Based_Valuation]]
 - 2026-07-12 — Relative strength indicators: what they are and what they're for -> [[Market_Based_Valuation]]
-- 2026-07-12 — Fed model vs. Yardeni model (legacy curriculum) -> [[Market_Based_Valuation]]
 - 2026-07-12 — What "sales" means in the price-to-sales ratio -> [[Market_Based_Valuation]]
 - 2026-07-11 — What the forward PEG ratio measures and its three limitations -> [[Market_Based_Valuation]]
 - 2026-07-11 — Underlying EPS vs. diluted EPS -> [[Market_Based_Valuation]]
@@ -206,6 +201,3 @@ Total prompts: **168**.
 - 2026-06-03 — Mosaic theory, MNPI, and priority of transactions -> [[Code_and_Standards]]
 - 2026-06-04 — The 2024 revisions: what changed in the Standards? -> [[Code_and_Standards]]
 - 2026-06-04 — Worked case: recommending an unfamiliar asset (I(E), III(C), V(A)) -> [[Code_and_Standards]]
-- 2026-06-03 — Why must a composite include ALL discretionary portfolios? -> [[GIPS]]
-- 2026-06-03 — Firm-wide, all-or-nothing, and verification -> [[GIPS]]
-- 2026-06-04 — Worked: compute an asset-weighted composite return (and the III(D) trap) -> [[GIPS]]

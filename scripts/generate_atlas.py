@@ -20,6 +20,7 @@ TOPIC_DIRS = {
     "19_Portfolio_Management": "19 Portfolio Management",
     "20_Ethics": "20 Ethics",
 }
+VALID_EXAM_SCOPES = {"core", "reference-only"}
 
 
 @dataclass
@@ -31,6 +32,7 @@ class Note:
     topic: str
     source: str
     status: str
+    exam_scope: str
     level2: list[str]
     qa: list[str]
     traps: list[str]
@@ -131,6 +133,7 @@ def parse_note(path: Path) -> Note:
         topic=topic,
         source=fm.get("source", ""),
         status=fm.get("status", ""),
+        exam_scope=fm.get("exam_scope", "core"),
         level2=level2,
         qa=qa,
         traps=trap_lines,
@@ -150,8 +153,6 @@ def load_notes() -> list[Note]:
 def coverage_confidence(note: Note) -> str:
     if "Overview" in note.stem or note.stem.endswith("_Overview"):
         return "Overview map"
-    if "No standalone GIPS reading" in note.source:
-        return "Reference-only"
     if note.los_tokens:
         return "Direct LOS"
     if "LOS" in note.source:
@@ -163,9 +164,14 @@ def is_overview_note(note: Note) -> bool:
     return "Overview" in note.stem or note.stem.endswith("_Overview")
 
 
+def is_core_note(note: Note) -> bool:
+    return note.exam_scope == "core"
+
+
 def render_coverage(notes: list[Note]) -> str:
+    core_notes = [note for note in notes if is_core_note(note)]
     by_topic: dict[str, list[Note]] = defaultdict(list)
-    for note in notes:
+    for note in core_notes:
         by_topic[note.topic].append(note)
 
     lines = [
@@ -210,11 +216,15 @@ def render_coverage(notes: list[Note]) -> str:
             lines.append(f"  - Evidence: {evidence}")
         lines.append("")
 
+    reference_notes = [note for note in notes if not is_core_note(note)]
+    lines.extend(["", "## Reference-Only Notes", ""])
+    for note in reference_notes:
+        lines.append(f"- {wiki(note.stem)} — {note.source}")
+
     flags = [
         note
-        for note in notes
+        for note in core_notes
         if not is_overview_note(note)
-        and coverage_confidence(note) != "Reference-only"
         and (coverage_confidence(note) == "Needs source detail" or not note.qa or not note.traps)
     ]
     lines.extend(["", "## Maintenance Flags", ""])
@@ -237,6 +247,8 @@ def render_coverage(notes: list[Note]) -> str:
 def render_active_recall(notes: list[Note]) -> str:
     by_topic: dict[str, list[tuple[Note, str]]] = defaultdict(list)
     for note in notes:
+        if not is_core_note(note):
+            continue
         for qa in note.qa:
             by_topic[note.topic].append((note, qa))
     lines = [
@@ -270,6 +282,8 @@ def render_active_recall(notes: list[Note]) -> str:
 def render_exam_traps(notes: list[Note]) -> str:
     by_topic: dict[str, list[Note]] = defaultdict(list)
     for note in notes:
+        if not is_core_note(note):
+            continue
         if note.traps:
             by_topic[note.topic].append(note)
     lines = [

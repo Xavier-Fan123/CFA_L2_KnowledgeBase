@@ -245,6 +245,9 @@ def main() -> int:
         if path.parent.name in TOPIC_DIRS:
             if "source" not in fm:
                 issues.append(f"{rel}: missing frontmatter `source`")
+            exam_scope = fm.get("exam_scope", "core")
+            if exam_scope not in {"core", "reference-only"}:
+                issues.append(f"{rel}: invalid frontmatter `exam_scope` value `{exam_scope}`")
             if not is_overview(path):
                 if "## Exam Traps" not in text:
                     issues.append(f"{rel}: missing `## Exam Traps`")

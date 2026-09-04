@@ -97,12 +97,10 @@ Recommend **compliance procedures**: written **Code & compliance policies**; **r
 ### 2026-06-03 — Stricter-law rule and the duty to dissociate
 **Q:** A member works where local law is **less** strict than the Code & Standards. What governs, and must they report violations?
 **A:** Under **I(A) Knowledge of the Law**, follow the **stricter** of applicable law or the Code & Standards — so here the **Code & Standards** govern. If local law is *stricter*, follow the law. Members must **dissociate** from known violations (stop participating, document, escalate). There is **no general duty to report** violations to authorities **unless the law requires it** (reporting to CFA Institute is encouraged but not mandated). Trap: "do nothing" or "just follow local law" is wrong when the Code is stricter.
-Related: [[GIPS]]
 
 ### 2026-06-03 — Mosaic theory, MNPI, and priority of transactions
 **Q:** Two quick application points: is mosaic theory allowed, and who trades first?
 **A:** **Mosaic theory is permitted** under **II(A)**: combining **nonmaterial nonpublic** information with **public** information to reach a conclusion is fine — only acting on **material nonpublic** information violates the standard. **VI(B) Priority of Transactions**: order is **clients first, then employer, then self** ("clients come first") — personal/beneficial accounts trade last. Related **IV(A)**: on leaving an employer you may take **skill/experience and public-source info** and prepare to compete, but **not** employer records or client lists, and no soliciting clients before you depart.
-Related: [[GIPS]]
 
 ### 2026-06-04 — The 2024 revisions: what changed in the Standards?
 **Q:** What are the three changes introduced with the 2023/2024 revision of the Code & Standards that L2 candidates must know?

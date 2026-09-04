@@ -54,7 +54,6 @@ Worked example (36 firms, dividend increase): model `ŷ = −3.445 + 0.332·Age 
    - Log-likelihood (LL) is always **negative**; **closer to 0 = better fit**.
    - LR is **χ² with q df**. H₀: the dropped coefficients are all 0. LR > critical → reject H₀.
    - Example: LL_unrestricted = −212.44, LL_restricted = −216.22, q=2 → LR = 2×3.78 = 7.56 > 5.99 → reject.
-3. **Goodness of fit**: no traditional R²; software gives **pseudo-R²**, usable only to compare models with the **same dependent variable**.
 
 ## OLS vs Logit (one-page)
 
@@ -66,16 +65,14 @@ Worked example (36 firms, dividend increase): model `ŷ = −3.445 + 0.332·Age 
 | Residual distribution | Normal | **Logistic (fat tails)** |
 | Slope meaning | ΔY per unit X | Δ**log odds** per unit X (probability effect is pointwise) |
 | Nested test | Joint **F-test** | **LR test** (χ², df=q) |
-| Fit | R² | pseudo-R² (same-DV comparison only) |
 
 ## Exam Traps
 - Nested test is the **LR test (χ²)**, not an F-test. All L2 tests side by side: [[Statistical_Tests_Master_Table]].
 - Slope = change in **log odds**, not probability.
-- pseudo-R² compares only models with the **same** dependent variable.
 
 ## Q&A
 
 ### 2026-06-02 — What is logistic regression and how is it tested?
 **Q:** Explain logistic regression in detail and how to test it.
-**A:** A logit model is used when the dependent variable is binary; OLS fails because fitted values can fall outside [0,1]. It models **log odds** `ln[p/(1−p)] = b₀+ΣbⱼXⱼ`, estimated by **MLE**, residuals **logistic (fat-tailed)**. Slope = change in log odds per unit X (probability effect must be computed pointwise at average X). Recover probability via `p = 1/(1+e^(−ŷ))`. Testing: individual p-values; nested models via the **Likelihood Ratio (LR) test** `LR = 2(LL_unrestricted − LL_restricted)`, χ² with q df (example 7.56 > 5.99 → reject); fit via pseudo-R² (same-DV only). Key trap: LR test, not F-test.
+**A:** A logit model is used when the dependent variable is binary; OLS fails because fitted values can fall outside [0,1]. It models **log odds** `ln[p/(1−p)] = b₀+ΣbⱼXⱼ`, estimated by **MLE**, residuals **logistic (fat-tailed)**. Slope = change in log odds per unit X (probability effect must be computed pointwise at average X). Recover probability via `p = 1/(1+e^(−ŷ))`. Testing: individual p-values; nested models via the **Likelihood Ratio (LR) test** `LR = 2(LL_unrestricted − LL_restricted)`, χ² with q df (example 7.56 > 5.99 → reject). Key trap: LR test, not F-test.
 Related: [[Regression_Assumption_Violations]]

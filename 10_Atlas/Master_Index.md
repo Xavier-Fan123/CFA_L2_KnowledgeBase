@@ -12,7 +12,7 @@ Map of Content for the whole knowledge base. One WikiLink line per note. Registe
 **Cross-topic:** [[Formula_Cheat_Sheet]] — final-review formula sheet aggregating every topic area.
 **Cross-topic:** [[Statistical_Tests_Master_Table]] — every L2 hypothesis test: statistic, distribution, df, tails, decision rule.
 
-**Review control:** [[LOS_Coverage_Matrix]] | [[Practice_Coverage_Matrix]] | [[Active_Recall_Index]] | [[Exam_Traps_Index]]
+**Review control:** [[2026_Exam_Scope]] | [[LOS_Coverage_Matrix]] | [[Practice_Coverage_Matrix]] | [[Active_Recall_Index]] | [[Exam_Traps_Index]]
 
 ## 11 — Quantitative Methods
 - [[Quantitative_Methods_Overview]]
@@ -67,13 +67,13 @@ Map of Content for the whole knowledge base. One WikiLink line per note. Registe
 | 11 Quantitative Methods | 9 | Evergreen (regression, time series, ML, big data) — full R1–R4 |
 | 12 Economics | 3 | Evergreen |
 | 13 Financial Statement Analysis | 7 | Evergreen — full R7–R12 |
-| 14 Corporate Issuers | 6 | Evergreen (+1 L1-bridge foundation note) |
+| 14 Corporate Issuers | 5 | Evergreen |
 | 15 Equity Investments | 7 | Evergreen |
 | 16 Fixed Income | 6 | Evergreen |
 | 17 Derivatives | 3 | Evergreen |
 | 18 Alternative Investments | 5 | Evergreen — full R30–R33 |
 | 19 Portfolio Management | 7 | Evergreen |
-| 20 Ethics | 4 | Evergreen — full R40–R42 + GIPS; 2024 revisions, I(E) Competence |
+| 20 Ethics | 3 | Evergreen — full R40–R42; 2024 revisions, I(E) Competence |
 
 All ten topic areas now have evergreen concept coverage grounded in the 2026 Schweser LOS map. Each note carries module/LOS-level structure, key formulas, and exam traps. **As of the 2026-06-03 enrichment pass, every detail note also has at least one worked numeric example and a populated `## Q&A` section** (exam-style questions, Schweser-verified). Official EOC/module quiz/mock source files are inventoried in [[Practice_Coverage_Matrix]]; full vignettes are not copied into the note set.
 

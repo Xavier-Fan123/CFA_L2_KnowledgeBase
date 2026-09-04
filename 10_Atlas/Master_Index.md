@@ -29,7 +29,6 @@ Map of Content for the whole knowledge base. One WikiLink line per note. Registe
 ## 14 — Corporate Issuers
 - [[Corporate_Issuers_Overview]]
 - [[Dividends_and_Share_Repurchases]] · [[ESG_and_Corporate_Governance]] · [[Cost_of_Capital]] · [[Corporate_Restructurings]]
-- [[Capital_Budgeting_Foundations]] — L1 bridge (TNOCF / NWC recovery / tax shields / nominal vs real); **not a 2026 L2 LOS**
 
 ## 15 — Equity Investments
 - [[Equity_Investments_Overview]]
@@ -53,7 +52,11 @@ Map of Content for the whole knowledge base. One WikiLink line per note. Registe
 
 ## 20 — Ethical and Professional Standards
 - [[Ethics_Overview]]
-- [[Code_and_Standards]] · [[Application_of_the_Code_and_Standards]] · [[GIPS]]
+- [[Code_and_Standards]] · [[Application_of_the_Code_and_Standards]]
+
+## Reference-only foundations
+- [[Capital_Budgeting_Foundations]] — Level I bridge; not a 2026 Level II LOS.
+- [[GIPS]] — detailed mechanics; not a standalone 2026 Level II reading.
 
 ---
 

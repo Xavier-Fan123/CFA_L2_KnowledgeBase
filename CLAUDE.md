@@ -75,7 +75,7 @@ Topic ↔ Schweser Book mapping (5 books) — verified against the 2026 Schweser
 - Book 2: FSA (modules 7-12) + Corporate Issuers (modules 13-16)
 - Book 3: Equity Valuation only (modules 17-22)
 - Book 4: Fixed Income (23-27) + Derivatives (28-29) + Alternatives (30-33)
-- Book 5: Portfolio Management (34-39) + Ethics (40-42) + GIPS
+- Book 5: Portfolio Management (34-39) + Ethics (40-42). GIPS is not a standalone Level II reading; only its Standard III(D) treatment belongs in core review.
 (Official curriculum is `cfa-program2026L2V1..V10.PDF`, one volume per topic area; confirm against actual files.)
 
 After extracting, **clean up temp files** (`rm -f /tmp/*.txt`). Do not leave temp txt files in the KB.

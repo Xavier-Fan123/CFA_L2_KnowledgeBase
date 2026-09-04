@@ -3,6 +3,7 @@ aliases: [Capital Budgeting, TNOCF, Terminal Year Non-Operating Cash Flow, NWC R
 tags: [CFA-L2, corp, foundation, L1-bridge]
 date: 2026-08-25
 status: evergreen
+exam_scope: reference-only
 source: CFA Level I Corporate Issuers (Capital Investments) — NOT a 2026 L2 LOS; verified absent from all five 2026 Schweser L2 books. Retained as foundation for L2 Equity / FSA / Cost of Capital.
 ---
 

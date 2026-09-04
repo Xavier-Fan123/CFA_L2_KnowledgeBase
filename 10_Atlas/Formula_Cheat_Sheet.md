@@ -98,9 +98,8 @@ Final-review aggregation of the highest-yield formulas across all ten topic area
 - **Breakeven inflation** = nominal yield − real (TIPS) yield.
 - **Total cost of ETF ownership** = expense ratio + spreads + premium/discount + tracking error.
 
-## 20 — Ethics & GIPS → [[Code_and_Standards]] · [[GIPS]]
+## 20 — Ethics → [[Code_and_Standards]]
 - No core formulas. Decision rules: follow the **stricter** of law vs Code & Standards; **mosaic theory** allowed; **priority of transactions** = clients > employer > self.
-- **GIPS**: firm-wide, all-or-nothing; composite = **all** discretionary fee-paying portfolios of a strategy; min **5 years** of compliant history (build to 10); verification recommended, not required.
 
 ---
 

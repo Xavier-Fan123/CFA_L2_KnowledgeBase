@@ -75,7 +75,7 @@ PDFs are read with `pdftotext` (available on this machine at `/mingw64/bin/pdfto
 
 Every wiki note follows a standardized structure:
 
-- **YAML frontmatter**: `aliases`, `tags`, `date`, `status` (`seed` → `incubating` → `evergreen`), `source` (curriculum reference)
+- **YAML frontmatter**: `aliases`, `tags`, `date`, `status` (`seed` → `incubating` → `evergreen`), `source` (curriculum reference), and optional `exam_scope`: `core` or `reference-only` (omission defaults to `core`)
 - **Body**: concept explanation
 - **Exam Traps**: high-frequency mistakes
 - **Q&A**: question-answer pairs distilled from conversations (dated)

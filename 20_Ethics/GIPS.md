@@ -3,12 +3,13 @@ aliases: [GIPS, Global Investment Performance Standards, Composites, GIPS Compli
 tags: [CFA-L2, ethics, concept, gips]
 date: 2026-06-03
 status: evergreen
+exam_scope: reference-only
 source: Referenced in Official 2026 L2 V10, Standard III(D) Performance Presentation; GIPS Standards for Firms. (No standalone GIPS reading in the 2026 L2 curriculum — see scope note.)
 ---
 
 # Global Investment Performance Standards (GIPS)
 
-> **Scope note (verified 2026):** The 2026 Level II curriculum does **not** contain a dedicated, standalone GIPS reading. GIPS appears at L2 only as a **reference within Standard III(D) Performance Presentation** — "complying with the GIPS standards is the **best method** to meet obligations under III(D)," and members should **encourage their firms** to adopt GIPS. This note retains the core GIPS framework for review; the deeper mechanics below the "Selected Requirements" heading are **background/foundational knowledge** (from prior curricula and the GIPS Standards for Firms), not text tested verbatim in the current L2 readings.
+> **Scope note (verified 2026):** Detailed firm, composite, history, and verification mechanics are **not** a standalone 2026 Level II reading. The examinable core is **Standard III(D)**: performance presentations must be **fair, accurate, and complete**; GIPS is one way to comply; and false GIPS-compliance claims violate III(D). The detailed material in this note is retained as reference-only foundation knowledge.
 
 ## Link to Standard III(D) Performance Presentation
 Under **III(D)**, performance communications must be **fair, accurate, and complete**. The curriculum gives two ways to comply: (1) **apply the GIPS standards** (the best method); or (2) comply **without** GIPS by — considering the audience's sophistication, presenting a **weighted composite** of similar portfolios (not a single representative account), **including terminated accounts** with their termination dates, making full disclosures (e.g., gross/net of fees, simulated/model results, prior-entity record), and maintaining supporting data/records.

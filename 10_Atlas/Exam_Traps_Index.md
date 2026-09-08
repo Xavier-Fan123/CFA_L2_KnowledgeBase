@@ -417,6 +417,6 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - **Standard I has FIVE subsections now** — don't forget **I(E) Competence** (added 2024).
 - **VI(A)** is **"Avoid or Disclose"** (avoid first); "Disclosure of Conflicts" is the **old** title.
 - **V(B)** now also requires disclosing the **nature of services AND the costs** to the client.
-- **III(D) without GIPS**: identify a brief presentation's limits; consider the audience; use a weighted composite, include terminated accounts and dates, disclose material basis/results/records, and retain support. GIPS is best but optional; a false GIPS claim violates III(D).
+- **III(D) without GIPS**: identify a brief presentation's limits; consider the audience; use a weighted composite; include terminated accounts and dates; disclose simulated results, prior-entity performance, and the gross/net/after-tax basis; and retain supporting data and records. GIPS is best but optional; a false GIPS claim violates III(D).
 - A single fact pattern usually implicates **several** Standards — name **all** that apply, not just one.
 - "CFA" is an **adjective** (CFA charterholder); using it as a noun violates **VII(B)**.

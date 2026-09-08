@@ -79,7 +79,7 @@ The official [2027 curriculum change announcement](https://www.cfainstitute.org/
 | Ethical and Professional Standards | 2 | Guidance for Standards I-VII | [[Code_and_Standards]] | Core; shared note |
 | Ethical and Professional Standards | 3 | Application of the Code and Standards: Level II | [[Application_of_the_Code_and_Standards]] | Core |
 
-The Quantitative Methods appendices are references and are not a 46th core module. This mapping found no missing current 2026 learning module in the knowledge base.
+The Quantitative Methods appendices are references and are not a 46th core module. This mapping found no missing current 2026 learning module in the knowledge base. It is a module-level navigation baseline, not a claim that every curriculum example or vignette detail is duplicated in the notes; the official curriculum and current errata remain controlling.
 
 ## Not Directly Examinable in 2026
 

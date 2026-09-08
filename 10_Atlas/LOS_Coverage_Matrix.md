@@ -23,7 +23,7 @@ Generated from each note's `source` field, headings, `## Exam Traps`, and `## Q&
 | 17 Derivatives | 3 | 3 | 10 | 17 | 2 | 0 |
 | 18 Alternative Investments | 5 | 5 | 13 | 27 | 4 | 0 |
 | 19 Portfolio Management | 7 | 7 | 15 | 37 | 6 | 0 |
-| 20 Ethics | 3 | 3 | 6 | 14 | 2 | 0 |
+| 20 Ethics | 3 | 3 | 7 | 15 | 2 | 0 |
 
 ## Reading-Level Notes
 
@@ -217,7 +217,7 @@ Generated from each note's `source` field, headings, `## Exam Traps`, and `## Q&
   - Evidence: 6 sections; 2 Q&A; 5 traps; 0 worked/example markers; LOS tokens: 42.a, 42.b
 - [[Code_and_Standards]] — **Direct LOS**
   - Source / LOS: Official 2026 L2 V10 (Learning Modules 1-2); Schweser Book 5, Readings 40-41 (LOS 40.a-40.b, 41.a-41.b)
-  - Evidence: 7 sections; 4 Q&A; 9 traps; 1 worked/example markers; LOS tokens: 40.a, 40.b, 41.b
+  - Evidence: 7 sections; 5 Q&A; 10 traps; 2 worked/example markers; LOS tokens: 40.a, 40.b, 41.b
 - [[Ethics_Overview]] — **Overview map**
   - Source / LOS: Official 2026 L2 V10 (Learning Modules 1-3); Schweser Book 5, Readings 40-42
   - Evidence: 4 sections; 0 Q&A; 0 traps; 0 worked/example markers; LOS tokens: 41.b

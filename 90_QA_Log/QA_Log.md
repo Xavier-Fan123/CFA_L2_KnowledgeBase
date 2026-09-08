@@ -7,6 +7,7 @@ status: evergreen
 
 # Q&A Log
 
+- 2026-09-07 [Ethics] III(D) compliance without GIPS: audience, weighted composite, terminated accounts, disclosure, and records → [[Code_and_Standards]], [[Application_of_the_Code_and_Standards]]
 - 2026-08-02 [Alt] Cap rate = NOI/value = income yield (reciprocal = NOI multiple); = r - g so ALWAYS below the discount rate when g>0; derive from comps or fundamentals -> [[Real_Estate]]
 - 2026-08-02 [Corp] Interlocking directorates: NOT prohibited; what fails is the independence test (remuneration/ownership/employment) or comply-or-explain disclosure -> [[ESG_and_Corporate_Governance]]
 - 2026-08-02 [Corp] TNOCF/NWC recovery (untaxed, hurts short projects most), capex tax shield, annuity=geometric series -> Gordon Growth, inflation direction on shield vs interest -> [[Capital_Budgeting_Foundations]]

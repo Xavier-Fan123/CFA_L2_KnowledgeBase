@@ -13,7 +13,7 @@ Auto-detected topics not yet covered by the KB. Resolve by creating or enriching
 - Official 45-module mapping found no missing current 2026 learning module in the knowledge base.
 - September errata review removed pseudo-R-squared; Fed/Yardeni and legacy M&A vocabulary were removed from core notes.
 - [[Capital_Budgeting_Foundations]] and deep [[GIPS]] mechanics were reclassified as reference-only.
-- Current Standard III(D) and change-of-control contingent-put mechanics were retained.
+- Current Standard III(D) and change-of-control contingent-put mechanics were retained; final review consolidated current III(D) non-GIPS procedures into the core [[Code_and_Standards]] note.
 - Priority: resolved
 
 ### 2026-08-27 - All local practice sources were wrongly recorded as missing (RESOLVED)

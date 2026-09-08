@@ -54,7 +54,7 @@ Members and Candidates must:
 - **III(A) Loyalty, Prudence, and Care**: clients' interests **first**; identify the actual client (for a pension, the **beneficiaries**, not the plan sponsor); **vote proxies** in clients' best interest (cost-benefit: routine proxies need not always be voted, but a policy is required); obtain **best price and execution**; **client brokerage (soft dollars)** belongs to the client and must be used for **research/services that benefit the client**, not to pay the manager's own overhead or to reward referrals.
 - **III(B) Fair Dealing**: disseminate recommendations/changes to all clients **fairly** (not "equally"); limit the people who know a change before dissemination; pre-disseminate allocation procedures for IPOs/hot issues.
 - **III(C) Suitability**: in an **advisory** relationship, make a reasonable inquiry into the client's experience/objectives/constraints, **update the IPS regularly**, judge suitability in the **total-portfolio** context; for a stated **mandate**, only act consistently with it; document/caution on unsolicited off-IPS trades.
-- **III(D) Performance Presentation**: presentations must be **fair, accurate, and complete**; no cherry-picking accounts or periods; **GIPS** is one way to comply; false GIPS-compliance claims violate III(D). Detailed [[GIPS]] mechanics are reference-only.
+- **III(D) Performance Presentation**: presentations must be **fair, accurate, and complete**; do not imply past returns will repeat; and do not cherry-pick accounts or periods. A brief presentation must identify its limited nature and make supporting detail available on request. Applying **GIPS** is the **best** compliance method, but it is not required. Without GIPS, consider the audience's sophistication; present a **weighted composite** of similar portfolios rather than a representative account; include terminated accounts with their termination dates; fully disclose simulated/model results, prior-entity records, and the gross/net/after-tax basis; and retain supporting data and records. A false GIPS-compliance claim violates III(D), including the official example of a non-asset-weighted composite. Detailed [[GIPS]] mechanics are reference-only.
 - **III(E) Preservation of Confidentiality**: keep client info confidential **unless** (1) it concerns the client's **illegal activities**, (2) disclosure is **required by law**, or (3) the client **permits** it. Confidentiality yields to a legal/regulatory (e.g., PCP) investigation.
 
 ### IV — Duties to Employers
@@ -89,10 +89,16 @@ Recommend **compliance procedures**: written **Code & compliance policies**; **r
 - **Standard I has FIVE subsections now** — don't forget **I(E) Competence** (added 2024).
 - **VI(A)** is **"Avoid or Disclose"** (avoid first); "Disclosure of Conflicts" is the **old** title.
 - **V(B)** now also requires disclosing the **nature of services AND the costs** to the client.
+- **III(D) without GIPS**: identify a brief presentation's limits; consider the audience; use a weighted composite, include terminated accounts and dates, disclose material basis/results/records, and retain support. GIPS is best but optional; a false GIPS claim violates III(D).
 - A single fact pattern usually implicates **several** Standards — name **all** that apply, not just one.
 - "CFA" is an **adjective** (CFA charterholder); using it as a noun violates **VII(B)**.
 
 ## Q&A
+
+### 2026-09-07 — How can a firm comply with III(D) without GIPS?
+**Q:** A firm does not apply GIPS. What must its performance presentation do to comply with Standard III(D)?
+**A:** It must still be **fair, accurate, and complete**, avoid implying that past performance will repeat, and identify a brief presentation's limits while making supporting detail available on request. Consider the audience's sophistication; show a **weighted composite** of similar portfolios rather than a representative account; include terminated accounts and their termination dates; fully disclose simulated/model results, prior-entity records, and gross/net/after-tax basis; and retain supporting data and records. Applying GIPS is the **best** method, not a requirement; falsely claiming GIPS compliance, including for a non-asset-weighted composite, violates III(D).
+Related: [[Application_of_the_Code_and_Standards]]
 
 ### 2026-06-03 — Stricter-law rule and the duty to dissociate
 **Q:** A member works where local law is **less** strict than the Code & Standards. What governs, and must they report violations?

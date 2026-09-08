@@ -20,7 +20,7 @@ The distinctive L2 reading: a **4-step decision framework** (Identify → Consid
 - Pick the response requiring the **highest** ethical standard; follow the **stricter** of law vs Code.
 - Mosaic theory is allowed; acting on material nonpublic information is not.
 - **Standard I has five subsections** (A–E); don't forget **I(E) Competence**. **VI(A)** = "Avoid or Disclose."
-- **III(D) Performance Presentation** requires fair, accurate, and complete presentations; no cherry-picking. GIPS is one way to comply, and a false GIPS-compliance claim violates III(D).
+- **III(D) Performance Presentation** requires fair, accurate, and complete presentations; no implication that returns repeat; and no cherry-picking. Without GIPS, consider the audience, identify brief-presentation limits, use a weighted composite, include terminated accounts and dates, disclose material basis/results/records, and retain support. GIPS is best but optional; a false GIPS claim violates III(D).
 - In a case item, name **every** applicable Standard (not just one) and, for the last two cases, give the **action + firm policy**.
 
 ## Reference-only foundation

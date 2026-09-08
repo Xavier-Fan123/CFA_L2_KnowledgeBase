@@ -10,7 +10,7 @@ source: Generated from note Q&A headings by scripts/generate_atlas.py
 
 Each prompt links back to the note that contains the full answer. Use this as a compact review queue before drilling the underlying note.
 
-Total prompts: **160**.
+Total prompts: **161**.
 
 ## 11 Quantitative Methods
 
@@ -197,6 +197,7 @@ Total prompts: **160**.
 
 - 2026-06-04 — What does the Level II "Application" ethics reading actually test? -> [[Application_of_the_Code_and_Standards]]
 - 2026-06-04 — "First five vs. last two" cases — why the distinction matters -> [[Application_of_the_Code_and_Standards]]
+- 2026-09-07 — How can a firm comply with III(D) without GIPS? -> [[Code_and_Standards]]
 - 2026-06-03 — Stricter-law rule and the duty to dissociate -> [[Code_and_Standards]]
 - 2026-06-03 — Mosaic theory, MNPI, and priority of transactions -> [[Code_and_Standards]]
 - 2026-06-04 — The 2024 revisions: what changed in the Standards? -> [[Code_and_Standards]]

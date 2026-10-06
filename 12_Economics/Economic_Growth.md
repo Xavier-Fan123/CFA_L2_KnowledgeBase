@@ -1,7 +1,7 @@
 ---
 aliases: [Economic Growth, Growth Accounting, Production Function, Solow Model, Convergence, Capital Deepening]
 tags: [CFA-L2, econ, concept, growth]
-date: 2026-08-25
+date: 2026-10-05
 status: evergreen
 source: Schweser Book 1, Module 6, LOS 6.a-6.l
 ---
@@ -12,6 +12,9 @@ source: Schweser Book 1, Module 6, LOS 6.a-6.l
 - **Developed-economy drivers**: savings/investment, financial markets, rule of law, education, free trade, openness. Developing economies often lack these → constraints.
 - **Stock market vs economy**: in the long run, `%ΔP = %ΔGDP + %Δ(E/GDP) + %Δ(P/E)`. Over long horizons share of profits and P/E are roughly stable, so **long-run equity appreciation ≈ sustainable GDP growth**.
 - **Potential GDP** = maximum sustainable output; its **growth rate** drives long-run equity returns, real interest rates, and government debt capacity. Higher potential growth → higher real rates.
+- **Earnings growth cannot exceed potential GDP growth in the long run**; labor productivity sets that upper limit, so a **permanent** rise in productivity growth lifts the ceiling on earnings growth and on long-run stock appreciation.
+- **For fixed-income investors** the key variable is inflation, and one of the best short- to intermediate-term inflation indicators is **actual GDP growth vs potential GDP growth** (actual above potential → rising inflation pressure → higher policy and bond yields; below → disinflation).
+- Real GDP growth = how fast the whole economy expands; **per capita** real GDP = the standard of living.
 
 ## Exam Workflow - Potential GDP and Market Implications (6.b, 6.c, 6.e)
 When the vignette asks what economic growth means for assets, work in this order:
@@ -44,6 +47,13 @@ When the vignette asks what economic growth means for assets, work in this order
 | 5 | Interpret the result for investors. | Potential GDP is a long-run anchor, not a one-period equity-return forecast. |
 
 **Worked example - solve for TFP residual:** output growth is 3.8%, capital grows 4.0%, labor grows 1.0%, and labor's income share is 65%. Then `alpha = 35%`, so `TFP growth = 3.8% - 0.35(4.0%) - 0.65(1.0%) = 1.75%`.
+
+## Physical Capital, ICT, Technology, Public Infrastructure (6.h)
+- Capital stock grows only with **positive net investment** (gross investment − depreciation); with a growing population part of it merely maintains the capital-to-labor ratio, so per capita growth rises less.
+- **Capital deepening contribution = labor-productivity growth − TFP growth** (official: South Korea 2005-2018, `3.3% − 0.8% = 2.5%` from capital deepening). The bigger the gap, the more growth relies on capital deepening — which cannot sustain per capita growth forever.
+- **ICT capital** (computers, telecom equipment, software) has **network externalities** that show up in **TFP**, so a rising ICT share can **raise potential GDP growth**; **non-ICT** capital (non-residential construction, transport equipment, machinery) mainly causes capital deepening with diminishing returns. Transformational "general purpose technologies" (steam engine, electricity, ICT) work the same way.
+- Productivity **levels** are higher in developed countries (accumulated human and physical capital); productivity **growth** is usually higher in developing ones (scarce capital, weaker diminishing returns).
+- **Public infrastructure** (roads, bridges, water, dams) complements private capital and raises the productivity of the whole economy.
 
 ## Natural Resources & Demographics (6.f, 6.g, 6.h)
 - Resource **ownership** is not required for growth (can import); the "resource curse" can even hinder growth (Dutch disease, weak institutions).
@@ -87,6 +97,8 @@ Exam shortcut: if the question says **saving permanently raises growth**, it is 
 - **Absolute convergence**: all countries converge to the same per-capita income level. (Not supported.)
 - **Conditional convergence**: countries converge **only if** they share the same savings rate, population growth, and production function — convergence to **their own** steady state.
 - **Club convergence**: only members of a "club" (similar institutions) converge; poor countries outside the club may diverge.
+
+- **Why countries fail to converge (official list)**: low rates of **investment and saving**, lack of **property rights**, **political instability**, poor **education and health**, **restrictions on trade**, and **tax/regulatory** policies that discourage work and investment. The evidence on convergence is **mixed**; more open, trade-oriented economies tend to grow faster.
 
 ## Government & Trade (6.k, 6.l)
 - Rationale for **subsidizing R&D/knowledge**: positive externalities → private investment is below the social optimum.

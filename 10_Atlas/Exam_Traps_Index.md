@@ -30,9 +30,11 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 
 ### Logistic Regression (Logit) -> [[Logistic_Regression]]
 - Nested test is the **LR test (χ²)**, not an F-test. All L2 tests side by side: [[Statistical_Tests_Master_Table]].
-- Slope = change in **log odds**, not probability.
+- Slope = change in **log odds**, not probability. A probability change needs the **marginal effect at the means** (all X at their means, bump one X by 1).
+- The curriculum's R²/pseudo-R² paragraph for logit was **removed** by the 14 Apr 2026 errata. Assess a logit model with coefficient significance and the **LR test**, not with an R²-type measure.
 
 ### Machine Learning -> [[Machine_Learning]]
+- **Flowchart**: linear regression problem → LASSO; linear classification → KNN/SVM; non-linear (either) → CART / random forest / neural nets; clustering with a known number of groups → **k-means**, unknown → **hierarchical**; many correlated features → **PCA** first.
 - **Hyperparameters are set by the researcher**; they are not learned from the data (λ in LASSO, k in KNN/k-means, NN node counts).
 - **Bias error = in-sample/underfit (too simple); variance error = out-of-sample/overfit (too complex).** Linear → high bias; nonlinear → high variance.
 - **# features = total independent variables** (12 fundamental + 2 technical = 14, not 70).
@@ -64,6 +66,9 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - Low pairwise correlations do **not** rule out multicollinearity: three or more variables can be jointly collinear with modest pairwise correlations. Correlation alone is diagnostic only in a two-variable regression — use VIF.
 
 ### Time Series Analysis -> [[Time_Series_Analysis]]
+- **Coefficient instability**: a different sample period can change both the coefficients and the model order; never pool **different regimes** (non-stationary across the full sample).
+- **MA(q) autocorrelations cut off after lag q; AR autocorrelations decay gradually.** A simple n-period moving average lags turning points and is not a good forecaster.
+- **ARMA**: unstable parameters, subjective (p, q) choice, needs 80+ observations — usually no better than a plain AR model.
 - **Durbin-Watson is invalid for AR models** (lagged dependent variable as regressor). Detect serial correlation of AR residuals with the **t-test on residual autocorrelations**, SE = **`1/√T`**, `t = ρ̂·√T`. Any significant residual autocorrelation ⇒ add lags / re-specify.
 - **Two-period AR(1) forecast feeds the one-period FORECAST, not the actual value**: `x̂ₜ₊₂ = b₀ + b₁x̂ₜ₊₁` (a classic trap is to reuse `xₜ`). Multiperiod forecasts are more uncertain.
 - DF test cannot test `b₁ = 1` directly; it tests the transformed `g = b₁ − 1 = 0` with a **modified** t.
@@ -107,12 +112,18 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - **Hard vs soft P&C market**: a **low** combined ratio marks a **hard** (profitable, high-rate) market; a **high** combined ratio marks a **soft** market. L&H carries **more interest-rate risk** than P&C because of its longer contracts and larger float.
 - A growing share of **Level 3** (unobservable-input) assets is a bank earnings-quality red flag.
 - LCR addresses **short-term (30-day)** liquidity; NSFR addresses **structural/long-term** funding.
+- CAMELS ratings run **1 = best to 5 = worst**, and the composite is a **judgment-weighted**, not arithmetic, average. CAMELS order ≠ importance.
+- **CET1 deducts intangibles and deferred tax assets**; Tier 2 needs an original maturity of at least five years.
+- **Direct writers** carry fixed distribution costs; **agency writers** carry variable commission costs.
 
 ### Employee Compensation: Post-Employment and Share-Based -> [[Employee_Compensation]]
 - **Funded status = plan assets − PBO**; it is what appears (net) on the balance sheet.
 - US GAAP pension **expense** uses **expected** return on assets; IFRS uses the discount rate (net interest) — a key comparability difference.
 - Past service cost: **IFRS expenses immediately**; US GAAP defers through OCI.
 - Remeasurements/actuarial gains-losses go to **OCI** (both standards); IFRS does **not** recycle them.
+- **Treasury stock method (2026)**: assumed proceeds = exercise cash **+ average unrecognized SBC expense**; RSUs have zero exercise cash but still have unrecognized expense. Loss-making firm → diluted = basic, so **add back anti-dilutive securities** for valuation.
+- **Underfunded DB plan = debt** in EV; **overfunded = ignore**. Deduct **future service cost** and **SBC** from FCF; leave **net pension interest** out of the DCF.
+- SBC fair value is fixed at **grant date** — a later share-price rise does not raise the expense on existing grants.
 
 ### Integration of Financial Statement Analysis Techniques -> [[Integration_of_FSA_Techniques]]
 - Removing an associate: **earnings ↓, margin ↓, asset turnover ↑**, and **leverage unchanged** (don't arbitrarily adjust equity).
@@ -123,9 +134,14 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 
 ### Intercorporate Investments -> [[Intercorporate_Investments]]
 - Equity-method dividends **reduce** the investment account (not income).
+- **Joint venture → equity method** under **both** IFRS and US GAAP. Proportionate consolidation is not the JV default — the 2026 errata corrects a practice solution to say it is **not permitted** for JVs.
+- **US GAAP goodwill impairment is no longer two-step.** Optional qualitative screen (more likely than not, > 50%), then one quantitative test: reporting-unit carrying amount (incl. goodwill) vs fair value, loss = excess **capped at allocated goodwill**. The old "implied fair value of goodwill" step was removed by the 17 Feb 2026 errata.
 - Net income is the **same** under equity method and full consolidation; ratios differ because of the grossed-up base.
 - **Partial goodwill** (IFRS) < full goodwill → lower total assets and lower NCI.
 - FVOCI **debt** recycles to P&L on sale; FVOCI **equity** election does **not** recycle.
+- IFRS 9: **equity** classifications can never be reclassified; **debt** only on a change of business model, with no restatement of prior periods.
+- **Impairment reversals**: IFRS **permits** reversing an equity-method impairment (in line with IAS 36); US GAAP **prohibits** it.
+- **Fair value option for associates**: any entity under US GAAP; only venture-capital-type entities (VC, mutual funds, unit trusts) under IFRS.
 - **SPE/VIE**: control is by **power + variable economics, not votes** — IFRS consolidates on **substance/control**; US GAAP consolidates if you are the **primary beneficiary**. Off-balance-sheet securitization **understates leverage** until consolidation pulls the assets/debt back on.
 - **Acquisition costs are expensed** (not added to goodwill); **contingent consideration** is included in the purchase price at **fair value**.
 
@@ -133,12 +149,20 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - Translation gain/loss location: **current rate → equity (CTA)**; **temporal → income statement**.
 - "Translation" = current rate method; "remeasurement" = temporal method.
 - Under temporal with a net **monetary liability** position, a **weakening** local currency produces a **gain**.
-- Current rate method keeps local-currency ratios intact; temporal does not.
+- Current rate method keeps **pure** balance-sheet and pure income-statement ratios intact, but **turnover and return ratios still change** (balance sheet at current, income statement at average). Receivables turnover is the one ratio that is the same under both methods.
+- Foreign currency **receivable** + foreign currency **strengthens** → **transaction gain**; FC **payable** + FC strengthens → loss.
+- **CTA is recycled** into net income when the foreign subsidiary is sold.
+- US GAAP "highly inflationary" = cumulative **3-year inflation > 100%** → temporal method; IFRS → restate for inflation, then current rate.
 
 ### Evaluating Quality of Financial Reports -> [[Quality_of_Financial_Reports]]
 - **Reporting quality ≠ earnings quality** — keep the two axes separate.
 - **High accruals = low earnings quality + faster mean reversion**; the cash-flow component of earnings is more persistent than the accrual component.
-- Beneish: a **higher** M-score signals a **higher** probability of manipulation.
+- Beneish: a **higher** M-score signals a **higher** probability of manipulation (cutoff −1.78 ≈ 3.8%). **Altman Z is the reverse**: a **higher** Z is **safer** (< 1.81 distress, > 3.00 safe).
+- **Positive net income with negative CFO** is the most dramatic accrual red flag; **receivables growing faster than revenue** (rising DSO) points to premature or fictitious revenue.
+- **Classification shifting** does not change net income — it moves expenses into "special/non-recurring" items or discontinued operations to inflate **core** earnings.
+- Booking a big impairment or restructuring charge in one period **overstates prior periods'** earnings (conservative now, aggressive before).
+- **R&D**: US GAAP expenses it all; IFRS capitalizes **development** costs once the six criteria are met (26 Jan 2026 errata).
+- Capitalizing operating costs (WorldCom) **raises CFO** (outflow moves to investing) and shows up as rising PP&E/total assets and falling asset turnover.
 - The **auditor's opinion is NOT a timely risk source** (it lags — covers historical statements). But a **change of auditor**, an **undersized auditor**, or **going-concern/control-weakness** language are genuine red flags. Best risk info: **notes + MD&A + event-driven disclosures**, not the audit report.
 
 
@@ -154,7 +178,8 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 
 ### Cost of Capital: Advanced Topics -> [[Cost_of_Capital]]
 - **Finance lease cost of debt = the rate implicit in the lease (RIIL)** — the IRR equating asset fair value (+ lessor's direct costs) to PV of lease payments + residual value. Use the **IBR** only when the RIIL is not determinable.
-- **2026 errata - private-company premiums**: add SP/IP/SCRP/CRP only when the risk is not already captured by beta, ERP, or country assumptions. Peer beta can make a separate IP double-count industry risk.
+- **2026 errata - private-company premiums**: add SP/IP/SCRP/CRP only when the risk is not already captured by beta, ERP, or country assumptions. Peer beta can make a separate IP double-count industry risk. Errata-corrected mini-case answers: build-up r_e **25.41%**, expanded CAPM **26.55%**, WACC **22.21%**.
+- **SCRP = specific-company risk premium** (key person, concentration, geography); **CRP = country risk premium**. One errata sentence relabels SCRP "specific-country", but the formulas still carry a separate CRP — don't merge the two.
 - **Unlever then relever** beta when the comparable's leverage differs from the subject's (Hamada).
 - **Expanded CAPM** = R_f + β·ERP + **SP + SCRP** (uses peer beta); **Build-up** = R_f + ERP + **SP + IP + SCRP** (NO beta — implicit β=1). Don't double-count beta in build-up. Illiquidity → marketability **discount on value**, not a premium in r_e.
 - **Grinold-Kroner**: a rise in expected **inflation does NOT change ERP** (i added, R_f subtracted, cancel). Earnings growth term = i + g − ΔS; %ΔP/E is the repricing term.
@@ -196,10 +221,12 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - Know the **18.l list**: multistage models are flexible, invertible (solve for r or g), explicit, and spreadsheet-friendly; but assumption-driven, sensitivity-prone, and error-prone.
 
 ### Equity Valuation: Applications and Processes -> [[Equity_Valuation_Process]]
-- Analyst edge = **perceived** mispricing, which includes estimation error in intrinsic value.
+- Analyst edge = **perceived** mispricing `V_E − P` (estimated value vs price), which includes estimation error in intrinsic value. "Which difference do active managers attempt to exploit?" → **estimated intrinsic value vs market price**.
 - **Sum-of-the-parts** can reveal a **conglomerate discount**.
 - Choose the model that fits the firm: non-payer with negative FCF but clean accounting → residual income.
 - **Fair market value** = hypothetical willing buyer/seller; **investment value** = value to a **specific** buyer **including synergies** (the strategic-buyer measure). Don't use the two interchangeably.
+- For **public-equity** valuation the relevant definition is **intrinsic value** (going concern) — not fair market value or accounting fair value.
+- Conglomerate discount explanations: **internal capital market inefficiency, endogenous factors, measurement error**.
 - Porter's five: new entrants, substitutes, **buyer** power, **supplier** power, rivalry — buyers and suppliers are two separate forces.
 
 ### Free Cash Flow Valuation (FCFF / FCFE) -> [[Free_Cash_Flow_Valuation]]
@@ -208,8 +235,12 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - **Leverage changes affect FCFE, not FCFF.** Dividends/buybacks affect **neither**.
 - WCInv excludes cash and short-term debt; an **increase** in working capital **reduces** free cash flow.
 - **Add non-operating assets** (excess cash, investment land, financial holdings at market value) to the FCFF/FCFE-derived value — the DCF only captures operating assets.
+- **Target-debt-ratio FCFE**: `FCFE = NI − (1 − DR)(FCInv − Dep) − (1 − DR)WCInv` — only the **equity-financed** share of net investment is subtracted; it assumes depreciation is the only non-cash charge.
+- **Real-terms valuation**: discount **real** FCFE growth at a **real** required return — never mix nominal and real.
 
 ### Market-Based (Relative) Valuation -> [[Market_Based_Valuation]]
+- **Terminal value via multiples**: `V_n = trailing P/E × E_n` or `forward P/E × E_(n+1)` — don't pair a forward multiple with `E_n`. A comparables-based terminal value inherits any **mispricing** in the benchmark.
+- **Look-ahead bias**: backtests must use only EPS that was **already reported** at the time.
 - **EV subtracts cash** and adds debt/preferred/minority — a common error.
 - **EV/EBITDA's two drawbacks**: EBITDA **overstates CFO when working capital grows**, and **FCFF ties to theory better** than EBITDA. Advantages ≠ the whole answer.
 - Normalizing cyclical EPS: the **method of average ROE is preferred** over the method of historical average EPS.
@@ -221,6 +252,8 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - **Justified dividend yield = (r − g)/(1 + g)** — it is the **inverse** orientation of P/E-type multiples, so *higher* yield = *cheaper*. Trailing yield uses the **dividend rate** (annualized latest dividend).
 
 ### Private Company Valuation -> [[Private_Company_Valuation]]
+- **Industry risk premium = build-up method only** in this reading ("industry risk premiums do not factor into either the CAPM or the expanded CAPM"). The Corporate Issuers cost-of-capital mini-case adds IP in both methods — follow whatever the vignette specifies. See [[Cost_of_Capital]].
+- **Illiquidity** is the primary **stock-specific** difference vs a public company; owner/manager overlap **reduces** agency problems rather than adding them.
 - **Total discount is multiplicative**: `1 − (1 − DLOC)(1 − DLOM)`, not the simple sum.
 - A **minority** interest gets **DLOC**; a **controlling** interest typically does not.
 - **Build-up / expanded CAPM** add size and company-specific premiums for private/small firms.
@@ -238,6 +271,8 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - **Clean surplus** must hold; OCI items (FX, FVOCI, pension remeasurements) violate it.
 - **Persistence factor** sits in the terminal term as `RI_T/(1 + r − ω)`, NOT `/(r − g)`. ω = 1 → perpetuity of RI; ω = 0 → terminal value zero. Don't confuse ω-decay with the ROE-fades-to-r variant (terminal = 0).
 - **Tobin's q** uses **replacement cost of total assets** and **total capital** — not equity book value.
+- Two-stage RI terminal term can be written as the **premium over book at T**: `(P_T − B_T)/(1+r)^T`.
+- **Four continuing-RI assumptions**: persists (positive level / constant real), zero, declines to zero (ROE → r), declines to a mean level.
 
 
 ## 16 Fixed Income
@@ -257,6 +292,9 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - Convertible minimum value = **max(conversion value, straight value)**.
 - **Busted convertible** = share price **well below** conversion price → trades like a **bond** (driven by rates/credit, not the share). Deep ITM → trades like the **stock**; near the conversion price → hybrid.
 - Callable: one-sided **up**-duration > down-duration; putable: **down** > up. Higher vol still → callable down / putable up / **OAS down**.
+- **Flattening/inverting curve → call option worth MORE, put option worth LESS.** Upward-sloping curve → high forward rates on the tree → fewer calls, more puts.
+- **Putable = extendible** (same coupon; putable's maturity = extendible's extended maturity, put date = original maturity).
+- No **American**-style putable bonds exist; Bermudan is common for callables (GSEs).
 
 ### Credit Analysis Models -> [[Credit_Analysis_Models]]
 - **CVA = PV of expected loss**; **fair value = VND − CVA** (VND = value assuming no default).
@@ -290,6 +328,7 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 
 ### Pricing and Valuation of Forward Commitments -> [[Forward_Commitments]]
 - `F0 = FV(S0 + CC0 − CB0)`: carry **benefits (income) reduce** F0; carry **costs increase** it.
+- **Bond futures: subtract the accrued interest at expiry.** `F0 = FV(B0 + AI0 − PVCI) − AI_T` and `Q0 = F0 / CF`. Forgetting `− AI_T` (the pre-errata Eq. 9) overstates the futures price — 107.12 instead of 106.92 in the curriculum example.
 - Forward value during life = **PV of (Ft − F0)** = `St − PV[F0]`; **zero at initiation**.
 - **FRA0 = the implied forward rate**; FRA is *advanced set, advanced settled* (payoff discounted one period); swaps/IR options are *settled in arrears*. FRA value at g = PV of `(FRAg − FRA0)`.
 - Par swap rate = `(1 − PV_n)/(Σ PV_i) × (1/AP)`; the **final PV factor appears twice** (denominator with coupons, numerator on par). With AP = 1 it is `(1 − DF_n)/ΣDF`.
@@ -308,6 +347,7 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - **Gamma of a call = gamma of a put**; gamma **highest ATM near expiry**; gamma is the risk left after delta-neutralizing; delta-plus-gamma approximation beats delta alone.
 - **Rho**: call **positive**, put **negative**. **Theta** usually negative (decay accelerates near expiry).
 - **Implied volatility** is forward-looking (vs historical = backward-looking); a non-flat **vol surface** signals BSM-assumption breakdown.
+- A **gamma-neutral** portfolio needs **options** (the underlying has zero gamma); delta-neutral alone leaves gamma (non-linearity) risk. **Volatility smile** = implied vol vs exercise price (2-D); **volatility surface** = vs exercise price **and** expiration (3-D); under BSM both would be **flat**.
 
 
 ## 18 Alternative Investments
@@ -324,7 +364,7 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - **Equity market neutral** ≈ low beta/low correlation; long/short equity keeps net (usually net-long) market exposure.
 - The **conditional** factor model uses a **crisis dummy** to expose **state-dependent** tail betas hidden in reported "alpha"; residual return = alpha + omitted factors + random error.
 - **Fund of funds** adds **diversification but a second layer of fees plus NETTING RISK** (incentive fees paid to winning sub-managers while losers drag the net return); **multi-strategy** nets internally (one fee layer, no netting risk) and reallocates faster, but concentrates operational risk.
-- **Specialist = volatility trading + life settlements** in the 2026 reading. Volatility traders trade the **term structure of volatility** (OTC option spreads, VIX futures, volatility/variance swaps); life-settlement managers want **low surrender value, low premiums, short life expectancy**.
+- **Specialist = volatility trading + reinsurance/life settlements** (official 2026 reading; catastrophe reinsurance included). Volatility traders trade the **term structure of volatility** (OTC option spreads, VIX futures, volatility/variance swaps); life-settlement managers want **low surrender value, low premiums, short life expectancy**.
 - **Dedicated short = 60%–120% short**; **short-biased = 30%–60% net short**. Convertible arb runs roughly **300% long / 200% short**.
 - 20% hedge funds added to 60/40: **σ down, Sharpe up, Sortino up, max drawdown down**.
 
@@ -336,6 +376,7 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - **NAVPS uses market values** and is superior to BVPS; it is not "exactly" intrinsic value.
 
 ### Overview of Types of Real Estate Investment (Private / Direct) -> [[Real_Estate]]
+- **Unsmoothing sign:** `R_t = R*_t / a − [(1 − a)/a] × R*_(t−1)` — **minus** the lagged appraisal return (11 Aug 2025 errata). Unsmoothed returns are **more** volatile than the appraisal series.
 - **Direct cap: value = year-1 NOI / cap rate**, and **cap rate = r − g**. Higher r ↓ value; higher g ↓ cap rate ↑ value. **Terminal value uses NOI_n(1+g)/(r−g)** (next-period NOI), not current NOI.
 - **Cap rate ≠ discount rate.** `r` = required return (risk-free + risk premium); cap rate = `r − g` and is **lower than r** whenever g > 0. Equal only if g = 0. Invert to read market growth: `g = r − cap rate`.
 - **Cap rate and value always move in opposite directions** — "cap rate compression" = falling cap rates = rising prices.
@@ -352,10 +393,13 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 
 ### Analysis of Active Portfolio Management -> [[Active_Portfolio_Management]]
 - **IR = active return / active risk** (tracking error); **Sharpe uses total risk**.
-- IR is invariant to aggressiveness (unconstrained); `SR_P² = SR_B² + IR²`.
+- IR is invariant to aggressiveness (unconstrained, **proportional** scaling of active weights); `SR_P² = SR_B² + IR²`.
+- **Cash flips the invariance:** adding cash leaves the **Sharpe ratio unchanged** but **lowers the IR**; scaling active weights leaves the **IR unchanged**.
 - Fundamental law: `IR = IC × √BR × TC`; breadth must be **independent** decisions.
 - Market timing = low breadth; broad security selection = high breadth.
 - **Market timer's IC = 2(% correct) − 1.** 50% right means **zero** skill, not 0.5.
+- Active weights **sum to zero**; value added > 0 **iff** active weights are positively correlated with subsequent active returns.
+- To change **active** risk, mix with the **benchmark**; to change **total** risk, mix with **cash** — Sharpe unchanged by cash, IR unchanged by benchmark mixing (proportional scaling).
 - **Sector rotation** is evaluated by the same fundamental law, with each sector bet counted as one (highly correlated) decision.
 
 ### Backtesting and Simulation -> [[Backtesting_and_Simulation]]
@@ -370,6 +414,7 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - A factor affects markets only via **rates, cash flows, or the risk premium**; only **surprises** move prices.
 - **Credit spreads widen in recessions, tighten in expansions**; yield curve flattens/inverts late cycle.
 - **Breakeven inflation = nominal − real yield**.
+- **Real rates rise with BOTH trend growth and growth volatility.** Taylor rule weights: **1.5 on inflation, 0.5 on the output gap**; neutral policy rate = real rate + **target** inflation.
 - Equity risk premium exists because stocks are a **poor consumption hedge** (pay off badly in bad times) — formally, the **negative covariance between the payoff and the inter-temporal rate of substitution** is the risk premium.
 - **Higher expected GDP growth → lower inter-temporal rate of substitution → less saving → HIGHER real rates.** The chain runs through diminishing marginal utility; getting the direction backwards is the classic error.
 - A **single-period risk-free bond has zero covariance → zero risk premium**; the premium appears only once the terminal value is uncertain.
@@ -388,6 +433,9 @@ Cross-topic collection of `## Exam Traps` bullets. Use it for final-pass review 
 - **Parametric VaR is poor for option-heavy portfolios** (non-normal); historical/Monte Carlo handle them.
 - Sensitivity measures give **exposure**, not loss probability; scenario analysis covers tail/multi-factor stress.
 - **Reverse stress test = start from failure and work back to the scenarios that cause it** — the opposite direction from an ordinary stress test.
+- Asset managers report risk **in % and relative to a benchmark**; banks report in **currency units, absolute**.
+- **Surplus at risk** treats pension liabilities as **short** bond positions; perfectly matched assets → zero surplus at risk.
+- VaR's limitations include **liquidity** and **correlation risk** blind spots and **regime** sensitivity; it is not a worst case.
 - z-thresholds: **5% → 1.65σ, 1% → 2.33σ, 16% → 1σ**. Higher confidence (1% vs 5%) → larger z → larger VaR.
 - **Never annualize a daily VaR** by ×250 or ×√250. Re-annualize mean (×250) and σ (×√250) *first*, then compute VaR. The √250 shortcut is valid only under a zero-expected-return assumption.
 - Parametric needs only mean + σ (+ correlations); it does **not** require a data history (historical sim does).

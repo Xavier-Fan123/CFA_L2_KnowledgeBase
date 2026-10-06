@@ -1,7 +1,7 @@
 ---
 aliases: [Currency Exchange Rates, FX Forecasting, Parity Conditions, Carry Trade, Covered Interest Rate Parity, Triangular Arbitrage]
 tags: [CFA-L2, econ, concept, fx]
-date: 2026-08-25
+date: 2026-10-05
 status: evergreen
 source: Schweser Book 1, Module 5, LOS 5.a-5.m
 ---
@@ -13,6 +13,9 @@ Quote convention: **P/B = price currency / base currency** (price of 1 unit of b
 ## Bid-Offer Spread (5.a)
 - Spread quoted in **pips**. Dealer **buys base at bid, sells base at offer**.
 - Spread widens with: lower currency-pair **liquidity** (volume), higher **volatility**, larger **trade size**, and as **maturity** lengthens (forward spreads ≥ spot spreads).
+- **Official five factors** for the interbank/dealer spread: (1) the **currency pair**, (2) the **time of day** (tightest when the key market centers are open), (3) **market volatility**, (4) the **transaction size**, and (5) the **relationship between dealer and client**. Spot settles **T + 2**; anything longer is a forward.
+- The party asking for a two-sided quote may deal at the bid or the offer (an option, not an obligation); the offer is always above the bid. No-arbitrage: a dealer's bid (offer) can't exceed (fall below) the interbank offer (bid).
+- **Forward points** are proportional to the **interest-rate differential** and approximately proportional to **time to maturity**; positive points = base currency at a forward **premium**.
 
 ## The Conversion Mnemonic (Schweser)
 **"Up-the-bid-and-multiply, down-the-ask-and-divide."** Given a P/B quote: converting the base→price currency means going **up** the quote → use the **bid** and **multiply**; converting price→base means going **down** the quote → use the **ask (offer)** and **divide**. (Rule: *buy the base at ask, sell the base at bid*.)
@@ -128,6 +131,8 @@ The curriculum names **three** channels through which a persistent current-accou
 
 **Trap:** Mundell-Fleming (short run) and portfolio balance (long run) give **opposite** signs for the same expansionary fiscal policy — short-run appreciation, long-run depreciation.
 - **Intervention & capital controls**: more effective for EM with smaller FX markets; aim to manage volatility/level. **Currency crisis warning signs**: deteriorating terms of trade, large foreign liabilities / declining FX reserves, rapid prior money growth, fixed/overvalued real exchange rate, banking-sector fragility, contagion.
+
+- Official summary point: countries that run **tight monetary policy, introduce structural reforms, and cut budget deficits** tend to see their currencies **strengthen** — capital responds to high nominal rates, lower expected inflation, a lower risk premium, and an upward revision of long-run fair value. **Overly easy monetary policy** leads to depreciation over time.
 
 ### Policy Impact Grid (5.k, 5.l)
 

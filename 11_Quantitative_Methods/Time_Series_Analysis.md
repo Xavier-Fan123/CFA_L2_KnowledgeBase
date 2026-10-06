@@ -1,9 +1,9 @@
 ---
 aliases: [Time Series Analysis, Covariance Stationary, Unit Root, Dickey-Fuller Test, Random Walk, First Differencing, AR Model, Mean Reversion, Trend Model, Log-Linear Trend, Seasonality, Seasonal Lag, Chain Rule of Forecasting, RMSE, Cointegration, Engle-Granger, ARCH]
 tags: [CFA-L2, quant, concept, time-series]
-date: 2026-08-25
+date: 2026-10-05
 status: evergreen
-source: Schweser Book 1, Reading 2 (Modules 2.1–2.5), LOS 2.a–2.o
+source: Official Curriculum 2026 L2 V1 LM5 (October 2026 errata applied); Schweser Book 1, Reading 2 (Modules 2.1–2.5), LOS 2.a–2.o
 ---
 
 # Time Series Analysis
@@ -69,6 +69,11 @@ An **autoregressive model of order p, AR(p)**, regresses the variable on its own
 - **In-sample vs. out-of-sample**: in-sample forecasts fall inside the estimation data; out-of-sample fall outside it. Out-of-sample accuracy is the real test of forecasting power.
 - **RMSE (root mean squared error)** = √(average squared out-of-sample error). To choose between two models that both fit (e.g. AR(1) vs. AR(2)), pick the one with the **lower out-of-sample RMSE** → smaller forecast error, better predictive power.
 
+## Instability of Coefficients (LOS 2.h)
+- Time-series coefficients — and even the **choice of model** (AR(1) vs AR(2)) — can change substantially between **earlier and later** or **shorter and longer** sample periods. Theory gives no clear-cut rule for sample length.
+- Guidance: models are valid only for **covariance-stationary** data, so **don't pool different regimes** (fixed vs floating exchange-rate periods; distinct central-bank policy regimes). Plot the data before estimating, and if policy changed on a known date, test whether the relationship differs before and after it.
+- *Official US CPI example*: 1995-2018 data → AR(2), next-month forecast **2.91%**; 2008-2018 data → AR(1) `inflation_t = 0.8431 + 0.5036 × inflation_(t−1)`, residual autocorrelations insignificant, forecast with 4% last month = **2.86%**. Inflation was far more volatile mid-sample, so the full period is probably **not** stationary → estimate separate models per regime.
+
 ## Random Walk & Unit Root (LOS 2.i)
 
 - **Random walk**: `xₜ = xₜ₋₁ + εₜ` (b₁ = 1). With or without drift, a random walk is **NOT covariance stationary** — its mean-reverting level is `b₀/(1−1) = b₀/0`, undefined (infinite).
@@ -97,6 +102,12 @@ An **autoregressive model of order p, AR(p)**, regresses the variable on its own
 If a series is a random walk (has a unit root), transform to covariance stationary by **first differencing**: define `yₜ = xₜ − xₜ₋₁` (model the **change**, not the level). Then fit an AR(1) on the differenced series `yₜ = b₀ + b₁yₜ₋₁ + εₜ`. The differenced series has a finite mean-reverting level and is therefore covariance stationary.
 
 **Worked example (capacity utilization):** AR(1) on the level suggests a unit root → not stationary → take first differences (period-over-period change) → re-estimate AR(1) on the differenced series; the lag coefficient is now significant → usable.
+
+## Moving-Average Models and ARMA (official Sections 12-13)
+- **Smoothing with an n-period moving average** `= (x_t + x_(t−1) + … + x_(t−n+1)) / n` — removes noise or seasonality (e.g., a 12-month MA of retail sales), but **lags large moves** and weights all periods equally, so it is a poor forecaster. *Example*: AstraZeneca quarterly sales 8,490, 8,601, 8,405, 8,872 → 4-quarter MA = **8,592**.
+- **MA(1) forecasting model**: `x_t = ε_t + θ·ε_(t−1)` (unobserved, uncorrelated errors). **MA(q)**: `x_t = ε_t + θ_1·ε_(t−1) + … + θ_q·ε_(t−q)` — a memory of **q periods**.
+- **Identification by autocorrelations**: an **MA(q)** series has its **first q autocorrelations significant and all later ones zero** (an abrupt cut-off); an **AR** series' autocorrelations **start large and decline gradually**. (Index returns in the curriculum example — S&P BSE 100 — fit an MA model better than an AR model.)
+- **ARMA(p, q)**: `x_t = b_0 + b_1x_(t−1) + … + b_px_(t−p) + ε_t + θ_1ε_(t−1) + … + θ_qε_(t−q)`. **Limitations**: parameters can be **very unstable** (small changes in the sample or starting values change the estimates); choosing p and q is **more art than science**; it may still **forecast poorly**. An AR model is usually just as accurate with far less complexity; even advocates want **at least 80 observations**.
 
 ## ARCH (2.m) — Autoregressive Conditional Heteroskedasticity
 
@@ -173,6 +184,9 @@ This section is a professional trading application, not CFA curriculum text.
 ```
 
 ## Exam Traps
+- **Coefficient instability**: a different sample period can change both the coefficients and the model order; never pool **different regimes** (non-stationary across the full sample).
+- **MA(q) autocorrelations cut off after lag q; AR autocorrelations decay gradually.** A simple n-period moving average lags turning points and is not a good forecaster.
+- **ARMA**: unstable parameters, subjective (p, q) choice, needs 80+ observations — usually no better than a plain AR model.
 - **Durbin-Watson is invalid for AR models** (lagged dependent variable as regressor). Detect serial correlation of AR residuals with the **t-test on residual autocorrelations**, SE = **`1/√T`**, `t = ρ̂·√T`. Any significant residual autocorrelation ⇒ add lags / re-specify.
 - **Two-period AR(1) forecast feeds the one-period FORECAST, not the actual value**: `x̂ₜ₊₂ = b₀ + b₁x̂ₜ₊₁` (a classic trap is to reuse `xₜ`). Multiperiod forecasts are more uncertain.
 - DF test cannot test `b₁ = 1` directly; it tests the transformed `g = b₁ − 1 = 0` with a **modified** t.

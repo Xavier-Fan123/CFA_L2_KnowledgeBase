@@ -10,7 +10,6 @@ status: evergreen
 - 2026-09-07 [Ethics] III(D) compliance without GIPS: audience, weighted composite, terminated accounts, disclosure, and records → [[Code_and_Standards]], [[Application_of_the_Code_and_Standards]]
 - 2026-08-02 [Alt] Cap rate = NOI/value = income yield (reciprocal = NOI multiple); = r - g so ALWAYS below the discount rate when g>0; derive from comps or fundamentals -> [[Real_Estate]]
 - 2026-08-02 [Corp] Interlocking directorates: NOT prohibited; what fails is the independence test (remuneration/ownership/employment) or comply-or-explain disclosure -> [[ESG_and_Corporate_Governance]]
-- 2026-08-02 [Corp] TNOCF/NWC recovery (untaxed, hurts short projects most), capex tax shield, annuity=geometric series -> Gordon Growth, inflation direction on shield vs interest -> [[Capital_Budgeting_Foundations]]
 - 2026-07-26 [Quant] Built Statistical Tests Master Table: all 12 L2 tests + rule "every F/chi-sq is one-tailed right, every t is two-tailed except Dickey-Fuller" -> [[Statistical_Tests_Master_Table]]
 - 2026-07-26 [Quant] Critical values: CI always two-tailed 1.645/1.96/2.58; one-tailed 1.28/1.645/2.33; one-tailed at a = two-tailed at 2a -> [[Multiple_Regression]]
 - 2026-07-26 [Quant] DW ~ 2(1-r): near 0 = positive SC (residuals persist, tiny gaps), near 4 = negative SC (alternating, huge gaps); "positive = pals" -> [[Regression_Assumption_Violations]]
@@ -68,7 +67,6 @@ Chronological index of every saved Q&A across all topics (newest first). Each li
 - 2026-06-04 [PM] Macro factor model expected vs realized return; compute parametric VaR (worked) → [[Multifactor_Models]], [[Measuring_Managing_Market_Risk]]
 - 2026-06-04 [Ethics] 2024 Code & Standards revisions (I(E) Competence, V(B), VI(A)); worked I(E)/V(A)/III(C) case → [[Code_and_Standards]]
 - 2026-06-04 [Ethics] L2 Application reading + 4-step framework; "first five vs last two" cases → [[Application_of_the_Code_and_Standards]]
-- 2026-06-04 [Ethics] Compute an asset-weighted composite return + III(D) trap → [[GIPS]]
 
 **2026-06-04 — Full reading-level build-out: created the 6 missing readings (R1 dedicated, R3 ML, R4 Big Data, R12 FSA integration, R32 public real estate) + completed Time-Series (trend/seasonality/cointegration). All 42 Schweser readings now have evergreen notes.**
 
@@ -79,7 +77,6 @@ Chronological index of every saved Q&A across all topics (newest first). Each li
 - 2026-06-04 [FSA] FSA integration: DuPont associate adjustment, accruals ratio, implied P/E → [[Integration_of_FSA_Techniques]]
 - 2026-06-04 [Alt] Public real estate: FFO/AFFO, NAVPS from cash NOI, 4 valuation approaches → [[Publicly_Traded_Real_Estate]]
 - 2026-06-04 [Quant] What is ARCH? (test, GLS fix, variance forecast) → [[Time_Series_Analysis]]
-- 2026-06-03 [Ethics] GIPS: composites include-all & firm-wide all-or-nothing/verification → [[GIPS]]
 - 2026-06-03 [Ethics] Stricter-law rule, mosaic theory, priority of transactions → [[Code_and_Standards]]
 - 2026-06-03 [PM] Discount-rate framework; breakeven inflation & cyclical credit spreads → [[Economics_and_Investment_Markets]]
 - 2026-06-03 [PM] Three backtest biases; historical vs Monte Carlo simulation → [[Backtesting_and_Simulation]]

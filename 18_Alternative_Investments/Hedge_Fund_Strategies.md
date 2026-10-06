@@ -1,9 +1,9 @@
 ---
 aliases: [Hedge Fund Strategies, Long-Short Equity, Merger Arbitrage, Global Macro, Relative Value, Fund of Funds]
 tags: [CFA-L2, alt, concept, hedge-funds]
-date: 2026-08-25
+date: 2026-10-05
 status: evergreen
-source: Schweser Book 4, Module 33, LOS 33.a-33.i
+source: Official Curriculum 2026 L2 V8 LM4; Schweser Book 4, Module 33, LOS 33.a-33.i
 ---
 
 # Hedge Fund Strategies
@@ -17,7 +17,7 @@ Grouped by approach; each differs in directionality, leverage, liquidity, and ta
 | **Event-driven** | **Merger (risk) arbitrage**, distressed, special situations, activist | Idiosyncratic, deal/event risk; merger arb = short, fat left tail |
 | **Relative value** | **Convertible arbitrage**, fixed-income arb, volatility arb | Exploits pricing differentials; levered, sensitive to liquidity/credit stress |
 | **Opportunistic** | **Global macro**, managed futures (CTAs) | Top-down, trend-following; positive in crises (crisis alpha), trades many markets |
-| **Specialist** | **Volatility trading**, **life settlements** | Niche risk premia, low correlation; requires specialized knowledge |
+| **Specialist** | **Volatility trading**, **reinsurance/life settlements** (incl. catastrophe reinsurance) | Niche risk premia, low correlation; requires specialized knowledge |
 | **Multi-manager** | **Fund of funds**, multi-strategy | Diversification; FoF adds a second fee layer; multi-strat reallocates capital internally |
 
 ## Investment Characteristics & Role (33.b-33.g)
@@ -26,10 +26,16 @@ Grouped by approach; each differs in directionality, leverage, liquidity, and ta
 - **Convertible arbitrage**: long convertible + short the stock (delta-hedge), long gamma/vega; exposed to **liquidity and credit** shocks; suffers when volatility collapses or credit gaps.
 - **Fixed-income arbitrage**: exploit mispricings between related rate instruments; highly **levered**, vulnerable to liquidity/funding stress (carry-trade-like blow-up risk).
 - **Global macro / managed futures (CTAs)**: directional/trend-following, can provide **downside protection / crisis alpha**; return profile often **positively skewed** (long volatility/trend).
-- **Distressed**: long undervalued distressed debt; illiquid, long horizon, equity-like risk.
-- **Specialist (33.f)** — the 2026 curriculum names **two** specialist strategies, both aiming at returns uncorrelated with traditional assets:
+- **Merger-arbitrage details (official)**: relatively **liquid**; **cross-border** deals need two sets of government approvals; deals involving **vertical integration** face more **antitrust** scrutiny → higher risk and **wider** merger spreads; moderate-to-high leverage; high Sharpe ratios but **left-tail** risk.
+- **Distressed**: long undervalued distressed debt; illiquid, long horizon, equity-like risk. Securities of firms in, near, or after **bankruptcy**: in **liquidation** assets are sold and claims are paid by priority (senior secured → junior secured → unsecured → convertible → preferred → common); in **reorganization** claims are renegotiated (maturity extensions, or debt-for-equity swaps with existing shares cancelled). Usually **long-biased**, highly illiquid, moderate-to-low leverage; returns at the high end of event-driven but **lumpy and cyclical**.
+- **Fixed-income arbitrage**: returns depend on correlations, the yield-spread pick-up, and the variety of debt across markets; US Treasury curve and carry trades are the most liquid but offer the fewest mispricings (liquidity falls for other sovereigns, mortgages, corporates); **high leverage**, but available leverage shrinks as trades get more complex.
+- **Global macro vs managed futures**: macro is usually **discretionary**, managed futures (mainly futures and options on futures) usually **systematic**; both highly liquid and highly levered; managed futures show **positive right-tail skew** in stress, macro gives similar but more heterogeneous diversification.
+- **Specialist (33.f)** — the official 2026 reading names **two** specialist strategies, **volatility trading** and **reinsurance/life settlements**, both aiming at returns uncorrelated with traditional assets:
   - **Volatility traders**: profit from changes in the **term structure of volatility**. Expressions include OTC options (**bull spreads, bear spreads, straddles, calendar spreads**) and, alternatively, **VIX futures, volatility swaps, and variance swaps**. (A variance swap pays on realized **variance**, so it is convex in volatility; a volatility swap pays linearly on realized volatility.)
-  - **Life settlements**: buy pools of **life insurance policies** from the insured and become the beneficiary. The manager screens for policies with **low surrender value**, **low ongoing premium payments**, and a **high probability that the insured dies soon**. Risk = longevity (the insured lives longer than modeled) plus the ongoing premium drag.
+  - **Reinsurance/life settlements** (one official category):
+    - **Life settlements**: buy pools of **life insurance policies** (via third-party brokers) and become the beneficiary, paying the remaining premiums. Screen for **low surrender value**, **low ongoing premium payments**, and a **high probability that the insured dies sooner than standard actuarial tables predict**. Success = PV of the death benefit > PV of the lump sum plus premiums; key inputs are the policy cash flows and **time to mortality** — unrelated to financial markets. Needs biometric/actuarial expertise. Risk = longevity plus the premium drag.
+    - **Catastrophe reinsurance**: insurers reinsure layers of cat risk (floods, hurricanes, earthquakes) with reinsurers, who use hedge funds as capital. Attractive if the fund gets (1) enough **geographic and product diversity**, (2) a sufficient **loss-reserve buffer** from the insurer, and (3) enough **premium income**; after a catastrophe, premiums rise. **Catastrophe bonds** and cat-risk futures allow long or hedging positions; issuance is **seasonal** (many before the North American hurricane season).
+    - For insurers, reinsurance provides risk transfer, capital and solvency management; for hedge funds, an **uncorrelated** return source. Both the official text and Schweser name the category **"reinsurance/life settlements"** — know both halves.
 - **Dedicated short-selling vs short-biased** (33.b): dedicated short funds run **60%–120% short at all times**; short-biased funds run **30%–60% net short**, moderating the short beta with some long and cash exposure. Both use minimal leverage and focus on stock picking, with **negative** correlation to traditional assets.
 - **Convertible arbitrage sizing** (33.d): managers typically run about **300% long convertibles and 200% short equity**; the strategy works best with **high convertible issuance, adequate liquidity, and moderate volatility**.
 - **Equity market neutral**: mostly **quantitative**, usually **high leverage** (needed because per-trade mispricings are small), and can perform well in weak markets because beta risk is minimal.
@@ -65,7 +71,7 @@ This section is a professional hedge-fund application, not CFA curriculum text.
 - **Equity market neutral** ≈ low beta/low correlation; long/short equity keeps net (usually net-long) market exposure.
 - The **conditional** factor model uses a **crisis dummy** to expose **state-dependent** tail betas hidden in reported "alpha"; residual return = alpha + omitted factors + random error.
 - **Fund of funds** adds **diversification but a second layer of fees plus NETTING RISK** (incentive fees paid to winning sub-managers while losers drag the net return); **multi-strategy** nets internally (one fee layer, no netting risk) and reallocates faster, but concentrates operational risk.
-- **Specialist = volatility trading + life settlements** in the 2026 reading. Volatility traders trade the **term structure of volatility** (OTC option spreads, VIX futures, volatility/variance swaps); life-settlement managers want **low surrender value, low premiums, short life expectancy**.
+- **Specialist = volatility trading + reinsurance/life settlements** (official 2026 reading; catastrophe reinsurance included). Volatility traders trade the **term structure of volatility** (OTC option spreads, VIX futures, volatility/variance swaps); life-settlement managers want **low surrender value, low premiums, short life expectancy**.
 - **Dedicated short = 60%–120% short**; **short-biased = 30%–60% net short**. Convertible arb runs roughly **300% long / 200% short**.
 - 20% hedge funds added to 60/40: **σ down, Sharpe up, Sortino up, max drawdown down**.
 

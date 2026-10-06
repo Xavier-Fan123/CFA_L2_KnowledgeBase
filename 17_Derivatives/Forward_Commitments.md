@@ -37,9 +37,15 @@ This section is a professional trading application, not CFA curriculum text.
 
 ## Fixed-Income Forwards & Futures (28.d)
 - Spot bond price (full) = quoted (clean) price + accrued interest: `S0 = B0 + AI0`. The carry benefit is the **PV of coupons** paid over the contract horizon: `CB0 = PVCI`; there are no carry costs (CC = 0).
-- Forward/futures price: `F0 = FV(S0 − PVCI) = FV(B0 + AI0 − PVCI)`.
-- For exchange-traded **bond futures**, the quoted futures price Q0 relates to F0 via the **conversion factor**: `F0 = Q0 × CF`, so the quoted price `Q0 = F0 / CF`. The seller delivers the **cheapest-to-deliver** bond (least costly after the CF adjustment).
-- Long-forward profit at T: `VT = BT − F0 = (ST − AIT) − F0` (quoted-price basis).
+- Bond futures settle against the **quoted (clean)** price, so at delivery the buyer pays the futures price **plus the accrued interest AI_T**. No-arbitrage condition: `F0 + AI_T = FV(B0 + AI0 − PVCI)`.
+- **Adjusted futures price (Eq. 9, as corrected by the 6 May 2026 errata):** `F0 = FV(B0 + AI0 − PVCI) − AI_T`, equivalently `F0 = FV(S0) − AI_T − FVCI`. The pre-errata printing omitted the `− AI_T` term.
+- **Quoted futures price (Eq. 10):** the **conversion factor** links the two prices, `F0 = Q0 × CF`, so `Q0 = (1/CF) × [FV(B0 + AI0) − AI_T − FVCI]`. The seller delivers the **cheapest-to-deliver** bond (least costly after the CF adjustment).
+- Long-futures profit at T: `vT = BT − F0 = (ST − AI_T) − F0` (quoted-price basis).
+- **Worked example (official V7, errata-corrected):** B0 = 107, AI0 = 0.07, PVCI = 0, AI_T = 0.20, r = 0.2%, T = 0.25, CF = 0.80, observed Q0 = 135, so the market's adjusted price is `F0 = 135 × 0.80 = 108.00`.
+  - Equilibrium: `F0 = (107 + 0.07)(1.002)^0.25 − 0.20 = 107.12 − 0.20 = 106.92`; equilibrium `Q0 = 106.92 / 0.80 = 133.65`.
+  - Futures overpriced by `108 − 106.92 = 1.08` at T (PV `1.08/(1.002)^0.25 = 1.0795`) → **carry arbitrage**: sell the futures, borrow, buy and carry the bond, deliver it at T.
+  - If the futures were underpriced → **reverse carry**: short the bond, lend the proceeds, buy the futures.
+- **Euro-bund example (official V7):** B0 = 108, AI0 = 0.083, AI_T = 0.25, FVCI = 0, r = 0.1%, T = 1/12, CF = 0.729535 → `F0 = 108.083 × 1.001^(1/12) − 0.25 = 107.84`, `Q0 = 107.84 / 0.729535 = 147.82`.
 
 ## Interest-Rate Forwards — FRAs (28.c)
 - An **FRA** (forward rate agreement) locks a single-period interest rate for an m-day deposit beginning h days forward. Notation **"X × Y"**: X = months to FRA expiration, Y − X = tenor of the underlying rate. A **1 × 4 FRA** expires in 1 month on a 3-month (90-day) MRR; a **3 × 9** expires in 3 months on a 6-month rate. Months are converted to days at 30 days/month.
@@ -67,6 +73,7 @@ This section is a professional trading application, not CFA curriculum text.
 
 ## Exam Traps
 - `F0 = FV(S0 + CC0 − CB0)`: carry **benefits (income) reduce** F0; carry **costs increase** it.
+- **Bond futures: subtract the accrued interest at expiry.** `F0 = FV(B0 + AI0 − PVCI) − AI_T` and `Q0 = F0 / CF`. Forgetting `− AI_T` (the pre-errata Eq. 9) overstates the futures price — 107.12 instead of 106.92 in the curriculum example.
 - Forward value during life = **PV of (Ft − F0)** = `St − PV[F0]`; **zero at initiation**.
 - **FRA0 = the implied forward rate**; FRA is *advanced set, advanced settled* (payoff discounted one period); swaps/IR options are *settled in arrears*. FRA value at g = PV of `(FRAg − FRA0)`.
 - Par swap rate = `(1 − PV_n)/(Σ PV_i) × (1/AP)`; the **final PV factor appears twice** (denominator with coupons, numerator on par). With AP = 1 it is `(1 − DF_n)/ΣDF`.

@@ -1,7 +1,7 @@
 ---
 aliases: [Big Data Projects, Data Wrangling, Data Cleansing, Normalization, Standardization, Text Processing, Bag-of-Words, BOW, Document Term Matrix, N-grams, Tokenization, Stemming, Lemmatization, Confusion Matrix, Precision, Recall, F1 Score, ROC, AUC, Fitting Curve, Grid Search, Ceiling Analysis, Class Imbalance]
 tags: [CFA-L2, quant, concept, big-data, machine-learning]
-date: 2026-06-04
+date: 2026-10-05
 status: evergreen
 source: Schweser Book 1, Reading 4 (Modules 4.1–4.3), LOS 4.a–4.g
 ---
@@ -60,6 +60,12 @@ Steps are **iterative**. For **text/unstructured** data the first four become: t
 - **Feature selection**: keep only features that add out-of-sample power → more **parsimonious** model, less noise.
 - **Feature engineering (FE)**: create/transform features (log, decompose, combine); **one-hot encoding (OHE)** converts a categorical feature into binary dummies.
 - For unstructured text: **word cloud** (bigger font = higher frequency); summary stats = **term frequency** and **co-occurrence**.
+- **Term-frequency measures that fill the DTM (official Eqs. 10-13)**:
+  - `TF (collection level) = TotalWordCount / total words in the collection` (very high-TF words, e.g., "the", become **custom stop words**).
+  - `TF (sentence level) = WordCountInSentence / TotalWordsInSentence`.
+  - `DF = SentenceCountWithWord / total number of sentences`; `IDF = log(1/DF)` — a measure of how **unique** a term is across the collection.
+  - `TF-IDF = TF × IDF`: **high** = the word is frequent in a few documents (informative); **low** = it appears in many documents.
+- **Textual ML steps** replace the first four structured steps: **text problem formulation → text curation → text preparation and wrangling → text exploration**, then model training as usual.
 
 ### Commodity Hedge Fund Extension (Beyond Curriculum)
 This section is a professional hedge-fund application, not CFA curriculum text.

@@ -1,15 +1,38 @@
 ---
 aliases: [Private Company Valuation, DLOM, DLOC, Capitalized Cash Flow, Build-Up Approach, Normalized Earnings]
 tags: [CFA-L2, equity, concept, valuation]
-date: 2026-08-25
+date: 2026-10-05
 status: evergreen
-source: Schweser Book 3, Module 22, LOS 22.a-22.i
+source: Official Curriculum 2026 L2 V5 LM6 (October 2026 errata applied); Schweser Book 3, Module 22, LOS 22.a-22.i
 ---
 
 # Private Company Valuation
 
 ## Private vs Public Features (22.a, 22.b)
 Private firms differ: less liquidity, fewer disclosures, owner-manager overlap, concentration of control, tax-minimization motives, shorter histories. Uses of valuation: transactions (sale/M&A), compliance (tax, financial reporting), litigation.
+
+**Official framework (Exhibit 1) — two groups of differences:**
+
+| Company-specific (can be + or −) | Stock-specific (generally −) |
+|---|---|
+| **Life-cycle stage** (early or late; public firms are mostly mature) | **Illiquidity** — the primary stock-specific factor (few buyers) |
+| **Smaller size** → higher required return (less diversified lines and customers, weaker distribution, less access to capital) | **Concentrated control** — controllers can extract value via above-market pay or related-party deals |
+| **Owner/manager overlap** → **reduces the principal-agent problem**, allows a longer-term view | **Sale restrictions** in shareholder agreements → lower marketability |
+| **Limited disclosure** (vs standardized public disclosure) | |
+
+- **Family ownership** dominates private companies worldwide (e.g., Germany's **Mittelstand**: over 90% of companies, about 58% of the workforce). In emerging markets family firms lean on pooled family resources, reinvested earnings, and trust-based relationships. Generational handovers (hiring non-family managers, raising outside capital, selling a stake) are a common trigger for a valuation. Family ownership or other concentrated control (PE owners, dual share classes) can give **public** companies private-company characteristics.
+- *Knowledge-check logic*: if owners and managers are already separate, **principal-agent issues are not** a distinguishing factor; differences in **per-share** value across partners' stakes come from **concentrated control** (who can form a control block); two otherwise identical family-run firms differ mainly through the **illiquidity** of the private one's shares.
+
+**Uses of private-company valuation (official Exhibit 2, 22.b)** — three practice areas:
+- **Transactions**: **venture capital** (early stage; milestone-based rounds, informal valuations), **private equity** (growth equity = minority stakes in scalable firms; **buyouts** = majority control, operational and balance-sheet optimization), **debt financing** (capacity to repay or take on debt), **IPOs** (founder/VC firm going public, a spin-off of a division, or a re-IPO after a private restructuring), **acquisitions/divestitures**, **bankruptcy** (going concern vs liquidation; restructuring), **share-based compensation** (option grants need valuations).
+- **Compliance**: financial reporting (e.g., goodwill impairment) and **tax** reporting.
+- **Litigation**: damages, lost profits, shareholder disputes, divorce.
+- The **standard of value** depends on context — e.g., **fair market value** for tax or financial reporting vs **investment value** to a synergistic acquirer.
+
+**Three areas of focus (official Exhibit 3)** when adapting a public-company FCFF DCF:
+1. **Cash-flow/earnings normalization** → changes the **numerator** (e.g., an executive's personal use of company assets).
+2. **Discount-rate / required-return adjustments** → changes the **denominator** (no observable prices; CAPM assumptions often fail).
+3. **Valuation discounts or premiums** → control premium vs lack-of-control and marketability discounts, applied last.
 
 ## Normalizing Earnings and Forecasting Private-Company FCF (22.c)
 Adjust reported earnings to reflect true economics: **non-recurring/unusual items**, **discretionary expenses**, **non-market levels of owner compensation**, **personal expenses charged to the firm**, **real-estate expense based on historical cost**, and **non-market lease rates**. Related-party transactions go to arm's length. Two earnings concepts: a **strategic (synergistic) buyer** normalizes **including acquisition synergies**; a **financial buyer** does not.
@@ -75,6 +98,8 @@ The adjustment depends on **what the benchmark value represents versus what you 
 - **Total discount** = `1 − (1 − DLOC)(1 − DLOM)` (applied multiplicatively, not additively).
 
 ## Exam Traps
+- **Industry risk premium = build-up method only** in this reading ("industry risk premiums do not factor into either the CAPM or the expanded CAPM"). The Corporate Issuers cost-of-capital mini-case adds IP in both methods — follow whatever the vignette specifies. See [[Cost_of_Capital]].
+- **Illiquidity** is the primary **stock-specific** difference vs a public company; owner/manager overlap **reduces** agency problems rather than adding them.
 - **Total discount is multiplicative**: `1 − (1 − DLOC)(1 − DLOM)`, not the simple sum.
 - A **minority** interest gets **DLOC**; a **controlling** interest typically does not.
 - **Build-up / expanded CAPM** add size and company-specific premiums for private/small firms.

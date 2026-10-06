@@ -1,16 +1,16 @@
 ---
 aliases: [2026 Exam Scope, 2026 Curriculum Map]
 tags: [CFA-L2, atlas, scope, 2026]
-date: 2026-09-04
+date: 2026-10-05
 status: evergreen
-source: CFA Institute 2026 Level II Topic Outlines and September 2026 Curriculum Errata Notice
+source: CFA Institute 2026 Level II Topic Outlines and Curriculum Errata Notice (October 2026 issue)
 ---
 
 # 2026 CFA Level II Exam Scope
 
 ## Scope Basis
 
-This is the human-auditable, one-row-per-module baseline for the November 2026 CFA Level II exam. It uses the [CFA Level II exam page](https://www.cfainstitute.org/programs/cfa-program/candidate-resources/level-ii-exam), the [2026 combined topic outline](https://www.cfainstitute.org/sites/default/files/docs/programs/cfa-program/2026-l2-topics-combined.pdf), and the [September 2026 curriculum errata notice](https://www.cfainstitute.org/sites/default/files/docs/programs/cfa-program/candidate-resources/2026-cfa-level-ii-errata.pdf).
+This is the human-auditable, one-row-per-module baseline for the November 2026 CFA Level II exam. It uses the [CFA Level II exam page](https://www.cfainstitute.org/programs/cfa-program/candidate-resources/level-ii-exam), the [2026 combined topic outline](https://www.cfainstitute.org/sites/default/files/docs/programs/cfa-program/2026-l2-topics-combined.pdf), and the [2026 curriculum errata notice](https://www.cfainstitute.org/sites/default/files/docs/programs/cfa-program/candidate-resources/2026-cfa-level-ii-errata.pdf) (re-checked against the **October 2026** issue on 2026-10-05; the local `cfa-program2026L2V*.PDF` volumes are the pre-errata printing).
 
 The official [2027 curriculum change announcement](https://www.cfainstitute.org/about/press-room/2026/cfa-institute-announces-updates-to-cfa-program-curriculum) states that the changes begin with the February 2027 exam window. The November 2026 exam therefore uses the 2026 outline and errata.
 
@@ -79,12 +79,12 @@ The official [2027 curriculum change announcement](https://www.cfainstitute.org/
 | Ethical and Professional Standards | 2 | Guidance for Standards I-VII | [[Code_and_Standards]] | Core; shared note |
 | Ethical and Professional Standards | 3 | Application of the Code and Standards: Level II | [[Application_of_the_Code_and_Standards]] | Core |
 
-The Quantitative Methods appendices are references and are not a 46th core module. This mapping found no missing current 2026 learning module in the knowledge base. It is a module-level navigation baseline, not a claim that every curriculum example or vignette detail is duplicated in the notes; the official curriculum and current errata remain controlling.
+The Quantitative Methods appendices are references and are not a 46th core module. This mapping found no missing current 2026 learning module in the knowledge base. The 2026-10-05 re-audit also confirmed the official LOS lists match the Schweser lists one-for-one (**370 LOS**, identical counts per reading). It is a module-level navigation baseline, not a claim that every curriculum example or vignette detail is duplicated in the notes; the official curriculum and current errata remain controlling.
 
 ## Not Directly Examinable in 2026
 
-- Capital Budgeting is Level I.
-- Deep GIPS mechanics are reference-only.
+- Capital budgeting is Level I — its foundation note was **deleted** on 2026-10-05.
+- GIPS mechanics are Level I/III — the GIPS note was **deleted** on 2026-10-05; Standard III(D) (including "GIPS is the best way to comply" and false-claim cases) stays in [[Code_and_Standards]].
 - Fed/Yardeni, pseudo-R-squared, and legacy M&A defense vocabulary were removed from core review.
 
 ## Still Examinable Despite Nearby Deletions
@@ -93,6 +93,23 @@ The Quantitative Methods appendices are references and are not a 46th core modul
 - VI(A) Avoid or Disclose Conflicts.
 - Change-of-control contingent-put protection.
 
-## September 2026 Errata Check
+## October 2026 Errata Check (re-audited 2026-10-05)
 
-The 24 August R-squared correction is already reflected. The two 13 August Machine Learning entries are accessibility-only. Stale pseudo-R-squared prose was removed. Previously corrected pooling-of-interests residue, private-company-premium wording, SOFR transition wording, and VI(A) naming remain aligned.
+The local official volumes are the **pre-errata** printing, so every concept-level errata item was checked against the notes. Items corrected, added, or made explicit in this pass:
+
+| Errata date | Topic | Correction now in the KB | Note |
+|---|---|---|---|
+| 17 Feb 2026 | FSA LM1 | US GAAP goodwill impairment = optional qualitative screen + single quantitative test capped at allocated goodwill (two-step test removed); JVs use the equity method | [[Intercorporate_Investments]] |
+| 28 Apr 2026 | FSA LM1 | Proportionate consolidation **not permitted** for JVs (practice-solution fix) | [[Intercorporate_Investments]], [[Corporate_Restructurings]] |
+| 26 Jan 2026 | FSA LM5 | R&D: US GAAP expensed; IFRS development costs capitalized if six criteria are met | [[Quality_of_Financial_Reports]] |
+| 2 Jun 2026 | FSA LM4 | "Operating leases are off-balance-sheet" sentence deleted | [[Analysis_of_Financial_Institutions]], [[Quality_of_Financial_Reports]] |
+| 28 Apr / 16 Jul 2026 | Corp LM3 | Private-company premia wording; mini-case answers 25.41% / 26.55% / WACC 22.21% | [[Cost_of_Capital]] |
+| 5 May / 1 Sep 2026 | Equity LM1 | Managers exploit **estimated** intrinsic value − price | [[Equity_Valuation_Process]] |
+| 6 May 2026 | Deriv LM1 | Bond futures: `F0 = FV(B0 + AI0 − PVCI) − AI_T` | [[Forward_Commitments]] |
+| 11 Aug 2025 | Alt LM2 | Unsmoothing equation sign (minus) | [[Real_Estate]] |
+| 5 Aug 2025 | Alt LM1 | Shale oil **decreased** oil's convenience yield | [[Commodities]] |
+| 21 Apr 2026 | PM LM2 | IR invariance needs **proportional** scaling; adding cash lowers IR | [[Active_Portfolio_Management]] |
+| 9 Jul / 26 Jun / 2 Jul 2026 | Quant LM4 | Marginal effect **at the means**; studentized deleted residual denominator; slope-dummy group gap | [[Logistic_Regression]], [[Multiple_Regression]] |
+| 17 Jun / 2 Jun 2026 | Ethics LM3 | Syyark conflict = VI(A); priority of transactions = VI(B) | [[Application_of_the_Code_and_Standards]] |
+
+Previously synced and re-confirmed: R² = SSR/SST = 1 − SSE/SST (24 Aug 2026); pseudo-R² paragraph removed (14 Apr 2026); pooling-of-interests paragraph removed and VIE primary-beneficiary definition (17 Feb / 22 Apr 2026); MSEX PVGO 22.35/20.85; SOFR has replaced Libor; VI(A) "Avoid or Disclose Conflicts"; tokenization = splitting text into tokens. The 13 Aug 2026 Machine Learning entries are accessibility-only.

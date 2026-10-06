@@ -1,7 +1,7 @@
 ---
 aliases: [Application of the Code and Standards, Ethics Cases, Level II Ethics Cases, Ethical Decision-Making Framework]
 tags: [CFA-L2, ethics, concept, application]
-date: 2026-06-04
+date: 2026-10-05
 status: evergreen
 source: Official 2026 L2 V10, Learning Module 3 (Application of the Code and Standards: Level II); Schweser Book 5, Reading 42, LOS 42.a-42.b
 ---
@@ -32,12 +32,12 @@ Mnemonic: **I-C-D-R** (Identify → Consider → Decide/act → Reflect).
 - **Last two cases → "identify + remediate."** Identify violations, state the **corrective actions required**, and draft a **policy statement a firm could adopt** to prevent recurrence.
 
 The seven cases (official V10, LM3):
-1. **Serengeti Advisory Services** — equity research firm; premium-tier service, undisclosed family ownership of a recommended company, an "approved list" of third-party research, plagiarism/attribution. Implicates **I(C) Misrepresentation**, **III(B) Fair Dealing**, **VI(A) Avoid or Disclose Conflicts**, **V(A) Diligence**.
+1. **Serengeti Advisory Services** — equity research firm; premium-tier service, undisclosed family ownership of a recommended company, an "approved list" of third-party research, plagiarism/attribution. Implicates **I(C) Misrepresentation**, **III(B) Fair Dealing**, **VI(A) Avoid or Disclose Conflicts**, **V(A) Diligence**. Personal trading ahead of clients is **VI(B) Priority of Transactions** (the 2 Jun 2026 errata fixed a mislabeled "V(B)").
 2. **Banco Libertad** — bank/asset-management conflicts, suitability and loyalty issues (**III(A)/III(C)**, **VI(A)**).
 3. **QuantHouse** — quantitative model research and reasonable-basis/diligence questions (**V(A)**, model vetting).
 4. **Jacobs, Riccio, and Associates** — communication, supervision, and conflicts (**IV(C)**, **V(B)**, **VI**).
 5. **Magadi Asset Management** — duties to clients/employer; fair dealing and priority of transactions (**III/IV/VI**).
-6. **Syyark** *(action + policy)* — adviser recommends an unfamiliar asset (cryptocurrency) before becoming proficient. Implicates **I(E) Competence**, **V(A) Diligence**, **III(C) Suitability**, and conflict-of-interest disclosure (**VI(A)**). Remedy: gain competence (CE/training/certification) before recommending; firm policy requiring proficiency in any new product before it is offered.
+6. **Syyark** *(action + policy)* — adviser recommends an unfamiliar asset (cryptocurrency) before becoming proficient. Implicates **I(E) Competence**, **V(A) Diligence**, **III(C) Suitability**, and — because Syyark **owns and mines** the cryptocurrency he recommends — **VI(A) Avoid or Disclose Conflicts**: avoid the conflict, or disclose it so effectively that clients and his employer fully understand it, and offer a suitable alternative to clients uncomfortable with the conflict (the 17 Jun 2026 errata corrected the solution's citation from I(E) to **VI(A)** for this conflict). Remedy for competence: gain it (CE/training/certification) before recommending; firm policy requiring proficiency in any new product before it is offered.
 7. **Agarway** *(action + policy)* — crowdfunding/listing platform due diligence under founder pressure, plus personal investments in companies being evaluated and information-based promotion. Implicates **I(B) Independence & Objectivity**, **II(B) Market Manipulation**, and **VI(A) Avoid or Disclose Conflicts**.
 
 > Note: the published case write-ups reference editions of the Handbook (e.g., the Serengeti case is from the 11th edition); the L2 2026 curriculum has integrated them and the **2024 revisions apply** — most importantly, the Syyark case turns on the **new I(E) Competence** standard and conflicts are framed under **VI(A) "Avoid or Disclose."**

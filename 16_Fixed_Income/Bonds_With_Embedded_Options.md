@@ -1,16 +1,18 @@
 ---
 aliases: [Bonds with Embedded Options, Callable Bond, Putable Bond, OAS, Option-Adjusted Spread, Effective Duration, Convertible Bond]
 tags: [CFA-L2, fi, concept, valuation]
-date: 2026-08-25
+date: 2026-10-05
 status: evergreen
-source: Schweser Book 4, Module 25, LOS 25.a-25.q
+source: Official Curriculum 2026 L2 V6 LM3; Schweser Book 4, Module 25, LOS 25.a-25.q
 ---
 
 # Valuation and Analysis of Bonds with Embedded Options
 
 ## Types of Embedded Options (25.a)
 Issuers embed options to manage interest-rate risk or to issue at a more attractive coupon; investors accept or demand them in exchange for yield.
-- **Simple**: call, put, conversion. *[Beyond curriculum: the **make-whole call**, which sets the call price at a spread-based PV of remaining cash flows and is therefore rarely economic for the issuer, is market practice rather than 2026 Schweser text.]*
+- **Exercise styles (official)**: a **European** call can be exercised once, on the call date; an **American** call any time from the first call date; a **Bermudan** call on scheduled dates after the call-protection period. Putables are European or (rarely) Bermudan — **there are no American-style putables**. US GSE callables are usually Bermudan at par with very short protection; US munis are typically callable at par after year 10.
+- **Extendible bond**: at maturity the holder may keep the bond for extra years (possibly at a different coupon). **Putable ≡ extendible** except for the underlying straight bond — e.g., a 3-year 3.30% bond **putable** in year 2 must equal a 2-year 3.30% bond **extendible** by one year (identical cash flows in every rate scenario, or there is arbitrage).
+- **Simple**: call, put, conversion. **Make-whole call (official LM3 text)**: most investment-grade corporates today are essentially non-refundable; the call price is set at a **narrow spread to a benchmark** (on-the-run Treasuries/gilts), so bondholders are more than "made whole" and **economical refunding is virtually out of the question**. Older US corporates were callable after 5 or 10 years at a premium that declined to par.
 - **Complex / less obvious** — often the vignette's actual subject:
   - **Sinking fund provision**: the issuer must retire part of the principal on a schedule (by open-market purchase or by calling bonds, often at par by lottery). It reduces credit risk but hands the issuer an option to retire cheap bonds — an **accelerated sinking fund** option lets the issuer retire more than the required amount.
   - **Estate put (survivor's option)**: the heirs of a deceased bondholder may **put the bond back at par**. Valuable when the bond trades below par; the issuer prices it in as a small option cost.
@@ -22,6 +24,7 @@ Issuers embed options to manage interest-rate risk or to issue at a more attract
 - **Putable**: `V_putable = V_straight + V_put option` (holder holds the put → benefits the holder).
 
 ## Valuation in the Tree (25.c, 25.f, 25.m)
+- **Three steps (official)**: (1) generate a tree of interest rates from the yield curve and the volatility assumption; (2) at each node, decide whether the option is exercised; (3) backward-induct to today. With **zero volatility** the same logic runs on the one-period forward rates alone.
 - Use the calibrated binomial tree (→ [[Arbitrage_Free_Valuation]]) with backward induction, applying the option rule at each node:
   - **Callable**: value = `min(computed value, call price)` (issuer calls when it's cheap to refinance).
   - **Putable**: value = `max(computed value, put price)` (holder puts when the bond is worth less).
@@ -30,6 +33,8 @@ Issuers embed options to manage interest-rate risk or to issue at a more attract
 ## Effect of Volatility & Curve (25.d, 25.e, 25.h)
 - Higher interest-rate **volatility → higher option value** → **lower** callable price, **higher** putable price.
 - Curve shape: a callable's call option is more valuable when rates **fall** / the curve is low and flat; a putable's put is more valuable when rates **rise**.
+- **Level (official 30-year examples, 15% vol)**: callable 4.50% bond — yields 5% flat → 3% flat: straight value 92.27 → 129.54 (**+40%**), callable only 86.90 → 110.43 (**+27%**), because the call option gains value as rates fall (capped upside). Putable 3.75% bond — 3% → 5% flat: straight **−30%**, putable only **−22%** (the put hedges rising rates).
+- **Shape**: **call value rises as the curve flattens or inverts** (≈8% of par upward-sloping 2%→4%, ≈10% flat at 4%, >12% inverted 6%→4%) — an upward curve puts high forward rates on the tree, leaving fewer nodes where calling pays. **Put value falls as the curve moves from upward-sloping to flat to inverted** — high forward rates on an upward curve create more opportunities to put. A callable issued at par on a normal upward curve is **out of the money** at issue.
 
 ## Option-Adjusted Spread (OAS) (25.g, 25.h)
 - **OAS** = the constant spread added to all tree rates that makes the model price = market price, after **removing the option** → comparable across bonds with different optionality.
@@ -42,6 +47,10 @@ Issuers embed options to manage interest-rate risk or to issue at a more attract
 - **Callable ≤ straight** and **putable ≤ straight** effective duration; the embedded option **shortens** expected life as rates approach the exercise region.
 - **Effective convexity**: callable bonds can have **negative** convexity (price compression near the call); putable bonds have **positive** convexity.
 - **One-sided durations** (up vs down) better capture the **asymmetric** sensitivity when the option is **near the money**: for a **callable**, one-sided **up**-duration > **down**-duration (price capped on the way down as it nears the call price → less sensitive to rate falls). For a **putable**, **down**-duration > **up**-duration (put floors the price on the way up). **Key-rate durations** isolate sensitivity to specific maturity shifts (shaping risk).
+- **Key rate durations — official patterns (4% flat curve)**:
+  - Option-free bond **at par**: only the **maturity-matched** par rate moves its value. Off par: the maturity-matched rate still dominates, and a **zero or very low-coupon** bond can show **negative** KRDs at shorter maturities (the 5-year KRD of a 10-year zero is −0.93).
+  - Bonds with options depend on **time to maturity and time to exercise**. A 30-year bond **callable in 10 years**: low coupon (unlikely to be called) → the **30-year** KRD dominates; high coupon (almost surely called) → behaves like a **10-year** bond (10% coupon: 10-year KRD 6.06 vs 30-year 0.19).
+  - A 30-year bond **putable in 10 years**: high coupon (unlikely to be put) → **30-year** KRD dominates (10% coupon: 11.96); low coupon (almost surely put) → behaves like a bond maturing on the **put date** (10-year KRD dominates).
 
 ## Convertible Bonds (25.n, 25.o, 25.p, 25.q)
 **Defining features**: bondholder's right to convert debt into a fixed number of shares during the conversion period at a preset **conversion price**; **conversion ratio** = par / conversion price. Ratio/price are adjusted for stock splits, bonus issues, and above-**threshold** dividends: if the actual dividend **exceeds the threshold dividend**, the **conversion ratio adjusts upward** (conversion price **down**) to offset the ex-dividend share-price drop — bondholder protection always means *more* shares, never fewer; dividends ≤ threshold trigger no adjustment. Change-of-control events carry a **contingent put** — exercisable only for a **specified window** after the event — or, as an alternative protection, a **lowered conversion price** (more shares per bond). Other puts may be **hard** (cash) or **soft** (issuer picks cash/stock/debentures/mix). If also **callable**, the issuer can force conversion (**forced conversion**) by calling once the share price is well above the conversion price, capping the bondholder's redemption value below the conversion value.
@@ -74,6 +83,9 @@ Issuers embed options to manage interest-rate risk or to issue at a more attract
 - Convertible minimum value = **max(conversion value, straight value)**.
 - **Busted convertible** = share price **well below** conversion price → trades like a **bond** (driven by rates/credit, not the share). Deep ITM → trades like the **stock**; near the conversion price → hybrid.
 - Callable: one-sided **up**-duration > down-duration; putable: **down** > up. Higher vol still → callable down / putable up / **OAS down**.
+- **Flattening/inverting curve → call option worth MORE, put option worth LESS.** Upward-sloping curve → high forward rates on the tree → fewer calls, more puts.
+- **Putable = extendible** (same coupon; putable's maturity = extendible's extended maturity, put date = original maturity).
+- No **American**-style putable bonds exist; Bermudan is common for callables (GSEs).
 
 ## Q&A
 

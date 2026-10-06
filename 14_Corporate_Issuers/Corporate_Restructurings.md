@@ -1,7 +1,7 @@
 ---
 aliases: [Corporate Restructurings, Mergers and Acquisitions, Divestitures, Spin-off, Takeover Premium, Net Debt to EBITDA, Pro Forma WACC, Sum of the Parts, LBO, Equity Carve-out, Comparable Transaction Analysis]
 tags: [CFA-L2, corp, concept]
-date: 2026-06-03
+date: 2026-10-05
 status: evergreen
 source: Official Curriculum 2026 L2 V4, Reading "Corporate Restructuring" (Schweser Book 2, Module 16); LOS a-g
 ---
@@ -42,7 +42,7 @@ Actions track the life cycle: **start-up/growth** → invest (expand); **maturit
 - **LBO** (special case = invest + divest + restructure): PE buyer uses heavy debt to take a target private, restructures, then exits via sale/IPO. Returns driven by **purchase price, leverage, FCF generated (debt paydown), and exit price**.
 
 ## Three-Step Evaluation Process (16.b–16.d)
-**Step 1 Initial evaluation → Step 2 Preliminary valuation → Step 3 Modeling & valuation.**
+**Step 1 Initial evaluation → Step 2 Preliminary valuation → Step 3 Modeling & valuation.** The official summary counts a fourth phase — **updating the investment thesis** for the issuer once the three steps are done; the full process is used only for **material** restructurings.
 
 ### Step 1 — Initial Evaluation (16.b): four questions
 **What? Why? Is it material? When?** Apply professional skepticism (management always frames it positively).
@@ -83,12 +83,12 @@ Build **pro forma** statements, then read off EPS, net debt/EBITDA, FCF, and a p
 
 - **EPS effect**: depends on financing and **relative P/E**. Stock-financed and acquirer P/E **>** target P/E → typically **accretive**; acquirer P/E < target P/E → dilutive. Cash/debt-financed → **accretive if target earnings yield (E/P) > after-tax cost of debt**, dilutive if below. (Accretion ≠ value creation.)
 - **Net debt / EBITDA** = (total debt − cash) ÷ EBITDA. Debt-financed deals raise it (more credit risk, possible covenant/rating pressure); divestitures that pay down debt lower it. (Six Flags hit ~13× pre-bankruptcy; emerged at < 3×.)
-- **Pro forma WACC**: a restructuring changes both the **weights** (w_d, w_p, w_e) AND the **costs** (r_d, r_e) of capital. A cash/debt-funded acquisition shifts weights toward debt; a deal that raises leverage and cuts profitability **raises** WACC. Crossing from **investment- to speculative-grade** adds several hundred bps to WACC — hence acquirers often structure deals to **defend an IG rating**.
+- **Pro forma WACC**: a restructuring changes both the **weights** (w_d, w_p, w_e) AND the **costs** (r_d, r_e) of capital. Official cost-of-capital drivers (Exhibit 17): bottom-up — **profitability** (EBITDA or EBIT to sales), **volatility** (SD of revenue / EBITDA), **leverage** (debt/EBITDA), **asset specificity** (collateral quality: liquidity, an active market for the asset); top-down — prevailing **interest rates** and **credit spreads**. A deal that raises leverage and lowers profitability generally **raises** WACC; losing the investment-grade rating adds several hundred bp. A cash/debt-funded acquisition shifts weights toward debt; a deal that raises leverage and cuts profitability **raises** WACC. Crossing from **investment- to speculative-grade** adds several hundred bps to WACC — hence acquirers often structure deals to **defend an IG rating**.
 - **Capital-structure-weight worked example (official, CN/KCS):** acquirer pre-deal debt $10.2bn, equity 713m × $105 = $74.9bn → **12% / 88%**. Post-deal: debt $33bn, equity (713m + 103m new) × $105 = $85.7bn → **~28% / 72%**. (Higher combined leverage 4.6× vs a rival's 4.0× debt/EBITDA = the less attractive offer.)
 
 ## Evaluating Investment, Divestment & Restructuring Actions (16.e, 16.f, 16.g)
 - **Equity investments (16.e)**: accounted for by the **equity method** if significant influence; the investee is **not consolidated**. Evaluate strategic fit and whether the stake is a strategic partnership/toehold to a future acquisition.
-- **Joint ventures (16.e)**: equity-method/proportionate; evaluate shared **control**, resource contributions, and market-access rationale.
+- **Joint ventures (16.e)**: accounted for by the **equity method** (proportionate consolidation is a rare exception, not the JV default); evaluate shared **control**, resource contributions, and market-access rationale.
 - **Acquisitions (16.e)**: target is **consolidated** (control). Evaluate **value creation = synergies − premium paid**, financing mix, accretion/dilution, and post-deal leverage/WACC and rating.
 - **Divestitures — sale vs spin-off (16.f)**: both can unlock a **conglomerate discount** (sum-of-parts > whole) by improving focus/management attention. A **sale** brings cash (often at a lower valuation if forced by liquidity/regulators); a **spin-off** gives holders equity in the separated firm and is slower but faces little antitrust scrutiny. Choice often hinges on **valuation** (many interested buyers → sale fetches more).
 - **Cost & balance-sheet restructurings (16.g)**: cost (franchising, sale-leaseback) lifts margins/returns; balance-sheet (recap, leveraged recap) rebalances leverage; reorganization renegotiates debt. Watch one-off charges and earnings-quality effects.

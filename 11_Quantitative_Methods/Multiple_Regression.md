@@ -110,7 +110,7 @@ Plug forecasted X's into the **full estimated equation**, using **all** coeffici
 
 - **Outlier** = extreme **Y** value; **high-leverage point** = extreme **X** value.
 - **Leverage (Lᵢ)** ∈ [0,1]; Σ leverages = k + 1. A point is **potentially influential** if its leverage exceeds **3(k+1)/n**.
-- **Studentized residuals** detect outliers: delete one observation, re-fit on n−1, compare actual Yᵢ to its predicted value, divide by its SD. Compare to t with **n − k − 2 df**. |studentized residual| > t_critical ⇒ outlier.
+- **Studentized (deleted) residuals** detect outliers: delete observation i, re-fit on n−1 observations, take the **deleted residual** `e*ᵢ = Yᵢ − Ŷᵢ(i)` (actual minus the prediction from the model without i), and divide by the **standard deviation of the deleted residual** `s*ₑ` (wording per the 26 Jun 2026 errata) → `t*ᵢ = e*ᵢ / s*ₑ`. Equivalent form from the full regression: `t*ᵢ = eᵢ / √[MSE(i)(1 − hᵢᵢ)]`, with eᵢ and leverage hᵢᵢ from the n-observation fit and MSE(i) from the fit **without** observation i. Compare to t with **n − k − 2 df**. |t*ᵢ| > t_critical ⇒ outlier.
 - **Influential** = excluding it materially changes the coefficients. Not all outliers/high-leverage points are influential. Remedies: fix input errors, delete bad data, add omitted variables, or **winsorize**.
 
 ## Dummy (Qualitative) Independent Variables (LOS 1.l)
@@ -122,6 +122,8 @@ A **dummy** is 0/1 (on/off). To distinguish **n classes use (n − 1) dummies** 
 | **Intercept dummy** | shifts the intercept: `Y = (b₀ + d₀D) + b₁X` → intercept becomes b₀+d₀ when D=1 |
 | **Slope dummy** (interaction term) | changes the slope: `Y = b₀ + b₁X + d₁(D·X)` |
 | **Both** | shifts intercept *and* slope |
+
+**Slope + intercept dummies — the group gap depends on X:** in `Y = b₀ + d₀D + b₁X + d₁(D·X)`, the D = 1 group differs from the reference group by `d₀ + d₁X`, not by a single number. Curriculum fund example (2 Jul 2026 errata): growth funds beat value funds by `2.262 + 0.020 × AGE` percentage points, everything else constant — the old "2.347%" summary was wrong.
 
 **Interpretation:** each dummy coefficient = the difference in Y between that category and the **omitted reference category**, holding other variables constant. Quarterly-EPS example with Q4 omitted: `EPS = 1.25 + 0.75·Q1 − 0.20·Q2 + 0.10·Q3`. Intercept 1.25 = average Q4 EPS; Q1 average = 1.25+0.75 = 2.00; Q2 = 1.05; Q3 = 1.35. These are also next-year quarterly forecasts.
 

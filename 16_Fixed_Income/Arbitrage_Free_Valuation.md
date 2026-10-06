@@ -1,9 +1,9 @@
 ---
 aliases: [Arbitrage-Free Valuation, Binomial Interest Rate Tree, Backward Induction, Pathwise Valuation, Monte Carlo, Term Structure Models]
 tags: [CFA-L2, fi, concept, valuation]
-date: 2026-08-25
+date: 2026-10-05
 status: evergreen
-source: Schweser Book 4, Module 24, LOS 24.a-24.i
+source: Official Curriculum 2026 L2 V6 LM2 (worked examples); Schweser Book 4, Module 24, LOS 24.a-24.i
 ---
 
 # Arbitrage-Free Valuation Framework
@@ -26,6 +26,32 @@ source: Schweser Book 4, Module 24, LOS 24.a-24.i
 
 ## Pathwise Valuation (24.g)
 - Value = **average of the values along each interest-rate path** in the tree. For an n-period tree there are `2^(n−1)` paths. Gives the same answer as backward induction for option-free bonds.
+
+## Worked Examples (official V6 LM2 numbers)
+
+**A. Calibrating the tree (24.d)** — par curve 1.00% (1y), 1.20% (2y), 1.25% (3y); volatility σ = 15%, so adjacent rates differ by `e^(2×0.15) = 1.3499`.
+- Time 1: solve for the lower rate so the 2-year 1.20% par bond prices at 100 → **i(1,L) = 1.1943%**, **i(1,H) = 1.1943% × 1.3499 = 1.6121%**.
+  - Check: node values `101.20/1.016121 = 99.5944` and `101.20/1.011943 = 100.0056`; Time 0 `= [1.20 + 0.5(99.5944 + 100.0056)]/1.01 = 100.0000` ✓.
+  - The two rates average **1.4032%**, slightly **above** the 1.4028% implied forward rate — a by-product of lognormality; the tree spreads out **around** the forward curve.
+- Time 2 (fit to the 3-year 1.25% par bond): **1.7863% / 1.3233% / 0.9803%**.
+- With volatility near zero the tree collapses onto the implied forward rates; higher σ widens it.
+
+**B. Backward induction (24.e)** — tree: Time 0 **2.000%**; Time 1 **4.646% / 3.442%**; Time 2 **8.167% / 6.050% / 4.482%** (calibrated to par yields of 2%, 3%, 4%). Value a 3-year, 5% annual-coupon bond:
+- Time 2: `105/1.08167 = 97.0721`; `105/1.06050 = 99.0099`; `105/1.04482 = 100.4958`.
+- Time 1: upper `[5 + 0.5(97.0721 + 99.0099)]/1.04646 = 98.4663`; lower `[5 + 0.5(99.0099 + 100.4958)]/1.03442 = 101.2672`.
+- Time 0: `[5 + 0.5(98.4663 + 101.2672)]/1.02 = **102.8105**` — the same price as discounting at the spot rates, which confirms the tree is arbitrage-free (24.f).
+
+**C. Pathwise valuation (24.g)** — 3-year zero (face 100) on tree A; 2^(3−1) = **4 paths**:
+
+| Path | Year 1 | Year 2 | Year 3 | PV |
+|---|---|---|---|---|
+| 1 (HH) | 1.0000% | 1.6121% | 1.7863% | 95.7291 |
+| 2 (HL) | 1.0000% | 1.6121% | 1.3233% | 96.1665 |
+| 3 (LH) | 1.0000% | 1.1943% | 1.3233% | 96.5636 |
+| 4 (LL) | 1.0000% | 1.1943% | 0.9803% | 96.8916 |
+| **Average** | | | | **96.3377** |
+
+e.g., path 1: `100/(1.01 × 1.016121 × 1.017863) = 95.7291`. The average equals the backward-induction value of the same zero (96.3377). Pascal's triangle counts the paths to each node (1-2-1 at Time 2).
 
 ## Monte Carlo Simulation (24.h)
 - Generates many random rate paths; used for **path-dependent** securities (e.g., **MBS** where prepayments depend on the rate history). Add a constant (drift adjustment / OAS) so simulated values match market prices. More paths → more precision (not necessarily more accuracy).

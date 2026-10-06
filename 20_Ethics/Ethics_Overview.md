@@ -23,5 +23,5 @@ The distinctive L2 reading: a **4-step decision framework** (Identify → Consid
 - **III(D) Performance Presentation** requires fair, accurate, and complete presentations; no implication that returns repeat; and no cherry-picking. Without GIPS, consider the audience, identify brief-presentation limits, use a weighted composite, include terminated accounts and dates, disclose simulated results, prior-entity performance, and the gross/net/after-tax basis, and retain supporting data and records. GIPS is best but optional; a false GIPS claim violates III(D).
 - In a case item, name **every** applicable Standard (not just one) and, for the last two cases, give the **action + firm policy**.
 
-## Reference-only foundation
-- [[GIPS]] — detailed firm, composite, history, and verification mechanics; not a standalone 2026 Level II reading.
+## Out of Scope
+- GIPS mechanics (composites, return calculation, verification) are **not** a Level II reading; only the Standard III(D) treatment is tested. The separate GIPS note was deleted on 2026-10-05.

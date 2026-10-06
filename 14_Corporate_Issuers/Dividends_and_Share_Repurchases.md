@@ -1,7 +1,7 @@
 ---
 aliases: [Dividends and Share Repurchases, Dividend Policy, Buybacks, Dividend Theories, Payout Policy]
 tags: [CFA-L2, corp, concept]
-date: 2026-08-25
+date: 2026-10-05
 status: evergreen
 source: Official Curriculum 2026 L2 V4, Reading "Analysis of Dividends and Share Repurchases" (Schweser Book 2, Module 13); LOS a-n
 ---
@@ -71,9 +71,13 @@ The curriculum lists exactly six. Vignettes give you a fact pattern and ask whic
   - Earnings yield = `5/50 = 10% > 3%` after-tax cost → **accretive in both cases**. (But leverage rises, so higher EPS ≠ automatically higher share price.)
 - **BVPS effect**: if repurchase price **> BVPS** → BVPS **falls**; if price **< BVPS** → BVPS rises.
 - **Five rationales for repurchasing rather than paying a dividend (13.l)**: (1) potential **tax advantage** when capital gains are taxed more favorably; (2) **share-price support / signaling** of management confidence; (3) **added flexibility** — avoids committing to a "sticky" future dividend; (4) **offsets dilution** from employee stock options; (5) **increases financial leverage** by reducing balance-sheet equity. Buybacks are equivalent to dividends **only** under no-tax, full-information assumptions.
+- **Dividend vs buyback (13.l, official summary)**: a repurchase is **equivalent to a cash dividend of the same amount** in its effect on total shareholder wealth, all else equal (taxes aside). Buybacks are often used **in lieu of raising the regular dividend** (no expectation of a maintained payout), to **supplement** regular dividends, and **instead of a special dividend** in years of extraordinary earnings. Signal cuts both ways: management thinks the shares are **undervalued** — or the company has **few positive-NPV projects**.
+- Repurchase-method detail: non-tendering shareholders in a tender offer **increase their relative ownership**; **direct negotiation** with a major holder is less common because it can **destroy value** for the remaining shareholders (paying a premium).
 
 ## Coverage / Sustainability (13.m, 13.n)
-- **Dividend coverage** = net income / dividends; **FCFE coverage** = FCFE / (dividends + buybacks).
+- **Dividend payout** = dividends / net income; **dividend coverage** = net income / dividends (the inverse). Higher payout / lower coverage → higher risk of a cut. Mature companies typically target **40%-60% payout (coverage ≈ 1.7x-2.5x)** over a 5-10-year cycle; **coverage near 1.0x puts the dividend in jeopardy** unless the earnings dip is non-recurring (a strike, a typhoon). A payout high relative to **peers** is also a warning.
+- **FCFE coverage** = FCFE / (dividends + share repurchases) — the better cash-based test because buybacks are also cash distributions. **= 1** → returning all available cash; **> 1** → building cash/liquidity; **< 1** → not sustainable (drawing down cash; eventually must issue equity or cut capex).
+- **Early warning signs (official)**: low dividend coverage; an **extremely high dividend yield** relative to the company's own record and forward earnings (the market expects a cut — high-yield stocks are over-represented among the worst performers); **borrowing to pay the dividend**; a **record of past dividend cuts** (a clean record of no reductions counts as much as many increases); and above-average **financial leverage** (debt may be unavailable in downturns).
 - Low coverage, high payout, declining FCFE, and high leverage flag an **unsustainable** dividend.
 
 ## Exam Traps

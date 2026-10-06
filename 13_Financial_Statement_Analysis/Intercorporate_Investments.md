@@ -1,9 +1,9 @@
 ---
 aliases: [Intercorporate Investments, Equity Method, Acquisition Method, Consolidation, Goodwill, Financial Assets]
 tags: [CFA-L2, fsa, concept]
-date: 2026-08-25
+date: 2026-10-05
 status: evergreen
-source: Schweser Book 2, Module 7, LOS 7.a-7.c
+source: Official Curriculum 2026 L2 V3 LM1 (October 2026 errata applied); Schweser Book 2, Module 7, LOS 7.a-7.c
 ---
 
 # Intercorporate Investments
@@ -14,21 +14,29 @@ Classification is driven by **degree of influence/control**, which dictates the 
 |------|------|------|------|
 | Investment in **financial assets** | None | < 20% | FVPL / FVOCI / amortized cost |
 | Investment in **associates** | Significant | 20–50% | **Equity method** |
-| **Joint venture** | Shared control | — | **Equity method** (IFRS) |
+| **Joint venture** | Shared (joint) control | — | **Equity method** (IFRS and US GAAP) |
 | **Business combination** | Control | > 50% | **Acquisition method (consolidation)** |
 
 ## Financial Assets (IFRS 9)
-- **Amortized cost**: debt held to collect contractual cash flows.
+- **Amortized cost**: debt whose business-model objective is to **hold to collect** contractual cash flows **and** whose cash flows are **solely payments of principal and interest**.
 - **FVOCI**: debt held to collect AND sell (unrealized G/L → OCI; interest/impairment → P&L). Equity may irrevocably elect FVOCI (no recycling to P&L on sale).
 - **FVPL**: default for equity and trading; all changes through P&L.
 - US GAAP: equity securities generally FVPL.
+- IFRS 9 dropped IAS 39's held-for-trading / available-for-sale / held-to-maturity portfolio labels in favor of a **business-model approach** for debt.
+- **Reclassification**: **equity — never** (the FVPL/FVOCI choice is irrevocable); **debt — only if the business model changes** (rare). No restatement of prior periods: amortized cost → FVPL remeasures to fair value with the gain/loss **in profit or loss immediately**; FVPL → amortized cost uses the fair value at the reclassification date as the new carrying amount.
+- **Impairment**: IFRS 9 moved from an **incurred-loss** to an **expected-credit-loss** model — **12-month** expected losses for performing assets, **lifetime** expected losses for non-performing assets, recognized up front (earlier recognition).
 
 ## Equity Method (Associates / JVs)
 - "**One-line consolidation**": investment recorded at cost, then **+ pro-rata share of investee net income** (income statement), **− dividends received** (return of capital, reduces the carrying value).
 - Investment account on the balance sheet = cost + cumulative share of earnings − dividends.
 - **Excess purchase price** over share of book value allocated to identifiable assets (depreciated → reduces equity income) and **goodwill**. Under the equity method, goodwill is embedded in the single investment carrying amount, not presented as a separate asset.
-- Watch for: upstream/downstream **unrealized profits** eliminated pro-rata; impairment if value declines.
-- **Proportionate consolidation (rare)**: for some **joint ventures**, IFRS has historically permitted this alternative to the equity method. The investor adds its **pro-rata share of each line** of the venture's assets, liabilities, revenues, and expenses (like an acquisition, but only the investor's percentage). Because only the investor's share is brought in, **no noncontrolling-interest account is created**. Net income and equity are the **same** as under the equity method; **assets, liabilities, revenues, and expenses are all higher** (so margins and ROA look lower, leverage higher). The curriculum presents it as a treatment that **may be allowed in rare cases**, so treat it as a comparison case the exam can describe rather than the default JV treatment.
+- **Transactions with associates**: the investor defers its **share** of unrealized profit on **upstream** (associate → investor) and **downstream** (investor → associate) sales until the goods are sold to a third party — deferral = ownership % × profit on goods still held by the buyer.
+- **Fair value option**: both standards let the investor carry an equity-method investment at fair value — **US GAAP: any entity**; **IFRS: only venture capital organizations, mutual funds, unit trusts and similar entities** (including investment-linked insurance funds). Elected at initial recognition and **irrevocable**; fair-value changes, interest, and dividends go to profit or loss, and no excess purchase price is amortized (no goodwill).
+- **Impairment of an equity-method investment**: goodwill sits inside the carrying amount, so the **whole investment** is tested, not the goodwill separately.
+  - **IFRS**: needs objective evidence of a loss event; compare **recoverable amount** (higher of value in use and fair value less costs to sell) with carrying amount; **reversals permitted**.
+  - **US GAAP**: fair value below carrying amount and the decline is other than temporary → write down to fair value; **reversals prohibited**.
+- **Joint ventures**: a contractual arrangement between two or more venturers that establishes **joint control**. **Both IFRS and US GAAP require the equity method** for joint ventures.
+- **Proportionate consolidation (rare exception only)**: the curriculum allows it for joint ventures "only under rare circumstances", and the 28 Apr 2026 errata states outright that proportionate consolidation is **not permitted for joint ventures** — the equity method is. Know the mechanics only as a comparison case: the venturer adds its **pro-rata share of each line** of the venture's assets, liabilities, revenues, and expenses; **no noncontrolling interest** is created; net income and equity are the **same** as under the equity method, but **assets, liabilities, revenues, and expenses are all higher** (margins and ROA look lower, leverage higher).
 
 ## Business Combinations — Acquisition Method
 - **Consolidate**: 100% of subsidiary assets, liabilities, revenues, expenses; eliminate intercompany.
@@ -36,7 +44,9 @@ Classification is driven by **degree of influence/control**, which dictates the 
 - **Goodwill** = purchase price − fair value of identifiable net assets acquired.
   - **Full goodwill** (US GAAP / IFRS option): based on fair value of the whole entity.
   - **Partial goodwill** (IFRS option): based on the **acquirer's share** only → lower goodwill, lower equity, lower NCI.
-- Goodwill is **not amortized**; tested for impairment. Under US GAAP, a reporting entity may first use a qualitative screen; if needed, the quantitative test recognizes the carrying-value excess over fair value, limited to allocated goodwill. IFRS uses a single-step quantitative impairment test.
+- Goodwill is **not amortized**; tested at least annually for impairment, with losses on the income statement.
+  - **IFRS (one step)**: goodwill is allocated to **cash-generating units (CGUs)**. Impairment = carrying amount of the CGU − **recoverable amount**. The loss is applied **first to the CGU's goodwill**; once goodwill is zero, the remainder is spread **pro rata over the CGU's other non-cash assets**.
+  - **US GAAP (17 Feb 2026 errata)**: goodwill is allocated to **reporting units**. An **optional qualitative assessment** comes first: if it is **more likely than not (> 50%)** that fair value exceeds carrying amount, stop. Otherwise run the **single quantitative test**: carrying amount of the reporting unit (incl. goodwill) vs its fair value; loss = the excess, **capped at the goodwill allocated** to that unit. The old two-step "implied fair value of goodwill" test is gone.
 - **Worked example (Schweser – Wood/Pine):** Wood pays $450m for **75%** of Pine; FV of Pine's identifiable net assets = $560m.
   - **Full goodwill** = implied total FV − identifiable net assets = `($450/0.75 = $600m) − $560m = $40m`; NCI = `25% × $600m = $150m`.
   - **Partial goodwill** = price − acquirer's share of net assets = `$450m − 0.75×$560m = $30m`; NCI = `25% × $560m = $140m`.
@@ -62,9 +72,14 @@ Classification is driven by **degree of influence/control**, which dictates the 
 
 ## Exam Traps
 - Equity-method dividends **reduce** the investment account (not income).
+- **Joint venture → equity method** under **both** IFRS and US GAAP. Proportionate consolidation is not the JV default — the 2026 errata corrects a practice solution to say it is **not permitted** for JVs.
+- **US GAAP goodwill impairment is no longer two-step.** Optional qualitative screen (more likely than not, > 50%), then one quantitative test: reporting-unit carrying amount (incl. goodwill) vs fair value, loss = excess **capped at allocated goodwill**. The old "implied fair value of goodwill" step was removed by the 17 Feb 2026 errata.
 - Net income is the **same** under equity method and full consolidation; ratios differ because of the grossed-up base.
 - **Partial goodwill** (IFRS) < full goodwill → lower total assets and lower NCI.
 - FVOCI **debt** recycles to P&L on sale; FVOCI **equity** election does **not** recycle.
+- IFRS 9: **equity** classifications can never be reclassified; **debt** only on a change of business model, with no restatement of prior periods.
+- **Impairment reversals**: IFRS **permits** reversing an equity-method impairment (in line with IAS 36); US GAAP **prohibits** it.
+- **Fair value option for associates**: any entity under US GAAP; only venture-capital-type entities (VC, mutual funds, unit trusts) under IFRS.
 - **SPE/VIE**: control is by **power + variable economics, not votes** — IFRS consolidates on **substance/control**; US GAAP consolidates if you are the **primary beneficiary**. Off-balance-sheet securitization **understates leverage** until consolidation pulls the assets/debt back on.
 - **Acquisition costs are expensed** (not added to goodwill); **contingent consideration** is included in the purchase price at **fair value**.
 

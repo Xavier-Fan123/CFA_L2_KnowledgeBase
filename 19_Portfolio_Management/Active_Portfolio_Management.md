@@ -1,9 +1,9 @@
 ---
 aliases: [Active Portfolio Management, Information Ratio, Fundamental Law, Information Coefficient, Breadth, Transfer Coefficient, Active Risk]
 tags: [CFA-L2, pm, concept, active-management]
-date: 2026-08-25
+date: 2026-10-05
 status: evergreen
-source: Schweser Book 5, Module 35, LOS 35.a-35.f
+source: Official Curriculum 2026 L2 V9 LM2 (October 2026 errata applied); Schweser Book 5, Module 35, LOS 35.a-35.f
 ---
 
 # Analysis of Active Portfolio Management
@@ -11,12 +11,16 @@ source: Schweser Book 5, Module 35, LOS 35.a-35.f
 ## Value Added (35.a)
 - **Active return** = `R_P − R_B` (portfolio − benchmark). Value added comes from over/under-weighting relative to the benchmark.
 - Can be decomposed into **factor (style) tilts** + **security selection**.
+- **Active weights** `Δw_i = w_P,i − w_B,i` **sum to zero** (overweights fund underweights); value added `R_A = Σ Δw_i × R_i`.
+- **Value added is positive if and only if** the realized active asset returns are **positively correlated** with the active weights set at the start of the period (overweight the winners, underweight the losers).
+- Decomposition across decisions: **asset-class allocation** + **security selection within classes**: `R_A = Σ Δw_j × R_B,j + Σ w_P,j × R_A,j` (and further into sector or country weights).
 
 ## Sharpe vs Information Ratio (35.b)
 - **Sharpe ratio** = `(R_P − R_f) / σ_P` — uses **total** risk; unaffected by adding cash/leverage.
 - **Information ratio (IR)** = `(R_P − R_B) / σ(R_P − R_B)` = **active return / active risk (tracking error)**.
   - **Ex ante** (expected) vs **ex post** (realized).
-  - IR is **unaffected by the aggressiveness** of active weights (scaling active positions scales both numerator and denominator) — assuming no benchmark/cash constraints.
+  - IR is **unaffected by the aggressiveness** of active weights: multiplying **every** active weight by the same constant c scales active return and active risk proportionally — for an **unconstrained** portfolio. The 21 Apr 2026 errata adds "in a proportional manner": an **asymmetric** change across sources of active risk can change the expected IR.
+  - **Unlike the Sharpe ratio, IR IS affected by adding cash or leverage.** Adding cash to a portfolio of risky assets generally **shrinks** the IR. Sharpe: invariant to cash; IR: invariant to proportional scaling of active weights.
 
 ## The Fundamental Law (35.c)
 - `E(R_A) = IC × √BR × σ_A × TC`, and `IR = IC × √BR × TC`.
@@ -24,7 +28,9 @@ source: Schweser Book 5, Module 35, LOS 35.a-35.f
   - **BR** (breadth): number of **independent** active decisions per year. *Example: active positions in 10 securities each month → BR = 10 × 12 = 120.*
   - **TC** (transfer coefficient): correlation between actual and optimal active weights; **1 = no constraints**. `TC²` = fraction of realized active-return variance explained by skill; `(1 − TC²)` = constraint-induced noise.
   - **σ_A**: active risk (aggressiveness).
-- **Optimal active risk** (unconstrained): `σ_A* = (IR / SR_B) × σ_B`; max Sharpe of the active portfolio satisfies `SR_P² = SR_B² + IR²`.
+- **Optimal active risk** (unconstrained): `σ_A* = (IR / SR_B) × σ_B`; max Sharpe of the active portfolio satisfies `SR_P² = SR_B² + IR²`. The optimal amount of active management rises with the forecasting accuracy (ex ante IC).
+- **Adjusting risk**: change **active risk** by combining the active portfolio with a position in the **benchmark**; once the maximum-Sharpe portfolio is found, change **total volatility** by combining it with **cash** (**two-fund separation**).
+- **TC, breadth, and active risk** may be **set by investment policy or regulation**, i.e., outside the manager's control; only skill (IC) is purely the manager's.
 
 ## Applications & Strategy Comparison (35.d, 35.e)
 - IR aids **manager selection** and choosing the **level of active risk**.
@@ -37,6 +43,7 @@ source: Schweser Book 5, Module 35, LOS 35.a-35.f
 ## Strengths & Limitations (35.f)
 - Provides a framework linking skill, breadth, and implementation to performance.
 - Limitations: **BR assumes independent decisions** (correlated bets overstate breadth); **IC is hard to estimate** and unstable; ex-ante inputs are noisy.
+- Curriculum applications of the fundamental law: **selecting country equity markets** in a global equity fund, and **timing credit and duration exposures** in a fixed-income fund.
 
 ### Commodity Hedge Fund Extension (Beyond Curriculum)
 This section is a professional hedge-fund application, not CFA curriculum text.
@@ -50,10 +57,13 @@ This section is a professional hedge-fund application, not CFA curriculum text.
 
 ## Exam Traps
 - **IR = active return / active risk** (tracking error); **Sharpe uses total risk**.
-- IR is invariant to aggressiveness (unconstrained); `SR_P² = SR_B² + IR²`.
+- IR is invariant to aggressiveness (unconstrained, **proportional** scaling of active weights); `SR_P² = SR_B² + IR²`.
+- **Cash flips the invariance:** adding cash leaves the **Sharpe ratio unchanged** but **lowers the IR**; scaling active weights leaves the **IR unchanged**.
 - Fundamental law: `IR = IC × √BR × TC`; breadth must be **independent** decisions.
 - Market timing = low breadth; broad security selection = high breadth.
 - **Market timer's IC = 2(% correct) − 1.** 50% right means **zero** skill, not 0.5.
+- Active weights **sum to zero**; value added > 0 **iff** active weights are positively correlated with subsequent active returns.
+- To change **active** risk, mix with the **benchmark**; to change **total** risk, mix with **cash** — Sharpe unchanged by cash, IR unchanged by benchmark mixing (proportional scaling).
 - **Sector rotation** is evaluated by the same fundamental law, with each sector bet counted as one (highly correlated) decision.
 
 ## Q&A

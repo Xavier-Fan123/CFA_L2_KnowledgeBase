@@ -1,7 +1,7 @@
 ---
 aliases: [Machine Learning, Supervised Learning, Unsupervised Learning, Deep Learning, Overfitting, Bias Error, Variance Error, Cross Validation, LASSO, Penalized Regression, SVM, KNN, CART, Random Forest, PCA, K-Means Clustering, Hierarchical Clustering, Neural Networks, Reinforcement Learning]
 tags: [CFA-L2, quant, concept, machine-learning]
-date: 2026-06-04
+date: 2026-10-05
 status: evergreen
 source: Schweser Book 1, Reading 3 (Modules 3.1–3.3), LOS 3.a–3.d
 ---
@@ -68,6 +68,14 @@ As complexity rises, **bias error falls but variance error rises** → choose co
   - **K-means**: partition into **k non-overlapping** clusters (k = hyperparameter); each has a **centroid**; observations reassigned until centroids stabilize.
   - **Hierarchical**: builds a hierarchy with **no preset k** — **agglomerative** (bottom-up) or **divisive** (top-down).
 
+## Choosing an ML Algorithm — official flowchart (Exhibit 37)
+1. **Complex data with many highly correlated features?** → first reduce dimension with **PCA**.
+2. **Numerical prediction (regression)?** → linear data: **penalized regression / LASSO**; non-linear data: **CART, random forest, or neural nets**.
+3. **Classification with labeled data?** → linear: **KNN or SVM**; non-linear: **CART, random forest, or neural nets (deep nets)**.
+4. **Unlabeled data (clustering)?** → non-linear: **neural nets / deep nets**; linear: **k-means if the number of categories is known**, **hierarchical clustering if it is unknown**.
+- **Regularization** = methods that reduce statistical variability in high-dimensional problems by **reducing model complexity** (e.g., LASSO's penalty; maximum depth or minimum node size limits on a CART tree).
+- **Deep neural networks (DNNs)** = neural nets with **many hidden layers (at least 2, often more than 20)** — the backbone of the AI revolution.
+
 ## Other Models — Neural Nets, DLN, RL
 
 - **Neural networks (NN/ANN)**: **input layer → hidden layer(s) → output layer**. Hidden-layer nodes (**neurons**) = **summation operator** (weighted average) + **nonlinear activation function**; **forward propagation** passes values forward, **backward propagation** revises weights from errors. Network structure (e.g. 3-4-1 nodes) is a **hyperparameter**.
@@ -85,6 +93,7 @@ This section is a professional hedge-fund application, not CFA curriculum text.
 - Reinforcement learning or highly adaptive systems require tight guardrails: position limits, liquidity constraints, drawdown stops, and human review. The objective function must penalize tail losses and market impact, not just maximize simulated reward.
 
 ## Exam Traps
+- **Flowchart**: linear regression problem → LASSO; linear classification → KNN/SVM; non-linear (either) → CART / random forest / neural nets; clustering with a known number of groups → **k-means**, unknown → **hierarchical**; many correlated features → **PCA** first.
 - **Hyperparameters are set by the researcher**; they are not learned from the data (λ in LASSO, k in KNN/k-means, NN node counts).
 - **Bias error = in-sample/underfit (too simple); variance error = out-of-sample/overfit (too complex).** Linear → high bias; nonlinear → high variance.
 - **# features = total independent variables** (12 fundamental + 2 technical = 14, not 70).

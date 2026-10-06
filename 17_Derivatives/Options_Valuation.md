@@ -1,12 +1,17 @@
 ---
 aliases: [Options Valuation, Binomial Option Model, Black-Scholes-Merton, BSM, Black Model, Option Greeks, Delta Hedging, Implied Volatility]
 tags: [CFA-L2, deriv, concept, options]
-date: 2026-08-25
+date: 2026-10-05
 status: evergreen
 source: Official Curriculum V7 (Derivatives) Learning Module 2; Schweser Book 4, Module 29, LOS 29.a-29.n
 ---
 
 # Valuation of Contingent Claims (Options)
+
+## No-Arbitrage Foundations (official framing)
+- The arbitrageur's **two rules**: (1) **don't use your own money**, (2) **don't take any price risk** — and prefers more money to less. Valuation rests on the **law of one price**: identical future cash flows in every state → identical price today.
+- Key assumptions throughout: replicating instruments are identifiable and investable; **no market frictions**; **short selling allowed with full use of proceeds**; the underlying follows a **known distribution**; borrowing and lending at a **known risk-free rate**.
+- A **two-period** binomial model = **three one-period models** (one at Time 0, two at Time 1). European options can be valued by the **expectations approach** (PV at the risk-free rate of the expected payoff under **risk-neutral** probabilities); both European and American options by the **no-arbitrage (backward induction)** approach, where for American options **early exercise** changes node values and hedge ratios.
 
 ## Binomial Option Model (29.a, 29.b, 29.d)
 - Underlying moves up by factor `u` or down by `d` each period. **Risk-neutral probability of up**: `π_U = (1 + r − d) / (u − d)`, `π_D = 1 − π_U`.
@@ -98,6 +103,7 @@ The Greeks are **static (comparative-statics) risk measures** — sensitivity of
 - **Gamma of a call = gamma of a put**; gamma **highest ATM near expiry**; gamma is the risk left after delta-neutralizing; delta-plus-gamma approximation beats delta alone.
 - **Rho**: call **positive**, put **negative**. **Theta** usually negative (decay accelerates near expiry).
 - **Implied volatility** is forward-looking (vs historical = backward-looking); a non-flat **vol surface** signals BSM-assumption breakdown.
+- A **gamma-neutral** portfolio needs **options** (the underlying has zero gamma); delta-neutral alone leaves gamma (non-linearity) risk. **Volatility smile** = implied vol vs exercise price (2-D); **volatility surface** = vs exercise price **and** expiration (3-D); under BSM both would be **flat**.
 
 ## Q&A
 

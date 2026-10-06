@@ -1,9 +1,9 @@
 ---
 aliases: [Credit Analysis Models, Credit Valuation Adjustment, CVA, Structural Model, Reduced-Form Model, Credit Spread, Expected Exposure, LGD]
 tags: [CFA-L2, fi, concept, credit]
-date: 2026-06-03
+date: 2026-10-05
 status: evergreen
-source: Schweser Book 4, Module 26, LOS 26.a-26.h
+source: Official Curriculum 2026 L2 V6 LM4; Schweser Book 4, Module 26, LOS 26.a-26.h
 ---
 
 # Credit Analysis Models
@@ -12,7 +12,7 @@ source: Schweser Book 4, Module 26, LOS 26.a-26.h
 - **Expected exposure (EE)**: amount at risk (bond value) at a given date before recovery.
 - **Recovery rate (RR)** / **Loss given default (LGD)** = `exposure × (1 − RR)`.
 - **Probability of default (POD)**: likelihood of default in a period; **hazard rate** = conditional default probability.
-- **Credit valuation adjustment (CVA)** = PV of **expected loss** = Σ (PV of each period's expected loss) = sum over time of `PV[ POD × LGD ]`.
+- **Credit valuation adjustment (CVA)** = PV of **expected loss** = Σ (PV of each period's expected loss) = sum over time of `PV[ POD × LGD ]`. Expected values use **risk-neutral** default probabilities and are discounted at **risk-free** rates; CVA is the investor's compensation for default risk and can be restated as a credit spread.
 - **VND (value assuming no default)** = the bond's value computed on the **benchmark binomial tree / spot curve as if default-free**. Official central identity: **fair (risky) value = VND − CVA**, and the **credit spread** = YTM(fair value) − benchmark YTM. (For an option-free bond on a flat benchmark, VND = the risk-free PV; the same tree that gives VND also generates the **expected exposures** for the CVA.)
 - **Volatility note:** changing rate volatility does **not** change VND of a default-risk-free bond; vol only moves fair value when there is an **embedded option** or **credit risk** (CVA changes with the tree).
 - **Sensitivity (curriculum):** a **lower POD** reduces CVA **more** than an equal-sized cut in the recovery rate (POD hits every period's expected loss; recovery only scales LGD).
@@ -41,7 +41,7 @@ This section is a professional trading application, not CFA curriculum text.
 
 ## Return Given Rating Transition (26.c)
 - Use a **credit migration (transition) matrix** of probabilities of moving between ratings.
-- **Expected % return impact** ≈ `−Σ (migration probability × Δspread × modified duration)` across possible new ratings. Downgrades widen spreads → price loss; upgrades the reverse.
+- **Expected % return impact** ≈ `−Σ (migration probability × Δspread × modified duration)` across possible new ratings. Downgrades widen spreads → price loss; upgrades the reverse. Curriculum conclusion: **credit spread migration typically reduces expected return** (the YTM overstates the expected return).
 
 ## Structural vs Reduced-Form (26.d)
 
@@ -53,9 +53,17 @@ This section is a professional trading application, not CFA curriculum text.
 ## Credit Spread Dynamics (26.e, 26.f, 26.g)
 - Spread compensates for **expected loss + risk/liquidity premium**. Spreads **widen** in downturns (higher POD, lower RR) and **tighten** in expansions.
 - **Term structure of credit spreads**: upward-sloping for healthy issuers; can **invert** for distressed issuers (near-term default risk dominates). Drivers: credit cycle, financial conditions, issuer fundamentals, supply/demand.
+  - **Macro**: weak economic activity makes the credit curve **steeper and wider**. **Market**: supply/demand matters, and the **most frequently traded** securities set the curve's shape.
+  - **Issuer/industry**: an expected **leverage-decreasing event** (e.g., an asset sale used to repay debt) can **flatten or invert** the curve.
+  - A bond **very likely to default** trades near its **recovery value** at every maturity, so its spread curve says little about how credit risk varies with maturity.
 
 ## Securitized Debt (26.h)
 Analyze the **collateral pool** (granularity, homogeneity), servicer quality, structure (tranching/credit enhancement), and cash-flow waterfall — not just a single obligor's balance sheet.
+- Why securitize: the issuer finances a **specific asset pool** (not the whole balance sheet), raising debt capacity, cutting regulatory capital and retained risk, and lowering stand-alone financing cost; investors get diversification, more predictable cash flows, and a yield pickup over similarly rated bonds for accepting complexity.
+- **Granularity** (number of obligations) and **homogeneity** (similarity of the obligations) drive the method (official Exhibit 33, Scope Ratings):
+  - **Granular + homogeneous** pools (credit cards, auto loans/leases, consumer ABS, residential mortgages, SME loans) → **statistical / portfolio-level** analysis of loss and prepayment behavior.
+  - **Non-granular + heterogeneous** pools (CRE loans, project finance, leveraged-loan CLOs) → **loan-by-loan** analysis.
+- Also assess the **originator/servicer**, the **issuing SPE**, and the structural and **credit-enhancement** features.
 
 ## Exam Traps
 - **CVA = PV of expected loss**; **fair value = VND − CVA** (VND = value assuming no default).

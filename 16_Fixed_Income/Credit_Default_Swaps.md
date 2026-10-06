@@ -1,9 +1,9 @@
 ---
 aliases: [Credit Default Swaps, CDS, Single-Name CDS, Index CDS, CDS Basis, Credit Curve Trades]
 tags: [CFA-L2, fi, concept, credit, derivatives]
-date: 2026-08-25
+date: 2026-10-05
 status: evergreen
-source: Schweser Book 4, Module 27, LOS 27.a-27.e
+source: Official Curriculum 2026 L2 V6 LM5 (October 2026 errata applied); Schweser Book 4, Module 27, LOS 27.a-27.e
 ---
 
 # Credit Default Swaps (CDS)
@@ -14,8 +14,11 @@ source: Schweser Book 4, Module 27, LOS 27.a-27.e
 - Notional, tenor, coupon, and reference obligation define the contract.
 
 ## Credit Events & Settlement (27.b)
-- **Credit events**: bankruptcy, failure to pay, restructuring (restructuring not always included, esp. US HY). Determined by an ISDA **Determinations Committee**.
-- **Settlement**: **cash** (pay loss = notional × (1 − recovery)) or **physical** (deliver bond for par).
+- **Credit events**: bankruptcy, failure to pay, restructuring (restructuring not always included, esp. US HY). Determined by an ISDA **Determinations Committee** (one per region; 15 members = 10 dealer banks + 5 buy-side end users; a credit event needs a **supermajority of 12**).
+- **Succession events**: a merger, divestiture, spinoff, or similar change that makes it unclear who owes the reference debt — the Determinations Committee rules, and the CDS may be **split among several successor entities**.
+- **Coverage**: a CDS on a reference obligation (usually **senior unsecured**) covers all obligations of the reference entity of **equal or higher seniority**. Buyer = **short** the credit; seller = **long** the credit.
+- **Types**: single-name, **index** (CDX IG and iTraxx Main: 125 names; CDX HY 100; iTraxx Crossover up to 75; **equally weighted**, so one default settles 1/125 of notional; IG quoted in spreads, HY in prices; new series every six months), and **tranche** CDS (beyond the reading's scope). Bespoke CDS and baskets also exist.
+- **Settlement**: **cash** (pay loss = notional × (1 − recovery)) or **physical** (deliver bond for par). The recovery rate for cash settlement is set by an **ISDA auction** of the cheapest-to-deliver debt; both parties accept the auction result even if actual recovery later differs — important for a protection buyer who also holds the bond.
 - **Payout** ≈ `notional × (1 − recovery rate) = notional × LGD`. Recovery is set by the **cheapest-to-deliver** obligation (lowest post-default price).
   - **Worked example (Schweser):** $10m notional **senior** CDS on Alpha. Post-default prices: a *subordinated* debenture 15%, a *senior* bond 25%, another *senior* bond 30%. The buyer delivers the **cheapest-to-deliver among eligible (senior/pari passu) obligations** = the 25% senior bond (the 15% subordinated bond is not deliverable into a senior CDS) → payout = `$10m × (1 − 0.25) = $7.5m`.
 
@@ -27,6 +30,7 @@ source: Schweser Book 4, Module 27, LOS 27.a-27.e
   - If spread > coupon → protection buyer pays upfront (price < 100); if spread < coupon → seller pays upfront (price > 100). Worked: IG, coupon 1%, spread 50 bps, duration 4 → upfront = (0.50% − 1%)×4 = **−2%** (seller pays), **price = 100 − (−2) = 102**.
 - **Change in value** ≈ `%Δprice ≈ Δspread(bps) × effective duration`; dollar `≈ Δspread × duration × notional` (gain to the protection **buyer** when spreads **widen**).
 - POD each period is **conditional** (a **hazard rate**); cumulative POD = 1 − Π(probability of survival).
+- **Over the contract's life**: value changes with the reference entity's credit quality even if no default ever occurs, and the CDS **spread approaches zero as maturity approaches**. Either party can **monetize** an accumulated gain or loss by entering an **offsetting** CDS with matching terms.
 
 ## Uses (27.d, 27.e)
 - **Hedge / manage exposure**: buy protection to reduce credit risk; sell protection to add it.

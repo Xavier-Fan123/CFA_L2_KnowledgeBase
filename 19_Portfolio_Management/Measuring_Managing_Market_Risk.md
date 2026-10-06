@@ -1,9 +1,9 @@
 ---
 aliases: [Measuring and Managing Market Risk, Value at Risk, VaR, Expected Shortfall, Sensitivity Risk, Scenario Risk, Risk Budgeting]
 tags: [CFA-L2, pm, concept, risk]
-date: 2026-08-25
+date: 2026-10-05
 status: evergreen
-source: Schweser Book 5, Module 38, LOS 38.a-38.l
+source: Official Curriculum 2026 L2 V9 LM5 (October 2026 errata applied); Schweser Book 5, Module 38, LOS 38.a-38.l
 ---
 
 # Measuring and Managing Market Risk
@@ -44,13 +44,16 @@ Official V9, Module 5. Portfolio = **$150,000,000**, 80% SPY (equity) + 20% SPLB
 ### Worked example — Historical simulation VaR (same portfolio)
 Reprice the 80/20 portfolio over each day's *actual* SPY/SPLB returns (e.g., Day 1 = 0.8(0.80%) + 0.2(−0.53%)), sort the resulting daily portfolio returns, and read the percentile. Official results (Excel `=percentile`): 1% VaR = **$2,643,196**; 5% VaR = **$1,622,272**; 16% VaR = **$880,221**. These differ from parametric mainly because historical simulation uses the data's own (lower-volatility) distribution and makes **no normality assumption** — the actual SPY sample had abnormally low volatility vs the 20% long-run input used above.
 
-## Advantages & Limitations (38.d)
-- **+**: single, comparable number; widely used; aggregates across positions.
-- **−**: says nothing about the **size of losses beyond VaR**; sensitive to assumptions/look-back; can understate tail risk; not subadditive in general (historical/parametric).
+## Advantages & Limitations (38.d) — official lists
+- **Advantages**: a **simple** concept, easy to understand and communicate, captures much information in **one number**; lets you **compare risk across asset classes, portfolios, and trading units** → supports **capital allocation**; usable in **performance evaluation**; can be **verified by backtesting**; **widely accepted by regulators**.
+- **Limitations**: **subjective** and highly sensitive to discretionary choices (method, horizon, confidence, look-back); **underestimates the frequency of extreme events**; ignores **lack of liquidity**; sensitive to **correlation risk** (correlations jump in crises); vulnerable to **trending or volatility regimes**; often **misread as a worst case**; **oversimplifies** risk and focuses heavily on the **left tail** (ignores upside); says nothing about the size of losses beyond VaR.
+- **No single right way** to estimate VaR. Parametric is poor when returns are non-normal (e.g., option positions); historical simulation uses events that actually happened and needs no distribution or parameters, but assumes the future resembles the past; Monte Carlo is extremely flexible but complex and time-consuming.
 
 ## Extensions (38.e)
 - **Conditional VaR (CVaR) / expected shortfall**: average loss **given** that loss exceeds VaR (tail).
 - **Incremental VaR**: change in VaR from adding/removing a position. **Marginal VaR**: sensitivity to a small change. **Relative (ex-ante tracking) VaR**: VaR of active return vs benchmark.
+- In a diversified portfolio, **MVaRs can be summed** to determine each asset's contribution to the overall VaR (official wording).
+- **Ex ante tracking error** = expected deviation of the portfolio's return from its benchmark (a forward-looking relative VaR) — the main relative-risk limit for asset managers; ex post tracking error is the realized deviation.
 
 ## Sensitivity & Scenario Measures (38.f-38.i)
 - **Sensitivity**: equity **beta**; fixed-income **duration & convexity**; option **Greeks (delta, gamma, vega)**. Measure exposure to a single risk factor, but **not probability** of loss.
@@ -68,14 +71,23 @@ This section is a professional trading application, not CFA curriculum text.
 - Risk limits should distinguish **economic hedge effectiveness** from **cash liquidity**. A hedge can reduce final price exposure while creating interim collateral needs that exceed available working capital.
 
 ## Constraints & Users (38.j, 38.k, 38.l)
-- **Constraints**: **risk budgeting** (allocate a total risk limit across units), **position limits**, **scenario limits**, **stop-loss limits**.
-- Different users emphasize different measures: **banks** (regulatory VaR, liquidity, leverage), **asset managers** (active risk / relative VaR), **pensions** (surplus-at-risk, liability-relative), **insurers** (economic capital, scenario/stress).
+- **Constraints**: **risk budgeting** (allocate the total risk appetite across sub-portfolios), **position limits**, **scenario limits** (a cap on the estimated loss in a given scenario — breach → corrective action), **stop-loss limits** (cut or liquidate the position after a specified loss within a period), and **capital allocation** (economic capital assigned by risk).
+- **Who uses what (official)**:
+  - **Banks** (currency units, absolute): **liquidity gap** (asset/liability mismatch), **VaR** on the trading/fair-value book, **leverage** ratio, **sensitivities** (duration, key rates, convexity) for held-for-sale assets, **economic capital** blending market, credit and operational risk, and **full-balance-sheet stress tests**.
+  - **Long-only asset managers** (**percentage of assets, relative to a benchmark**): **position limits** (most frequent), sensitivities and **beta**, **liquidity** of holdings, scenario analysis, **redemption risk** (open-end funds), and **ex ante tracking error** (more common than VaR).
+  - **Hedge funds**: sensitivities, **gross exposure** (long + short), **leverage**, VaR at high confidence, scenarios, and **drawdown** (peak-to-trough).
+  - **DB pension funds**: goal = stay adequately funded (funding ratio = assets / PV of liabilities; > 100% overfunded). Measures: **interest-rate and curve risk** of the liability cash flows (liabilities as short bond positions at the regulator's discount curve); **surplus at risk** = VaR with assets long and liabilities short (higher when assets are more volatile and less correlated with liabilities; a breach triggers re-allocation — **liability-driven investing**); split into **liability-hedging** vs **return-generating** assets (the latter also hedges longevity and wage-growth surprises).
+  - **P&C insurers**: liabilities are not highly correlated with markets, so assets are **not** matched to liabilities (premiums pay claims) → **sensitivities vs target asset allocation**, **economic capital and VaR** (capital is tapped only when payouts exceed expectations), **scenario analysis** stressing market and insurance risks together.
+  - **Life insurers / annuities**: long liabilities, reserves sensitive to discount-rate assumptions → **sensitivities**, closer **asset-liability matching**, and **scenario analysis** of asset-liability mismatch including non-market shocks (e.g., longevity).
 
 ## Exam Traps
 - VaR is a **minimum** loss at a confidence level, not the maximum; it ignores **how bad** the tail is — use **CVaR/expected shortfall** for that.
 - **Parametric VaR is poor for option-heavy portfolios** (non-normal); historical/Monte Carlo handle them.
 - Sensitivity measures give **exposure**, not loss probability; scenario analysis covers tail/multi-factor stress.
 - **Reverse stress test = start from failure and work back to the scenarios that cause it** — the opposite direction from an ordinary stress test.
+- Asset managers report risk **in % and relative to a benchmark**; banks report in **currency units, absolute**.
+- **Surplus at risk** treats pension liabilities as **short** bond positions; perfectly matched assets → zero surplus at risk.
+- VaR's limitations include **liquidity** and **correlation risk** blind spots and **regime** sensitivity; it is not a worst case.
 - z-thresholds: **5% → 1.65σ, 1% → 2.33σ, 16% → 1σ**. Higher confidence (1% vs 5%) → larger z → larger VaR.
 - **Never annualize a daily VaR** by ×250 or ×√250. Re-annualize mean (×250) and σ (×√250) *first*, then compute VaR. The √250 shortcut is valid only under a zero-expected-return assumption.
 - Parametric needs only mean + σ (+ correlations); it does **not** require a data history (historical sim does).

@@ -1,9 +1,9 @@
 ---
 aliases: [Market-Based Valuation, Price Multiples, EV/EBITDA, Justified Multiples, PEG, Method of Comparables]
 tags: [CFA-L2, equity, concept, valuation]
-date: 2026-08-25
+date: 2026-10-05
 status: evergreen
-source: Schweser Book 3, Module 20, LOS 20.a-20.r
+source: Official Curriculum 2026 L2 V5 LM4 (October 2026 errata applied); Schweser Book 3, Module 20, LOS 20.a-20.r
 ---
 
 # Market-Based (Relative) Valuation
@@ -51,6 +51,22 @@ The exam asks "why would an analyst prefer X here?" — these are list LOS.
 - **PEG** = `(P/E) / g(%)`; lower PEG = relatively cheaper, but assumes a linear P/E-growth relation and ignores risk and differing growth durations.
 - **Predicted P/E**: regress P/E on fundamentals (growth, payout, risk) cross-sectionally; limits — unstable out of sample, multicollinearity, time-period specific.
 
+## Terminal Value Using Price Multiples (20.k)
+- In a multistage DDM/DCF the terminal value must reflect growth the company can **sustain long run**. Analysts often use **terminal price multiples** (P/E, P/B):
+  - **Based on fundamentals**: restate the Gordon model as a multiple — divide by `E_n` for a **trailing** terminal P/E, by `E_(n+1)` for a **leading** one (same answer as Gordon directly; the multiple is just easier to communicate).
+  - **Based on comparables**: benchmark = **median industry P/E, average industry P/E, or the stock's own average past P/E**.
+- `V_n = benchmark trailing terminal P/E × E_n` or `V_n = benchmark forward terminal P/E × E_(n+1)`; then discount `V_n` back n periods with the forecast dividends/cash flows.
+- **Comparables**: strength — entirely grounded in **market data** (Gordon needs r, payout and mature g and is very sensitive to them); weakness — if the benchmark is **mispriced**, the terminal value inherits the error.
+- *Official Example 17*: industry average P/E 14.3, `E_3` = $3.00 → `V_3 = 14.3 × 3.00 = $42.90`.
+
+## Method of Comparables — Steps and Benchmarks (20.a, 20.l)
+1. Select and calculate the price multiple.
+2. Choose the comparison asset(s) and compute the **benchmark** (median or mean for a group).
+3. Apply the benchmark (possibly adjusted for fundamentals) to estimate value — equivalently, compare the stock's multiple with the benchmark.
+4. Check whether gaps are **explained by differences in fundamentals** and revise the conclusion.
+- Benchmark choices: peer-group median/mean (industry), industry or sector median/mean, an equity-index P/E, or the stock's own average past P/E (also relative to peers, industry, or index). A group or index usually gives less valuation error than a single closely matched stock. Industry groupings: **GICS** and **ICB**.
+- **Look-ahead bias**: when backtesting a multiple-based strategy, compute trailing P/Es only with EPS that had **actually been reported** at the decision date (e.g., in early January Q4 EPS is not yet out).
+
 ## Price/Cash Flow (P/CF) and Dividend Yield (20.c, 20.d)
 Both are explicit curriculum multiples alongside P/E, P/B, P/S.
 
@@ -95,6 +111,8 @@ Practical fix: restate to a common accounting basis where possible, and prefer m
   - **Weighted harmonic mean** = `1 / Σ(wi/Xi)` with portfolio value weights wi — matches a real cap-weighted portfolio's multiple. (Harmonic ≤ geometric ≤ arithmetic for positive values.)
 
 ## Exam Traps
+- **Terminal value via multiples**: `V_n = trailing P/E × E_n` or `forward P/E × E_(n+1)` — don't pair a forward multiple with `E_n`. A comparables-based terminal value inherits any **mispricing** in the benchmark.
+- **Look-ahead bias**: backtests must use only EPS that was **already reported** at the time.
 - **EV subtracts cash** and adds debt/preferred/minority — a common error.
 - **EV/EBITDA's two drawbacks**: EBITDA **overstates CFO when working capital grows**, and **FCFF ties to theory better** than EBITDA. Advantages ≠ the whole answer.
 - Normalizing cyclical EPS: the **method of average ROE is preferred** over the method of historical average EPS.

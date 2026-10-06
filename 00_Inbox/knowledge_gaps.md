@@ -9,10 +9,20 @@ status: evergreen
 
 Auto-detected topics not yet covered by the KB. Resolve by creating or enriching notes.
 
+### 2026-10-05 — Official-curriculum audit for the November 2026 exam: errata, detail gaps, deletions (RESOLVED)
+- Triggered by: user request — "exam in November: check for outdated knowledge and omissions; add what is missing and delete what is definitely not tested."
+- **Method (new, stronger than the Schweser KEY CONCEPTS pass):** (1) extracted the LEARNING OUTCOMES boxes from all ten official volumes — **370 LOS, identical per-reading counts to Schweser**, so no whole LOS was missing; (2) compared each learning module's official **SUMMARY / LEARNING MODULE OVERVIEW** (or lesson headings where none exists) against its note, reading the official section text wherever a note was thin; (3) synced every concept-level item in the **October 2026 errata notice** (the local PDFs are the pre-errata printing); (4) re-checked LOS tags in note **bodies** only — the earlier 370/370 count appears to have leaned on frontmatter ranges such as "2.a-2.o" (LOS 2.h and 20.k had no body text).
+- **Corrections (content was wrong or outdated):** Taylor rule formula (the real rate was labelled "neutral rate", in the note and in [[Formula_Cheat_Sheet]]); real rates vs growth volatility (official: **higher** volatility → **higher** real rates); public-equity value definition (official: **intrinsic value**, not fair market value); bond-futures price missing `− AI_T`; unsmoothing sign; JV accounting; specialist hedge-fund strategies (**reinsurance/life settlements** — the 2026-08-25 pass had wrongly dropped reinsurance); the "analyst adjustments" pension section was legacy and was replaced by the official DB valuation treatment; current-rate ratio claim refined (mixed ratios still change); three LaTeX formulas in [[Formula_Cheat_Sheet]] were corrupted (`	` read as a tab).
+- **Detail added from the official text (biggest gaps):** [[Quality_of_Financial_Reports]] (potential problems, warning-signs exhibit, 7 evaluation steps, accruals, Altman Z, cash-flow and balance-sheet quality, cases); [[Employee_Compensation]] (5 compensation types, IFRS 2 mechanics, official treasury stock method with unrecognized SBC, SBC and DB valuation); [[Multinational_Operations]] (transaction exposure, CTA recycling, ratio effects, hyperinflation); [[Intercorporate_Investments]] (IFRS 9 reclassification, ECL, FV option, impairment reversals); [[Analysis_of_Financial_Institutions]] (CAMELS ratings/components/limitations, non-CAMELS factors, insurers); [[Market_Based_Valuation]] (terminal value via multiples — LOS k had no body text); [[Free_Cash_Flow_Valuation]] (target-DR FCFE, uses of FCF, real-terms model, sensitivity, ESG); [[Residual_Income]]; [[Private_Company_Valuation]] (company- vs stock-specific factors, uses, three areas of focus); [[Bonds_With_Embedded_Options]] (exercise styles, extendibles, curve-shape effects, KRD patterns); [[Arbitrage_Free_Valuation]] (three official worked examples — closes the 2026-08-27 item below); [[Time_Series_Analysis]] (coefficient instability — LOS 2.h had no body text — and MA/ARMA); plus smaller items across PM, Economics, Corporate Issuers, Derivatives, Alternatives, Quant.
+- **Deleted as definitely not examinable at Level II:** the capital budgeting foundations note (Level I Corporate Issuers) and the detailed GIPS note (Level I/III). Also removed: a gross-income-multiplier line in [[Real_Estate]] (zero hits in the official volume). Relabeled: the make-whole call in [[Bonds_With_Embedded_Options]] is official LM3 text, not "beyond curriculum". Standard III(D), including "GIPS is the best way to comply" and the official false-claim / policy-consistency cases, stays in [[Code_and_Standards]]. Both files remain recoverable from git history.
+- Lesson: Schweser condensations can drop or distort official content (reinsurance; pension adjustments); when the two disagree, the official volume plus the latest errata controls.
+- **User decision (2026-10-06): KEEP** the 17 "Commodity Trading / Hedge Fund Extension (Beyond Curriculum)" sections (one per note in 17 notes). They stay clearly labelled as non-examinable professional context; future "delete what is not tested" passes should leave them alone.
+- Priority: resolved
+
 ### 2026-09-04 — 2026 exam-scope audit and errata reconciliation (RESOLVED)
 - Official 45-module mapping found no missing current 2026 learning module in the knowledge base.
 - September errata review removed pseudo-R-squared; Fed/Yardeni and legacy M&A vocabulary were removed from core notes.
-- [[Capital_Budgeting_Foundations]] and deep [[GIPS]] mechanics were reclassified as reference-only.
+- The capital budgeting foundations note and the deep GIPS mechanics note were reclassified as reference-only (both later deleted on 2026-10-05).
 - Current Standard III(D) and change-of-control contingent-put mechanics were retained; final review consolidated current III(D) non-GIPS procedures into the core [[Code_and_Standards]] note.
 - Priority: resolved
 
@@ -36,12 +46,12 @@ Auto-detected topics not yet covered by the KB. Resolve by creating or enriching
 - **Standing rule for future write-backs:** the Q&A heading separator must be an em-dash, exactly as the CLAUDE.md template shows - `### YYYY-MM-DD - <summary>` written with a hyphen silently drops the entry from both indexes.
 - Priority: resolved
 
-### 2026-08-27 - Arbitrage_Free_Valuation carries no worked calculation
+### 2026-08-27 - Arbitrage_Free_Valuation carries no worked calculation (RESOLVED 2026-10-05 — three official worked examples added)
 - Triggered by: the same coverage audit - a lines-per-LOS and worked-example sweep across all 57 topic notes.
 - Finding: [[Arbitrage_Free_Valuation]] is 59 lines covering LOS 24.a-24.i with **zero numbers** - no calibrated binomial tree, no backward-induction node values, no pathwise example. The prose is complete and correct (value additivity **and** dominance, lognormal `e^(2σ)` node spacing, CIR/Vasicek/Ho-Lee/KWF), but the exam tests this reading almost entirely as calculation. Every comparable computational note ([[Time_Series_Analysis]], [[Options_Valuation]], [[Multifactor_Models]], [[Real_Estate]]) carries worked examples.
 - Checked and cleared: the other zero-example notes are genuinely qualitative or already complete - [[Exchange_Traded_Funds]], [[Quality_of_Financial_Reports]] (Beneish, all 8 indices + the -1.78 cutoff), [[Economics_and_Investment_Markets]] (Taylor rule, breakeven inflation), [[Big_Data_Projects]] (confusion matrix worked through). Not gaps.
 - Suggested action: add a calibrated two-period tree, a backward-induction walk-through for a coupon bond, and a pathwise valuation that reconciles to the same price, from Schweser Book 4 Module 24.
-- Priority: medium-high
+- Priority: resolved (was medium-high)
 
 
 ### 2026-08-25 - Reading-level "KEY CONCEPTS" audit: 47 detail-level LOS points were missing or thin (RESOLVED)
@@ -68,7 +78,7 @@ Auto-detected topics not yet covered by the KB. Resolve by creating or enriching
 ### 2026-08-02 — Capital budgeting (TNOCF / NWC recovery / tax shields) absent from KB and from the 2026 L2 curriculum (RESOLVED)
 - Triggered by: user's four-part self-diagnosis after a practice set — TNOCF & NWC recovery, incremental capex vs. depreciation tax shield, annuity↔geometric-series mapping, and nominal-vs-real direction on shields and interest.
 - Finding: **"TNOCF" returns zero hits across all five 2026 Schweser L2 books**; there is no capital budgeting reading in 2026 L2. This is **Level I** (Corporate Issuers — Capital Investments). The user's practice source is testing L1 foundation material.
-- Suggested action: **done** — created [[Capital_Budgeting_Foundations]] with an explicit scope warning, plus L2 bridges for each concept (NWC↔WCInv in [[Free_Cash_Flow_Valuation]]; tax shield↔after-tax cost of debt in [[Cost_of_Capital]]; geometric series↔Gordon Growth in [[Dividend_Discount_Models]]; nominal-vs-real↔temporal method in [[Multinational_Operations]]).
+- Suggested action: **done** — created a capital budgeting foundations note (deleted 2026-10-05 as not examinable at Level II) with an explicit scope warning, plus L2 bridges for each concept (NWC↔WCInv in [[Free_Cash_Flow_Valuation]]; tax shield↔after-tax cost of debt in [[Cost_of_Capital]]; geometric series↔Gordon Growth in [[Dividend_Discount_Models]]; nominal-vs-real↔temporal method in [[Multinational_Operations]]).
 - Priority: resolved (kept as foundation, flagged as non-LOS so it doesn't consume L2 review time)
 
 ### 2026-07-26 — No critical-value / test-statistic reference anywhere in the KB (RESOLVED)
@@ -101,7 +111,7 @@ Auto-detected topics not yet covered by the KB. Resolve by creating or enriching
 - **Findings (notes were incomplete/incorrect despite `status: evergreen` — confirms labels can't be trusted):**
   - **Derivatives**: [[Options_Valuation]] was **missing BSM d₁/d₂ entirely**; FRA/swap valuation, Black model, swaptions, and Greek formulas + delta-hedge sizing were thin → all added.
   - **Equity**: [[Market_Based_Valuation]] was **missing P/CF and dividend yield** (both explicit LOS) → added.
-  - **Ethics**: [[Code_and_Standards]] was on the **old edition** — missing **Standard I(E) Competence** (2024 revision), VI(A) mislabeled; no Application-cases note existed → created [[Application_of_the_Code_and_Standards]]; [[GIPS]] source corrected (no standalone 2026 GIPS reading — it sits under Standard III(D)).
+  - **Ethics**: [[Code_and_Standards]] was on the **old edition** — missing **Standard I(E) Competence** (2024 revision), VI(A) mislabeled; no Application-cases note existed → created [[Application_of_the_Code_and_Standards]]; GIPS note source corrected (note deleted 2026-10-05) (no standalone 2026 GIPS reading — it sits under Standard III(D)).
   - **Alternatives**: [[Real_Estate]] used a non-official example and omitted most of LM2 → **rewritten** to the official private-RE reading (NOI, RE cycle, 3 valuation approaches, indexes).
   - **Corporate**: [[Cost_of_Capital]] missing DDM/BYPRP/Fama-French/Grinold-Kroner; [[Corporate_Restructurings]] missing pro-forma/sum-of-parts/LBO → added.
   - Smaller gaps filled across Quant (ANOVA MSR/MSE/SEE; AR residual-autocorrelation test), Economics (forward points, real-rate parity, endogenous growth), FSA (SPE/VIE, pension & translation worked examples, sources of risk info), FI (macro rate views 23.k, convertibles, VND/CVA, DM, CDS spread), PM (APT arbitrage, parametric VaR worked example).

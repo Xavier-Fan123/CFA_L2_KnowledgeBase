@@ -1,9 +1,9 @@
 ---
 aliases: [Commodities, Commodity Futures, Contango, Backwardation, Roll Return, Theories of Futures Returns, Commodity Swaps]
 tags: [CFA-L2, alt, concept, commodities]
-date: 2026-08-25
+date: 2026-10-05
 status: evergreen
-source: Schweser Book 4, Module 30, LOS 30.a-30.j
+source: Official Curriculum 2026 L2 V8 LM1 (October 2026 errata applied); Schweser Book 4, Module 30, LOS 30.a-30.j
 ---
 
 # Commodities and Commodity Derivatives
@@ -15,6 +15,9 @@ source: Schweser Book 4, Module 30, LOS 30.a-30.j
 ## Valuation vs Equities/Bonds (30.c, 30.d)
 - Commodities generate **no cash flows** → cannot be valued by DCF. "Value" comes from supply/demand, storage economics, and **convenience yield** (benefit of holding the physical).
 - Participants: **hedgers** (producers/consumers), **speculators/traders** (provide liquidity, take risk), **arbitrageurs**.
+
+- **Pricing forms**: the **spot** price (deliver/buy the physical commodity now at a specific location) vs the **futures** price (exchange-based, defined quantity and often quality, later delivery); **basis** = spot − futures. Contracts settle by **cash or physical delivery**. Three trading participants: **informed investors/hedgers, speculators, arbitrageurs**.
+- **Errata facts (5 Aug 2025 / 5 May 2026)**: since 2010 **US shale oil production DECREASED oil's convenience yield**, so historical scarcity risk is much lower; grains have **well-defined** (not "uniform") seasons and growth cycles specific to geographic regions. A **short life cycle** lets a market adjust quickly to shocks; a **long** one limits its ability to react.
 
 ## Contango vs Backwardation (30.e)
 - **Contango**: futures price **> spot** (upward curve) — typical when storage costs dominate, ample supply. In contango the **basis and calendar spread are negative** → **negative** roll return.
@@ -48,7 +51,7 @@ The curriculum names **three** distinct theories — keep them separate, because
   - **Excess-return swap** — exchanges the **price (excess) return** only (no collateral leg).
   - **Basis swap** — exchanges cash flows based on the difference between two related prices/indexes.
   - **Variance / volatility swap** — payoff tied to realized **variance / volatility** of the commodity.
-- **Index construction** drives returns via three levers: **weighting** scheme, **roll** methodology/timing, and **rebalancing** frequency.
+- **Index construction** drives returns via three levers: **weighting** scheme, **roll** methodology/timing, and **rebalancing** frequency. The official summary lists **five** differentiating characteristics: (1) **breadth and selection** of commodities/sectors (some have several reference contracts), (2) **weighting** method, (3) **roll** methodology and frequency, (4) **rebalancing** methodology and frequency, and (5) the **governance** that decides which commodities are included.
   - **Five major indexes:** **S&P GSCI** (24 commodities, world-production value weighting → energy-heavy, up to ~80%); **BCOM / Bloomberg Commodity** (23 commodities, liquidity-weighted + committee, capped to diversify); **DBLCI** (fixed weights, distinctive **optimized roll**); **TR/CC CRB** (fixed, committee, **monthly** rebalance); **RICI** (38 commodities, fixed, committee, **monthly** rebalance).
   - **Weighting:** production/value-weighted (floating) drifts with prices → **smaller rebalancing trades**; **fixed-weight** forces larger buy-low/sell-high rebalancing.
   - **Rebalancing:** **frequent (monthly)** rebalancing helps in **mean-reverting** markets (sell peaks/buy valleys) but **hurts in trending** markets; annual rebalancing favors persistent trends.

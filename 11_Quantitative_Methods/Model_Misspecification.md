@@ -1,7 +1,7 @@
 ---
 aliases: [Model Misspecification, Functional Form Misspecification, Omitted Variable, Variable Scaling]
 tags: [CFA-L2, quant, concept, regression]
-date: 2026-06-03
+date: 2026-10-05
 status: evergreen
 source: Schweser Book 1, Module 1.3, LOS 1.g
 ---
@@ -10,7 +10,7 @@ source: Schweser Book 1, Module 1.3, LOS 1.g
 
 ## Overview
 
-Three principles of model specification: independent variables must have an **economic rationale**, the model must be **parsimonious**, and the **functional form must be correct**. Misspecification either biases / makes inconsistent the coefficients, or breaks the error-term assumptions (heteroskedasticity / serial correlation), making inference unreliable.
+Principles of model specification (official 2026 list — five): (1) an **economic rationale** for each variable, (2) **parsimony**, (3) **good out-of-sample performance** (not just in-sample fit), (4) the **appropriate functional form**, and (5) **no violations of the regression assumptions**. Functional-form failures come from **omitted variables, inappropriate variable form, inappropriate scaling, and inappropriate data pooling**. Misspecification either biases / makes inconsistent the coefficients, or breaks the error-term assumptions (heteroskedasticity / serial correlation), making inference unreliable.
 
 ## Four Functional-Form Misspecifications
 

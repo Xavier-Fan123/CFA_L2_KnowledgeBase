@@ -1,7 +1,7 @@
 ---
 aliases: [Real Estate, Private Real Estate, Direct Real Estate, Overview of Types of Real Estate Investment, NOI, Cap Rate, Direct Capitalization, Equity Dividend Rate, Real Estate Cycle, Appraisal-Based Index, Transaction-Based Index, GPRI]
 tags: [CFA-L2, alt, concept, real-estate]
-date: 2026-06-03
+date: 2026-10-05
 status: evergreen
 source: Official Curriculum 2026 L2 Vol 8, Learning Module 2 (Overview of Types of Real Estate Investment), LOS 31.a-31.e; Schweser Book 4
 ---
@@ -45,6 +45,8 @@ NOI is computed **before financing costs and income taxes** (analogous to EBITDA
 - Equity = 3,750,000 − 3,000,000 = EUR750,000; pre-tax CF = 406,750 − 220,745 = EUR186,005 → **equity dividend rate = 186,005 / 750,000 = 24.8%** (falls to 21.6% at the lower NOI).
 
 **Depreciation:** computed on the **depreciable base** = construction/acquisition cost + improvements; **land is excluded** (assumed infinite life). Periods vary by jurisdiction/property type.
+
+- **Classification (official overview)**: real estate exposure held as **equity** (direct property, REITs, and firms that operate, develop or service real estate) or as **debt** (mortgages, **mortgage-backed securities**, **covered bonds**). Actual and potential **economic use** is the primary driver of value; NOI is the common return metric.
 
 ## 2. Economic Value Drivers & Portfolio Role (31.b)
 
@@ -107,8 +109,6 @@ Return = **periodic income** (bond-like leases) + **capital appreciation** (equi
 
 **(C) Sales comparison (market) approach** — adjust recent comparable sale prices for differences (size, age, location, condition, **timing of sale**). Most common unit = **price per square foot/meter**. Recent sales weighted more; valid only with enough comparable transactions.
 
-> **Gross income multiplier (GIM)** = Sale price / Gross income — a crude relative-value shortcut (curriculum / general-knowledge addition for completeness; not a primary LM2 method).
-
 ## 5. Real Estate Indexes (31.e)
 
 - **Appraisal-based** (e.g., NCREIF, GREFI via NCREIF/INREV/ANREV): periodic professional **appraisals** of portfolio properties.
@@ -120,9 +120,13 @@ Return = **periodic income** (bond-like leases) + **capital appreciation** (equi
 
 **Appraisal-based holding-period return** (single-period IRR proxy): `HPR = [NOI − Capital expenditures + (End market value − Begin market value)] / Begin market value` *Worked (Wallonia Example 12):* NOI EUR406,750, capex EUR100,000; begin MV = 3,750,000 × 1.056 = EUR3,960,000; end MV = 3,960,000 × 1.032 = EUR4,086,720 → HPR = (406,750 − 100,000 + 126,720) / 3,960,000 = **10.95%**.
 
-**Adjusting for appraisal lag:** (1) **"unsmooth"** the index via a reverse-AR model $R_t^* = aR_t + (1-a)R_{t-1}^*$ → higher volatility & correlation (more realistic); or (2) use a **transaction-based** index when comparing RE to public assets.
+**Adjusting for appraisal lag:** (1) **"unsmooth"** the appraisal index → higher volatility and higher correlation with other asset classes (more realistic); or (2) use a **transaction-based** index when comparing RE to public assets.
+- **Smoothing model (Eq. 16):** $R_t^* = aR_t + (1-a)R_{t-1}^*$, where $R_t^*$ = appraisal-based (observed) return, $R_t$ = actual (true) return, and $0 \le a \le 1$ = speed at which actual returns show up in appraisals (higher a = faster).
+- **Unsmoothing (Eq. 17, sign corrected by the 11 Aug 2025 errata):** $R_t = \dfrac{R_t^*}{a} - \dfrac{1-a}{a}R_{t-1}^*$. With a = 0.5 the true return moves **twice** as much as the reported one.
+- *Worked (a = 0.6):* $R_0^* = 2.70\%$, $R_1^* = 0.50\%$ → $R_1 = 0.50/0.6 - (0.4/0.6)(2.70) = 0.83 - 1.80 = -0.97\%$. Sanity check: appraisal returns fell, so the unsmoothed return must fall **further**. The printed Example 13 still shows 2.63%, which is the pre-errata **plus** sign — use the minus.
 
 ## Exam Traps
+- **Unsmoothing sign:** `R_t = R*_t / a − [(1 − a)/a] × R*_(t−1)` — **minus** the lagged appraisal return (11 Aug 2025 errata). Unsmoothed returns are **more** volatile than the appraisal series.
 - **Direct cap: value = year-1 NOI / cap rate**, and **cap rate = r − g**. Higher r ↓ value; higher g ↓ cap rate ↑ value. **Terminal value uses NOI_n(1+g)/(r−g)** (next-period NOI), not current NOI.
 - **Cap rate ≠ discount rate.** `r` = required return (risk-free + risk premium); cap rate = `r − g` and is **lower than r** whenever g > 0. Equal only if g = 0. Invert to read market growth: `g = r − cap rate`.
 - **Cap rate and value always move in opposite directions** — "cap rate compression" = falling cap rates = rising prices.

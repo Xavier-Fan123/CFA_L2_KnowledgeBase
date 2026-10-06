@@ -1,9 +1,9 @@
 ---
 aliases: [Multifactor Models, Arbitrage Pricing Theory, APT, Carhart Model, Factor Models, Active Risk Decomposition]
 tags: [CFA-L2, pm, concept, factor-models]
-date: 2026-08-25
+date: 2026-10-05
 status: evergreen
-source: Schweser Book 5, Module 37, LOS 37.a-37.g
+source: Official Curriculum 2026 L2 V9 LM4 (October 2026 errata applied); Schweser Book 5, Module 37, LOS 37.a-37.g
 ---
 
 # Multifactor Models
@@ -51,10 +51,15 @@ Two factors = **surprises** in inflation (F_INFL) and GDP growth (F_GDP). Two st
 | **Fundamental** | Firm attributes (size, value, momentum, P/B) | **Factor sensitivities are standardized attributes**; factor returns estimated by regression |
 | **Statistical** | Factors extracted by statistics (PCA/factor analysis) | Maximize explained variance; factors lack economic interpretation |
 
+- **Statistical models, two kinds (official)**: **factor analysis** — factors are portfolios that best reproduce historical return **covariances**; **principal components** — factors are portfolios that best reproduce historical return **variances**. Factors may lack economic meaning.
+- **Order of estimation**: *macro* models first build the factor (**surprise**) series, then regress to estimate the **sensitivities**; *fundamental* models first specify the **sensitivities** (standardized attributes), then regress cross-sectionally to estimate the **factor returns**. Fundamental factors are company **fundamental** (e.g., leverage, earnings variability), company **share-related** (e.g., market cap, B/P, momentum), or **macroeconomic** factors.
+- Systematic factors represent **priced risk** — risk investors demand extra return to bear; macro surprises affect either expected cash flows or the discount rate and are meant to be uncorrelated.
+
 - **Carhart four-factor**: `R_p − R_f = α + β_mkt·RMRF + β_smb·SMB + β_hml·HML + β_wml·WML` (market, size, value, momentum).
 
 ## Uses & Active Risk (37.e, 37.f, 37.g)
 - Uses: return attribution, **risk attribution**, portfolio construction (factor tilts), passive/active replication, understanding style.
+- Construction uses also include **tracking market indexes** and **alternative (smart beta) index construction**; investors should take **above-average** exposure to risks they have a **comparative advantage** in bearing and below-average exposure where they are disadvantaged.
 - **Benefit of multiple risk dimensions (37.f):** the CAPM splits wealth only between the risk-free asset and one broad market index. Recognizing **multiple sources of systematic risk** lets an investor improve on that mean-variance result by **tilting away from the market portfolio** — taking **above-average exposure to factors they have a comparative advantage in bearing** (and below-average exposure to those they don't). Different investors have different appetites/abilities to bear inflation, growth, credit, liquidity, etc., so the same factor that is a risk to one investor can be an opportunity for another.
 - **Active return** = Σ (active factor tilts × factor returns) + security selection.
 - **Active risk (tracking error)** decomposes into **active factor risk + active specific risk**: `active risk² = active factor risk² + active specific (selection) risk²`.

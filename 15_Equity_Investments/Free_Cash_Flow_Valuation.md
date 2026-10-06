@@ -1,9 +1,9 @@
 ---
 aliases: [Free Cash Flow Valuation, FCFF, FCFE, Free Cash Flow to Firm, Free Cash Flow to Equity]
 tags: [CFA-L2, equity, concept, valuation]
-date: 2026-06-03
+date: 2026-10-05
 status: evergreen
-source: Schweser Book 3, Module 19, LOS 19.a-19.m
+source: Official Curriculum 2026 L2 V5 LM3 (October 2026 errata applied); Schweser Book 3, Module 19, LOS 19.a-19.m
 ---
 
 # Free Cash Flow Valuation (FCFF / FCFE)
@@ -63,14 +63,29 @@ The cash-flow waterfall: operating cash (after tax, FCInv, WCInv) = **FCFF** (al
 - Don't confuse the accrual with cash: actual restructuring cash paid (e.g., severance) flows through the accrued-liability change in **WCInv**; the charge/reversal accrual itself is the non-cash NCC item.
 
 ## Forecasting & Drivers (19.e, 19.f)
-- Approaches: (1) grow historical FCF at a constant rate; (2) forecast each component.
+- Approaches: (1) grow historical FCF at a constant rate (fits if FCF has grown steadily and historical relationships should hold); (2) forecast each component — EBIT(1 − t), net non-cash charges, FCInv, WCInv.
+- **Sales-based method (official)**: assume **net new fixed investment (FCInv − Dep)** and **WCInv** are constant proportions of the **increase in sales**:
+  - incremental FCInv rate = `(Capex − Depreciation) / ΔSales`; WCInv rate = `ΔWorking capital / ΔSales`.
+  - `FCFF = EBIT(1 − t) − (FCInv − Dep) − WCInv` (depreciation assumed to be the only non-cash charge; maintenance capex ≈ depreciation, growth capex tied to sales growth).
+- **FCFE with a target debt ratio DR** (debt / (debt + equity)): the firm finances DR of net new investment with debt, so `Net borrowing = DR × (FCInv − Dep) + DR × WCInv`, which gives:
+  `FCFE = NI − (1 − DR)(FCInv − Dep) − (1 − DR)(WCInv)` (official Eq. 15) — FCFE = net income minus the **equity-financed** share of net investment; no need to forecast debt issuance and repayment year by year.
+  - *Illustration (own numbers)*: NI 100, FCInv 70, Dep 30, WCInv 20, DR 40% → `FCFE = 100 − 0.6(40) − 0.6(20) = 64`.
 - **Dividends, share repurchases, and share issuance do NOT affect FCFF or FCFE** (financing of equity, not operating). **Changes in leverage** affect FCFE (via net borrowing and interest) but not FCFF.
-- Net income / EBITDA are **imperfect** proxies for cash flow (ignore reinvestment, WCInv, non-cash items).
+- Net income / EBITDA are **imperfect** proxies for cash flow (ignore reinvestment, WCInv, non-cash items) — earnings components either **double-count or ignore** parts of the cash-flow stream.
+- **Uses-of-FCF check** (must equal the sources calculation): `Uses of FCFF = Δcash balances + Int(1 − t) + (principal repaid − new borrowing) + dividends + (buybacks − share issuance)`; `Uses of FCFE = Δcash balances + dividends + (buybacks − share issuance)`. Borrowing to pay dividends or buy back stock **raises leverage**; issuing shares to repay debt lowers it.
+- **Analyst adjustments to CFO**: when balance-sheet working-capital changes don't match the cash-flow statement ("non-articulation" — caused by **acquisitions/divestitures** and **non-domestic subsidiaries**), adjust the CFO starting point or forecast components from sales.
+- **Why analysts often prefer FCF to DDM**: many firms pay little or no dividends; dividends are set at the board's **discretion** and may not track long-run profitability (paid well below or above FCF); FCFE measures **capacity** to pay, the relevant view for a **control** buyer, while dividends are what a minority holder actually receives.
 
 ## Valuation Models (19.j, 19.k, 19.l)
 - **Single-stage**: `Firm value = FCFF1 / (WACC − g)`; `Equity = FCFE1 / (r − g)`.
 - Equity value (from FCFF) = firm value − market value of debt.
-- **Two/three-stage**: PV of explicit FCF + PV of terminal value (Gordon or exit multiple).
+- **Two/three-stage**: PV of explicit FCF + PV of terminal value (Gordon or exit multiple). Two common two-stage versions: **(a) a constant growth rate in each stage**, **(b) growth declining through stage 1 to a sustainable long-run rate in stage 2**. Three-stage models are good approximations for cash flows that actually fluctuate year to year.
+  - `Firm value = Σ FCFF_t/(1+WACC)^t + [FCFF_(n+1)/(WACC − g)] / (1+WACC)^n`; `Equity value = Σ FCFE_t/(1+r)^t + [FCFE_(n+1)/(r − g)] / (1+r)^n`.
+- **Complicated capital structures**: FCFF/FCFE models adapt easily — e.g., with preferred stock, subtract the market value of preferred (FCFF path) or deduct preferred dividends from FCFE.
+- **Real (inflation-adjusted) single-stage model for international stocks** — useful when inflation is high or volatile: `V0 = FCFE0(1 + g_real)/(r_real − g_real)`, with `r_real` = real **country return ± industry, size and leverage adjustments** (a build-up), and g_real benchmarked to the country's real growth rate.
+  - *Official Mukamba example*: r_real = 7.30% + 0.80% − 0.33% − 0.12% = **7.65%**; g_real = 3.0% − 0.5% = 2.5%; `V0 = 1,400(1.025)/(0.0765 − 0.025) = 1,435/0.0515 ≈ CDF 27,864`.
+- **Sensitivity analysis (19.i)**: value moves **proportionally** with the base-year FCFF/FCFE; growth rates and their **duration** are the hardest inputs. In the official Petrobras example, value is **negatively** related to beta, the risk-free rate, and the ERP and **positively** related to FCFE growth — and was **most sensitive to the FCFE growth rate** (BRL24.02-38.57). A range-based sensitivity analysis shows which inputs matter most (6 Mar 2026 errata wording).
+- **Integrating ESG**: quantifiable items (e.g., a projected environmental fine) go straight into the cash flows; hard-to-quantify material ESG risks can be handled by **adding a risk premium to the cost of equity** (analyst judgment).
 - Compare to market price → over/under/fairly valued (19.m).
 
 ## FCFF vs FCFE Valuation Paths — Same Equity Value When Consistent (19.k)
@@ -106,6 +121,8 @@ Given ($m): NI 500; D&A 120; **reversal** of prior restructuring charge 40; gain
 - **Leverage changes affect FCFE, not FCFF.** Dividends/buybacks affect **neither**.
 - WCInv excludes cash and short-term debt; an **increase** in working capital **reduces** free cash flow.
 - **Add non-operating assets** (excess cash, investment land, financial holdings at market value) to the FCFF/FCFE-derived value — the DCF only captures operating assets.
+- **Target-debt-ratio FCFE**: `FCFE = NI − (1 − DR)(FCInv − Dep) − (1 − DR)WCInv` — only the **equity-financed** share of net investment is subtracted; it assumes depreciation is the only non-cash charge.
+- **Real-terms valuation**: discount **real** FCFE growth at a **real** required return — never mix nominal and real.
 
 ## Q&A
 

@@ -1,7 +1,7 @@
 ---
 aliases: [ESG, Corporate Governance, Ownership Structures, ESG Integration, Agency Conflicts, CEO Duality, Principal-Principal, Dual-Class Shares, SASB]
 tags: [CFA-L2, corp, concept, esg]
-date: 2026-06-03
+date: 2026-10-05
 status: evergreen
 source: Official Curriculum 2026 L2 V4, Reading "ESG Considerations in Investment Analysis" (Schweser Book 2, Module 14); LOS a-d
 ---
@@ -52,6 +52,11 @@ Three official buckets — **board policies, executive remuneration, shareholder
 - **Three sources of ESG information**: (1) **proprietary** research from public disclosures (annual/proxy/ sustainability reports, 10-K) — limited by **voluntary, inconsistent** reporting; (2) **ESG data vendors** (MSCI, Sustainalytics) scores/rankings — subjective interpretation; (3) **not-for-profit / NGO frameworks** promoting uniform standards (e.g., SASB).
 - Implementation approaches: **negative/exclusionary screening**, **positive/best-in-class screening**, **thematic** investing, **ESG integration** (into forecasts/valuation), **engagement/active ownership**, **impact** investing.
 - **Analytical use differs by asset class**: in **equity** analysis, ESG integration both **identifies opportunities** and **mitigates downside risk** (adjust revenue/margins, capex, terminal value); in **fixed income**, it feeds the **credit spread / discount rate** (worse ESG → wider spread, higher yield).
+
+## Green Bonds (official sidebar, ESG LM2)
+- **Green bond** = proceeds **earmarked** for projects with environmental or climate benefits (first one: the EIB's Climate Awareness Bond, 2007). The **issuer** decides the label (with the lead underwriter) and must disclose the eligibility criteria and **use of proceeds**, in line with the voluntary **Green Bond Principles** (2014; maintained by ICMA); independent reviews are optional.
+- Otherwise it **resembles the issuer's conventional bonds** — normally the **same credit rating and bondholder recourse**. Issuers bear extra monitoring/reporting costs but may gain a more diversified investor base and possibly a new-issue premium if demand is strong. Forms: corporate, project, MBS/ABS, municipal.
+- In **fixed income**, ESG integration focuses mainly on **downside risk**; in **equity**, on both opportunities and downside risk. Scenario analysis and stress tests are increasingly used for climate **physical risks**.
 
 ## Exam Traps
 - Dispersed ownership → **principal-agent**; concentrated ownership → **principal-principal** (minority expropriation) conflict.

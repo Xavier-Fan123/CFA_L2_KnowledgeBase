@@ -1,9 +1,9 @@
 ---
 aliases: [Term Structure, Yield Curve Dynamics, Spot and Forward Rates, Swap Spread, Riding the Yield Curve, Term Structure Theories]
 tags: [CFA-L2, fi, concept, rates]
-date: 2026-06-03
+date: 2026-10-05
 status: evergreen
-source: Schweser Book 4, Module 23, LOS 23.a-23.k
+source: Official Curriculum 2026 L2 V6 LM1 (October 2026 errata applied); Schweser Book 4, Module 23, LOS 23.a-23.k
 ---
 
 # Term Structure and Interest Rate Dynamics
@@ -14,14 +14,17 @@ source: Schweser Book 4, Module 23, LOS 23.a-23.k
   - The forward rate `f` is the **breakeven** reinvestment rate that equates rolling strategies.
 - **Bootstrapping**: derive spot rates sequentially from the **par curve** (par bond prices = 100).
 - **Forward pricing**: `forward price of a bond = current price / discount factor` to the settlement date.
+- **Notation (6 May 2026 errata)**: `f_(A,B−A)` = forward rate for a loan starting **A** periods from today with a tenor of **B − A** periods (a forward on a zero maturing at **B**); discount factor `DF_(A,B−A) = 1/(1 + f_(A,B−A))^(B−A)`.
+- **Spot rate = geometric average** of the short rate and the intervening forward rates. **Forwards > spots when the spot curve slopes up, < when it slopes down, = when flat.**
 
 ## Active Management & Riding the Curve (23.c, 23.d)
 - If spot rates evolve **as today's forward rates predict**, all bonds earn the one-period risk-free return (no excess return). Active managers bet rates will **differ** from the forwards.
 - **Riding / rolling down the yield curve**: when the curve is **upward sloping and expected to stay stable**, buy longer maturities and earn price appreciation as the bond "rolls down" to lower yields — outperforms buy-and-hold at the short end.
+  - Official framing: if the upward-sloping spot curve is **unchanged**, an N-period zero "rolls down" to N − 1 periods and earns the **N-period forward rate** that rolls out of its pricing — more than a short bond earns, i.e., a **term premium** for longer maturities.
 
 ## Swap Curve & Spreads (23.e, 23.f, 23.g)
 - **Swap rate curve** = par yields for the fixed leg of fixed-for-floating interest-rate swaps; floating leg now references a **market reference rate (MRR)** (transaction-based, e.g. **SOFR**; historically Libor). A key benchmark: many maturities, led by major banks (so comparable across countries), and the fixed rate is analogous to a government-bond YTM derived by bootstrapping.
-- **Swap spread** = swap rate − government (Treasury) yield of equal maturity → gauges credit/liquidity. *By convention uses the on-the-run government bond.* Post-2008, swap spreads have narrowed to **zero or negative** (higher dealer capital requirements / leverage constraints) — a common trap.
+- **Swap spread** = swap rate − government (Treasury) yield of equal maturity → gauges credit/liquidity. Swap and Treasury curves differ because of **credit exposure, liquidity, and other supply/demand factors**; spreads quoted over a curve can be turned back into a bond **price**. *By convention uses the on-the-run government bond.* Post-2008, swap spreads have narrowed to **zero or negative** (higher dealer capital requirements / leverage constraints) — a common trap.
 - **Short-term spreads** (economy-wide credit & liquidity gauges; wider = more stress):
   - **TED spread** = MRR (Eurodollar-based) − T-bill of equal maturity.
   - **MRR−OIS spread** (formerly **Libor−OIS**) = MRR − overnight-indexed-swap (OIS) rate; the OIS floating leg ≈ geometric average of a daily overnight rate (e.g. fed funds / SOFR).

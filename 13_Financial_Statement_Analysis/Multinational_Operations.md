@@ -1,9 +1,9 @@
 ---
 aliases: [Multinational Operations, Foreign Currency Translation, Current Rate Method, Temporal Method, CTA, Functional Currency]
 tags: [CFA-L2, fsa, concept, fx]
-date: 2026-06-03
+date: 2026-10-05
 status: evergreen
-source: Schweser Book 2, Module 9, LOS 9.a-9.j
+source: Official Curriculum 2026 L2 V3 LM3; Schweser Book 2, Module 9, LOS 9.a-9.j
 ---
 
 # Multinational Operations (Foreign Currency Translation)
@@ -21,20 +21,32 @@ source: Schweser Book 2, Module 9, LOS 9.a-9.j
 | Functional = **parent's presentation** | **Temporal method** (remeasurement) | local → functional/presentation |
 | Local = highly **inflationary** | US GAAP: temporal; IFRS: restate for inflation then current rate | — |
 
+## Foreign Currency Transactions (9.b) — transaction exposure
+- An export sale (import purchase) on account denominated in a foreign currency is recorded at the **transaction-date** rate. Any change in the functional-currency value of the receivable (payable) before settlement is a **foreign currency transaction gain or loss in net income**.
+- If a **balance sheet date** falls between transaction and settlement, the receivable/payable is retranslated at the balance-sheet-date rate and the gain/loss goes to income even though it is **unrealized** (it may reverse by settlement).
+
+| Position | Foreign currency **strengthens** | Foreign currency **weakens** |
+|---|---|---|
+| FC **receivable** (export) | **Gain** | Loss |
+| FC **payable** (import) | Loss | **Gain** |
+
+- Companies must disclose the **net FX gain/loss in income**, but may report transaction gains/losses in **operating or non-operating** income → operating margins may not be comparable across companies.
+
 ## Current Rate Method (Translation)
 - **Assets & liabilities**: **current** (period-end) rate.
 - **Common stock**: **historical** rate.
 - **Income statement (revenues/expenses)**: **average** rate.
 - **Dividends**: rate when declared.
-- Balancing item = **Cumulative Translation Adjustment (CTA)** in **equity (OCI)**.
-- Exposure = **net assets** (shareholders' equity).
+- Other equity items: **historical** rates.
+- Balancing item = **Cumulative Translation Adjustment (CTA)** in **equity (OCI)**. The CTA for a foreign entity is **transferred (recycled) to net income when that entity is sold or otherwise disposed of**.
+- Exposure = **net assets** (shareholders' equity). Exposure disappears only if assets = liabilities (no equity) — rarely achievable.
 
 ## Temporal Method (Remeasurement)
-- **Monetary** assets/liabilities (cash, receivables, payables, debt): **current** rate.
-- **Non-monetary** assets/liabilities (inventory, PP&E, intangibles) & **equity**: **historical** rates.
+- **Monetary** assets/liabilities (cash, receivables, payables, debt) **and non-monetary items measured at current value** (e.g., at fair value): **current** rate.
+- **Non-monetary** assets/liabilities carried at historical cost (inventory at cost, PP&E, intangibles) & **equity**: **historical** rates.
 - COGS and depreciation: **historical** rates (tied to non-monetary assets); most other IS items: average.
 - Balancing item = **remeasurement gain/loss** in the **income statement (net income)**.
-- Exposure = **net monetary assets** (usually net monetary **liability** position).
+- Exposure = **net monetary assets** (usually net monetary **liability** position), adjusted for non-monetary items at current value. Easier to manage than under the current rate method: **match monetary assets with monetary liabilities** and the exposure is zero (e.g., fund the subsidiary with equity instead of local debt).
 
 ## Quick Comparison
 
@@ -49,7 +61,32 @@ source: Schweser Book 2, Module 9, LOS 9.a-9.j
 ## Rate-Direction Effects (9.c, 9.f)
 - **Current rate method, depreciating local currency** → CTA is a **loss** (negative); translated assets/sales shrink. Appreciating local currency → CTA gain.
 - **Temporal, depreciating local currency, net monetary liability** → remeasurement **gain** in NI.
-- Current rate method **preserves financial ratios** computed in local currency; temporal distorts them (mixes current and historical rates).
+
+**Foreign currency STRENGTHENS against the parent's currency (official Canadaco Example 6; reverse everything if it weakens):**
+
+| Translated amount | Current rate method | Temporal method (net monetary **liability**) |
+|---|---|---|
+| Revenues, assets, liabilities | Higher | Higher |
+| Net income | **Higher** | **Lower** (remeasurement loss in NI) |
+| Equity | **Higher** (positive CTA) | **Lower** (loss flows through retained earnings) |
+
+- Canadaco, temporal: a C$3,000,000 note payable while the C$ rose from 0.70 to 0.80 → a **EUR 300,000** loss (3,000,000 × 0.10) that equity financing would have avoided.
+
+**Ratio effects (official Canadaco comparison):**
+- **Current rate** method preserves ratios built **only from the balance sheet or only from the income statement** — current ratio, debt-to-assets, debt-to-equity, interest coverage, gross/operating/net margins. It **distorts mixed ratios** (turnover ratios, ROA, ROE), because balance-sheet items use the current rate and income items the average rate.
+- **Temporal** method distorts almost every ratio, and the **direction cannot be generalized**.
+- **Receivables turnover is identical under both methods** (sales at average and receivables at current under each).
+
+## Hyperinflationary Economies (9.g)
+- In a highly inflationary economy the subsidiary's **functional currency is irrelevant** to the choice of method.
+- **US GAAP**: highly inflationary = **cumulative three-year inflation > 100%** (≈ 26% a year; apply with judgment, the trend matters too) → remeasure with the **temporal** method as if the functional currency were the reporting currency; **no inflation restatement**. This avoids the **"disappearing plant" problem** — translating historical-cost assets at ever-weaker current rates would shrink them toward zero.
+- **IFRS**: first **restate** the local statements for local inflation (**IAS 29**), then translate **everything at the current rate** (IAS 21). IAS 21 gives no specific threshold; IAS 29 treats cumulative inflation approaching or exceeding 100% over three years as an indicator. The curriculum calls this the approach that best represents economic reality (Turkish land example: restate-then-translate leaves the land at about its original USD value).
+
+## Disclosures and Using Both Methods (9.e, 9.j)
+- A parent can use **both** methods at once — current rate for subsidiaries whose functional currency is local, temporal for those whose functional currency is the parent's.
+- Required disclosure: the **total translation gain/loss in income** and the **CTA in equity**. There is **no** requirement to split the income amount between transaction gains/losses and temporal-method remeasurement.
+- **Clean-surplus adjustment**: add the change in CTA reported in equity to net income to get a comprehensive measure of income.
+- Use segment and MD&A disclosures (revenue and earnings by currency, sensitivity to rate changes) to judge how a company's countries of operation expose results to currency moves (9.j).
 
 ## Worked Example — Same Balance Sheet, Two Methods (LOS 9.e)
 *(curriculum Amerco/Spanco; functional vs presentation differ; rate falls from 1.00 H to 0.80 C)*
@@ -94,7 +131,10 @@ This section is a professional trading application, not CFA curriculum text.
 - Translation gain/loss location: **current rate → equity (CTA)**; **temporal → income statement**.
 - "Translation" = current rate method; "remeasurement" = temporal method.
 - Under temporal with a net **monetary liability** position, a **weakening** local currency produces a **gain**.
-- Current rate method keeps local-currency ratios intact; temporal does not.
+- Current rate method keeps **pure** balance-sheet and pure income-statement ratios intact, but **turnover and return ratios still change** (balance sheet at current, income statement at average). Receivables turnover is the one ratio that is the same under both methods.
+- Foreign currency **receivable** + foreign currency **strengthens** → **transaction gain**; FC **payable** + FC strengthens → loss.
+- **CTA is recycled** into net income when the foreign subsidiary is sold.
+- US GAAP "highly inflationary" = cumulative **3-year inflation > 100%** → temporal method; IFRS → restate for inflation, then current rate.
 
 ## Q&A
 
@@ -105,5 +145,5 @@ Related: [[Currency_Exchange_Rates]]
 
 ### 2026-06-03 — Which translation method preserves financial ratios?
 **Q:** Does translation distort local-currency ratios under the current rate or the temporal method?
-**A:** The **current rate method preserves** pure local-currency ratios because every balance-sheet item is translated at the **same** current rate (income statement at the average rate), so ratios built from same-statement items are unchanged. The **temporal method distorts** ratios because it **mixes** current rates (monetary items) with historical rates (non-monetary items, COGS, depreciation). Quick tell: current rate → functional = local; temporal → functional = parent's; gain/loss to equity (CTA) vs net income respectively.
+**A:** The **current rate method preserves** pure local-currency ratios because every balance-sheet item is translated at the **same** current rate (income statement at the average rate), so ratios built from same-statement items are unchanged — but **mixed** ratios (turnover, ROA, ROE) still change because the balance sheet uses the current rate and the income statement the average rate. The **temporal method distorts** ratios because it **mixes** current rates (monetary items) with historical rates (non-monetary items, COGS, depreciation). Quick tell: current rate → functional = local; temporal → functional = parent's; gain/loss to equity (CTA) vs net income respectively.
 Related: [[Intercorporate_Investments]]

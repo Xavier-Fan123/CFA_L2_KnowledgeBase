@@ -1,7 +1,7 @@
 ---
 aliases: [Publicly Traded Real Estate, REIT, REOC, Mortgage REIT, NAVPS, FFO, AFFO, Funds From Operations, Cap Rate, REIT Valuation, Price-to-FFO, Cash NOI]
 tags: [CFA-L2, alt, concept, real-estate]
-date: 2026-06-04
+date: 2026-10-05
 status: evergreen
 source: Official Curriculum L2 Vol 8, Learning Module 3 (Investments in Real Estate through Publicly Traded Securities); Schweser Book 4
 ---
@@ -38,6 +38,9 @@ source: Official Curriculum L2 Vol 8, Learning Module 3 (Investments in Real Est
 **Advantages:** superior **liquidity** (trades daily), transparency, tax exemption, **predictable earnings** (contractual rents), access to premium properties, active professional management, greater diversification across property type/geography.
 
 **Disadvantages (mostly flow from the high-payout rule):** **limited income growth** (little retained earnings → may be **forced to issue equity** at bad prices), **lack of flexibility** (investment restrictions), and **lower portfolio diversification benefit** — REITs correlate **more with equities** than direct real estate does.
+
+- **REITs vs REOCs (official)**: REITs offer **higher dividend yields** and **income-tax exemption**, but **less operating flexibility** (limits on the range of real estate activities) and **less growth from reinvested cash flow** (high mandatory payout). REOCs are the reverse.
+- **What REIT investors analyze (official list)**: general economic activity, retail sales, job creation, population growth, new supply and demand for each property type; **occupancy, leasing activity, rental rates, remaining lease terms, in-place vs market rents**, costs to maintain and re-lease space, **tenant financial health and concentration**, financial leverage, **debt maturities and costs**, and the quality of management and governance.
 
 ## NAVPS — Net Asset Value per Share (LOS 32.b)
 

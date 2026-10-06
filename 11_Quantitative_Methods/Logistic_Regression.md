@@ -33,7 +33,7 @@ The logit model uses **log odds as the dependent variable**:
 
 - **Intercept b₀**: log odds when all X = 0.
 - **Slope bⱼ** (official wording): the change in the **log odds** of the event per 1-unit change in Xⱼ, holding others constant.
-- It is **NOT** a direct change in probability — the model is non-linear, so the probability change from a 1-unit move depends on the curvature at that point. Curriculum method: compute probability at the **average** X's, then bump one X by 1 unit and recompute; the difference is that variable's marginal effect.
+- It is **NOT** a direct change in probability — the model is non-linear, so the probability change from a 1-unit move depends on the curvature at that point. Curriculum method — the **marginal effect at the means** (wording per the 9 Jul 2026 errata): compute the probability with every X at its **sample mean**, then raise only the variable of interest by one unit (others still at their means) and recompute; the difference estimates that variable's marginal effect on P(Y = 1). Software reports it directly (e.g., a "marginal effects at the mean" option).
 
 ## From Coefficients to Probability
 
@@ -68,7 +68,8 @@ Worked example (36 firms, dividend increase): model `ŷ = −3.445 + 0.332·Age 
 
 ## Exam Traps
 - Nested test is the **LR test (χ²)**, not an F-test. All L2 tests side by side: [[Statistical_Tests_Master_Table]].
-- Slope = change in **log odds**, not probability.
+- Slope = change in **log odds**, not probability. A probability change needs the **marginal effect at the means** (all X at their means, bump one X by 1).
+- The curriculum's R²/pseudo-R² paragraph for logit was **removed** by the 14 Apr 2026 errata. Assess a logit model with coefficient significance and the **LR test**, not with an R²-type measure.
 
 ## Q&A
 

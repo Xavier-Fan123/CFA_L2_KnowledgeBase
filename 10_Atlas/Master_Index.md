@@ -54,9 +54,8 @@ Map of Content for the whole knowledge base. One WikiLink line per note. Registe
 - [[Ethics_Overview]]
 - [[Code_and_Standards]] · [[Application_of_the_Code_and_Standards]]
 
-## Reference-only foundations
-- [[Capital_Budgeting_Foundations]] — Level I bridge; not a 2026 Level II LOS.
-- [[GIPS]] — detailed mechanics; not a standalone 2026 Level II reading.
+## Removed as Not Examinable (2026-10-05)
+- Capital budgeting (Level I Corporate Issuers) and detailed GIPS mechanics (Level I/III) were deleted — neither is a 2026 Level II learning outcome. Recoverable from git history if ever needed.
 
 ---
 

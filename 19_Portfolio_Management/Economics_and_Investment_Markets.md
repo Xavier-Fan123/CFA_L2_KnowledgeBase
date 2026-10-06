@@ -1,9 +1,9 @@
 ---
 aliases: [Economics and Investment Markets, Discount Rate Framework, Taylor Rule, Business Cycle and Markets, Credit Spreads, Equity Risk Premium]
 tags: [CFA-L2, pm, concept, macro]
-date: 2026-08-25
+date: 2026-10-05
 status: evergreen
-source: Schweser Book 5, Module 34, LOS 34.a-34.k
+source: Official Curriculum 2026 L2 V9 LM1 (October 2026 errata applied); Schweser Book 5, Module 34, LOS 34.a-34.k
 ---
 
 # Economics and Investment Markets
@@ -24,11 +24,15 @@ The reading builds every result from one idea: an investor decides between **con
 - **Risk aversion**: the utility lost on a loss exceeds the utility gained on an equal-sized gain. **Absolute risk aversion declines with wealth** (richer investors accept more risk), but in **equilibrium** the marginal utility of holding more risky assets declines, so wealthy and poorer investors end up with the **same willingness to hold risky assets** at the margin.
 
 ## Real Rates & Growth (34.c)
-- Average level of **real short-term rates** is tied to the economy's **long-term real growth rate** and the **volatility** of that growth. Higher trend growth → higher real rates; higher growth volatility → investors demand more → can lower the equilibrium rate (precautionary saving).
-- Policy rates often described by a **Taylor rule**: `policy rate = neutral + inflation + 0.5(inflation gap) + 0.5(output gap)`.
+- Average level of **real short-term rates** is **positively** related to the economy's **trend real growth rate AND to the volatility of that growth** (official: "real interest rates are higher in an economy in which GDP growth is more volatile"). Fast-growing (catching-up) economies have a higher marginal product of capital → higher real rates; the advantage fades as they mature.
+- **Short-term nominal rate** ≈ real rate that balances savers and investors + **expected inflation** → higher in economies with higher, more volatile growth and higher average inflation; closely tied to the central bank's policy rate.
+- **Taylor rule (official Eq. 12)**: `pr_t = l_t + π_t + 0.5(π_t − π*) + 0.5(Y_t − Y*) = l_t + 1.5π_t − 0.5π* + 0.5(output gap)`, where `l_t` = the **real short-term rate** that balances long-term saving and borrowing, π* = target inflation, `Y − Y*` = output gap (log levels). Inflation carries the heavier weight (**1.5 vs 0.5**).
+  - **Neutral policy rate** = `l_t + π*` (inflation at target, zero output gap) — neither spurs nor impedes activity. Inflation above target or a positive output gap → policy rate **above** neutral.
+  - *Official example*: l 2.0%, π 3.0%, π* 2.0%, output gap 2.0% → `2 + 3 + 0.5(1) + 0.5(2) = 6.5%`.
 
 ## Business Cycle Effects (34.d, 34.f, 34.i, 34.j)
 - **Term structure**: short rates rise into late expansion; the **yield curve flattens/inverts** late cycle and **steepens** in early recovery (policy easing).
+- **Why a term premium on default-free bonds**: risk-averse investors demand more for longer maturities because longer-dated government bonds are **less negatively correlated with consumption** — a poorer consumption hedge. Curve shape = expected short rates + inflation expectations + risk premiums, all moved by the cycle and policy.
 - **Credit spreads**: **widen in contractions** (higher default risk), **tighten in expansions**. Credit-sensitive bonds underperform in downturns.
 - **Equity earnings**: cyclical expectations swing earnings growth; **valuation multiples** compress in downturns and expand in recoveries (pro-cyclical).
 
@@ -36,16 +40,21 @@ The reading builds every result from one idea: an investor decides between **con
 - **Breakeven inflation rate** = nominal yield − real (TIPS) yield = expected inflation + an inflation risk premium. The spread between nominal and inflation-indexed bonds reflects inflation expectations and uncertainty.
 
 ## Equity Risk Premium & Consumption (34.h, 34.g)
+- **ERP > credit premium**: dividends are uncertain and time-varying, and in a failure the shareholder loses everything while bondholders recover something. The two premiums are positively correlated and both **rise in economic weakness**.
+- **P/E is pro-cyclical** (rises in expansions, falls in recessions). A "high" P/E can reflect **falling real rates, a lower ERP, higher expected real earnings growth, or lower operating/financial risk**.
 - Equities pay off poorly in **bad times** (low consumption) → poor consumption hedge → investors demand a **positive equity risk premium**. Assets that hedge bad times (e.g., government bonds) command lower premiums.
 - A company's **credit quality** depends on the cyclicality and stability of demand for its products.
 
 ## Commercial Real Estate (34.k)
 - CRE combines **bond-like** (lease income) and **equity-like** (residual value, vacancy/cyclicality) characteristics; sensitive to growth, rates, and credit conditions.
+- Value = PV of **rents** plus **redevelopment value** as leases expire; cash-flow uncertainty rises in downturns. Because property prices are **pro-cyclical** (a poor hedge against bad outcomes), investors demand a relatively **high risk premium**, plus a **liquidity premium** for illiquidity.
+- A lease to a developed-economy government with **inflation-indexed** rent is bond-like: express its expected cash flows in **real** terms (25 Nov 2025 errata) and discount at real rates.
 
 ## Exam Traps
 - A factor affects markets only via **rates, cash flows, or the risk premium**; only **surprises** move prices.
 - **Credit spreads widen in recessions, tighten in expansions**; yield curve flattens/inverts late cycle.
 - **Breakeven inflation = nominal − real yield**.
+- **Real rates rise with BOTH trend growth and growth volatility.** Taylor rule weights: **1.5 on inflation, 0.5 on the output gap**; neutral policy rate = real rate + **target** inflation.
 - Equity risk premium exists because stocks are a **poor consumption hedge** (pay off badly in bad times) — formally, the **negative covariance between the payoff and the inter-temporal rate of substitution** is the risk premium.
 - **Higher expected GDP growth → lower inter-temporal rate of substitution → less saving → HIGHER real rates.** The chain runs through diminishing marginal utility; getting the direction backwards is the classic error.
 - A **single-period risk-free bond has zero covariance → zero risk premium**; the premium appears only once the terminal value is uncertain.

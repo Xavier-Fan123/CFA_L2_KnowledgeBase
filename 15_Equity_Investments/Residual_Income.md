@@ -1,9 +1,9 @@
 ---
 aliases: [Residual Income, Economic Value Added, EVA, MVA, Residual Income Model, Clean Surplus]
 tags: [CFA-L2, equity, concept, valuation]
-date: 2026-06-03
+date: 2026-10-05
 status: evergreen
-source: Schweser Book 3, Module 21, LOS 21.a-21.k
+source: Official Curriculum 2026 L2 V5 LM5 (October 2026 errata applied); Schweser Book 3, Module 21, LOS 21.a-21.k
 ---
 
 # Residual Income (RI) Valuation
@@ -14,13 +14,18 @@ Residual income = earnings **in excess of the equity charge** (the cost of equit
 - **EVA** = `NOPAT − (WACC × invested capital)` = `EBIT(1 − t) − WACC × capital`.
   - **Worked example (Schweser):** NOPAT $2,100, WACC 14.2%, capital $18,000 → `$WACC = 0.142 × 18,000 = $2,556`; `EVA = 2,100 − 2,556 = −$456` (destroyed value that year).
 - **MVA** = market value − book value of (total) capital.
+- **Uses of RI models (21.b)**: equity valuation **and** measuring internal corporate performance and setting **executive compensation** (EVA-style).
+- Per-share forecast: `RI_t = E_t − r × B_(t−1)` = `(ROE_t − r) × B_(t−1)` — **beginning** book value.
 
 ## Valuation Model (21.c, 21.f)
 - `V0 = B0 + Σ RI_t / (1 + r)^t` — current book value plus PV of future residual income.
 - **Single-stage (constant growth)**: `V0 = B0 + [(ROE − r) × B0] / (r − g)`.
 - **Justified P/B** = `1 + (ROE − r)/(r − g) = (ROE − g)/(r − g)`.
   - **Worked example (Schweser):** ROE 14%, r 8%, g 4% → `P/B = (0.14 − 0.04)/(0.08 − 0.04) = 2.5`.
-- Implied growth: solve the single-stage equation given market P/B (21.g).
+- Implied growth (21.g): from `P0 = B0 + (ROE − r)B0/(r − g)` → `g = r − B0(ROE − r)/(P0 − B0)`. The market's implied growth in RI rises with P/B.
+
+## Two-Stage RI with a Terminal Price Premium (21.f)
+`V0 = B0 + Σ_{t=1..T} RI_t/(1+r)^t + (P_T − B_T)/(1+r)^T` — the last term is the **premium over book value** expected at the horizon. If RI is expected to fade to zero by T, `P_T − B_T = 0`.
 
 ## Multistage RI & Continuing Residual Income (21.f, 21.h)
 - **Multistage RI**: forecast RI explicitly for T periods, then add a **continuing (terminal) residual income** value at the horizon: `V0 = B0 + Σ_{t=1}^{T-1} RI_t/(1+r)^t + [ RI_T / (1 + r − ω) ] / (1+r)^{T-1}`.
@@ -38,6 +43,7 @@ Residual income = earnings **in excess of the equity charge** (the cost of equit
 | Large accounting accruals | Strong market-leadership position |
 
 - A separate multistage variant lets **ROE fade to r** explicitly each period; once ROE = r, RI = 0 and the terminal value is **zero**.
+- **The four common continuing-RI assumptions (official)**: (1) RI continues **indefinitely at a positive level** (variant: grows with inflation, i.e., constant in real terms); (2) RI is **zero** from the terminal year onward; (3) RI **declines to zero** as ROE reverts to the cost of equity; (4) RI **declines to some mean level**.
 
 > **Tobin's q** (closely related concept): `q = (market value of debt + equity) / replacement cost of total assets`. Like justified P/B it rises with asset productivity, but it uses **total capital** in the numerator and **replacement cost of total assets** (not equity book value) in the denominator. Theory: q → 1 as economic profits compete away. (Hard to compute — replacement costs are rarely observable.)
 
@@ -46,8 +52,14 @@ Residual income = earnings **in excess of the equity charge** (the cost of equit
 - Theoretically gives the **same** value as DDM/FCF with consistent assumptions.
 
 ## Strengths, Weaknesses, Accounting (21.j, 21.k)
-- **Use when**: firm pays no dividends, FCF is negative, terminal value is uncertain, but accounting is high quality.
-- **Weaknesses**: relies on accounting data that can be manipulated; requires **clean surplus** to hold (all income flows through the income statement). Violations: items booked directly to equity (OCI: FX translation, some pension and FVOCI items) break clean surplus and require adjustment.
+- **Strengths (official)**: terminal value is a **small** share of total value; uses **readily available accounting data**; works **without dividends or near-term positive FCF**; works when **cash flows are unpredictable**; focuses on economic profitability.
+- **Weaknesses**: accounting data can be **manipulated** by management; inputs may need **significant adjustments**; requires the **clean surplus relation** (`B_t = B_(t−1) + E_t − D_t`) to hold or be adjusted for; relies on book value and ROE not being distorted.
+- **Most appropriate when**: no dividends or an unpredictable dividend pattern; **negative FCF for many years** but positive FCF expected eventually; **great uncertainty about the terminal value**. Least appropriate when clean surplus is badly violated or book value and ROE are unpredictable.
+- **Fundamental drivers** of RI: **book value of equity** and **ROE**. RI valuation is most closely related to **P/B**: PV of expected RI > 0 ⇔ justified P/B > 1.
+- **Accounting adjustments (21.k)**:
+  - **Clean surplus violations** — items booked directly to equity (OCI: FX translation, some pension remeasurements, FVOCI gains/losses) → adjust net income to comprehensive income so RI and book value reconcile.
+  - **Book value adjustments** — off-balance-sheet items, differences from **fair value** (e.g., LIFO inventory, pension positions), and the **amortization of certain intangible assets**.
+  - **Earnings adjustments** — strip **non-recurring items** misclassified as recurring; watch aggressive accounting and differences in international standards.
 
 ## Exam Traps
 - `RI = (ROE − r) × beginning book value`; the charge uses **beginning-of-period** equity.
@@ -56,6 +68,8 @@ Residual income = earnings **in excess of the equity charge** (the cost of equit
 - **Clean surplus** must hold; OCI items (FX, FVOCI, pension remeasurements) violate it.
 - **Persistence factor** sits in the terminal term as `RI_T/(1 + r − ω)`, NOT `/(r − g)`. ω = 1 → perpetuity of RI; ω = 0 → terminal value zero. Don't confuse ω-decay with the ROE-fades-to-r variant (terminal = 0).
 - **Tobin's q** uses **replacement cost of total assets** and **total capital** — not equity book value.
+- Two-stage RI terminal term can be written as the **premium over book at T**: `(P_T − B_T)/(1+r)^T`.
+- **Four continuing-RI assumptions**: persists (positive level / constant real), zero, declines to zero (ROE → r), declines to a mean level.
 
 ## Q&A
 
